@@ -3190,7 +3190,213 @@
     }
 
 
-</style>
+
+    /* Mobile Drawer Items (Hidden by default on Desktop) */
+    .mobile-drawer-divider,
+    .mobile-drawer-lang-item,
+    .mobile-drawer-cta-item {
+      display: none;
+    }
+
+    @media (max-width: 992px) {
+      /* Hide Book Appointment and Language selector from top header bar on mobile */
+      .desktop-only-action {
+        display: none !important;
+      }
+
+      /* Clean mobile header bar: Logo left, Hamburger right */
+      header {
+        height: 72px !important;
+        padding: 0 16px !important;
+        background: #ffffff !important;
+        box-shadow: 0 2px 14px rgba(15, 23, 42, 0.08) !important;
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 10000 !important;
+      }
+      .nav-container {
+        height: 72px !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100% !important;
+        padding: 0 !important;
+      }
+      .brand-logo-img {
+        height: 54px !important;
+        width: auto !important;
+        max-width: 120px !important;
+      }
+      .header-right-actions {
+        display: flex !important;
+        align-items: center !important;
+        gap: 0 !important;
+        margin-left: auto !important;
+      }
+
+      /* Mobile Toggle Button (cleanly placed on top right) */
+      .mobile-toggle-btn {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 44px !important;
+        height: 44px !important;
+        border-radius: 10px !important;
+        background: #f1f5f9 !important;
+        border: 1px solid #cbd5e1 !important;
+        color: #1A3150 !important;
+        font-size: 20px !important;
+        cursor: pointer !important;
+        transition: all 0.25s ease !important;
+        padding: 0 !important;
+      }
+      .mobile-toggle-btn:active {
+        background: #e2e8f0 !important;
+        transform: scale(0.92) !important;
+      }
+
+      /* Smooth Opening Mobile Menu Drawer */
+      .nav-links {
+        display: flex !important;
+        position: fixed !important;
+        top: 72px !important;
+        left: 0 !important;
+        width: 100% !important;
+        max-height: calc(100vh - 72px) !important;
+        background: #ffffff !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0 !important;
+        padding: 16px 20px 36px !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        border-bottom: 2px solid #e2e8f0 !important;
+        box-shadow: 0 25px 60px rgba(15, 23, 42, 0.22) !important;
+        transform: translateY(-120%) !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.28s ease, visibility 0.28s !important;
+        z-index: 9999 !important;
+      }
+      .nav-links.mobile-open {
+        transform: translateY(0) !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+
+      .nav-links .nav-item {
+        width: 100% !important;
+        border-bottom: 1px solid #f1f5f9 !important;
+        padding: 14px 0 !important;
+        list-style: none !important;
+      }
+      .nav-links .nav-link {
+        font-size: 16px !important;
+        font-weight: 700 !important;
+        color: #0f172a !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        text-decoration: none !important;
+      }
+
+      /* Divider under Contact */
+      .mobile-drawer-divider {
+        display: block !important;
+        height: 1px !important;
+        background: #e2e8f0 !important;
+        margin: 20px 0 16px !important;
+        list-style: none !important;
+      }
+
+      /* Mobile Translator Item inside Drawer */
+      .mobile-drawer-lang-item {
+        display: block !important;
+        list-style: none !important;
+        margin-bottom: 18px !important;
+      }
+      .mobile-lang-label {
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        font-size: 12px !important;
+        font-weight: 700 !important;
+        color: #64748b !important;
+        margin-bottom: 8px !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.5px !important;
+      }
+      .mobile-lang-label i {
+        color: #6B9DD2 !important;
+        font-size: 13px !important;
+      }
+      .mobile-lang-select-wrap {
+        position: relative !important;
+        width: 100% !important;
+      }
+      .mobile-lang-select {
+        width: 100% !important;
+        padding: 12px 36px 12px 14px !important;
+        font-size: 14.5px !important;
+        font-weight: 600 !important;
+        color: #1a3150 !important;
+        background: #f8fafc !important;
+        border: 1.5px solid #cbd5e1 !important;
+        border-radius: 10px !important;
+        outline: none !important;
+        cursor: pointer !important;
+        appearance: none !important;
+        -webkit-appearance: none !important;
+        font-family: inherit !important;
+      }
+      .mobile-lang-select:focus {
+        border-color: #6B9DD2 !important;
+        background: #ffffff !important;
+      }
+      .mobile-lang-chevron {
+        position: absolute !important;
+        right: 14px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        color: #64748b !important;
+        pointer-events: none !important;
+        font-size: 12px !important;
+      }
+
+      /* Mobile CTA Button under Translator */
+      .mobile-drawer-cta-item {
+        display: block !important;
+        list-style: none !important;
+        padding-top: 4px !important;
+      }
+      .mobile-drawer-cta-item .mobile-cta-btn {
+        width: 100% !important;
+        background: linear-gradient(135deg, #1A3150 0%, #2b4f7e 100%) !important;
+        color: #ffffff !important;
+        border: 1px solid rgba(107, 157, 210, 0.45) !important;
+        border-radius: 12px !important;
+        padding: 14px 20px !important;
+        font-size: 15px !important;
+        font-weight: 700 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 10px !important;
+        box-shadow: 0 6px 18px rgba(26, 49, 80, 0.28) !important;
+        cursor: pointer !important;
+        text-decoration: none !important;
+        transition: all 0.25s ease !important;
+      }
+      .mobile-drawer-cta-item .mobile-cta-btn span,
+      .mobile-drawer-cta-item .mobile-cta-btn i {
+        color: #ffffff !important;
+      }
+      .mobile-drawer-cta-item .mobile-cta-btn:active {
+        transform: scale(0.98) !important;
+      }
+    }
+
+  </style>
   <!-- Routex Smooth Inertia Scrolling Library (SmoothScroll v1.4.10) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
 </head>
@@ -3207,7 +3413,7 @@
         <img src="images/primefpint_clean.png" alt="PrimeFPrint - Fingerprinting & PCC Services" class="brand-logo-img">
       </a>
 
-      <!-- 3 Navigation Elements -->
+      <!-- Navigation Elements & Mobile Drawer Content -->
       <ul class="nav-links">
         <li class="nav-item">
           <a href="#home" class="nav-link">Home</a>
@@ -3244,8 +3450,30 @@
         <li class="nav-item">
           <a href="#contact" class="nav-link">Contact</a>
         </li>
-        <li class="mobile-only-cta-item" style="padding-top: 14px; list-style: none;">
-          <button class="btn-primary mobile-cta-btn" onclick="openEnquiryModal(); toggleMobileMenu();">
+
+        <!-- Inside Hamburger: Divider -->
+        <li class="mobile-drawer-divider"></li>
+
+        <!-- Inside Hamburger: Translator Button with proper spacing -->
+        <li class="mobile-drawer-lang-item">
+          <label class="mobile-lang-label"><i class="fa-solid fa-globe"></i> Select Language</label>
+          <div class="mobile-lang-select-wrap">
+            <select class="mobile-lang-select" onchange="translatePage(this.value)" title="Choose Language">
+              <option value="en">English (US)</option>
+              <option value="hi">Hindi (हिन्दी)</option>
+              <option value="te">Telugu (తెలుగు)</option>
+              <option value="ar">Arabic (العربية)</option>
+              <option value="fr">French (Français)</option>
+              <option value="es">Spanish (Español)</option>
+              <option value="de">German (Deutsch)</option>
+            </select>
+            <i class="fa-solid fa-chevron-down mobile-lang-chevron"></i>
+          </div>
+        </li>
+
+        <!-- Inside Hamburger: Book Appointment Button -->
+        <li class="mobile-drawer-cta-item">
+          <button class="mobile-cta-btn" onclick="openEnquiryModal(); toggleMobileMenu();">
             <span>Book Appointment</span>
             <i class="fa-solid fa-arrow-right"></i>
           </button>
@@ -3253,10 +3481,11 @@
       </ul>
 
       <div class="header-right-actions">
-        <button class="btn-header desktop-only-btn" onclick="openEnquiryModal()">Book Appointment</button>
+        <!-- Desktop Only in Top Bar -->
+        <button class="btn-header desktop-only-action" onclick="openEnquiryModal()">Book Appointment</button>
         
-        <!-- Reliable Custom Language Selector -->
-        <div class="custom-lang-wrapper">
+        <!-- Desktop Only Language Selector in Top Bar -->
+        <div class="custom-lang-wrapper desktop-only-action">
           <select id="langSelect" class="custom-lang-select" onchange="translatePage(this.value)" title="Choose Language">
             <option value="en">English</option>
             <option value="hi">Hindi (हिन्दी)</option>
@@ -3268,7 +3497,7 @@
           </select>
         </div>
 
-        <!-- Mobile Hamburger Menu Button -->
+        <!-- Mobile Hamburger Toggle Button (Cleanly Placed on Top Right) -->
         <button class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Toggle Navigation Menu" onclick="toggleMobileMenu()">
           <i class="fa-solid fa-bars"></i>
         </button>
@@ -5099,7 +5328,6 @@
         navLinks.classList.toggle('mobile-open');
         const isOpen = navLinks.classList.contains('mobile-open');
         if (!isOpen) {
-          // Reset sub dropdowns when menu closes
           document.querySelectorAll('.nav-item.dropdown-open').forEach(el => el.classList.remove('dropdown-open'));
         }
         if (toggleBtn) {
