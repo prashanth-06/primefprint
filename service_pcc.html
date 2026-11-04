@@ -49,19 +49,76 @@
       color: var(--primary);
     }
 
-    /* TOP NOTIFICATION STRIP */
+    /* Top Header Strip - Executive Luxury Bar */
     .top-strip {
-      background: #0a0f1d;
-      color: #94a3b8;
-      font-size: 13px;
-      padding: 10px 5%;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 9px 5%;
+      font-size: 12.5px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      color: #cbd5e1;
+      background: linear-gradient(90deg, #0e1e34 0%, #152b4b 50%, #0e1e34 100%);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      position: relative;
+      z-index: 1001;
     }
-    .top-strip a { color: #6B9DD2; text-decoration: none; font-weight: 600; }
-    .strip-items { display: flex; gap: 20px; }
+    .top-strip-left {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      font-weight: 500;
+      color: #e2e8f0;
+      letter-spacing: 0.1px;
+    }
+    .top-strip-left i {
+      color: #6B9DD2;
+      font-size: 13px;
+    }
+    .strip-items {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+    .strip-phone-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(107, 157, 210, 0.14);
+      border: 1px solid rgba(107, 157, 210, 0.32);
+      color: #ffffff !important;
+      padding: 4px 13px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none !important;
+      transition: all 0.22s ease;
+      font-size: 12px;
+    }
+    .strip-phone-link i {
+      color: #6B9DD2;
+      font-size: 11px;
+    }
+    .strip-phone-link:hover {
+      background: #6B9DD2;
+      color: #0d1e35 !important;
+      border-color: #6B9DD2;
+      box-shadow: 0 0 12px rgba(107, 157, 210, 0.5);
+    }
+    .strip-phone-link:hover i {
+      color: #0d1e35;
+    }
+    .strip-hours {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: #94a3b8;
+      font-weight: 500;
+      font-size: 12px;
+    }
+    .strip-hours i {
+      color: #6B9DD2;
+      font-size: 12px;
+    }
 
     /* HEADER & NAVIGATION */
     header {
@@ -1416,12 +1473,21 @@
   <!-- Top Reading Scroll Progress Bar -->
   <div id="scroll-progress-bar"></div>
 
-  <!-- Top Strip -->
+  <!-- Top Header Notification Strip -->
   <div class="top-strip">
-    <div><i class="fa-solid fa-location-dot" style="color: var(--primary-accent); margin-right: 6px;"></i> Official Forensic Laboratory &bull; Hyderabad, India</div>
+    <div class="top-strip-left">
+      <i class="fa-solid fa-location-dot"></i>
+      <span>House No. 5-8-300, Road No. 08, Sagar Housing Complex, B.N Reddy Nagar, Hyderabad-500070, Telangana</span>
+    </div>
     <div class="strip-items">
-      <span><i class="fa-solid fa-phone" style="color: var(--primary-accent); margin-right: 6px;"></i> Prior Appointment Mandatory: <a href="tel:+918125255814">+91 81252 55814</a></span>
-      <span><i class="fa-regular fa-clock" style="color: var(--primary-accent); margin-right: 6px;"></i> Mon - Sat: 9:30 AM - 6:30 PM</span>
+      <a href="tel:+919441821998" class="strip-phone-link">
+        <i class="fa-solid fa-phone"></i>
+        <span>Prior Appointment Mandatory: <strong>+91 94418 21998</strong></span>
+      </a>
+      <span class="strip-hours">
+        <i class="fa-regular fa-clock"></i>
+        <span>Mon - Sat: 9:30 AM - 6:30 PM</span>
+      </span>
     </div>
   </div>
 
@@ -1547,9 +1613,9 @@
             <span>Schedule PCC Fingerprinting</span>
             <i class="fa-solid fa-arrow-right"></i>
           </a>
-          <a href="tel:+918125255814" class="btn-outline">
+          <a href="tel:+9194418 21998" class="btn-outline">
             <i class="fa-solid fa-phone"></i>
-            <span>Call Examiner: +91 81252 55814</span>
+            <span>Call Examiner: +91 94418 21998</span>
           </a>
         </div>
       </div>
@@ -2517,14 +2583,14 @@
           <i class="fa-solid fa-plus"></i>
         </button>
         <div class="faq-body">
-          Yes! We provide on-site mobile fingerprinting services across Hyderabad for senior citizens, VIP applicants, and corporate batches. Please contact our helpline (+91 81252 55814) to arrange a home or office visit.
+          Yes! We provide on-site mobile fingerprinting services across Hyderabad for senior citizens, VIP applicants, and corporate batches. Please contact our helpline (+91 94418 21998) to arrange a home or office visit.
         </div>
       </div>
     </div>
   </section>
 
   <!-- Floating WhatsApp CTA (Bottom-Left, Icon Only) -->
-  <a href="https://wa.me/918125255814?text=Hello%20PrimeFPrint,%20I%20would%20like%20to%20book%20a%20Police%20Clearance%20Certificate%20(PCC)%20appointment." target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+  <a href="https://wa.me/9194418 21998?text=Hello%20PrimeFPrint,%20I%20would%20like%20to%20book%20a%20Police%20Clearance%20Certificate%20(PCC)%20appointment." target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
@@ -2565,7 +2631,7 @@
 
       <div class="footer-col">
         <h4>Direct Lab Contact</h4>
-        <p style="font-size: 13.5px; margin-bottom: 8px;"><i class="fa-solid fa-phone" style="color: #6B9DD2; margin-right: 8px;"></i> <a href="tel:+918125255814" style="color: #ffffff; text-decoration: none;">+91 81252 55814</a></p>
+        <p style="font-size: 13.5px; margin-bottom: 8px;"><i class="fa-solid fa-phone" style="color: #6B9DD2; margin-right: 8px;"></i> <a href="tel:+9194418 21998" style="color: #ffffff; text-decoration: none;">+91 94418 21998</a></p>
         <p style="font-size: 13.5px; margin-bottom: 8px;"><i class="fa-solid fa-envelope" style="color: #6B9DD2; margin-right: 8px;"></i> <a href="mailto:forensicexperthyd@gmail.com" style="color: #94a3b8; text-decoration: none;">forensicexperthyd@gmail.com</a></p>
         <p style="font-size: 13px; color: #64748b; margin-top: 10px;">Hyderabad, Telangana, India</p>
       </div>

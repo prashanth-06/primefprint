@@ -56,20 +56,76 @@
       letter-spacing: -0.02em;
     }
 
-    /* Top Emergency / Schedule Notification */
+    /* Top Header Strip - Executive Luxury Bar */
     .top-strip {
-      border-bottom: 1px solid var(--card-border);
-      padding: 10px 5%;
-      font-size: 13px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 9px 5%;
+      font-size: 12.5px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      color: var(--text-muted);
-      background: var(--bg-light);
+      color: #cbd5e1;
+      background: linear-gradient(90deg, #0e1e34 0%, #152b4b 50%, #0e1e34 100%);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      position: relative;
+      z-index: 1001;
     }
-    .top-strip a { color: var(--primary-accent); text-decoration: none; font-weight: 700; }
-    .top-strip a:hover { text-decoration: underline; }
-    .strip-items { display: flex; gap: 24px; align-items: center; }
+    .top-strip-left {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      font-weight: 500;
+      color: #e2e8f0;
+      letter-spacing: 0.1px;
+    }
+    .top-strip-left i {
+      color: #6B9DD2;
+      font-size: 13px;
+    }
+    .strip-items {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+    .strip-phone-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(107, 157, 210, 0.14);
+      border: 1px solid rgba(107, 157, 210, 0.32);
+      color: #ffffff !important;
+      padding: 4px 13px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none !important;
+      transition: all 0.22s ease;
+      font-size: 12px;
+    }
+    .strip-phone-link i {
+      color: #6B9DD2;
+      font-size: 11px;
+    }
+    .strip-phone-link:hover {
+      background: #6B9DD2;
+      color: #0d1e35 !important;
+      border-color: #6B9DD2;
+      box-shadow: 0 0 12px rgba(107, 157, 210, 0.5);
+    }
+    .strip-phone-link:hover i {
+      color: #0d1e35;
+    }
+    .strip-hours {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: #94a3b8;
+      font-weight: 500;
+      font-size: 12px;
+    }
+    .strip-hours i {
+      color: #6B9DD2;
+      font-size: 12px;
+    }
 
     /* Sticky Header - Glass Blur UI */
     header {
@@ -2245,15 +2301,51 @@
       }
       .nav-links .dropdown {
         position: static !important;
-        display: block !important;
-        opacity: 1 !important;
-        visibility: visible !important;
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
         box-shadow: none !important;
         border: 1px solid #e2e8f0 !important;
         border-radius: 12px !important;
         margin-top: 10px !important;
-        padding: 10px !important;
+        padding: 8px 10px !important;
         background: #f8fafc !important;
+        transition: all 0.25s ease !important;
+      }
+      .nav-links .nav-item.dropdown-open .dropdown {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+      .dropdown-chevron {
+        transition: transform 0.25s ease !important;
+      }
+      .nav-links .nav-item.dropdown-open .dropdown-chevron {
+        transform: rotate(180deg) !important;
+      }
+      .mobile-only-cta-item .mobile-cta-btn {
+        width: 100% !important;
+        background: linear-gradient(135deg, #1A3150 0%, #2b4f7e 100%) !important;
+        color: #ffffff !important;
+        border: 1px solid rgba(107, 157, 210, 0.45) !important;
+        border-radius: 12px !important;
+        padding: 14px 20px !important;
+        font-size: 15px !important;
+        font-weight: 700 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 10px !important;
+        box-shadow: 0 6px 18px rgba(26, 49, 80, 0.28) !important;
+        cursor: pointer !important;
+        transition: all 0.25s ease !important;
+      }
+      .mobile-only-cta-item .mobile-cta-btn span,
+      .mobile-only-cta-item .mobile-cta-btn i {
+        color: #ffffff !important;
+      }
+      .mobile-only-cta-item .mobile-cta-btn:active {
+        transform: scale(0.98) !important;
       }
       .nav-links .dropdown a {
         padding: 12px 10px !important;
@@ -2297,42 +2389,85 @@
       .logo-text h3 { font-size: 16px !important; }
       .logo-text span { font-size: 9px !important; letter-spacing: 1.5px !important; }
 
-      /* Hero Cinematic Slider Section */
+      /* Hero Cinematic Slider Section - Perfectly Scaled for Mobile UX */
       .hero-slider-section {
         height: auto !important;
-        min-height: 100vh !important;
-        padding: 85px 16px 50px !important;
+        min-height: unset !important;
+        padding: 42px 16px 36px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
       }
       .hero-slider-content {
         grid-template-columns: 1fr !important;
-        gap: 30px !important;
+        gap: 0 !important;
+        padding: 0 8px !important;
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+      .hero-content-left {
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
       }
       .hero-badge-pill {
         font-size: 11px !important;
-        padding: 5px 12px !important;
-        margin-bottom: 14px !important;
+        padding: 6px 14px !important;
+        margin: 0 auto 14px !important;
+        display: inline-flex !important;
+        text-align: center !important;
+        line-height: 1.35 !important;
       }
       .hero-heading {
-        font-size: 26px !important;
+        font-size: 24px !important;
         line-height: 1.25 !important;
         margin-bottom: 12px !important;
+        text-align: center !important;
       }
       .hero-subtext {
-        font-size: 13.5px !important;
-        line-height: 1.55 !important;
-        margin-bottom: 20px !important;
+        font-size: 13px !important;
+        line-height: 1.5 !important;
+        margin-bottom: 22px !important;
+        text-align: center !important;
+        max-width: 380px !important;
       }
       .hero-actions {
+        display: flex !important;
         flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
         width: 100% !important;
+        max-width: 320px !important;
+        margin: 0 auto 20px !important;
         gap: 10px !important;
       }
-      .hero-actions .btn-primary,
-      .hero-actions .btn-secondary {
+      .hero-slider-content .btn-primary,
+      .hero-actions .btn-glass {
         width: 100% !important;
         justify-content: center !important;
-        padding: 12px 18px !important;
-        font-size: 14px !important;
+        padding: 13px 20px !important;
+        font-size: 14.5px !important;
+        text-align: center !important;
+      }
+      .hero-trust-bar {
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+        gap: 10px 18px !important;
+        padding-top: 18px !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.16) !important;
+        max-width: 100% !important;
+      }
+      .hero-trust-item {
+        font-size: 12px !important;
+        justify-content: center !important;
       }
       .hero-form-card {
         padding: 22px 16px !important;
@@ -2342,34 +2477,19 @@
       .hero-form-card h3 {
         font-size: 19px !important;
       }
+      /* Hide extreme side arrows on mobile touchscreens */
+      .hero-carousel-arrow {
+        display: none !important;
+      }
       .slider-arrows {
         display: none !important;
       }
       .slider-dots {
-        bottom: 15px !important;
+        bottom: 12px !important;
       }
 
-      /* Sticky Left Action Pills on Mobile */
+      /* Hide Sticky Left Action Pills on Mobile to prevent overlapping content */
       .sticky-left-actions {
-        top: auto !important;
-        bottom: 85px !important;
-        transform: none !important;
-        left: 0 !important;
-        gap: 6px !important;
-      }
-      .sticky-pill {
-        width: 38px !important;
-        height: 38px !important;
-      }
-      .sticky-pill-icon {
-        width: 38px !important;
-        height: 38px !important;
-        font-size: 14px !important;
-      }
-      .sticky-pill:hover {
-        width: 38px !important; /* Keep compact on mobile touch screens */
-      }
-      .sticky-pill-text-wrap {
         display: none !important;
       }
 
@@ -2596,29 +2716,8 @@
         box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4) !important;
         z-index: 998 !important;
       }
-      /* Position Left Sticky Pills nicely above WhatsApp */
+      /* Hide Left Sticky Pills on Mobile */
       .sticky-left-actions {
-        top: auto !important;
-        bottom: 80px !important;
-        left: 0 !important;
-        transform: none !important;
-        gap: 6px !important;
-        z-index: 997 !important;
-      }
-      .sticky-pill {
-        width: 36px !important;
-        height: 36px !important;
-        border-radius: 0 18px 18px 0 !important;
-      }
-      .sticky-pill-icon {
-        width: 36px !important;
-        height: 36px !important;
-        font-size: 13px !important;
-      }
-      .sticky-pill:hover {
-        width: 36px !important;
-      }
-      .sticky-pill-text-wrap {
         display: none !important;
       }
       /* Hide top reading progress on mobile */
@@ -3092,12 +3191,21 @@
   <!-- Top Reading Scroll Progress Bar -->
   <div id="scroll-progress-bar"></div>
 
-  <!-- Top Emergency / Schedule Notification -->
+  <!-- Top Header Notification Strip -->
   <div class="top-strip">
-    <div><i class="fa-solid fa-location-dot" style="color: var(--primary-accent); margin-right: 6px;"></i> House No. 5-8-300, Road No. 08, Sagar Housing Complex, B.N Reddy Nagar, Hyderabad-500070, Telangana</div>
+    <div class="top-strip-left">
+      <i class="fa-solid fa-location-dot"></i>
+      <span>House No. 5-8-300, Road No. 08, Sagar Housing Complex, B.N Reddy Nagar, Hyderabad-500070, Telangana</span>
+    </div>
     <div class="strip-items">
-      <span><i class="fa-solid fa-phone" style="color: var(--primary-accent); margin-right: 6px;"></i> Prior Appointment Mandatory: <a href="tel:+919441821998">+91 94418 21998</a></span>
-      <span><i class="fa-regular fa-clock" style="color: var(--primary-accent); margin-right: 6px;"></i> Mon - Sat: 9:30 AM - 6:30 PM</span>
+      <a href="tel:+919441821998" class="strip-phone-link">
+        <i class="fa-solid fa-phone"></i>
+        <span>Prior Appointment Mandatory: <strong>+91 94418 21998</strong></span>
+      </a>
+      <span class="strip-hours">
+        <i class="fa-regular fa-clock"></i>
+        <span>Mon - Sat: 9:30 AM - 6:30 PM</span>
+      </span>
     </div>
   </div>
 
@@ -3115,9 +3223,10 @@
         </li>
 
         <!-- Services with PCC and FINRA only -->
-        <li class="nav-item">
-          <a href="#services" class="nav-link">
-            Services <i class="fa-solid fa-chevron-down" style="font-size: 11px;"></i>
+        <li class="nav-item has-dropdown">
+          <a href="javascript:void(0)" class="nav-link dropdown-toggle" id="servicesToggle">
+            <span>Services</span>
+            <i class="fa-solid fa-chevron-down dropdown-chevron" style="font-size: 11px;"></i>
           </a>
           <ul class="dropdown">
             <li>
@@ -3145,7 +3254,7 @@
           <a href="#contact" class="nav-link">Contact</a>
         </li>
         <li class="mobile-only-cta-item" style="padding-top: 14px; list-style: none;">
-          <button class="btn-primary" onclick="openEnquiryModal(); toggleMobileMenu();" style="width: 100%; justify-content: center; padding: 12px; font-size: 15px;">
+          <button class="btn-primary mobile-cta-btn" onclick="openEnquiryModal(); toggleMobileMenu();">
             <span>Book Appointment</span>
             <i class="fa-solid fa-arrow-right"></i>
           </button>
@@ -4998,24 +5107,66 @@
       if (navLinks) {
         navLinks.classList.toggle('mobile-open');
         const isOpen = navLinks.classList.contains('mobile-open');
+        if (!isOpen) {
+          // Reset sub dropdowns when menu closes
+          document.querySelectorAll('.nav-item.dropdown-open').forEach(el => el.classList.remove('dropdown-open'));
+        }
         if (toggleBtn) {
           toggleBtn.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
         }
       }
     };
 
-    // Auto-close mobile menu upon clicking any nav link
+    // Sub-dropdown accordion toggle & auto-close logic
     document.addEventListener('DOMContentLoaded', function() {
+      // Toggle Services dropdown on mobile tap
+      const servicesToggle = document.getElementById('servicesToggle');
+      if (servicesToggle) {
+        servicesToggle.addEventListener('click', function(e) {
+          if (window.innerWidth <= 992) {
+            e.preventDefault();
+            e.stopPropagation();
+            const parent = this.closest('.nav-item');
+            if (parent) {
+              parent.classList.toggle('dropdown-open');
+            }
+          }
+        });
+      }
+
+      // Auto-close mobile menu upon clicking links (except dropdown toggle)
       document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', function() {
+          if (this.id === 'servicesToggle' && window.innerWidth <= 992) {
+            return;
+          }
           const navLinks = document.querySelector('.nav-links');
           const toggleBtn = document.getElementById('mobileMenuToggle');
           if (navLinks && navLinks.classList.contains('mobile-open')) {
             navLinks.classList.remove('mobile-open');
+            document.querySelectorAll('.nav-item.dropdown-open').forEach(el => el.classList.remove('dropdown-open'));
             if (toggleBtn) toggleBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
           }
         });
       });
+
+      // Touch swipe support for hero slider
+      const heroSection = document.querySelector('.hero-slider-section');
+      if (heroSection) {
+        let touchStartX = 0;
+        let touchEndX = 0;
+        heroSection.addEventListener('touchstart', function(e) {
+          touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        heroSection.addEventListener('touchend', function(e) {
+          touchEndX = e.changedTouches[0].screenX;
+          if (touchStartX - touchEndX > 50) {
+            if (typeof nextSlide === 'function') nextSlide();
+          } else if (touchEndX - touchStartX > 50) {
+            if (typeof prevSlide === 'function') prevSlide();
+          }
+        }, { passive: true });
+      }
     });
 
 
