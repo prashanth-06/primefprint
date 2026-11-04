@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Key Forensics | Certified FBI, PCC & Forensic Fingerprint Specialists</title>
+  <meta name="description" content="Premier certified forensic fingerprinting, FBI FD-258 cards, Canadian RCMP, FINRA licensing, and Police Clearance Certificates (PCC) with 40+ years of trusted excellence.">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Cormorant Garamond for luxury legal touch -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- jsVectorMap CSS for Interactive Map -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap/dist/css/jsvectormap.min.css" />
+
+  <style>
+    :root {
+      --bg-dark: #070d18;
+      --bg-darker: #040810;
+      --card-dark: #0d1627;
+      --card-border: rgba(255, 255, 255, 0.08);
+      --accent-cyan: #00e5ff;
+      --accent-blue: #2563eb;
+      --accent-gold: #f59e0b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --gradient-glow: radial-gradient(circle at 50% 0%, rgba(0, 229, 255, 0.15), transparent 70%);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    /* Selection Bar & Switcher */
+    .version-switch-bar {
+      background: #020617;
+      border-bottom: 1px solid rgba(0, 229, 255, 0.2);
+      padding: 10px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: #94a3b8;
+    }
+    .version-switch-bar a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0, 229, 255, 0.1);
+      padding: 4px 12px;
+      border-radius: 9999px;
+      border: 1px solid rgba(0, 229, 255, 0.3);
+      transition: all 0.2s;
+    }
+    .version-switch-bar a:hover {
+      background: var(--accent-cyan);
+      color: var(--bg-dark);
+    }
+
+    /* Top Strip */
+    .top-strip {
+      border-bottom: 1px solid var(--card-border);
+      padding: 10px 5%;
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text-muted);
+      background: rgba(7, 13, 24, 0.9);
+    }
+    .top-strip a { color: var(--text-main); text-decoration: none; font-weight: 600; }
+    .top-strip a:hover { color: var(--accent-cyan); }
+    .strip-items { display: flex; gap: 24px; align-items: center; }
+
+    /* Sticky Header - EXACT 3 ELEMENTS */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(7, 13, 24, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      z-index: 1000;
+      padding: 0 5%;
+    }
+    .nav-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Logo Area */
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, rgba(0, 229, 255, 0.2), rgba(37, 99, 235, 0.3));
+      border: 1px solid var(--accent-cyan);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-cyan);
+      font-size: 20px;
+      box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
+    }
+    .logo-text h3 {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      text-transform: uppercase;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    .logo-text span {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--accent-cyan);
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    /* Navigation Menu (3 Items) */
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 36px;
+      align-items: center;
+    }
+    .nav-item { position: relative; }
+    .nav-link {
+      text-decoration: none;
+      color: var(--text-main);
+      font-size: 15px;
+      font-weight: 600;
+      padding: 12px 0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: var(--accent-cyan); }
+    .nav-link i.fa-chevron-down { font-size: 11px; transition: transform 0.2s; }
+
+    /* Dropdown */
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: -20px;
+      background: #0b1424;
+      border: 1px solid var(--card-border);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6), 0 0 20px rgba(0, 229, 255, 0.1);
+      border-radius: 12px;
+      width: 320px;
+      padding: 12px;
+      list-style: none;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .nav-item:hover .dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .nav-item:hover .nav-link i.fa-chevron-down { transform: rotate(180deg); }
+    .dropdown li a {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: var(--text-main);
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.15s;
+    }
+    .dropdown li a:hover {
+      background: rgba(0, 229, 255, 0.08);
+      color: var(--accent-cyan);
+    }
+    .dropdown-icon {
+      font-size: 16px;
+      color: var(--accent-cyan);
+      margin-top: 3px;
+    }
+    .dropdown-desc {
+      display: block;
+      font-size: 11.5px;
+      font-weight: 400;
+      color: var(--text-dim);
+      margin-top: 2px;
+    }
+
+    .btn-header {
+      background: linear-gradient(135deg, #00e5ff 0%, #0284c7 100%);
+      color: #040810;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 14px;
+      text-decoration: none;
+      box-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
+      transition: all 0.2s;
+    }
+    .btn-header:hover {
+      box-shadow: 0 0 30px rgba(0, 229, 255, 0.6);
+      transform: translateY(-2px);
+    }
+
+    /* HERO: Modern Editorial Storytelling (Static Version) */
+    .hero-static {
+      position: relative;
+      padding: 110px 5% 120px;
+      background: radial-gradient(circle at 80% 20%, rgba(37, 99, 235, 0.15), transparent 50%),
+                  radial-gradient(circle at 20% 70%, rgba(0, 229, 255, 0.1), transparent 50%),
+                  var(--bg-dark);
+      border-bottom: 1px solid var(--card-border);
+      overflow: hidden;
+    }
+    .hero-static::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
+    }
+    .hero-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(0, 229, 255, 0.08);
+      border: 1px solid rgba(0, 229, 255, 0.3);
+      padding: 6px 16px;
+      border-radius: 9999px;
+      font-size: 13px;
+      color: var(--accent-cyan);
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 24px;
+    }
+    .pulse-dot {
+      width: 8px; height: 8px;
+      background: var(--accent-cyan);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--accent-cyan);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(0.9); opacity: 0.8; }
+      50% { transform: scale(1.4); opacity: 1; }
+      100% { transform: scale(0.9); opacity: 0.8; }
+    }
+
+    .hero-heading {
+      font-size: 52px;
+      line-height: 1.12;
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      margin-bottom: 24px;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    .hero-heading span.gradient-text {
+      background: linear-gradient(135deg, #ffffff 30%, var(--accent-cyan) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtext {
+      font-size: 17px;
+      color: #cbd5e1;
+      line-height: 1.7;
+      margin-bottom: 36px;
+      max-width: 580px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      margin-bottom: 48px;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent-cyan) 0%, #0284c7 100%);
+      color: #040810;
+      padding: 16px 32px;
+      border-radius: 10px;
+      font-weight: 800;
+      font-size: 15px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 0 25px rgba(0, 229, 255, 0.35);
+      transition: all 0.25s;
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 35px rgba(0, 229, 255, 0.6);
+    }
+    .btn-glass {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      padding: 16px 28px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 15px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s;
+    }
+    .btn-glass:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    /* Trust Stats Strip */
+    .hero-stat-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      padding-top: 32px;
+      border-top: 1px solid var(--card-border);
+    }
+    .stat-number {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--accent-cyan);
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    .stat-label { font-size: 13px; color: var(--text-muted); font-weight: 500; }
+
+    /* Hero Lead Capture Card */
+    .hero-lead-card {
+      background: rgba(13, 22, 39, 0.85);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(0, 229, 255, 0.25);
+      border-radius: 20px;
+      padding: 38px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 229, 255, 0.1);
+      position: relative;
+    }
+    .hero-lead-card::after {
+      content: "";
+      position: absolute;
+      top: -2px; left: 20%; right: 20%; height: 3px;
+      background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
+    }
+    .card-title {
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 6px;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    .card-subtitle {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+    .form-field { margin-bottom: 16px; }
+    .form-field label {
+      display: block;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .form-field input, .form-field select {
+      width: 100%;
+      background: #060b14;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 13px 16px;
+      border-radius: 8px;
+      color: var(--text-main);
+      font-size: 14.5px;
+      font-family: inherit;
+      outline: none;
+      transition: all 0.2s;
+    }
+    .form-field input:focus, .form-field select:focus {
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 15px rgba(0, 229, 255, 0.25);
+    }
+    .btn-submit-lead {
+      width: 100%;
+      background: linear-gradient(135deg, var(--accent-cyan), #0284c7);
+      color: #040810;
+      border: none;
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 800;
+      cursor: pointer;
+      margin-top: 8px;
+      box-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
+      transition: all 0.2s;
+    }
+    .btn-submit-lead:hover {
+      box-shadow: 0 0 30px rgba(0, 229, 255, 0.5);
+      transform: translateY(-2px);
+    }
+
+    /* Section Boilerplate */
+    section { padding: 110px 5%; position: relative; }
+    .section-head {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 60px;
+    }
+    .tag-badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent-cyan);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: 38px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    .section-desc {
+      font-size: 16px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* Storytelling About Section */
+    .about-story {
+      background: #050a14;
+      border-top: 1px solid var(--card-border);
+      border-bottom: 1px solid var(--card-border);
+    }
+    .about-grid {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .about-visual {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--card-border);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    }
+    .about-visual img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      display: block;
+    }
+    .about-experience-badge {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      background: rgba(7, 13, 24, 0.95);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--accent-cyan);
+      padding: 18px 24px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+    }
+    .exp-years { font-size: 36px; font-weight: 800; color: var(--accent-cyan); line-height: 1; font-family: 'Space Grotesk', sans-serif;}
+    .exp-label { font-size: 12px; font-weight: 700; color: #fff; text-transform: uppercase; margin-top: 4px; letter-spacing: 0.5px;}
+
+    .story-card {
+      margin-bottom: 20px;
+      padding-left: 20px;
+      border-left: 2px solid rgba(0, 229, 255, 0.3);
+    }
+    .story-card h4 { font-size: 18px; margin-bottom: 6px; color: var(--accent-cyan); }
+    .story-card p { font-size: 14.5px; color: var(--text-muted); }
+
+    /* Services Grid */
+    .services-grid {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 28px;
+    }
+    .service-box {
+      background: var(--card-dark);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 34px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    .service-box:hover {
+      transform: translateY(-8px);
+      border-color: rgba(0, 229, 255, 0.4);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5), 0 0 25px rgba(0, 229, 255, 0.15);
+    }
+    .service-box-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(0, 229, 255, 0.1);
+      border: 1px solid rgba(0, 229, 255, 0.25);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: var(--accent-cyan);
+      margin-bottom: 22px;
+    }
+    .service-box h3 {
+      font-size: 21px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+    .service-box p {
+      font-size: 14.5px;
+      color: var(--text-muted);
+      margin-bottom: 22px;
+      line-height: 1.6;
+    }
+    .service-box .service-cta {
+      color: var(--accent-cyan);
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Why Choose Us */
+    .why-choose-us { background: #060b14; }
+    .features-grid {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .feature-tile {
+      background: var(--card-dark);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 28px;
+      text-align: center;
+    }
+    .feature-icon-circle {
+      width: 60px; height: 60px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      background: rgba(37, 99, 235, 0.15);
+      border: 1px solid rgba(37, 99, 235, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      color: #60a5fa;
+    }
+    .feature-tile h4 { font-size: 17px; margin-bottom: 10px; color: #fff; }
+    .feature-tile p { font-size: 13.5px; color: var(--text-muted); }
+
+    /* Interactive World Map Section */
+    .global-presence {
+      background: #030712;
+      border-top: 1px solid var(--card-border);
+      border-bottom: 1px solid var(--card-border);
+    }
+    .map-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: #080f1e;
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+    }
+    #world-map {
+      width: 100%;
+      height: 480px;
+    }
+    .highlighted-countries-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .country-tag {
+      background: rgba(0, 229, 255, 0.08);
+      border: 1px solid rgba(0, 229, 255, 0.25);
+      padding: 8px 16px;
+      border-radius: 9999px;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #e2e8f0;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .country-tag span { color: var(--accent-cyan); }
+
+    /* Testimonials */
+    .testimonials-grid {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .testi-card {
+      background: var(--card-dark);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 32px;
+      position: relative;
+    }
+    .testi-stars { color: #f59e0b; margin-bottom: 16px; font-size: 14px; }
+    .testi-text { font-size: 14.5px; color: #cbd5e1; line-height: 1.7; margin-bottom: 24px; font-style: italic; }
+    .testi-author { display: flex; align-items: center; gap: 14px; }
+    .author-avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-cyan), #2563eb);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: #040810;
+    }
+    .author-info h5 { font-size: 15px; color: #fff; }
+    .author-info span { font-size: 12px; color: var(--text-muted); }
+
+    /* FAQs */
+    .faq-wrapper {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+    .faq-block {
+      background: var(--card-dark);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      margin-bottom: 14px;
+      overflow: hidden;
+    }
+    .faq-trigger {
+      width: 100%;
+      text-align: left;
+      padding: 20px 24px;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: inherit;
+    }
+    .faq-trigger:hover { color: var(--accent-cyan); }
+    .faq-body {
+      padding: 0 24px 20px;
+      color: var(--text-muted);
+      font-size: 14.5px;
+      line-height: 1.7;
+    }
+
+    /* Contact Section with Interactive Map */
+    .contact-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: flex-start;
+    }
+    .contact-info-panel {
+      background: var(--card-dark);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 40px;
+    }
+    .contact-item {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 26px;
+    }
+    .contact-icon {
+      width: 44px; height: 44px;
+      background: rgba(0, 229, 255, 0.1);
+      border: 1px solid rgba(0, 229, 255, 0.3);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-cyan);
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .contact-item h5 { font-size: 13px; color: var(--text-muted); text-transform: uppercase; margin-bottom: 4px; }
+    .contact-item p, .contact-item a { font-size: 15.5px; color: #fff; text-decoration: none; font-weight: 600; }
+    .contact-item a:hover { color: var(--accent-cyan); }
+
+    .map-frame {
+      width: 100%;
+      height: 240px;
+      border-radius: 12px;
+      border: 1px solid var(--card-border);
+      margin-top: 20px;
+      overflow: hidden;
+    }
+    .map-frame iframe { width: 100%; height: 100%; border: none; }
+
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      left: 28px;
+      right: auto;
+      width: 56px;
+      height: 56px;
+      background: #25d366;
+      color: #fff;
+      border-radius: 50% !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      text-decoration: none;
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.45);
+      z-index: 9999;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .whatsapp-float:hover { transform: scale(1.05); }
+
+    /* Footer */
+    footer {
+      background: #02050b;
+      border-top: 1px solid var(--card-border);
+      padding: 80px 5% 30px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    .footer-content {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 50px;
+      border-bottom: 1px solid var(--card-border);
+    }
+    .footer-col h4 {
+      font-size: 16px;
+      color: #fff;
+      margin-bottom: 18px;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a { color: var(--text-muted); text-decoration: none; transition: color 0.15s; }
+    .footer-col ul li a:hover { color: var(--accent-cyan); }
+    .footer-bottom {
+      max-width: 1300px;
+      margin: 30px auto 0;
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      color: var(--text-dim);
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .hero-container { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; }
+      .features-grid { grid-template-columns: repeat(2, 1fr); }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .contact-container { grid-template-columns: 1fr; }
+      .footer-content { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .hero-heading { font-size: 38px; }
+      .features-grid { grid-template-columns: 1fr; }
+      .top-strip { display: none; }
+      .footer-content { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Switcher Strip to toggle between Static & Slider Version -->
+  <div class="version-switch-bar">
+    <div>⚡ <strong>Landing Page Version A</strong> (Static Executive Hero Section)</div>
+    <div>
+      <a href="landing_slider.html">View Version B (Hero Sliders) &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Top Emergency / Schedule Notification -->
+  <div class="top-strip">
+    <div>📍 Official Forensic Laboratory &bull; Hyderabad, India</div>
+    <div class="strip-items">
+      <span><i class="fa-solid fa-phone" style="color: var(--accent-cyan);"></i> Prior Appointment Mandatory: <a href="tel:+918125255814">+91 81252 55814</a></span>
+      <span><i class="fa-regular fa-clock" style="color: var(--accent-cyan);"></i> Mon - Sat: 9:30 AM - 6:30 PM</span>
+    </div>
+  </div>
+
+  <!-- Header: EXACT 3 ELEMENTS (Home, Services [with PCC, FINRA dropdown], Contact) -->
+  <header>
+    <div class="nav-container">
+      <a href="#home" class="brand-logo">
+        <div class="logo-icon">
+          <i class="fa-solid fa-fingerprint"></i>
+        </div>
+        <div class="logo-text">
+          <h3>Key Forensics</h3>
+          <span>Certified Experts</span>
+        </div>
+      </a>
+
+      <!-- 3 Navigation Links -->
+      <ul class="nav-links">
+        <!-- 1. Home -->
+        <li class="nav-item">
+          <a href="#home" class="nav-link">Home</a>
+        </li>
+
+        <!-- 2. Services with Sub-dropdown -->
+        <li class="nav-item">
+          <a href="#services" class="nav-link">
+            Services <i class="fa-solid fa-chevron-down"></i>
+          </a>
+          <ul class="dropdown">
+            <li>
+              <a href="#service-pcc">
+                <i class="fa-solid fa-passport dropdown-icon"></i>
+                <div>
+                  Police Clearance (PCC)
+                  <span class="dropdown-desc">Global Visa &amp; Immigration Clearance</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#service-finra">
+                <i class="fa-solid fa-briefcase dropdown-icon"></i>
+                <div>
+                  FINRA Fingerprinting
+                  <span class="dropdown-desc">US Corporate &amp; Broker-Dealer Licensing</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#service-fbi">
+                <i class="fa-solid fa-shield-halved dropdown-icon"></i>
+                <div>
+                  FBI FD-258 Cards
+                  <span class="dropdown-desc">Official US CJIS Compliant Fingerprinting</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#service-rcmp">
+                <i class="fa-brands fa-canadian-maple-leaf dropdown-icon"></i>
+                <div>
+                  RCMP Canada Clearance
+                  <span class="dropdown-desc">Certified Rolled Prints for PR &amp; Citizenship</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#service-nclex">
+                <i class="fa-solid fa-user-doctor dropdown-icon"></i>
+                <div>
+                  NCLEX &amp; Medical Boards
+                  <span class="dropdown-desc">State Nursing &amp; Healthcare Licensing</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#service-forensic">
+                <i class="fa-solid fa-magnifying-glass dropdown-icon"></i>
+                <div>
+                  Document Examination
+                  <span class="dropdown-desc">Handwriting &amp; Signature Forensic Analysis</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- 3. Contact -->
+        <li class="nav-item">
+          <a href="#contact" class="nav-link">Contact</a>
+        </li>
+      </ul>
+
+      <a href="#book-appointment" class="btn-header">Book Appointment</a>
+    </div>
+  </header>
+
+  <!-- Hero Section: Static Premium Banner -->
+  <section class="hero-static" id="home">
+    <div class="hero-container">
+      <div>
+        <div class="hero-badge-pill">
+          <span class="pulse-dot"></span>
+          Certified Forensic Fingerprint Laboratory &bull; 40+ Years of Service
+        </div>
+        <h1 class="hero-heading">
+          Forensic Precision.<br>
+          <span class="gradient-text">Consular Acceptance Worldwide.</span>
+        </h1>
+        <p class="hero-subtext">
+          Premier provider of certified FBI FD-258 fingerprint cards, Canadian RCMP clearance, FINRA corporate compliance, and Police Clearance Certificates (PCC) trusted by international embassies.
+        </p>
+        
+        <div class="hero-actions">
+          <a href="#book-appointment" class="btn-primary">
+            <span>Book In-Person Session</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#services" class="btn-glass">
+            <i class="fa-solid fa-list-check"></i>
+            <span>Explore Services</span>
+          </a>
+        </div>
+
+        <div class="hero-stat-row">
+          <div>
+            <div class="stat-number">40+</div>
+            <div class="stat-label">Years Forensic Excellence</div>
+          </div>
+          <div>
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Embassy Acceptance Rate</div>
+          </div>
+          <div>
+            <div class="stat-number">25+</div>
+            <div class="stat-label">Countries Supported</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Lead Capture Card -->
+      <div class="hero-lead-card" id="book-appointment">
+        <h3 class="card-title">Schedule Verification</h3>
+        <p class="card-subtitle">Prior appointment mandatory to guarantee zero wait time.</p>
+
+        <form onsubmit="alert('Inquiry received! Connected to laboratory appointment desk.'); return false;">
+          <div class="form-field">
+            <label>Full Name</label>
+            <input type="text" placeholder="e.g. Rahul Sharma" required>
+          </div>
+          <div class="form-field">
+            <label>Mobile / WhatsApp Number</label>
+            <input type="tel" placeholder="+91 98765 43210" required>
+          </div>
+          <div class="form-field">
+            <label>Service Required</label>
+            <select required>
+              <option value="">Select Verification Service...</option>
+              <option value="pcc">Police Clearance Certificate (PCC)</option>
+              <option value="finra">FINRA Corporate Licensing</option>
+              <option value="fbi">FBI FD-258 Card Fingerprinting</option>
+              <option value="rcmp">Canadian RCMP Verification</option>
+              <option value="nclex">NCLEX / Nursing Medical Board</option>
+              <option value="doc">Forensic Document Examination</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label>Destination Country</label>
+            <input type="text" placeholder="e.g. USA, Canada, Australia, UAE" required>
+          </div>
+          <button type="submit" class="btn-submit-lead">
+            Confirm Appointment Slot &rarr;
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section (Storytelling) -->
+  <section class="about-story" id="about">
+    <div class="about-grid">
+      <div class="about-visual">
+        <img src="images/slider_fingerprint.jpg" alt="Biometric Forensic Scanner">
+        <div class="about-experience-badge">
+          <div class="exp-years">40+</div>
+          <div class="exp-label">Years Experience</div>
+        </div>
+      </div>
+      <div>
+        <span class="tag-badge">Our Legacy &amp; Credibility</span>
+        <h2 class="section-title">Where Forensic Science Meets International Trust</h2>
+        <p class="section-desc" style="margin-bottom: 24px;">
+          Key Forensics was established by senior forensic experts with over four decades of distinguished service across government crime laboratories and the private sector. Today, we are India's benchmark destination for individuals, multinational executives, and corporate legal teams requiring impeccable background clearances.
+        </p>
+
+        <div class="story-card">
+          <h4>Government &amp; Embassy Standards</h4>
+          <p>Our technicians use original FBI FD-258 cards, specialized live-scan techniques, and archival smudge-free ink rolled prints that ensure zero rejection across global visa consulates.</p>
+        </div>
+
+        <div class="story-card">
+          <h4>Chain of Custody &amp; Absolute Discretion</h4>
+          <p>Every piece of biometric evidence and questioned documentation is handled under strict legal non-disclosure protocols, ensuring 100% confidentiality.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Services Section -->
+  <section id="services">
+    <div class="section-head">
+      <span class="tag-badge">Specialized Practice Areas</span>
+      <h2 class="section-title">Global Verification Services</h2>
+      <p class="section-desc">Certified forensic fingerprinting, documentation, and identity verification adhering to sovereign consular criteria.</p>
+    </div>
+
+    <div class="services-grid">
+      <!-- 1. PCC -->
+      <div class="service-box" id="service-pcc">
+        <div class="service-box-icon"><i class="fa-solid fa-passport"></i></div>
+        <h3>Police Clearance Certificate (PCC)</h3>
+        <p>Expert rolled fingerprinting on official designated cards for immigration visas, permanent residency, and consular police clearances across USA, Canada, UK, Australia, and Gulf nations.</p>
+        <a href="#book-appointment" class="service-cta">Book PCC Session &rarr;</a>
+      </div>
+
+      <!-- 2. FINRA -->
+      <div class="service-box" id="service-finra">
+        <div class="service-box-icon"><i class="fa-solid fa-briefcase"></i></div>
+        <h3>FINRA Fingerprinting</h3>
+        <p>Regulatory compliance fingerprinting for financial securities professionals, broker-dealers, investment advisors, and IT architects operating on US financial platforms.</p>
+        <a href="#book-appointment" class="service-cta">Book FINRA Compliance &rarr;</a>
+      </div>
+
+      <!-- 3. FBI FD-258 -->
+      <div class="service-box" id="service-fbi">
+        <div class="service-box-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>FBI FD-258 Fingerprint Cards</h3>
+        <p>In-stock authentic FBI FD-258 cards. Precision ink-and-roll ridge clarity meeting strict FBI CJIS biometric standards for US Green Cards, citizenship, and adoptions.</p>
+        <a href="#book-appointment" class="service-cta">Get FD-258 Taken &rarr;</a>
+      </div>
+
+      <!-- 4. RCMP Canada -->
+      <div class="service-box" id="service-rcmp">
+        <div class="service-box-icon"><i class="fa-brands fa-canadian-maple-leaf"></i></div>
+        <h3>Canadian RCMP Clearance</h3>
+        <p>Direct rolled ink submissions on RCMP C-216C forms for Canadian immigration, PR visa processing, and provincial professional certifications.</p>
+        <a href="#book-appointment" class="service-cta">Get RCMP Fingerprints &rarr;</a>
+      </div>
+
+      <!-- 5. NCLEX & Medical -->
+      <div class="service-box" id="service-nclex">
+        <div class="service-box-icon"><i class="fa-solid fa-user-doctor"></i></div>
+        <h3>NCLEX &amp; Medical Boards</h3>
+        <p>Mandatory fingerprint cards for Indian nurses, doctors, and allied healthcare professionals seeking state licensure in USA and Canada.</p>
+        <a href="#book-appointment" class="service-cta">Medical Board Verification &rarr;</a>
+      </div>
+
+      <!-- 6. Forensic Document -->
+      <div class="service-box" id="service-forensic">
+        <div class="service-box-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <h3>Forensic Document &amp; Handwriting</h3>
+        <p>Disputed signature verification, counterfeit document analysis, altered wills, and Section 65B certified expert reports admissible in judicial courts.</p>
+        <a href="#book-appointment" class="service-cta">Consult Forensic Scientist &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="why-choose-us" id="why-us">
+    <div class="section-head">
+      <span class="tag-badge">The Key Forensics Advantage</span>
+      <h2 class="section-title">Why Global Applicants Choose Us</h2>
+      <p class="section-desc">Experience, certified precision, and dedicated consular compliance ensure your application succeeds the first time.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-tile">
+        <div class="feature-icon-circle"><i class="fa-solid fa-award"></i></div>
+        <h4>40+ Years Expertise</h4>
+        <p>Supervised by former government and senior forensic crime laboratory specialists.</p>
+      </div>
+      <div class="feature-tile">
+        <div class="feature-icon-circle"><i class="fa-solid fa-check-double"></i></div>
+        <h4>Zero Rejection Guarantee</h4>
+        <p>Rigorous ridge pattern inspection ensures 100% acceptance by FBI and foreign embassies.</p>
+      </div>
+      <div class="feature-tile">
+        <div class="feature-icon-circle"><i class="fa-solid fa-box-archive"></i></div>
+        <h4>Original Official Forms</h4>
+        <p>Authentic FBI FD-258 cards, RCMP formats, and international cards supplied directly in lab.</p>
+      </div>
+      <div class="feature-tile">
+        <div class="feature-icon-circle"><i class="fa-solid fa-user-shield"></i></div>
+        <h4>100% Confidential</h4>
+        <p>All biometric information is protected under strict non-disclosure legal guidelines.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive World Map: Global Presence -->
+  <section class="global-presence" id="global-presence">
+    <div class="section-head">
+      <span class="tag-badge">Worldwide Clearances</span>
+      <h2 class="section-title">Our Global Presence &amp; Accreditations</h2>
+      <p class="section-desc">Interactive Map: Countries where our certified fingerprinting and forensic clearances are routinely accepted.</p>
+    </div>
+
+    <div class="map-wrapper">
+      <div id="world-map"></div>
+
+      <div class="highlighted-countries-pills">
+        <div class="country-tag"><span>🇺🇸</span> USA (FBI &amp; FINRA)</div>
+        <div class="country-tag"><span>🇨🇦</span> Canada (RCMP)</div>
+        <div class="country-tag"><span>🇦🇺</span> Australia (AFP / PCC)</div>
+        <div class="country-tag"><span>🇬🇧</span> United Kingdom (ACRO)</div>
+        <div class="country-tag"><span>🇦🇪</span> Dubai / UAE</div>
+        <div class="country-tag"><span>🇸🇬</span> Singapore (SPF)</div>
+        <div class="country-tag"><span>🇧🇭</span> Bahrain</div>
+        <div class="country-tag"><span>🇶🇦</span> Qatar</div>
+        <div class="country-tag"><span>🇭🇰</span> Hong Kong</div>
+        <div class="country-tag"><span>🇳🇿</span> New Zealand</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <div class="section-head">
+      <span class="tag-badge">Client Endorsements</span>
+      <h2 class="section-title">Trusted by Thousands Worldwide</h2>
+      <p class="section-desc">Read how our certified precision helped professionals secure visas, corporate licenses, and clearances without delay.</p>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"I needed FBI FD-258 fingerprinting for my US Green Card. Key Forensics provided original cards and rolled my prints flawlessly. The FBI approved them on the first attempt without any smudge warnings!"</p>
+        <div class="testi-author">
+          <div class="author-avatar">VS</div>
+          <div class="author-info">
+            <h5>Venkatesh S.</h5>
+            <span>Software Architect (US EB-1 Visa)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Our IT financial clients in New York required FINRA registration fingerprints on short notice. The Key Forensics team handled 15 corporate employees smoothly with complete documentation."</p>
+        <div class="testi-author">
+          <div class="author-avatar">PR</div>
+          <div class="author-info">
+            <h5>Pooja Reddy</h5>
+            <span>HR Director, FinTech Solutions</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Got my Singapore Police Clearance and Canadian RCMP verification done here. Very knowledgeable forensic experts who know the exact requirements for every country."</p>
+        <div class="testi-author">
+          <div class="author-avatar">MN</div>
+          <div class="author-info">
+            <h5>Mohammed Noman</h5>
+            <span>Healthcare Specialist (Canada PR)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Frequently Asked Questions -->
+  <section id="faq" style="background: #060b14;">
+    <div class="section-head">
+      <span class="tag-badge">Got Questions?</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-desc">Clear answers regarding required forms, turnaround time, and appointment protocols.</p>
+    </div>
+
+    <div class="faq-wrapper">
+      <div class="faq-block">
+        <button class="faq-trigger" onclick="toggleFaq(this)">
+          Is prior appointment necessary before visiting the lab?
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="faq-body">
+          Yes. To ensure zero waiting time and personalized attention by senior forensic examiners, all applicants must schedule an appointment prior to visiting.
+        </div>
+      </div>
+
+      <div class="faq-block">
+        <button class="faq-trigger" onclick="toggleFaq(this)">
+          Do I need to carry my own fingerprint forms (e.g. FBI FD-258 or RCMP)?
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="faq-body">
+          No. We maintain fresh, original stock of official FBI FD-258 cards, Canadian RCMP forms, Singapore PCC formats, and standard consular sheets in our laboratory.
+        </div>
+      </div>
+
+      <div class="faq-block">
+        <button class="faq-trigger" onclick="toggleFaq(this)">
+          What identification documents must I bring to the appointment?
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="faq-body">
+          Please carry your original valid Passport, Government photo ID (Aadhaar Card, Voter ID, or Driving License), two recent passport-size photographs, and any official letter received from the embassy or employer.
+        </div>
+      </div>
+
+      <div class="faq-block">
+        <button class="faq-trigger" onclick="toggleFaq(this)">
+          How long does an ink-and-roll fingerprinting appointment take?
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="faq-body">
+          A standard session takes approximately 20 to 30 minutes, which includes ID verification, test impressions, rolled card recording, and signing the examiner certificates.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us Section with Map & Form -->
+  <section id="contact">
+    <div class="section-head">
+      <span class="tag-badge">Get In Touch</span>
+      <h2 class="section-title">Schedule In-Person Consultation</h2>
+      <p class="section-desc">Visit our certified laboratory or speak directly with our senior forensic experts.</p>
+    </div>
+
+    <div class="contact-container">
+      <div class="contact-info-panel">
+        <h3 style="font-size: 22px; color: #fff; margin-bottom: 24px; font-family: 'Space Grotesk', sans-serif;">Laboratory Headquarters</h3>
+        
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div>
+            <h5>Address</h5>
+            <p>Key Forensics Laboratory, Hyderabad, Telangana, India</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+          <div>
+            <h5>Direct Appointments</h5>
+            <a href="tel:+918125255814">+91 81252 55814</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div>
+            <h5>Official Correspondence</h5>
+            <a href="mailto:info@keyforensics.in">info@keyforensics.in</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fa-regular fa-clock"></i></div>
+          <div>
+            <h5>Operating Hours</h5>
+            <p>Monday - Saturday: 9:30 AM &ndash; 6:30 PM (Prior Appointment Mandatory)</p>
+          </div>
+        </div>
+
+        <!-- Google Map Embed -->
+        <div class="map-frame">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121820.39572417743!2d78.38469854999999!3d17.4123487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+
+      <!-- Contact Message Form -->
+      <div class="hero-lead-card" style="padding: 40px;">
+        <h3 class="card-title">Send a Confidential Inquiry</h3>
+        <p class="card-subtitle">Have a specialized case or corporate batch requirement? Leave your details below.</p>
+
+        <form onsubmit="alert('Message sent successfully! Our experts will contact you within 2 hours.'); return false;">
+          <div class="form-field">
+            <label>Your Full Name</label>
+            <input type="text" placeholder="e.g. Ananya Sen" required>
+          </div>
+          <div class="form-field">
+            <label>Email Address</label>
+            <input type="email" placeholder="name@domain.com" required>
+          </div>
+          <div class="form-field">
+            <label>Phone / WhatsApp Number</label>
+            <input type="tel" placeholder="+91 98765 43210" required>
+          </div>
+          <div class="form-field">
+            <label>Case Type / Country</label>
+            <input type="text" placeholder="e.g. USA FBI Check or Canada PCC" required>
+          </div>
+          <div class="form-field">
+            <label>Brief Message</label>
+            <textarea rows="3" placeholder="Tell us about your requirements or preferred time..." style="width: 100%; background: #060b14; border: 1px solid rgba(255, 255, 255, 0.12); padding: 13px 16px; border-radius: 8px; color: var(--text-main); font-size: 14px; font-family: inherit; outline: none;"></textarea>
+          </div>
+          <button type="submit" class="btn-submit-lead">
+            Submit Consultation Request &rarr;
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating WhatsApp CTA -->
+  <a href="https://wa.me/918125255814?text=Hello%20Key%20Forensics,%20I%20would%20like%20to%20book%20a%20fingerprinting%20appointment." target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col">
+        <div class="brand-logo" style="margin-bottom: 16px;">
+          <div class="logo-icon"><i class="fa-solid fa-fingerprint"></i></div>
+          <div class="logo-text">
+            <h3>Key Forensics</h3>
+            <span>Certified Experts</span>
+          </div>
+        </div>
+        <p style="font-size: 14px; line-height: 1.7; max-width: 380px;">
+          Premier government-accredited forensic laboratory specializing in international police clearances, FINRA corporate verifications, FBI FD-258 fingerprint cards, and court-admissible questioned document analysis.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Clearance Services</h4>
+        <ul>
+          <li><a href="#service-pcc">Police Clearance (PCC)</a></li>
+          <li><a href="#service-finra">FINRA Fingerprinting</a></li>
+          <li><a href="#service-fbi">FBI FD-258 Cards</a></li>
+          <li><a href="#service-rcmp">Canada RCMP Verification</a></li>
+          <li><a href="#service-nclex">NCLEX &amp; Medical Boards</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Destinations</h4>
+        <ul>
+          <li><a href="#global-presence">United States (USA)</a></li>
+          <li><a href="#global-presence">Canada</a></li>
+          <li><a href="#global-presence">Australia &amp; NZ</a></li>
+          <li><a href="#global-presence">United Kingdom (UK)</a></li>
+          <li><a href="#global-presence">UAE, Singapore, Qatar</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Headquarters</h4>
+        <p style="margin-bottom: 8px;">Hyderabad, Telangana, India</p>
+        <p style="margin-bottom: 8px;">Phone: +91 81252 55814</p>
+        <p style="margin-bottom: 8px;">Email: info@keyforensics.in</p>
+        <p>Prior Appointment Mandatory</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2026 Key Forensics India. All rights reserved.</div>
+      <div>Designed for Supreme Accuracy &bull; Official Consular Submission Standards</div>
+    </div>
+  </footer>
+
+  <!-- jsVectorMap Script & World Map Implementation -->
+  <script src="https://cdn.jsdelivr.net/npm/jsvectormap"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jsvectormap/dist/maps/world.js"></script>
+
+  <script>
+    // Initialize Interactive World Map Highlighting Provided Countries
+    document.addEventListener("DOMContentLoaded", function () {
+      const map = new jsVectorMap({
+        selector: '#world-map',
+        map: 'world',
+        backgroundColor: 'transparent',
+        draggable: true,
+        zoomButtons: true,
+        zoomOnScroll: false,
+        regionStyle: {
+          initial: {
+            fill: '#152238',
+            stroke: '#080f1e',
+            strokeWidth: 1,
+            fillOpacity: 1
+          },
+          hover: {
+            fill: '#00e5ff',
+            fillOpacity: 0.8
+          },
+          selected: {
+            fill: '#00e5ff'
+          }
+        },
+        selectedRegions: ['US', 'CA', 'AU', 'GB', 'AE', 'SG', 'BH', 'QA', 'NZ', 'MY', 'KW'],
+        onRegionTooltipShow: function(event, tooltip, code) {
+          const names = {
+            'US': 'USA (FBI & FINRA Certified)',
+            'CA': 'Canada (RCMP Clearance)',
+            'AU': 'Australia (AFP / PCC)',
+            'GB': 'United Kingdom (ACRO / Visa)',
+            'AE': 'Dubai / UAE (Police Clearance)',
+            'SG': 'Singapore (SPF Clearance)',
+            'BH': 'Bahrain (PCC)',
+            'QA': 'Qatar (PCC)',
+            'NZ': 'New Zealand (Immigration)',
+            'KW': 'Kuwait (PCC)',
+            'MY': 'Malaysia (PCC)'
+          };
+          if (names[code]) {
+            tooltip.text(names[code]);
+          }
+        }
+      });
+    });
+
+    // FAQ Toggle
+    function toggleFaq(btn) {
+      const body = btn.nextElementSibling;
+      const icon = btn.querySelector('i');
+      if (body.style.display === 'none' || body.style.display === '') {
+        body.style.display = 'block';
+        icon.classList.remove('fa-plus');
+        icon.classList.add('fa-minus');
+      } else {
+        body.style.display = 'none';
+        icon.classList.remove('fa-minus');
+        icon.classList.add('fa-plus');
+      }
+    }
+  </script>
+
+</body>
+</html>

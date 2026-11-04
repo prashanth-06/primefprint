@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Audit Report - https://mecwinindia.com/</title>
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --border: #e2e8f0;
+      --text: #1e293b;
+      --muted: #64748b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      margin: 0;
+      padding: 30px 20px;
+      background-color: #f8fafc;
+      color: var(--text);
+    }
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    }
+    .header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 15px;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header h1 {
+      margin: 0 0 5px 0;
+      font-size: 24px;
+      color: var(--primary);
+    }
+    .website-link {
+      font-size: 14px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .image-block {
+      margin-bottom: 40px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #ffffff;
+      page-break-inside: avoid;
+    }
+    .image-title {
+      background: #f1f5f9;
+      padding: 12px 18px;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--primary);
+      border-bottom: 1px solid var(--border);
+    }
+    .image-wrapper {
+      padding: 15px;
+      text-align: center;
+      background: #fafbfc;
+    }
+    .image-wrapper img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      display: block;
+      margin: 0 auto;
+    }
+
+    .btn-print {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    .btn-print:hover { background: #172554; }
+
+    @media print {
+      body { background: #fff; padding: 0; }
+      .container { box-shadow: none; padding: 0; max-width: 100%; }
+      .no-print { display: none; }
+      .image-block { page-break-inside: avoid; margin-bottom: 30px; }
+      .page-break { page-break-before: always; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  
+  <div class="no-print" style="display: flex; justify-content: flex-end; margin-bottom: 15px;">
+    <button class="btn-print" onclick="window.print()">Print / Save as PDF</button>
+  </div>
+
+  <div class="header">
+    <div>
+      <h1>Website Audit Report</h1>
+      <div class="website-link">Website: https://mecwinindia.com/</div>
+    </div>
+  </div>
+
+  <!-- Image 1: Pingdom -->
+  <div class="image-block">
+    <div class="image-title">1. Website Speed &amp; Page Size Test (Pingdom Tools)</div>
+    <div class="image-wrapper">
+      <img src="report_assets/pingdom_test.png" alt="Pingdom Speed Test Results">
+    </div>
+  </div>
+
+  <!-- Image 2: Google PageSpeed Mobile -->
+  <div class="image-block page-break">
+    <div class="image-title">2. Google PageSpeed Insights &mdash; Mobile Performance Score</div>
+    <div class="image-wrapper">
+      <img src="report_assets/pagespeed_mobile.png" alt="Google PageSpeed Mobile Score">
+    </div>
+  </div>
+
+  <!-- Image 3: Google PageSpeed Desktop -->
+  <div class="image-block page-break">
+    <div class="image-title">3. Google PageSpeed Insights &mdash; Desktop Performance Score</div>
+    <div class="image-wrapper">
+      <img src="report_assets/pagespeed_desktop.png" alt="Google PageSpeed Desktop Score">
+    </div>
+  </div>
+
+  <!-- Image 4: High-Res W3C HTML Validation -->
+  <div class="image-block page-break">
+    <div class="image-title">4. W3C HTML Code Validation &amp; Error Report (Nu HTML Checker)</div>
+    <div class="image-wrapper">
+      <img src="report_assets/w3c_validator_full.png" alt="W3C HTML Validator Results for mecwinindia.com">
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

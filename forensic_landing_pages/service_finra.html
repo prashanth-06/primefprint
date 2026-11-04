@@ -1,0 +1,2596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FINRA Fingerprinting Services | US Corporate Broker-Dealer Compliance | PrimeFPrint</title>
+  <meta name="description" content="Mandatory FINRA background check fingerprinting on official FBI standard cards for financial institutions, broker-dealers, investment advisors, and offshore IT professionals.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+
+    :root {
+      /* Neutral Brand Color System (Derived from PrimeFPrint Logo) */
+      --primary: #1a3150;           /* Logo Deep Navy */
+      --primary-accent: #1a3150;    /* Primary Brand Navy */
+      --primary-navy: #1a3150;
+      --primary-accent-dark: #12243b; /* Deeper Navy Hover */
+      --accent-soft: #6b9dd2;       /* Logo Soft Slate Blue (from 'FP' & swoosh) */
+      --accent-cyan: #6b9dd2;       /* Replaced electric cyan with muted logo slate blue */
+      --bg-white: #ffffff;          /* Pure White */
+      --bg-light: #f8fafc;          /* Off-white Pearl */
+      --bg-subtle: #f1f5f9;         /* Cool Neutral Slate */
+      --card-white: #ffffff;
+      --card-border: #e2e8f0;       /* Hairline Neutral Border */
+      --card-border-hover: #cbd5e1;
+      --text-main: #1a3150;         /* Deep Navy Headings */
+      --text-muted: #526071;        /* Muted Charcoal/Slate */
+      --text-light: #64748b;
+      --shadow-sm: 0 2px 8px rgba(26, 49, 80, 0.04);
+      --shadow-md: 0 10px 30px rgba(26, 49, 80, 0.06);
+      --shadow-lg: 0 20px 50px rgba(26, 49, 80, 0.08);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: var(--text-main);
+      background-color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+      top: 0px !important;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--primary);
+    }
+
+    /* TOP NOTIFICATION STRIP */
+    .top-strip {
+      background: #0a0f1d;
+      color: #94a3b8;
+      font-size: 13px;
+      padding: 10px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .top-strip a { color: #6B9DD2; text-decoration: none; font-weight: 600; }
+    .strip-items { display: flex; gap: 20px; }
+
+    /* HEADER & NAVIGATION */
+    header {
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid var(--card-border);
+      padding: 14px 5%;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      transition: all 0.3s ease;
+    }
+    .nav-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand-logo-img {
+      height: 96px;
+      width: auto;
+      max-width: 140px;
+      object-fit: contain;
+      display: block;
+      image-rendering: -webkit-optimize-contrast;
+      transition: transform 0.25s ease;
+    }
+    .brand-logo:hover .brand-logo-img {
+      transform: scale(1.03);
+    }
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .logo-icon {
+      width: 42px; height: 42px;
+      background: linear-gradient(135deg, #1A3150 0%, #13253d 100%);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 20px;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+    }
+    .logo-text h3 {
+      font-size: 19px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin: 0;
+      letter-spacing: -0.5px;
+      color: #0f172a;
+    }
+    .logo-text span {
+      font-size: 11px;
+      color: var(--primary-accent);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      display: block;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-link {
+      text-decoration: none;
+      color: #334155;
+      font-weight: 600;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+      position: relative;
+    }
+    .nav-link:hover, .nav-link.active { color: var(--primary-accent); }
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: -18px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--primary-accent);
+      border-radius: 3px 3px 0 0;
+    }
+
+    /* Dropdown */
+    .nav-item { position: relative; }
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: -20px;
+      background: #ffffff;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      width: 290px;
+      padding: 12px;
+      list-style: none;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 100;
+    }
+    .nav-item:hover .dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(6px);
+    }
+    .dropdown li { margin-bottom: 6px; }
+    .dropdown li:last-child { margin-bottom: 0; }
+    .dropdown a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 14px;
+      color: #334155;
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: all 0.2s;
+    }
+    .dropdown a:hover, .dropdown a.active {
+      background: #f0f9ff;
+      color: var(--primary-accent);
+    }
+    .dropdown-icon {
+      font-size: 16px;
+      color: var(--primary-accent);
+      width: 20px;
+      text-align: center;
+    }
+    .dropdown-desc {
+      display: block;
+      font-size: 11px;
+      color: var(--text-muted);
+      font-weight: 400;
+      margin-top: 2px;
+    }
+
+    .header-right-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .btn-header {
+      background: #1a3150;
+      color: #ffffff;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(26, 49, 80, 0.18);
+      border: 1px solid #14263e;
+      transition: all 0.2s;
+    }
+    .step-card:hover {
+      transform: translateY(-4px);
+      border-color: #1a3150;
+      box-shadow: 0 14px 30px rgba(2, 132, 199, 0.12);
+    }
+    .step-badge {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #1A3150;
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      box-shadow: 0 0 12px rgba(2, 132, 199, 0.5);
+    }
+    .step-card h4 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 8px;
+    }
+    .step-time {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      color: #1a3150;
+      background: #f0f9ff;
+      border: 1px solid #dbe6f1;
+      padding: 3px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+    .step-card p {
+      font-size: 13.5px;
+      color: #64748b;
+      line-height: 1.5;
+    }
+
+    /* ROTATING BORDER FORM ON SERVICE PAGES */
+    .booking-wrapper {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    .service-booking-card {
+      background: #cbd5e1;
+      border: none;
+      border-radius: 22px;
+      padding: 40px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15), 0 0 30px rgba(2, 132, 199, 0.15);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .service-booking-card::before {
+      content: "";
+      position: absolute;
+      top: -65%;
+      left: -65%;
+      width: 230%;
+      height: 230%;
+      background: conic-gradient(
+        transparent 0deg,
+        transparent 160deg,
+        #1A3150 200deg,
+        #6B9DD2 215deg,
+        #ffffff 225deg,
+        #6B9DD2 235deg,
+        #1A3150 250deg,
+        transparent 290deg,
+        transparent 360deg
+      );
+      animation: rotateHeroBorder 5s linear infinite;
+      z-index: -2;
+    }
+    .service-booking-card::after {
+      content: "";
+      position: absolute;
+      inset: 2px;
+      background: #ffffff;
+      border-radius: 20px;
+      z-index: -1;
+    }
+    .form-inner-content {
+      position: relative;
+      z-index: 2;
+    }
+    .form-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .form-field { margin-bottom: 16px; }
+    .form-field label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: #475569;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .form-field input, .form-field select, .form-field textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 14px;
+      background: #f8fafc;
+      color: #0f172a;
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+    .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+      outline: none;
+      border-color: #1a3150;
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.12);
+    }
+
+    /* FAQ ACCORDION */
+    .faq-wrapper { max-width: 860px; margin: 0 auto; }
+    .faq-block {
+      background: #ffffff;
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      margin-bottom: 14px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    }
+    .faq-trigger {
+      width: 100%;
+      text-align: left;
+      padding: 20px 24px;
+      background: none;
+      border: none;
+      color: #0f172a;
+      font-size: 16.5px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      transition: color 0.2s;
+    }
+    .faq-trigger:hover { color: var(--primary-accent); }
+    .faq-body {
+      display: none;
+      padding: 0 24px 20px;
+      color: var(--text-muted);
+      font-size: 14.5px;
+      line-height: 1.7;
+      animation: faqSlideDown 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes faqSlideDown {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* FLOATING WHATSAPP BUTTON (BOTTOM LEFT, ICON ONLY) */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      left: 28px;
+      width: 56px;
+      height: 56px;
+      background: #25d366;
+      color: #ffffff;
+      border-radius: 50% !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      text-decoration: none;
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
+      z-index: 9999;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1) translateY(-3px);
+      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+      color: #ffffff;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0a0f1d;
+      color: #94a3b8;
+      padding: 70px 5% 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .footer-content {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 50px;
+      margin-bottom: 50px;
+    }
+    .footer-col h4 {
+      color: #ffffff;
+      font-size: 17px;
+      margin-bottom: 20px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul a {
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+    .footer-col ul a:hover { color: #6B9DD2; }
+    .footer-bottom {
+      max-width: 1300px;
+      margin: 0 auto;
+      text-align: center;
+      padding-top: 25px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 13px;
+    }
+
+    
+    
+    /* ============================================================
+       FEATURE GRID 4 & TIMELINE STEPS (DESKTOP & RESPONSIVE)
+       ============================================================ */
+    .feature-grid-4 {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 1200px) {
+      .feature-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    .timeline-steps {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .step-card {
+      background: #ffffff;
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 34px 24px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+
+    /* ============================================================
+       MOBILE TOGGLE BUTTON (HIDDEN ON DESKTOP)
+       ============================================================ */
+    .mobile-toggle-btn {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      color: #1a3150;
+      font-size: 17px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .mobile-toggle-btn:hover {
+      background: #1a3150;
+      color: #ffffff;
+    }
+
+    /* ============================================================
+       INNER PAGE HERO & BREADCRUMB
+       ============================================================ */
+    .inner-page-hero {
+      background: linear-gradient(135deg, #f0f7ff 0%, #f8fafc 60%, #ffffff 100%);
+      border-bottom: 1px solid var(--card-border);
+      padding: 42px 5% 46px;
+      position: relative;
+    }
+    .inner-hero-container {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+    .breadcrumb-nav {
+      margin-bottom: 12px;
+    }
+    .breadcrumb-list {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+    .breadcrumb-list li a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb-list li a:hover {
+      color: var(--primary);
+    }
+    .breadcrumb-separator {
+      font-size: 10px;
+      color: #94a3b8;
+    }
+    .breadcrumb-list li.active {
+      color: var(--primary);
+      font-weight: 700;
+    }
+    .inner-hero-title {
+      font-size: 38px;
+      font-weight: 800;
+      letter-spacing: -0.8px;
+      color: var(--primary);
+      margin: 0;
+      line-height: 1.2;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* ============================================================
+       TYPOGRAPHY & SECTION HEADINGS
+       ============================================================ */
+    .section-head {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 55px;
+    }
+    .tag-badge {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      font-size: 11.5px !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 1.2px !important;
+      color: #1a3150 !important;
+      background: #f0f4f8 !important;
+      border: 1px solid #d0dbe7 !important;
+      padding: 6px 18px !important;
+      border-radius: 50px !important;
+      box-shadow: 0 1px 4px rgba(26, 49, 80, 0.04) !important;
+      margin-bottom: 16px !important;
+      transition: all 0.25s ease !important;
+    }
+    .tag-badge::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #1a3150;
+    }
+    .section-title {
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: -0.8px;
+      margin-bottom: 14px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--primary);
+      line-height: 1.25;
+    }
+    .section-desc {
+      font-size: 15.5px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ============================================================
+       OVERVIEW SPLIT LAYOUT & FANCYBOX CARD
+       ============================================================ */
+    .pcc-overview-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 55px;
+      align-items: center;
+    }
+    .fancybox-card {
+      display: block;
+      text-decoration: none;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 12px 35px rgba(26, 49, 80, 0.08);
+      border: 1px solid #cbd5e1;
+      position: relative;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      background: #ffffff;
+      cursor: pointer;
+    }
+    .fancybox-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 45px rgba(26, 49, 80, 0.16);
+      border-color: #6b9dd2;
+    }
+    .fancybox-img-container {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      background: #0f172a;
+    }
+    .fancybox-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .fancybox-card:hover .fancybox-img-container img {
+      transform: scale(1.05);
+    }
+    .fancybox-badge {
+      position: absolute;
+      bottom: 14px;
+      right: 14px;
+      background: rgba(26, 49, 80, 0.88);
+      backdrop-filter: blur(8px);
+      color: #ffffff;
+      padding: 8px 14px;
+      border-radius: 30px;
+      font-size: 12.5px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.25s;
+    }
+    .fancybox-badge i {
+      color: #6b9dd2;
+      font-size: 13px;
+    }
+    .fancybox-card:hover .fancybox-badge {
+      background: #12243b;
+      color: #ffffff;
+    }
+    .fancybox-card:hover .fancybox-badge i {
+      color: #ffffff;
+    }
+    .fancybox-card-caption {
+      padding: 16px 20px;
+      background: #ffffff;
+      border-top: 1px solid var(--card-border);
+    }
+    .fancybox-card-caption h5 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #1a3150;
+      margin-bottom: 4px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .fancybox-card-caption p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* ============================================================
+       SERVICE BULLETS & CALL TO ACTION BUTTONS
+       ============================================================ */
+    .service-bullet-list {
+      list-style: none;
+      margin-bottom: 28px;
+      padding: 0;
+      font-size: 14.5px;
+      color: var(--text-main);
+    }
+    .service-bullet-list li {
+      margin-bottom: 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      line-height: 1.6;
+    }
+    .service-bullet-list li i {
+      color: #16a34a;
+      font-size: 16px;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+    .overview-cta-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+    .btn-primary {
+      background: #1a3150;
+      color: #ffffff;
+      padding: 13px 26px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 14px rgba(26, 49, 80, 0.2);
+      border: 1px solid #14263e;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-primary:hover {
+      background: #12243b;
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(26, 49, 80, 0.28);
+    }
+    .btn-outline {
+      background: #ffffff;
+      color: var(--primary);
+      border: 1.5px solid #cbd5e1;
+      padding: 13px 24px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s;
+    }
+    .btn-outline:hover {
+      border-color: var(--primary);
+      background: #f8fafc;
+      color: var(--primary);
+    }
+
+    /* ============================================================
+       FEATURE GRID 3 & CARDS (PILLARS)
+       ============================================================ */
+    .feature-grid-3 {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .feature-card {
+      background: #ffffff;
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 32px 28px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .feature-card:hover {
+      transform: translateY(-4px);
+      border-color: #cbd5e1;
+      box-shadow: var(--shadow-md);
+    }
+    .card-icon-wrap {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: #f0f4f8;
+      border: 1px solid #d0dbe7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+    .feature-card h4 {
+      font-size: 19px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--primary);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .feature-card p {
+      font-size: 14.5px;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    
+    /* ============================================================
+       SCROLL TO TOP CIRCULAR PROGRESS INDICATOR
+       ============================================================ */
+    #scroll-percentage {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: conic-gradient(#1a3150 0%, #e2e8f0 0%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(26, 49, 80, 0.15);
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+      z-index: 999;
+    }
+    #scroll-percentage.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    #scroll-percentage-value {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    #scroll-percentage-value .pct-icon { display: none; font-size: 13px; color: var(--primary); }
+    #scroll-percentage:hover #scroll-percentage-value .pct-text { display: none; }
+    #scroll-percentage:hover #scroll-percentage-value .pct-icon { display: inline-block; }
+
+        /* ============================================================
+       COMPREHENSIVE MOBILE RESPONSIVE STYLES (320px - 992px)
+       ============================================================ */
+    @media (max-width: 992px) {
+      /* Header & Navigation Bar */
+      header {
+        padding: 10px 4% !important;
+      }
+      .nav-container {
+        gap: 10px !important;
+      }
+      .brand-logo-img {
+        height: 72px !important;
+        max-width: 110px !important;
+      }
+      .header-right-actions {
+        gap: 8px !important;
+      }
+      .btn-header {
+        padding: 8px 13px !important;
+        font-size: 12px !important;
+        white-space: nowrap !important;
+        border-radius: 6px !important;
+      }
+      .mobile-toggle-btn {
+        display: flex !important;
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 15px !important;
+        flex-shrink: 0 !important;
+      }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        padding: 20px 5%;
+        border-bottom: 1px solid var(--card-border);
+        flex-direction: column;
+        gap: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        z-index: 1000;
+      }
+      .nav-links.mobile-open {
+        display: flex !important;
+      }
+
+      /* Top Notification Strip */
+      .top-strip {
+        flex-direction: column;
+        gap: 6px;
+        text-align: center;
+        padding: 8px 4%;
+        font-size: 11.5px;
+      }
+      .strip-items {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      /* Inner Page Hero */
+      .inner-page-hero {
+        padding: 28px 4% 32px !important;
+      }
+      .inner-hero-title {
+        font-size: 26px !important;
+        line-height: 1.25 !important;
+      }
+      .breadcrumb-list {
+        flex-wrap: wrap;
+        font-size: 12px;
+        gap: 6px;
+      }
+
+      /* Main Overview Section (FIX FOR SQUISHED IMAGES ON MOBILE) */
+      .pcc-overview-container {
+        grid-template-columns: 1fr !important;
+        gap: 36px !important;
+      }
+      .pcc-overview-content {
+        order: 1;
+      }
+      .pcc-overview-visual {
+        order: 2;
+        width: 100% !important;
+        max-width: 520px !important;
+        margin: 0 auto !important;
+      }
+      .fancybox-card {
+        width: 100% !important;
+        border-radius: 14px !important;
+      }
+      .fancybox-img-container {
+        width: 100% !important;
+        aspect-ratio: 16 / 10 !important;
+      }
+      .fancybox-img-container img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        display: block !important;
+      }
+
+      /* Overview Action Buttons */
+      .overview-cta-row {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+      }
+      .overview-cta-row .btn-primary,
+      .overview-cta-row .btn-outline {
+        width: 100% !important;
+        justify-content: center !important;
+        text-align: center;
+      }
+
+      /* Sections & Headings Padding */
+      section[style*="padding"] {
+        padding: 55px 4% !important;
+      }
+      .section-head {
+        margin-bottom: 35px !important;
+      }
+      .section-title {
+        font-size: 25px !important;
+        line-height: 1.25 !important;
+      }
+      .section-desc {
+        font-size: 14.5px !important;
+        line-height: 1.6 !important;
+      }
+
+      /* Feature Grids & Timelines */
+      .feature-grid-3,
+      .feature-grid-4,
+      .timeline-steps {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+      }
+      .feature-card {
+        padding: 24px 18px !important;
+      }
+      .step-card {
+        padding: 26px 18px !important;
+      }
+
+      /* Booking Form */
+      .form-grid-2 {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+      }
+      .service-booking-card {
+        padding: 24px 16px !important;
+        border-radius: 16px !important;
+      }
+      .form-field input,
+      .form-field select {
+        font-size: 14px !important;
+        padding: 12px 14px !important;
+      }
+
+      /* WhatsApp & Bottom UI */
+      .whatsapp-float {
+        bottom: 20px !important;
+        left: 18px !important;
+        width: 46px !important;
+        height: 46px !important;
+        font-size: 24px !important;
+      }
+      .footer-content {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+        padding: 50px 4% 30px !important;
+      }
+    }
+
+    /* GOOGLE TRANSLATOR & CUSTOM LANGUAGE SELECTOR STYLES */
+    .goog-logo-link { display: none !important; }
+    .goog-te-banner-frame.skiptranslate { display: none !important; }
+    body { top: 0px !important; }
+    .custom-lang-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+    .custom-lang-select {
+      appearance: none;
+      -webkit-appearance: none;
+      padding: 10px 32px 10px 14px;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      background: #ffffff url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%230284c7' viewBox='0 0 16 16'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") no-repeat right 12px center;
+      color: #0f172a;
+      font-weight: 700;
+      font-size: 13.5px;
+      outline: none;
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      transition: all 0.2s;
+    }
+    .custom-lang-select:hover, .custom-lang-select:focus {
+      border-color: #1a3150;
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+    }
+    @media (max-width: 768px) {
+      .custom-lang-select {
+        padding: 6px 26px 6px 10px !important;
+        font-size: 12px !important;
+        max-width: 100px !important;
+      }
+    }
+  
+    /* ============================================================
+       FINRA FORMS & SPECIMENS SLIDER WITH FANCYBOX
+       ============================================================ */
+    .finra-specimens-section {
+      background: linear-gradient(180deg, #f8fafc 0%, #ffffff 50%, #f8fafc 100%);
+      padding: 95px 5%;
+      border-top: 1px solid #e2e8f0;
+      border-bottom: 1px solid #e2e8f0;
+      position: relative;
+    }
+    .finra-specimens-container {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+    .finra-confidentiality-notice {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-left: 4px solid #2563eb;
+      border-radius: 10px;
+      padding: 12px 18px;
+      margin: 16px auto 20px;
+      max-width: 860px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #1e3a8a;
+      font-size: 13.5px;
+      line-height: 1.5;
+      text-align: left;
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.06);
+    }
+    .finra-confidentiality-notice i {
+      color: #2563eb;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .finra-carousel-wrapper {
+      position: relative;
+      margin-top: 35px;
+      display: flex;
+      align-items: center;
+    }
+    .finra-carousel-viewport {
+      width: 100%;
+      overflow: hidden;
+      padding: 15px 4px 25px;
+    }
+    .finra-carousel-track {
+      display: flex;
+      gap: 24px;
+      transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: transform;
+    }
+    .finra-form-slide {
+      flex: 0 0 calc((100% - 48px) / 3);
+      min-width: 0;
+    }
+    @media (max-width: 1050px) {
+      .finra-form-slide { flex: 0 0 calc((100% - 24px) / 2); }
+    }
+    @media (max-width: 680px) {
+      .finra-form-slide { flex: 0 0 100%; }
+    }
+
+    /* Card Item */
+    .finra-form-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .finra-form-card:hover {
+      transform: translateY(-5px);
+      border-color: #65a3dc;
+      box-shadow: 0 16px 36px rgba(26, 49, 80, 0.12);
+    }
+    .finra-form-img-link {
+      display: block;
+      text-decoration: none;
+      position: relative;
+    }
+    .finra-form-img-container {
+      position: relative;
+      width: 100%;
+      height: 250px;
+      background: #f8fafc;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .finra-form-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 12px;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .finra-form-card:hover .finra-form-img-container img {
+      transform: scale(1.04);
+    }
+    .finra-form-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.45);
+      backdrop-filter: blur(2px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+    .finra-form-card:hover .finra-form-overlay {
+      opacity: 1;
+    }
+    .finra-overlay-pill {
+      background: #1A3150;
+      color: #ffffff;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 12.5px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .finra-form-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .finra-form-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .finra-code-badge {
+      font-size: 11px;
+      font-weight: 700;
+      color: #1A3150;
+      background: #f1f5f9;
+      padding: 3px 8px;
+      border-radius: 6px;
+      letter-spacing: 0.3px;
+    }
+    .finra-specimen-pill {
+      font-size: 11px;
+      font-weight: 700;
+      color: #0369a1;
+      background: #e0f2fe;
+      padding: 3px 8px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .finra-specimen-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #0284c7;
+      display: inline-block;
+    }
+    .finra-form-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #1A3150;
+      margin: 0 0 6px;
+      line-height: 1.35;
+    }
+    .finra-form-jurisdiction {
+      font-size: 12.5px;
+      color: #64748b;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+    .finra-form-jurisdiction i {
+      color: #65a3dc;
+      font-size: 11px;
+    }
+    .finra-form-desc {
+      font-size: 13px;
+      color: #475569;
+      line-height: 1.5;
+      margin: 0 0 16px;
+      flex-grow: 1;
+    }
+    .finra-form-footer {
+      margin-top: auto;
+      border-top: 1px solid #f1f5f9;
+      padding-top: 12px;
+    }
+    .finra-form-inspect-btn {
+      width: 100%;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #1A3150;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      transition: all 0.2s ease;
+    }
+    .finra-form-inspect-btn:hover {
+      background: #1A3150;
+      color: #ffffff;
+      border-color: #1A3150;
+    }
+
+    /* Carousel Nav Arrows */
+    .finra-nav-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      color: #1A3150;
+      font-size: 15px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+      z-index: 10;
+      flex-shrink: 0;
+      transition: all 0.2s ease;
+    }
+    .finra-nav-btn:hover {
+      background: #1A3150;
+      color: #ffffff;
+      border-color: #1A3150;
+      transform: scale(1.08);
+    }
+    .finra-nav-btn.prev-btn { margin-right: 12px; }
+    .finra-nav-btn.next-btn { margin-left: 12px; }
+    @media (max-width: 600px) {
+      .finra-nav-btn { display: none; }
+    }
+
+    /* Dots */
+    .finra-carousel-indicators {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    .finra-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #cbd5e1;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+    .finra-dot.active {
+      width: 26px;
+      border-radius: 999px;
+      background: #1A3150;
+    }
+
+    /* Callout Card */
+    .finra-inventory-callout {
+      margin-top: 45px;
+      background: #ffffff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 24px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.04);
+    }
+    .finra-callout-text {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .finra-callout-text i {
+      color: #16a34a;
+      font-size: 26px;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+    .finra-callout-text strong {
+      display: block;
+      font-size: 16px;
+      color: #1A3150;
+      margin-bottom: 4px;
+    }
+    .finra-callout-text p {
+      margin: 0;
+      font-size: 13.5px;
+      color: #64748b;
+      line-height: 1.5;
+    }
+    .finra-callout-btn {
+      background: #1A3150;
+      color: #ffffff;
+      padding: 13px 24px;
+      border-radius: 999px;
+      font-size: 13.5px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      flex-shrink: 0;
+      transition: all 0.25s ease;
+      box-shadow: 0 6px 16px rgba(26, 49, 80, 0.18);
+    }
+    .finra-callout-btn:hover {
+      background: #2563eb;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(37, 99, 235, 0.3);
+    }
+    @media (max-width: 900px) {
+      .finra-inventory-callout {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .finra-callout-btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
+  <!-- Fancybox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+</head>
+<body>
+  <!-- Top Reading Scroll Progress Bar -->
+  <div id="scroll-progress-bar"></div>
+
+  <!-- Top Strip -->
+  <div class="top-strip">
+    <div><i class="fa-solid fa-location-dot" style="color: var(--primary-accent); margin-right: 6px;"></i> Official Forensic Laboratory &bull; Hyderabad, India</div>
+    <div class="strip-items">
+      <span><i class="fa-solid fa-phone" style="color: var(--primary-accent); margin-right: 6px;"></i> Corporate Compliance Desk: <a href="tel:+918125255814">+91 81252 55814</a></span>
+      <span><i class="fa-regular fa-clock" style="color: var(--primary-accent); margin-right: 6px;"></i> Mon - Sat: 9:30 AM - 6:30 PM</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <a href="landing_slider.html" class="brand-logo" title="PrimeFPrint - Fingerprinting & PCC Services">
+        <img src="images/primefpint_clean.png" alt="PrimeFPrint - Fingerprinting & PCC Services" class="brand-logo-img">
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li class="nav-item">
+          <a href="landing_slider.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="landing_slider.html#services" class="nav-link active">
+            Services <i class="fa-solid fa-chevron-down" style="font-size: 11px;"></i>
+          </a>
+          <ul class="dropdown">
+            <li>
+              <a href="service_pcc.html">
+                <i class="fa-solid fa-passport dropdown-icon"></i>
+                <div>
+                  Police Clearance Certificate (PCC)
+                  <span class="dropdown-desc">Global Visa &amp; Immigration Clearance</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="service_finra.html" class="active">
+                <i class="fa-solid fa-briefcase dropdown-icon"></i>
+                <div>
+                  FINRA Fingerprinting
+                  <span class="dropdown-desc">US Corporate &amp; Broker-Dealer Licensing</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="landing_slider.html#contact" class="nav-link">Contact</a>
+        </li>
+      </ul>
+
+      <div class="header-right-actions">
+        <a href="#finra-booking" class="btn-header">Book Appointment</a>
+        
+        <!-- Reliable Custom Language Selector -->
+        <div class="custom-lang-wrapper">
+          <select id="langSelect" class="custom-lang-select" onchange="translatePage(this.value)" title="Choose Language">
+            <option value="en">English</option>
+            <option value="hi">Hindi (हिन्दी)</option>
+            <option value="te">Telugu (తెలుగు)</option>
+            <option value="ar">Arabic (العربية)</option>
+            <option value="fr">French (Français)</option>
+            <option value="es">Spanish (Español)</option>
+            <option value="de">German (Deutsch)</option>
+          </select>
+        </div>
+
+        <!-- Hidden Native Google Translate Mount -->
+        <div id="google_translate_element" style="display:none !important;"></div>
+
+        <button class="mobile-toggle-btn" onclick="toggleMobileMenu()" aria-label="Toggle Navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Clean Light Inner Page Hero (Heading & Breadcrumb Only) -->
+  <section class="inner-page-hero">
+    <div class="inner-hero-container">
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <ol class="breadcrumb-list">
+          <li><a href="landing_slider.html"><i class="fa-solid fa-house"></i> Home</a></li>
+          <li class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></li>
+          <li><a href="landing_slider.html#services">Services</a></li>
+          <li class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></li>
+          <li class="active" aria-current="page">FINRA Fingerprinting</li>
+        </ol>
+      </nav>
+      <h1 class="inner-hero-title">FINRA Fingerprinting</h1>
+    </div>
+  </section>
+
+  <!-- Content Section 1: FINRA Overview with Integrated Fancybox Visual Inspection -->
+  <section style="background: #ffffff; padding: 75px 5% 70px;">
+    <div class="pcc-overview-container">
+      <div class="pcc-overview-content">
+        <span class="tag-badge">US Regulatory Compliance</span>
+        <h2 class="section-title heading-fade" style="text-align: left; margin-bottom: 20px;">What is FINRA Fingerprinting?</h2>
+        <p class="section-desc" style="text-align: left; margin-bottom: 20px;">
+          FINRA (Financial Industry Regulatory Authority) fingerprinting is a mandatory statutory background verification process for individuals registering with FINRA member firms in the United States.
+        </p>
+        <p style="font-size: 15px; color: #475569; line-height: 1.75; margin-bottom: 28px;">
+          Under <strong>SEC Rule 17f-2</strong>, candidate fingerprints are submitted to conduct an FBI criminal background check as part of federal regulatory requirements. Candidates must have their friction ridges rolled on authentic FINRA-approved cards with authentic employer codes and CRD numbers.
+        </p>
+
+        <!-- Properly Spaced Service List Items (No double bullet dots) -->
+        <ul class="service-bullet-list">
+          <li>
+            <i class="fa-solid fa-circle-check"></i>
+            <div><strong>Official FINRA Cards:</strong> Authentic FBI standard fingerprint cards in stock with correct ORI</div>
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-check"></i>
+            <div><strong>100% FBI CJIS Smudge-Free:</strong> Rolled according to strict FBI biometric capture specs</div>
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-check"></i>
+            <div><strong>NDA Protection:</strong> Strict data confidentiality for financial firms &amp; IT contractors</div>
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-check"></i>
+            <div><strong>Courier Dispatch Assistance:</strong> Fast international courier forwarding to designated US addresses</div>
+          </li>
+        </ul>
+
+        <!-- Generous CTA Action Row -->
+        <div class="overview-cta-row">
+          <a href="#finra-booking" class="btn-primary">
+            <span>Schedule FINRA Appointment</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="tel:+918125255814" class="btn-outline">
+            <i class="fa-solid fa-phone"></i>
+            <span>Corporate Desk: +91 81252 55814</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Fancybox Image Inspection Card (Pure Image + Sleek Badge) -->
+      <div class="pcc-overview-visual">
+        <a href="images/finra_hero.jpg" data-fancybox="finra-gallery" data-caption="FINRA Fingerprinting Cards and US Corporate Compliance Documentation" class="fancybox-card">
+          <div class="fancybox-img-container">
+            <img src="images/finra_hero.jpg" alt="Official FINRA Fingerprinting Card and Corporate US Compliance Documentation">
+            <div class="fancybox-badge">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span>Click to Enlarge / Inspect</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Section 2: Core Compliance Pillars (Enhanced Card Section) -->
+  <section class="section-pillars" style="background: #f8fafc; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; padding: 85px 5%;">
+    <div class="section-head heading-fade">
+      <span class="tag-badge">Mandatory Standards</span>
+      <h2 class="section-title">Core Compliance Framework</h2>
+      <p class="section-desc">Statutory requirements governing FINRA registered personnel and financial contractors.</p>
+    </div>
+
+    <div class="feature-grid-3">
+      <div class="feature-card">
+        <div class="card-icon-wrap"><i class="fa-solid fa-building-columns"></i></div>
+        <h4>Federal FBI Vetting</h4>
+        <p>Under SEC Rule 17f-2, candidate fingerprints are submitted to conduct an FBI criminal background check as part of federal regulatory compliance for the U.S. financial services industry.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="card-icon-wrap"><i class="fa-solid fa-file-signature"></i></div>
+        <h4>Official Card Standards</h4>
+        <p>Fingerprints must be recorded on official FINRA-compliant cards with exact ORI numbers, CRD numbers, and employer codes properly authenticated.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="card-icon-wrap"><i class="fa-solid fa-user-lock"></i></div>
+        <h4>Strict NDA Confidentiality</h4>
+        <p>We work with leading investment banks and offshore technology companies, maintaining strict data privacy protocols and Non-Disclosure Agreements (NDAs).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who Needs FINRA Fingerprinting -->
+  <section style="background: #f8fafc; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; padding: 85px 5%;">
+    <div class="section-head">
+      <span class="tag-badge">Mandatory Coverage</span>
+      <h2 class="section-title">Who Needs FINRA Fingerprinting?</h2>
+      <p class="section-desc">Required for professionals joining or providing contracted technological services to FINRA-regulated entities.</p>
+    </div>
+
+    <div class="feature-grid-4">
+      <div class="feature-card">
+        <div class="card-icon-wrap"><i class="fa-solid fa-chart-line"></i></div>
+        <h4>Broker-Dealers</h4>
+        <p>Registered representatives and associated persons of US broker-dealer firms.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="card-icon-wrap"><i class="fa-solid fa-landmark"></i></div>
+        <h4>Investment Banks</h4>
+        <p>Financial analysts, corporate finance executives, and capital markets personnel.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="card-icon-wrap"><i class="fa-solid fa-user-tie"></i></div>
+        <h4>Financial Advisors</h4>
+        <p>Registered Investment Advisors (RIAs) and wealth managers subject to SEC/FINRA scrutiny.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="card-icon-wrap"><i class="fa-solid fa-laptop-code"></i></div>
+        <h4>Offshore IT Contractors</h4>
+        <p>Software engineers and DevOps teams maintaining sensitive US banking &amp; trading infrastructure.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="card-icon-wrap"><i class="fa-solid fa-scale-unbalanced"></i></div>
+        <h4>Compliance Officers</h4>
+        <p>Chief Compliance Officers, AML analysts, and internal legal auditors.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="card-icon-wrap"><i class="fa-solid fa-arrows-split-up-and-left"></i></div>
+        <h4>Transfer Agents</h4>
+        <p>Registered transfer agents and custodian staff handling shareholder securities.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="card-icon-wrap"><i class="fa-solid fa-cubes"></i></div>
+        <h4>Clearing Operations</h4>
+        <p>Back-office settlement and clearing staff processing transaction flows.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="card-icon-wrap"><i class="fa-solid fa-vault"></i></div>
+        <h4>Custody Personnel</h4>
+        <p>Any corporate employee handling customer funds, securities, or critical ledgers.</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- Accredited Sovereign Fingerprint Forms & Specimens Slider (9 Forms) -->
+  <section class="finra-specimens-section" id="finra-forms">
+    <div class="finra-specimens-container">
+      <div class="section-head heading-fade">
+        <span class="tag-badge">Official Document Inventory</span>
+        <h2 class="section-title">Accredited Fingerprint Card Standards &amp; Specimens</h2>
+        
+        <!-- Mandatory Client Confidentiality Note Banner -->
+        <div class="finra-confidentiality-notice">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span><strong>Confidentiality Notice:</strong> (The following forms are displayed for illustration purposes only). Forms are watermarked and intentionally blurred to prevent unauthorized reproduction while providing full visual verification for corporate compliance officers.</span>
+        </div>
+
+        <p class="section-desc">
+          PrimeFPrint maintains ready in-lab stock of authentic sovereign fingerprint cards required by US financial regulators, FBI CJIS, RCMP Canada, and foreign ministries of interior.
+        </p>
+      </div>
+
+      <!-- Slider Component with Interactive Controls -->
+      <div class="finra-carousel-wrapper">
+        <button class="finra-nav-btn prev-btn" id="finraPrevBtn" aria-label="Previous Form Slide" onclick="moveFinraSlide(-1)">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <div class="finra-carousel-viewport" id="finraViewport">
+          <div class="finra-carousel-track" id="finraTrack">
+
+          <div class="finra-form-slide">
+            <div class="finra-form-card">
+              <a href="images/finra-files/finra-nine.jpeg" 
+                 data-fancybox="finra-specimen-gallery" 
+                 data-caption="<strong>Official FINRA Blue Fingerprint Card</strong> (15 U.S.C. 78q(f)(2)) — United States (FINRA & SEC)<br><span style='font-size:12px;color:#94a3b8;'>[Note: Displayed for illustration purposes only. Confidential form specimen.]</span>"
+                 class="finra-form-img-link"
+                 title="Click to inspect Official FINRA Blue Fingerprint Card">
+                <div class="finra-form-img-container">
+                  <img src="images/finra-files/finra-nine.jpeg" alt="Official FINRA Blue Fingerprint Card" loading="lazy">
+                  <div class="finra-form-overlay">
+                    <span class="finra-overlay-pill">
+                      <i class="fa-solid fa-magnifying-glass-plus"></i> Inspect Form
+                    </span>
+                  </div>
+                </div>
+              </a>
+              <div class="finra-form-body">
+                <div class="finra-form-meta">
+                  <span class="finra-code-badge">15 U.S.C. 78q(f)(2)</span>
+                  <span class="finra-specimen-pill"><span class="finra-specimen-dot"></span> Specimen</span>
+                </div>
+                <h4 class="finra-form-title">Official FINRA Blue Fingerprint Card</h4>
+                <div class="finra-form-jurisdiction">
+                  <i class="fa-solid fa-location-dot"></i> United States (FINRA & SEC)
+                </div>
+                <p class="finra-form-desc">Mandatory securities personnel card required for US broker-dealer registration, registered representatives, and investment compliance.</p>
+                <div class="finra-form-footer">
+                  <button type="button" class="finra-form-inspect-btn" onclick="openFinraFancybox(0)">
+                    <i class="fa-solid fa-expand"></i> Full-Screen View
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="finra-form-slide">
+            <div class="finra-form-card">
+              <a href="images/finra-files/finra-eight.jpeg" 
+                 data-fancybox="finra-specimen-gallery" 
+                 data-caption="<strong>FBI FD-258 Applicant Fingerprint Card</strong> (FD-258 Standard) — United States (FBI CJIS)<br><span style='font-size:12px;color:#94a3b8;'>[Note: Displayed for illustration purposes only. Confidential form specimen.]</span>"
+                 class="finra-form-img-link"
+                 title="Click to inspect FBI FD-258 Applicant Fingerprint Card">
+                <div class="finra-form-img-container">
+                  <img src="images/finra-files/finra-eight.jpeg" alt="FBI FD-258 Applicant Fingerprint Card" loading="lazy">
+                  <div class="finra-form-overlay">
+                    <span class="finra-overlay-pill">
+                      <i class="fa-solid fa-magnifying-glass-plus"></i> Inspect Form
+                    </span>
+                  </div>
+                </div>
+              </a>
+              <div class="finra-form-body">
+                <div class="finra-form-meta">
+                  <span class="finra-code-badge">FD-258 Standard</span>
+                  <span class="finra-specimen-pill"><span class="finra-specimen-dot"></span> Specimen</span>
+                </div>
+                <h4 class="finra-form-title">FBI FD-258 Applicant Fingerprint Card</h4>
+                <div class="finra-form-jurisdiction">
+                  <i class="fa-solid fa-location-dot"></i> United States (FBI CJIS)
+                </div>
+                <p class="finra-form-desc">Official standard ten-print card utilized for US immigration, NVC visa filings, medical/nursing boards (NCLEX), and federal background checks.</p>
+                <div class="finra-form-footer">
+                  <button type="button" class="finra-form-inspect-btn" onclick="openFinraFancybox(1)">
+                    <i class="fa-solid fa-expand"></i> Full-Screen View
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="finra-form-slide">
+            <div class="finra-form-card">
+              <a href="images/finra-files/finra-four.jpeg" 
+                 data-fancybox="finra-specimen-gallery" 
+                 data-caption="<strong>RCMP C-216C Fingerprint Card</strong> (RCMP C-216C) — Canada (RCMP Ottawa)<br><span style='font-size:12px;color:#94a3b8;'>[Note: Displayed for illustration purposes only. Confidential form specimen.]</span>"
+                 class="finra-form-img-link"
+                 title="Click to inspect RCMP C-216C Fingerprint Card">
+                <div class="finra-form-img-container">
+                  <img src="images/finra-files/finra-four.jpeg" alt="RCMP C-216C Fingerprint Card" loading="lazy">
+                  <div class="finra-form-overlay">
+                    <span class="finra-overlay-pill">
+                      <i class="fa-solid fa-magnifying-glass-plus"></i> Inspect Form
+                    </span>
+                  </div>
+                </div>
+              </a>
+              <div class="finra-form-body">
+                <div class="finra-form-meta">
+                  <span class="finra-code-badge">RCMP C-216C</span>
+                  <span class="finra-specimen-pill"><span class="finra-specimen-dot"></span> Specimen</span>
+                </div>
+                <h4 class="finra-form-title">RCMP C-216C Fingerprint Card</h4>
+                <div class="finra-form-jurisdiction">
+                  <i class="fa-solid fa-location-dot"></i> Canada (RCMP Ottawa)
+                </div>
+                <p class="finra-form-desc">Official Canadian national police clearance card for Express Entry PR, citizenship, and federal government employment vetting.</p>
+                <div class="finra-form-footer">
+                  <button type="button" class="finra-form-inspect-btn" onclick="openFinraFancybox(2)">
+                    <i class="fa-solid fa-expand"></i> Full-Screen View
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="finra-form-slide">
+            <div class="finra-form-card">
+              <a href="images/finra-files/finra-seven.jpeg" 
+                 data-fancybox="finra-specimen-gallery" 
+                 data-caption="<strong>Bahrain CID Fingerprint Form</strong> (MOI CID Bahrain) — Kingdom of Bahrain (Interior Ministry)<br><span style='font-size:12px;color:#94a3b8;'>[Note: Displayed for illustration purposes only. Confidential form specimen.]</span>"
+                 class="finra-form-img-link"
+                 title="Click to inspect Bahrain CID Fingerprint Form">
+                <div class="finra-form-img-container">
+                  <img src="images/finra-files/finra-seven.jpeg" alt="Bahrain CID Fingerprint Form" loading="lazy">
+                  <div class="finra-form-overlay">
+                    <span class="finra-overlay-pill">
+                      <i class="fa-solid fa-magnifying-glass-plus"></i> Inspect Form
+                    </span>
+                  </div>
+                </div>
+              </a>
+              <div class="finra-form-body">
+                <div class="finra-form-meta">
+                  <span class="finra-code-badge">MOI CID Bahrain</span>
+                  <span class="finra-specimen-pill"><span class="finra-specimen-dot"></span> Specimen</span>
+                </div>
+                <h4 class="finra-form-title">Bahrain CID Fingerprint Form</h4>
+                <div class="finra-form-jurisdiction">
+                  <i class="fa-solid fa-location-dot"></i> Kingdom of Bahrain (Interior Ministry)
+                </div>
+                <p class="finra-form-desc">Standard Ministry of Interior fingerprint card for foreign employment clearance, resident visa vetting, and sovereign PCC.</p>
+                <div class="finra-form-footer">
+                  <button type="button" class="finra-form-inspect-btn" onclick="openFinraFancybox(3)">
+                    <i class="fa-solid fa-expand"></i> Full-Screen View
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="finra-form-slide">
+            <div class="finra-form-card">
+              <a href="images/finra-files/finra-six.jpeg" 
+                 data-fancybox="finra-specimen-gallery" 
+                 data-caption="<strong>Bahrain Major Palm Print Form</strong> (Palm Section (Back)) — Kingdom of Bahrain (Forensic Directorate)<br><span style='font-size:12px;color:#94a3b8;'>[Note: Displayed for illustration purposes only. Confidential form specimen.]</span>"
+                 class="finra-form-img-link"
+                 title="Click to inspect Bahrain Major Palm Print Form">
+                <div class="finra-form-img-container">
+                  <img src="images/finra-files/finra-six.jpeg" alt="Bahrain Major Palm Print Form" loading="lazy">
+                  <div class="finra-form-overlay">
+                    <span class="finra-overlay-pill">
+                      <i class="fa-solid fa-magnifying-glass-plus"></i> Inspect Form
+                    </span>
+                  </div>
+                </div>
+              </a>
+              <div class="finra-form-body">
+                <div class="finra-form-meta">
+                  <span class="finra-code-badge">Palm Section (Back)</span>
+                  <span class="finra-specimen-pill"><span class="finra-specimen-dot"></span> Specimen</span>
+                </div>
+                <h4 class="finra-form-title">Bahrain Major Palm Print Form</h4>
+                <div class="finra-form-jurisdiction">
+                  <i class="fa-solid fa-location-dot"></i> Kingdom of Bahrain (Forensic Directorate)
+                </div>
+                <p class="finra-form-desc">Supplementary full-palm friction ridge form required for comprehensive consular security verifications and forensic archives.</p>
+                <div class="finra-form-footer">
+                  <button type="button" class="finra-form-inspect-btn" onclick="openFinraFancybox(4)">
+                    <i class="fa-solid fa-expand"></i> Full-Screen View
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="finra-form-slide">
+            <div class="finra-form-card">
+              <a href="images/finra-files/finra-five.jpeg" 
+                 data-fancybox="finra-specimen-gallery" 
+                 data-caption="<strong>Singapore & Malaysia Industrial Form</strong> (Industrial Ident. (1/84)) — Singapore & Malaysia (Govt Clearance)<br><span style='font-size:12px;color:#94a3b8;'>[Note: Displayed for illustration purposes only. Confidential form specimen.]</span>"
+                 class="finra-form-img-link"
+                 title="Click to inspect Singapore & Malaysia Industrial Form">
+                <div class="finra-form-img-container">
+                  <img src="images/finra-files/finra-five.jpeg" alt="Singapore & Malaysia Industrial Form" loading="lazy">
+                  <div class="finra-form-overlay">
+                    <span class="finra-overlay-pill">
+                      <i class="fa-solid fa-magnifying-glass-plus"></i> Inspect Form
+                    </span>
+                  </div>
+                </div>
+              </a>
+              <div class="finra-form-body">
+                <div class="finra-form-meta">
+                  <span class="finra-code-badge">Industrial Ident. (1/84)</span>
+                  <span class="finra-specimen-pill"><span class="finra-specimen-dot"></span> Specimen</span>
+                </div>
+                <h4 class="finra-form-title">Singapore & Malaysia Industrial Form</h4>
+                <div class="finra-form-jurisdiction">
+                  <i class="fa-solid fa-location-dot"></i> Singapore & Malaysia (Govt Clearance)
+                </div>
+                <p class="finra-form-desc">Specialized ten-print industrial identification record required for professional work passes, security vetting, and legalizations.</p>
+                <div class="finra-form-footer">
+                  <button type="button" class="finra-form-inspect-btn" onclick="openFinraFancybox(5)">
+                    <i class="fa-solid fa-expand"></i> Full-Screen View
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="finra-form-slide">
+            <div class="finra-form-card">
+              <a href="images/finra-files/finra-three.jpeg" 
+                 data-fancybox="finra-specimen-gallery" 
+                 data-caption="<strong>SAPS 91(a) Police Enquiry Form</strong> (SAPS 91(a)) — South Africa (SAPS CRC Pretoria)<br><span style='font-size:12px;color:#94a3b8;'>[Note: Displayed for illustration purposes only. Confidential form specimen.]</span>"
+                 class="finra-form-img-link"
+                 title="Click to inspect SAPS 91(a) Police Enquiry Form">
+                <div class="finra-form-img-container">
+                  <img src="images/finra-files/finra-three.jpeg" alt="SAPS 91(a) Police Enquiry Form" loading="lazy">
+                  <div class="finra-form-overlay">
+                    <span class="finra-overlay-pill">
+                      <i class="fa-solid fa-magnifying-glass-plus"></i> Inspect Form
+                    </span>
+                  </div>
+                </div>
+              </a>
+              <div class="finra-form-body">
+                <div class="finra-form-meta">
+                  <span class="finra-code-badge">SAPS 91(a)</span>
+                  <span class="finra-specimen-pill"><span class="finra-specimen-dot"></span> Specimen</span>
+                </div>
+                <h4 class="finra-form-title">SAPS 91(a) Police Enquiry Form</h4>
+                <div class="finra-form-jurisdiction">
+                  <i class="fa-solid fa-location-dot"></i> South Africa (SAPS CRC Pretoria)
+                </div>
+                <p class="finra-form-desc">Official South African Police Service criminal record enquiry and biometric clearance form for international expat verifications.</p>
+                <div class="finra-form-footer">
+                  <button type="button" class="finra-form-inspect-btn" onclick="openFinraFancybox(6)">
+                    <i class="fa-solid fa-expand"></i> Full-Screen View
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="finra-form-slide">
+            <div class="finra-form-card">
+              <a href="images/finra-files/finra-two.jpeg" 
+                 data-fancybox="finra-specimen-gallery" 
+                 data-caption="<strong>Police Form 20D Identification Card</strong> (Form 20D) — Commonwealth & Consular Sovereign Clearances<br><span style='font-size:12px;color:#94a3b8;'>[Note: Displayed for illustration purposes only. Confidential form specimen.]</span>"
+                 class="finra-form-img-link"
+                 title="Click to inspect Police Form 20D Identification Card">
+                <div class="finra-form-img-container">
+                  <img src="images/finra-files/finra-two.jpeg" alt="Police Form 20D Identification Card" loading="lazy">
+                  <div class="finra-form-overlay">
+                    <span class="finra-overlay-pill">
+                      <i class="fa-solid fa-magnifying-glass-plus"></i> Inspect Form
+                    </span>
+                  </div>
+                </div>
+              </a>
+              <div class="finra-form-body">
+                <div class="finra-form-meta">
+                  <span class="finra-code-badge">Form 20D</span>
+                  <span class="finra-specimen-pill"><span class="finra-specimen-dot"></span> Specimen</span>
+                </div>
+                <h4 class="finra-form-title">Police Form 20D Identification Card</h4>
+                <div class="finra-form-jurisdiction">
+                  <i class="fa-solid fa-location-dot"></i> Commonwealth & Consular Sovereign Clearances
+                </div>
+                <p class="finra-form-desc">Comprehensive ten-print biometric identification card deployed across multiple sovereign high commissions and foreign consulates.</p>
+                <div class="finra-form-footer">
+                  <button type="button" class="finra-form-inspect-btn" onclick="openFinraFancybox(7)">
+                    <i class="fa-solid fa-expand"></i> Full-Screen View
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="finra-form-slide">
+            <div class="finra-form-card">
+              <a href="images/finra-files/finra-one.jpeg" 
+                 data-fancybox="finra-specimen-gallery" 
+                 data-caption="<strong>Kenya Police 20 Fingerprint Form</strong> (Police 20) — Kenya (Directorate Criminal Investigations)<br><span style='font-size:12px;color:#94a3b8;'>[Note: Displayed for illustration purposes only. Confidential form specimen.]</span>"
+                 class="finra-form-img-link"
+                 title="Click to inspect Kenya Police 20 Fingerprint Form">
+                <div class="finra-form-img-container">
+                  <img src="images/finra-files/finra-one.jpeg" alt="Kenya Police 20 Fingerprint Form" loading="lazy">
+                  <div class="finra-form-overlay">
+                    <span class="finra-overlay-pill">
+                      <i class="fa-solid fa-magnifying-glass-plus"></i> Inspect Form
+                    </span>
+                  </div>
+                </div>
+              </a>
+              <div class="finra-form-body">
+                <div class="finra-form-meta">
+                  <span class="finra-code-badge">Police 20</span>
+                  <span class="finra-specimen-pill"><span class="finra-specimen-dot"></span> Specimen</span>
+                </div>
+                <h4 class="finra-form-title">Kenya Police 20 Fingerprint Form</h4>
+                <div class="finra-form-jurisdiction">
+                  <i class="fa-solid fa-location-dot"></i> Kenya (Directorate Criminal Investigations)
+                </div>
+                <p class="finra-form-desc">Official Kenya National Police Criminal Investigation Department biometric sheet for overseas work permits and consular clearances.</p>
+                <div class="finra-form-footer">
+                  <button type="button" class="finra-form-inspect-btn" onclick="openFinraFancybox(8)">
+                    <i class="fa-solid fa-expand"></i> Full-Screen View
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          </div>
+        </div>
+
+        <button class="finra-nav-btn next-btn" id="finraNextBtn" aria-label="Next Form Slide" onclick="moveFinraSlide(1)">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <!-- Indicator Dots & Counter -->
+      <div class="finra-carousel-indicators" id="finraDots"></div>
+
+      <!-- Footer Reassurance Callout -->
+      <div class="finra-inventory-callout">
+        <div class="finra-callout-text">
+          <i class="fa-solid fa-circle-check"></i>
+          <div>
+            <strong>100% Genuine Foreign Sovereign Card Stock Maintained in Hyderabad Lab</strong>
+            <p>You never need to wait weeks for cards to be mailed from US/overseas employers. We roll on authentic FBI FD-258, FINRA Blue, and RCMP C-216C cards immediately upon appointment.</p>
+          </div>
+        </div>
+        <a href="#finra-booking" class="finra-callout-btn">
+          <span>Schedule FINRA Fingerprinting</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- How PrimeFPrint Simplifies FINRA -->
+  <section style="background: #ffffff; padding: 85px 5%;">
+    <div class="section-head">
+      <span class="tag-badge">The PrimeFPrint Advantage</span>
+      <h2 class="section-title">How We Make FINRA Processing Seamless</h2>
+      <p class="section-desc">Our laboratory ensures zero rejection from US processing centers with end-to-end guidance.</p>
+    </div>
+
+    <div class="feature-grid-3">
+      <div class="feature-card">
+        <div class="card-icon-wrap"><i class="fa-solid fa-clipboard-check"></i></div>
+        <h4>Official Card Stock in Lab</h4>
+        <p>We provide genuine, fresh FINRA-compliant cards so you don't need to await international mailings from your employer.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="card-icon-wrap"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <h4>Microscopic Quality Control</h4>
+        <p>Examiners check every rolled delta and core under high-power loupes to verify NFIQ quality scores before card sign-off.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="card-icon-wrap"><i class="fa-solid fa-box-archive"></i></div>
+        <h4>Secure US Courier Support</h4>
+        <p>Direct international tracking dispatch via DHL/FedEx to FINRA Document Processing in Rockville, MD or your employer's US office.</p>
+      </div>
+    </div>
+
+    <!-- Official Clarification Note from Reference Image -->
+    <div style="max-width: 900px; margin: 40px auto 0; background: #f8fafc; border: 1px solid #cbd5e1; border-left: 4px solid #1A3150; padding: 18px 22px; border-radius: 12px; font-size: 13.5px; color: #1A3150; line-height: 1.6;">
+      <strong><i class="fa-solid fa-circle-info" style="margin-right: 6px;"></i> Regulatory Clarification:</strong> PrimeFPrint provides certified ink fingerprinting on official FINRA cards and secure international courier assistance. Once your completed card arrives at the designated U.S. facility, formal background check processing is executed directly by FINRA and the FBI.
+    </div>
+  </section>
+
+  <!-- Estimated Timeline -->
+  <section style="background: #f8fafc; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; padding: 85px 5%;">
+    <div class="section-head">
+      <span class="tag-badge">Speed &amp; Reliability</span>
+      <h2 class="section-title">Estimated Processing Timeline</h2>
+      <p class="section-desc">Transparent turnarounds to ensure corporate compliance deadlines are met seamlessly.</p>
+    </div>
+
+    <div class="timeline-steps">
+      <div class="step-card">
+        <div class="step-badge">1</div>
+        <span class="step-time">15 - 20 Minutes</span>
+        <h4>Appointment &amp; Fingerprinting</h4>
+        <p>Quick ten-print recording session at our Hyderabad lab or on-site at your corporate office.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-badge">2</div>
+        <span class="step-time">Within 24 Hours</span>
+        <h4>Quality Sign-Off &amp; Dispatch</h4>
+        <p>Senior examiner authentication and secure tamper-proof packaging for immediate courier handoff.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-badge">3</div>
+        <span class="step-time">4 - 7 Business Days</span>
+        <h4>Delivery to the USA</h4>
+        <p>Express international priority delivery directly to FINRA in Maryland or your corporate US headquarters.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINRA Booking Form -->
+  <section id="finra-booking" style="background: radial-gradient(circle at 50% 0%, #f0f9ff 0%, #ffffff 70%); padding: 90px 5%;">
+    <div class="section-head">
+      <span class="tag-badge">Priority Corporate Booking</span>
+      <h2 class="section-title">Schedule In-Person FINRA Fingerprinting</h2>
+      <p class="section-desc">Individual and corporate batch appointments available with dedicated non-disclosure compliance.</p>
+    </div>
+
+    <div class="booking-wrapper">
+      <div class="service-booking-card">
+        <div class="form-inner-content">
+          <form onsubmit="alert('Thank you! Your FINRA fingerprinting appointment has been scheduled. Our corporate desk will contact you via WhatsApp/call.'); return false;">
+            <div class="form-grid-2">
+              <div class="form-field">
+                <label>Applicant Full Name *</label>
+                <input type="text" placeholder="e.g. Anand Varma" required>
+              </div>
+              <div class="form-field">
+                <label>Phone / WhatsApp Number *</label>
+                <input type="tel" placeholder="+91 98765 43210" required>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-field">
+                <label>Corporate Employer / Firm Name *</label>
+                <input type="text" placeholder="e.g. US Financial Services Firm / Bank" required>
+              </div>
+              <div class="form-field">
+                <label>Individual or Corporate Batch *</label>
+                <select required>
+                  <option value="individual">Individual Appointment (1 Applicant)</option>
+                  <option value="batch_small">Small Corporate Batch (2 - 5 Applicants)</option>
+                  <option value="batch_large">Large Corporate Batch (5+ On-site)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-field">
+                <label>FINRA CRD Number (If Assigned)</label>
+                <input type="text" placeholder="e.g. 1234567 or leave blank">
+              </div>
+              <div class="form-field">
+                <label>Preferred Date &amp; Time Slot *</label>
+                <input type="datetime-local" required>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; padding: 16px; font-size: 16px;">
+              <span>Confirm FINRA Appointment Slot</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+            <div style="text-align: center; margin-top: 14px; font-size: 12px; color: #64748b;">
+              <i class="fa-solid fa-shield-halved" style="color: #1a3150; margin-right: 4px;"></i>
+              Strict Corporate NDA &bull; Original FINRA Cards in Stock &bull; Express US Dispatch Support
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINRA Frequently Asked Questions -->
+  <section style="background: #ffffff; border-top: 1px solid #e2e8f0; padding: 85px 5%;">
+    <div class="section-head">
+      <span class="tag-badge">Clear Answers</span>
+      <h2 class="section-title">FINRA Fingerprinting FAQs</h2>
+      <p class="section-desc">Key details regarding US compliance requirements, CRD filing, and card submission.</p>
+    </div>
+
+    <div class="faq-wrapper">
+      <div class="faq-block">
+        <button class="faq-trigger" onclick="toggleFaq(this)">
+          What card format is used for FINRA fingerprinting?
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="faq-body">
+          FINRA submissions require standard FBI FD-258 fingerprint cards printed with specific FINRA identifiers, ORI numbers, and firm CRD details. We maintain fresh, original cards in our laboratory.
+        </div>
+      </div>
+
+      <div class="faq-block">
+        <button class="faq-trigger" onclick="toggleFaq(this)">
+          What happens if my previous prints were rejected by FINRA?
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="faq-body">
+          Fingerprints captured with improper ink or inexperienced personnel often smudge and get rejected. Our former government forensic examiners record impressions under specialized magnification to guarantee crisp ridge density that passes FBI CJIS automated processing.
+        </div>
+      </div>
+
+      <div class="faq-block">
+        <button class="faq-trigger" onclick="toggleFaq(this)">
+          Can PrimeFPrint dispatch the cards directly to the United States?
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="faq-body">
+          Yes! We offer tamper-proof packaging and express international courier dispatch with DHL/FedEx directly to FINRA's Document Processing Center in Rockville, Maryland, or directly to your compliance department in the US.
+        </div>
+      </div>
+
+      <div class="faq-block">
+        <button class="faq-trigger" onclick="toggleFaq(this)">
+          Do you provide on-site fingerprinting for corporate teams?
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="faq-body">
+          Yes. For financial institutions and technology firms onboarding multiple analysts or contractors, we deploy forensic teams to your Hyderabad campus for rapid batch recording.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating WhatsApp CTA (Bottom-Left, Icon Only) -->
+  <a href="https://wa.me/918125255814?text=Hello%20PrimeFPrint,%20I%20would%20like%20to%20book%20a%20FINRA%20fingerprinting%20appointment." target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col">
+        <div class="brand-logo" style="margin-bottom: 20px;">
+          <div style="background: #ffffff; padding: 6px 14px; border-radius: 12px; display: inline-flex; align-items: center; box-shadow: 0 4px 16px rgba(0,0,0,0.25);">
+            <img src="images/primefpint_clean.png" alt="PrimeFPrint" style="height: 64px; width: auto; display: block; border-radius: 4px;">
+          </div>
+        </div>
+        <p style="font-size: 13.5px; line-height: 1.6; margin-bottom: 16px;">
+          Government recognized private forensic crime laboratory in Hyderabad, India. Specializing in court-admissible ink rolled fingerprinting, police clearance certificates, and FINRA corporate verification.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Practice Areas</h4>
+        <ul>
+          <li><a href="service_pcc.html">Police Clearance Certificate (PCC)</a></li>
+          <li><a href="service_finra.html">FINRA Corporate Fingerprinting</a></li>
+          <li><a href="landing_slider.html#service-pcc">FBI FD-258 Cards</a></li>
+          <li><a href="landing_slider.html#service-pcc">Canadian RCMP (C-216C)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="landing_slider.html#home">Home</a></li>
+          <li><a href="landing_slider.html#about">Our Legacy &amp; Lab</a></li>
+          <li><a href="landing_slider.html#why-us">Why Choose Us</a></li>
+          <li><a href="landing_slider.html#faq">FAQs</a></li>
+          <li><a href="landing_slider.html#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Direct Lab Contact</h4>
+        <p style="font-size: 13.5px; margin-bottom: 8px;"><i class="fa-solid fa-phone" style="color: #6B9DD2; margin-right: 8px;"></i> <a href="tel:+918125255814" style="color: #ffffff; text-decoration: none;">+91 81252 55814</a></p>
+        <p style="font-size: 13.5px; margin-bottom: 8px;"><i class="fa-solid fa-envelope" style="color: #6B9DD2; margin-right: 8px;"></i> <a href="mailto:forensicexperthyd@gmail.com" style="color: #94a3b8; text-decoration: none;">forensicexperthyd@gmail.com</a></p>
+        <p style="font-size: 13px; color: #64748b; margin-top: 10px;">Hyderabad, Telangana, India</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2026 PrimeFPrint &bull; All Rights Reserved &bull; ISO Certified Forensic Laboratory
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileMenu() {
+      document.getElementById('navLinks').classList.toggle('mobile-open');
+    }
+
+    function toggleFaq(btn) {
+      const body = btn.nextElementSibling;
+      const icon = btn.querySelector('i');
+      const isCurrentlyOpen = body.style.display === 'block';
+
+      document.querySelectorAll('.faq-body').forEach(b => b.style.display = 'none');
+      document.querySelectorAll('.faq-trigger i').forEach(ic => {
+        ic.classList.remove('fa-minus');
+        ic.classList.add('fa-plus');
+      });
+
+      if (!isCurrentlyOpen) {
+        body.style.display = 'block';
+        icon.classList.remove('fa-plus');
+        icon.classList.add('fa-minus');
+      }
+    }
+  </script>
+  
+  <!-- Routex Smooth Inertia Scrolling & Heading Fade Observer -->
+  <div id="scroll-percentage" onclick="scrollToTop()" title="Back to Top">
+    <div id="scroll-percentage-value">
+      <span class="pct-text">0%</span>
+      <i class="fa-solid fa-arrow-up pct-icon"></i>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script>
+    // 1. Initialize Fancybox
+    Fancybox.bind("[data-fancybox]", {});
+
+    // 2. Initialize Routex Smooth Momentum Scroll
+    document.addEventListener("DOMContentLoaded", function () {
+      if (typeof SmoothScroll !== 'undefined') {
+        SmoothScroll({
+          animationTime: 850,
+          stepSize: 80,
+          accelerationDelta: 50,
+          accelerationMax: 3,
+          pulseAlgorithm: true,
+          pulseScale: 4,
+          pulseNormalize: 1,
+          touchpadSupport: true
+        });
+      }
+
+      // Top Progress Bar & Scroll Indicator
+      const progressBar = document.getElementById('scroll-progress-bar');
+      const scrollPctEl = document.getElementById('scroll-percentage');
+      const pctTextEl = document.querySelector('#scroll-percentage-value .pct-text');
+
+      window.addEventListener('scroll', function () {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollPercent = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+        const roundedPct = Math.round(scrollPercent);
+
+        if (progressBar) progressBar.style.width = scrollPercent + '%';
+
+        if (scrollPctEl) {
+          scrollPctEl.style.background = `conic-gradient(#1A3150 ${roundedPct}%, #e2e8f0 ${roundedPct}%)`;
+          if (pctTextEl) pctTextEl.textContent = roundedPct + '%';
+          if (scrollTop > 200) {
+            scrollPctEl.classList.add('active');
+          } else {
+            scrollPctEl.classList.remove('active');
+          }
+        }
+      }, { passive: true });
+
+      // Smooth Anchor Navigation with Offset
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const targetId = this.getAttribute('href');
+          if (targetId && targetId !== '#') {
+            const targetEl = document.querySelector(targetId);
+            if (targetEl) {
+              e.preventDefault();
+              const headerOffset = 90;
+              const elementPosition = targetEl.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
+            }
+          }
+        });
+      });
+
+      // 3. Heading Fade In & Fade Out on Scroll
+      const headingObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            entry.target.classList.remove('faded-out');
+          } else {
+            if (entry.boundingClientRect.top < 0) {
+              entry.target.classList.add('faded-out');
+              entry.target.classList.remove('revealed');
+            } else {
+              entry.target.classList.remove('revealed');
+              entry.target.classList.remove('faded-out');
+            }
+          }
+        });
+      }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      document.querySelectorAll('.heading-fade, .section-title, .section-head, .inner-hero-title').forEach(el => {
+        headingObserver.observe(el);
+      });
+
+      // Reveal hero title immediately on load
+      const heroTitle = document.querySelector('.inner-hero-title');
+      if (heroTitle) {
+        setTimeout(() => heroTitle.classList.add('revealed'), 80);
+      }
+    });
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function toggleMobileMenu() {
+      document.getElementById('navLinks').classList.toggle('mobile-open');
+    }
+
+    function toggleFaq(btn) {
+      const body = btn.nextElementSibling;
+      const icon = btn.querySelector('i');
+      const isCurrentlyOpen = body.style.display === 'block';
+
+      document.querySelectorAll('.faq-body').forEach(b => b.style.display = 'none');
+      document.querySelectorAll('.faq-trigger i').forEach(ic => {
+        ic.classList.remove('fa-minus');
+        ic.classList.add('fa-plus');
+      });
+
+      if (!isCurrentlyOpen) {
+        body.style.display = 'block';
+        icon.classList.remove('fa-plus');
+        icon.classList.add('fa-minus');
+      }
+    }
+  </script>
+  <!-- Google Translate Engine & Cookie Dispatcher -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+
+    function translatePage(langCode) {
+      // 1. Set Google Translate Cookie (works on all protocols & servers)
+      const domain = window.location.hostname;
+      const cookieValue = '/en/' + langCode;
+      
+      document.cookie = `googtrans=${cookieValue}; path=/;`;
+      if (domain) {
+        document.cookie = `googtrans=${cookieValue}; path=/; domain=${domain};`;
+      }
+
+      // 2. Trigger native select if available
+      const combo = document.querySelector('.goog-te-combo');
+      if (combo) {
+        combo.value = langCode;
+        combo.dispatchEvent(new Event('change'));
+      } else {
+        // Reload page so Google Translate reads the newly placed cookie and translates all text immediately
+        window.location.reload();
+      }
+    }
+
+    // Read current language on load and sync dropdown
+    window.addEventListener('DOMContentLoaded', () => {
+      const match = document.cookie.match(/(?:^|;\s*)googtrans=\/en\/([a-zA-Z\-]+)/);
+      if (match && match[1]) {
+        const sel = document.getElementById('langSelect');
+        if (sel) sel.value = match[1];
+      }
+    });
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- FINRA Specimens Interactive Carousel Script -->
+  <script>
+    let finraCurrentIndex = 0;
+    const totalFinraSlides = 9;
+
+    function getFinraVisibleCount() {
+      if (window.innerWidth <= 680) return 1;
+      if (window.innerWidth <= 1050) return 2;
+      return 3;
+    }
+
+    function initFinraDots() {
+      const dotsWrap = document.getElementById('finraDots');
+      if (!dotsWrap) return;
+      dotsWrap.innerHTML = '';
+      const visibleCount = getFinraVisibleCount();
+      const maxPages = totalFinraSlides - visibleCount + 1;
+
+      for (let i = 0; i < maxPages; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'finra-dot' + (i === 0 ? ' active' : '');
+        dot.onclick = () => setFinraSlide(i);
+        dotsWrap.appendChild(dot);
+      }
+    }
+
+    function updateFinraCarousel() {
+      const track = document.getElementById('finraTrack');
+      if (!track) return;
+      const visibleCount = getFinraVisibleCount();
+      const maxIndex = Math.max(0, totalFinraSlides - visibleCount);
+
+      if (finraCurrentIndex > maxIndex) finraCurrentIndex = maxIndex;
+      if (finraCurrentIndex < 0) finraCurrentIndex = 0;
+
+      const slide = track.querySelector('.finra-form-slide');
+      if (!slide) return;
+      const slideWidth = slide.offsetWidth;
+      const gap = 24;
+      const offset = finraCurrentIndex * (slideWidth + gap);
+
+      track.style.transform = `translateX(-${offset}px)`;
+
+      // Update dots
+      const dots = document.querySelectorAll('.finra-dot');
+      dots.forEach((d, i) => {
+        d.classList.toggle('active', i === finraCurrentIndex);
+      });
+    }
+
+    function moveFinraSlide(dir) {
+      const visibleCount = getFinraVisibleCount();
+      const maxIndex = Math.max(0, totalFinraSlides - visibleCount);
+      finraCurrentIndex += dir;
+      if (finraCurrentIndex < 0) finraCurrentIndex = maxIndex;
+      else if (finraCurrentIndex > maxIndex) finraCurrentIndex = 0;
+      updateFinraCarousel();
+    }
+
+    function setFinraSlide(index) {
+      finraCurrentIndex = index;
+      updateFinraCarousel();
+    }
+
+    function openFinraFancybox(index) {
+      const links = document.querySelectorAll('.finra-form-img-link');
+      if (links && links[index]) {
+        links[index].click();
+      }
+    }
+
+    // Touch swipe support for mobile
+    document.addEventListener('DOMContentLoaded', () => {
+      initFinraDots();
+      updateFinraCarousel();
+
+      const viewport = document.getElementById('finraViewport');
+      if (!viewport) return;
+
+      let startX = 0;
+      let endX = 0;
+
+      viewport.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+      }, { passive: true });
+
+      viewport.addEventListener('touchend', (e) => {
+        endX = e.changedTouches[0].clientX;
+        const diff = startX - endX;
+        if (Math.abs(diff) > 40) {
+          moveFinraSlide(diff > 0 ? 1 : -1);
+        }
+      }, { passive: true });
+
+      window.addEventListener('resize', () => {
+        initFinraDots();
+        updateFinraCarousel();
+      });
+    });
+  </script>
+
+</body>
+</html>

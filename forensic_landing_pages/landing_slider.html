@@ -1,0 +1,5162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PrimeFPrint | Certified FBI, PCC & Forensic Specialists</title>
+  <meta name="description" content="Premier certified forensic fingerprinting, FBI FD-258 cards, Canadian RCMP, FINRA licensing, and Police Clearance Certificates (PCC) with 40+ years of trusted excellence.">
+
+  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- jsVectorMap CSS for Interactive Map -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap/dist/css/jsvectormap.min.css" />
+
+  <style>
+    :root {
+      /* Neutral Brand Color System (Derived from PrimeFPrint Logo) */
+      --primary: #1a3150;           /* Logo Deep Navy */
+      --primary-accent: #1a3150;    /* Primary Brand Navy */
+      --primary-navy: #1a3150;
+      --primary-accent-dark: #12243b; /* Deeper Navy Hover */
+      --accent-soft: #6b9dd2;       /* Logo Soft Slate Blue (from 'FP' & swoosh) */
+      --accent-cyan: #6b9dd2;       /* Replaced electric cyan with muted logo slate blue */
+      --bg-white: #ffffff;          /* Pure White */
+      --bg-light: #f8fafc;          /* Off-white Pearl */
+      --bg-subtle: #f1f5f9;         /* Cool Neutral Slate */
+      --card-white: #ffffff;
+      --card-border: #e2e8f0;       /* Hairline Neutral Border */
+      --card-border-hover: #cbd5e1;
+      --text-main: #1a3150;         /* Deep Navy Headings */
+      --text-muted: #526071;        /* Muted Charcoal/Slate */
+      --text-light: #64748b;
+      --shadow-sm: 0 2px 8px rgba(26, 49, 80, 0.04);
+      --shadow-md: 0 10px 30px rgba(26, 49, 80, 0.06);
+      --shadow-lg: 0 20px 50px rgba(26, 49, 80, 0.08);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-white);
+      color: var(--text-main);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      letter-spacing: -0.02em;
+    }
+
+    /* Top Emergency / Schedule Notification */
+    .top-strip {
+      border-bottom: 1px solid var(--card-border);
+      padding: 10px 5%;
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text-muted);
+      background: var(--bg-light);
+    }
+    .top-strip a { color: var(--primary-accent); text-decoration: none; font-weight: 700; }
+    .top-strip a:hover { text-decoration: underline; }
+    .strip-items { display: flex; gap: 24px; align-items: center; }
+
+    /* Sticky Header - Glass Blur UI */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(18px) saturate(180%);
+      -webkit-backdrop-filter: blur(18px) saturate(180%);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.65);
+      box-shadow: 0 4px 24px rgba(15, 23, 42, 0.04);
+      z-index: 1000;
+      padding: 0 5%;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .nav-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      height: 104px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Brand Logo - Crisp HD Rendering */
+    .brand-logo-img {
+      height: 96px;
+      width: auto;
+      max-width: 140px;
+      object-fit: contain;
+      display: block;
+      image-rendering: -webkit-optimize-contrast;
+      transition: transform 0.25s ease;
+    }
+    .brand-logo:hover .brand-logo-img {
+      transform: scale(1.03);
+    }
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--primary);
+    }
+    .logo-icon {
+      width: 44px; height: 44px;
+      background: #f8fafc; border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-accent);
+      font-size: 20px;
+      box-shadow: 0 2px 10px rgba(2, 132, 199, 0.15);
+    }
+    .logo-text h3 {
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      text-transform: uppercase;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--primary);
+    }
+    .logo-text span {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--primary-accent);
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    /* 3 Navigation Elements */
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 36px;
+      align-items: center;
+    }
+    .nav-item { position: relative; }
+    .nav-link {
+      text-decoration: none;
+      color: var(--primary);
+      font-size: 15px;
+      font-weight: 600;
+      padding: 12px 0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: var(--primary-accent); }
+
+    /* Dropdown: ONLY PCC and FINRA */
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: -20px;
+      background: var(--bg-white);
+      border: 1px solid var(--card-border);
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+      border-radius: 12px;
+      width: 330px;
+      padding: 12px;
+      list-style: none;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .nav-item:hover .dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .dropdown li { margin-bottom: 6px; }
+    .dropdown li:last-child { margin-bottom: 0; }
+    .dropdown li a {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: var(--text-main);
+      font-size: 14px;
+      font-weight: 700;
+      transition: all 0.15s;
+    }
+    .dropdown li a:hover {
+      background: #eff6ff;
+      color: var(--primary-accent);
+    }
+    .dropdown-icon { font-size: 18px; color: var(--primary-accent); margin-top: 2px; }
+    .dropdown-desc { display: block; font-size: 12px; font-weight: 400; color: var(--text-muted); margin-top: 3px; line-height: 1.4; }
+
+    /* Book Appointment Button: Smooth Color Fill Hover Transition (Logo "FP" Light Blue Gradient) */
+    .btn-header {
+      position: relative;
+      background: #1a3150;
+      color: #ffffff !important;
+      padding: 12px 24px;
+      border-radius: 9px;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(26, 49, 80, 0.16);
+      border: 1px solid #1a3150;
+      overflow: hidden;
+      z-index: 1;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #3a7bc8 0%, #65a3dc 50%, #7db9ed 100%);
+      z-index: -1;
+      transform: translateY(100%);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-header:hover::before {
+      transform: translateY(0);
+    }
+    .btn-header:hover {
+      transform: translateY(-2px);
+      border-color: #7db9ed;
+      box-shadow: 0 8px 24px rgba(101, 163, 220, 0.38);
+      color: #ffffff !important;
+      text-shadow: 0 1px 2px rgba(15, 23, 42, 0.25);
+    }
+
+    /* HERO: Dynamic Cinematic Carousel Slider (with Clean White Contrast Overlay) */
+        /* HERO: Dynamic Cinematic Carousel Slider */
+    .hero-slider-section {
+      position: relative;
+      min-height: 640px;
+      height: 90vh;
+      max-height: 840px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    .slide {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1.2s ease-in-out, transform 8s cubic-bezier(0.25, 1, 0.5, 1);
+      transform: scale(1.08);
+      z-index: 1;
+    }
+    .slide.active {
+      opacity: 1;
+      transform: scale(1);
+      z-index: 2;
+    }
+    .slide-overlay {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      /* Brand Navy Harmonic Gradient */
+      background: linear-gradient(90deg, rgba(12, 24, 42, 0.88) 0%, rgba(12, 24, 42, 0.64) 52%, rgba(12, 24, 42, 0.22) 100%);
+    }
+
+    .hero-slider-content {
+      position: relative;
+      z-index: 20;
+      max-width: 1300px;
+      margin: 0 auto;
+      width: 100%;
+      display: block;
+      padding: 0 5%;
+      color: #ffffff;
+    }
+
+    .hero-content-left {
+      max-width: 740px;
+    }
+
+    .hero-trust-bar {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 26px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255, 255, 255, 0.18);
+      max-width: 680px;
+    }
+    .hero-trust-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.92);
+      text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+    }
+    .hero-trust-item i {
+      color: #6B9DD2;
+      font-size: 15px;
+    }
+
+    .hero-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      padding: 7px 18px;
+      border-radius: 50px !important;
+      font-size: 13px;
+      color: #ffffff;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      margin-bottom: 22px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    }
+    .pulse-dot {
+      width: 8px; height: 8px;
+      background: #6B9DD2;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #6B9DD2;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(0.9); opacity: 0.8; }
+      50% { transform: scale(1.4); opacity: 1; }
+      100% { transform: scale(0.9); opacity: 0.8; }
+    }
+
+    .hero-heading {
+      font-size: 48px;
+      line-height: 1.18;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 20px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #ffffff;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+    .accent-sub {
+      color: #ffffff;
+      font-weight: 800;
+      display: inline;
+    }
+
+    .hero-subtext {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.88);
+      line-height: 1.7;
+      margin-bottom: 30px;
+      max-width: 580px;
+      font-weight: 400;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    .hero-slider-content .btn-primary {
+      background: #ffffff !important;
+      color: #1a3150 !important;
+      padding: 15px 32px;
+      border-radius: 10px;
+      font-weight: 800;
+      font-size: 15px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+      border: 1px solid #ffffff;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .hero-slider-content .btn-primary span,
+    .hero-slider-content .btn-primary i {
+      color: #1a3150 !important;
+      font-weight: 800;
+    }
+    .hero-slider-content .btn-primary:hover {
+      background: #f8fafc !important;
+      color: #1a3150 !important;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(255, 255, 255, 0.25);
+    }
+
+    .btn-glass {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #ffffff !important;
+      padding: 15px 28px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 15px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s;
+      backdrop-filter: blur(8px);
+    }
+    .btn-glass:hover {
+      background: rgba(255, 255, 255, 0.22);
+      border-color: rgba(255, 255, 255, 0.45);
+      color: #ffffff !important;
+      transform: translateY(-2px);
+    }
+
+    /* Extreme Left & Right Vertically Centered Carousel Arrow Buttons */
+    .hero-carousel-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: rgba(12, 24, 42, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      cursor: pointer;
+      z-index: 30;
+      backdrop-filter: blur(10px);
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    }
+    .hero-carousel-arrow:hover {
+      background: #1A3150;
+      border-color: #6B9DD2;
+      color: #ffffff;
+      transform: translateY(-50%) scale(1.08);
+      box-shadow: 0 8px 24px rgba(26, 49, 80, 0.4);
+    }
+    .hero-carousel-arrow:active {
+      transform: translateY(-50%) scale(0.96);
+    }
+    .hero-prev-arrow {
+      left: 28px;
+    }
+    .hero-next-arrow {
+      right: 28px;
+    }
+
+    @media (max-width: 992px) {
+      .hero-carousel-arrow {
+        width: 42px;
+        height: 42px;
+        font-size: 15px;
+      }
+      .hero-prev-arrow {
+        left: 14px;
+      }
+      .hero-next-arrow {
+        right: 14px;
+      }
+    }
+
+    /* Refined Hero Booking Lead Card with Smooth Rotating Gradient Border Beam */
+    .hero-lead-card {
+      background: #cbd5e1;
+      border: none;
+      border-radius: 20px;
+      padding: 30px 28px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25), 0 0 30px rgba(2, 132, 199, 0.2);
+      color: var(--text-main);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .hero-lead-card::before {
+      content: "";
+      position: absolute;
+      top: -65%;
+      left: -65%;
+      width: 230%;
+      height: 230%;
+      background: conic-gradient(
+        transparent 0deg,
+        transparent 160deg,
+        #1A3150 200deg,
+        #6B9DD2 215deg,
+        #ffffff 225deg,
+        #6B9DD2 235deg,
+        #1A3150 250deg,
+        transparent 290deg,
+        transparent 360deg
+      );
+      animation: rotateBorderBeam 4.5s linear infinite;
+      z-index: -2;
+    }
+    .hero-lead-card::after {
+      content: "";
+      position: absolute;
+      inset: 2px;
+      background: #ffffff;
+      border-radius: 18px;
+      z-index: -1;
+    }
+    @keyframes rotateBorderBeam {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    .card-title-row, .card-subtitle, .hero-lead-card form {
+      position: relative;
+      z-index: 2;
+    }
+    .card-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+    .card-title {
+      font-size: 21px;
+      font-weight: 800;
+      color: #0f172a;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      margin: 0;
+    }
+    .card-verified-tag {
+      font-size: 10px;
+      font-weight: 700;
+      color: #1a3150;
+      background: #f0f9ff;
+      border: 1px solid #dbe6f1;
+      padding: 3px 8px;
+      border-radius: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .card-subtitle {
+      font-size: 12.5px;
+      color: #64748b;
+      margin-bottom: 18px;
+    }
+    .form-field { margin-bottom: 13px; }
+    .form-field label {
+      display: block;
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #475569;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .form-field input, .form-field select {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 13.5px;
+      background: #f8fafc;
+      color: #0f172a;
+      transition: all 0.2s;
+    }
+    .form-field input:focus, .form-field select:focus {
+      outline: none;
+      border-color: #1a3150;
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.12);
+    }
+    .btn-submit-lead {
+      width: 100%;
+      background: linear-gradient(135deg, #1A3150 0%, #13253d 100%);
+      color: #ffffff;
+      border: none;
+      padding: 13px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14.5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(2, 132, 199, 0.3);
+      transition: all 0.25s;
+      margin-top: 6px;
+    }
+    .btn-submit-lead:hover {
+      background: linear-gradient(135deg, #13253d 0%, #075985 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(2, 132, 199, 0.4);
+    }
+    .card-security-note {
+      text-align: center;
+      font-size: 11px;
+      color: #94a3b8;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+
+    /* Section Boilerplate: Clean Light Theme */
+    section { padding: 100px 5%; position: relative; }
+    .section-head { text-align: center; max-width: 760px; margin: 0 auto 60px; }
+    
+    .tag-badge {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      font-size: 11.5px !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 1.2px !important;
+      color: #1a3150 !important;
+      background: #f0f4f8 !important;
+      border: 1px solid #d0dbe7 !important;
+      padding: 6px 18px !important;
+      border-radius: 50px !important;
+      box-shadow: 0 1px 4px rgba(26, 49, 80, 0.04) !important;
+      margin-bottom: 16px !important;
+      transition: all 0.25s ease !important;
+    }
+    .tag-badge::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #1A3150;
+      box-shadow: 0 0 8px rgba(2, 132, 199, 0.6);
+    }
+    .section-title {
+      font-size: 38px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--primary);
+    }
+    .section-desc { font-size: 16px; color: var(--text-muted); line-height: 1.7; }
+
+
+
+    /* Section 1: About Story (Soft Light Gray) */
+    .about-story {
+      background: var(--bg-light);
+      border-top: 1px solid var(--card-border);
+      border-bottom: 1px solid var(--card-border);
+      position: relative;
+      overflow: hidden;
+      padding: 100px 5%;
+    }
+    .about-grid {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Routex Floating Aeroplane in About Us Background */
+    .about-plane-bg-wrap {
+      position: absolute;
+      top: 60px;
+      left: 8%;
+      width: 440px;
+      height: 280px;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.95;
+    }
+    .about-flight-svg {
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+
+    .about-visual {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--card-border);
+      box-shadow: var(--shadow-lg);
+    }
+    .about-visual img { width: 100%; height: 480px; object-fit: cover; display: block; }
+    .about-experience-badge {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      background: #ffffff;
+      border: 1px solid var(--card-border);
+      padding: 18px 24px;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+    .exp-years { font-size: 36px; font-weight: 800; color: var(--primary-accent); line-height: 1; font-family: 'Plus Jakarta Sans', sans-serif;}
+    .exp-label { font-size: 12px; font-weight: 700; color: var(--primary); text-transform: uppercase; margin-top: 4px; letter-spacing: 0.5px;}
+
+    .story-card {
+      margin-bottom: 22px;
+      padding: 18px 22px;
+      background: #ffffff;
+      border-radius: 10px;
+      border: 1px solid var(--card-border);
+      border-left: 4px solid var(--primary-accent);
+      box-shadow: var(--shadow-sm);
+    }
+    .story-card h4 { font-size: 17px; margin-bottom: 6px; color: var(--primary); font-weight: 700; }
+    .story-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+
+    /* Section 2: Services Grid (Pure White Background) */
+    .services-section {
+      background: var(--bg-white);
+    }
+    .services-grid {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+      gap: 32px;
+    }
+    
+    /* Enhanced Luxury Service Cards with Visual Image Headers */
+    .services-grid {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 36px;
+    }
+    .service-box {
+      background: #cbd5e1;
+      border: none;
+      border-radius: 22px;
+      padding: 0;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08), 0 0 25px rgba(2, 132, 199, 0.12);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .service-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 60px rgba(2, 132, 199, 0.22), 0 0 40px rgba(56, 189, 248, 0.28);
+    }
+    .service-box::before {
+      content: "";
+      position: absolute;
+      top: -65%;
+      left: -65%;
+      width: 230%;
+      height: 230%;
+      background: conic-gradient(
+        transparent 0deg,
+        transparent 160deg,
+        #1A3150 200deg,
+        #6B9DD2 215deg,
+        #ffffff 225deg,
+        #6B9DD2 235deg,
+        #1A3150 250deg,
+        transparent 290deg,
+        transparent 360deg
+      );
+      animation: rotateBorderBeam 5s linear infinite;
+      z-index: -2;
+    }
+    #service-finra::before {
+      animation-delay: -2.5s;
+    }
+    .service-box::after {
+      content: "";
+      position: absolute;
+      inset: 3px;
+      background: #ffffff;
+      border-radius: 19px;
+      z-index: -1;
+    }
+    .service-box-inner {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      border-radius: 19px;
+      overflow: hidden;
+      background: #ffffff;
+    }
+    .service-card-media {
+      position: relative;
+      width: 100%;
+      height: 350px; /* Highlighting the image prominently */
+      overflow: hidden;
+      background: #0f172a;
+      display: block;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .service-title-link {
+      text-decoration: none;
+      color: inherit;
+      display: inline-block;
+      transition: color 0.2s;
+    }
+    .service-title-link:hover h3 {
+      color: #1a3150;
+    }
+    .btn-service-view-more {
+      width: 100%;
+      justify-content: center;
+      padding: 14px 24px;
+      font-size: 15px;
+      font-weight: 700;
+      border-radius: 12px;
+    }
+    .service-card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .service-box:hover .service-card-media img {
+      transform: scale(1.07);
+    }
+    .service-card-media-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.05) 0%, rgba(15, 23, 42, 0) 30%, rgba(15, 23, 42, 0.12) 100%);
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .service-box:hover .service-card-media-overlay {
+      opacity: 0.4;
+    }
+    .service-card-chip {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(8px);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 11.5px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      z-index: 5;
+    }
+    .service-card-chip i {
+      color: #6B9DD2;
+    }
+    .service-floating-icon {
+      position: absolute;
+      bottom: 16px;
+      right: 18px;
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #1A3150 0%, #13253d 100%);
+      color: #ffffff;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      box-shadow: 0 8px 20px rgba(2, 132, 199, 0.4);
+      border: 2px solid #ffffff;
+      z-index: 5;
+      transition: transform 0.3s ease;
+    }
+    .service-box:hover .service-floating-icon {
+      transform: scale(1.1) rotate(4deg);
+    }
+    .service-box-body {
+      padding: 30px 32px 30px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .service-meta-strip {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 12px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #1a3150;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .service-meta-strip span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .service-box-body h3 {
+      font-size: 22px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 12px;
+      letter-spacing: -0.4px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .service-box-body p {
+      font-size: 14.5px;
+      color: #64748b;
+      line-height: 1.65;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+    .service-card-footer {
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px solid #f1f5f9;
+    }
+
+    @media (max-width: 992px) {
+      .services-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+.service-box-icon {
+      width: 64px; height: 64px;
+      background: #f8fafc; border: 1px solid #cbd5e1;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      color: var(--primary-accent);
+      margin-bottom: 24px;
+    }
+    .service-box h3 {
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 14px;
+      color: var(--primary);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .service-box p {
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      line-height: 1.7;
+    }
+    .service-bullet-list {
+      list-style: none;
+      margin-bottom: 28px;
+      font-size: 14px;
+      color: var(--text-main);
+    }
+    .service-bullet-list li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .service-bullet-list i { color: #16a34a; font-size: 14px; }
+
+    /* Section 3: Why Choose Us (Light Subtle Gray) */
+    .why-choose-us {
+      background: var(--bg-light);
+      border-top: 1px solid var(--card-border);
+      border-bottom: 1px solid var(--card-border);
+    }
+    .features-grid {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .feature-tile {
+      background: #ffffff;
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 32px 24px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.25s;
+    }
+    .feature-tile:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--card-border-hover);
+    }
+    .feature-icon-circle {
+      width: 64px; height: 64px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      background: #f8fafc; border: 1px solid #cbd5e1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: var(--primary-accent);
+    }
+    .feature-tile h4 { font-size: 18px; font-weight: 700; margin-bottom: 10px; color: var(--primary); }
+    .feature-tile p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+
+        
+        /* ============================================================
+       Section 4: Interactive World Map - Ultra Premium Light Theme
+       ============================================================ */
+    .global-presence {
+      background: #ffffff;
+      padding: 100px 5%;
+      position: relative;
+      overflow: hidden;
+    }
+    .map-wrapper {
+      max-width: 1240px;
+      margin: 0 auto;
+      background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+      border: 1px solid #cbd5e1;
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+      position: relative;
+    }
+    #world-map {
+      width: 100%;
+      height: 520px;
+      border-radius: 16px;
+      background: transparent;
+    }
+
+    /* Professional Map Summary Legend Bar */
+    .map-summary-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 35px;
+      padding-top: 30px;
+      border-top: 1px solid #e2e8f0;
+    }
+    .map-summary-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+      transition: all 0.25s;
+    }
+    .map-summary-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(2, 132, 199, 0.12);
+      border-color: #93c5fd;
+    }
+    .summary-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: #f0f4f8;
+      border: 1px solid #d0dbe7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      color: #1a3150;
+      flex-shrink: 0;
+    }
+    .map-summary-card h4 {
+      font-size: 15px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 4px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .map-summary-card p {
+      font-size: 13px;
+      color: #64748b;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    
+    /* ============================================================
+       CLIENT 34 ACCREDITED COUNTRIES DIRECTORY & HIGHLIGHTED LOCATION PINS
+       ============================================================ */
+    .countries-directory-section {
+      margin-top: 40px;
+      padding-top: 36px;
+      border-top: 1px solid #e2e8f0;
+    }
+    .countries-dir-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .countries-dir-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: #1a3150;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .countries-dir-badge {
+      background: #f0f4f8;
+      color: #1a3150;
+      border: 1px solid #d0dbe7;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .map-top-filter-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 24px;
+      width: 100%;
+    }
+    .region-filter-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      background: #ffffff;
+      padding: 6px 12px;
+      border-radius: 40px;
+      border: 1px solid #cbd5e1;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+    }
+    .region-tab-btn {
+      background: transparent;
+      border: 1px solid transparent;
+      padding: 8px 18px;
+      border-radius: 24px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #475569;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .region-tab-btn:hover {
+      background: #f1f5f9;
+      color: #1a3150;
+    }
+    .region-tab-btn.active {
+      background: #1a3150;
+      color: #ffffff;
+      border-color: #1a3150;
+      box-shadow: 0 4px 12px rgba(26, 49, 80, 0.25);
+    }
+    .client-countries-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 14px;
+    }
+    .country-loc-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(26, 49, 80, 0.03);
+    }
+    .country-loc-card:hover {
+      transform: translateY(-2px);
+      border-color: #6b9dd2;
+      box-shadow: 0 8px 20px rgba(26, 49, 80, 0.08);
+      background: #f8fafc;
+    }
+    /* Highlighted Location Pin Symbol */
+    .loc-pin-highlight {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: #f0f4f8;
+      border: 1px solid #d0dbe7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      color: #1a3150;
+      flex-shrink: 0;
+      transition: all 0.25s ease;
+      box-shadow: 0 2px 6px rgba(26, 49, 80, 0.06);
+    }
+    .country-loc-card:hover .loc-pin-highlight {
+      background: #1a3150;
+      color: #ffffff;
+      border-color: #1a3150;
+      transform: scale(1.08);
+      box-shadow: 0 4px 12px rgba(26, 49, 80, 0.25);
+    }
+    .country-info {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+    .country-title-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .country-num {
+      font-size: 11px;
+      font-weight: 700;
+      color: #94a3b8;
+    }
+    .country-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: #1a3150;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .country-badge-sub {
+      font-size: 11.5px;
+      color: #64748b;
+      margin-top: 2px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .tag-id-status {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: 4px;
+      background: #e2e8f0;
+      color: #1a3150;
+    }
+
+    @media (max-width: 768px) {
+      .client-countries-grid {
+        grid-template-columns: 1fr;
+      }
+      .countries-dir-head {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    /* Custom Tooltip Styling */
+    .jvm-tooltip {
+      background: #0f172a !important;
+      border: 1px solid #6b9dd2 !important;
+      border-radius: 8px !important;
+      color: #ffffff !important;
+      font-family: inherit !important;
+      font-size: 13px !important;
+      font-weight: 700 !important;
+      padding: 8px 14px !important;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4) !important;
+    }
+
+    /* Section 5: Testimonials (Ultra Premium Responsive Slider) */
+    .testimonials-section {
+      background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+      border-top: 1px solid var(--card-border);
+      border-bottom: 1px solid var(--card-border);
+      padding: 95px 5%;
+      position: relative;
+      overflow: hidden;
+    }
+    .testimonials-slider-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .testi-slider-wrapper {
+      overflow: hidden;
+      padding: 15px 6px 25px;
+      border-radius: 20px;
+    }
+    .testi-track {
+      display: flex;
+      gap: 24px;
+      transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+      will-change: transform;
+    }
+    .testi-card {
+      flex: 0 0 calc((100% - 48px) / 3);
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 34px 30px;
+      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      box-sizing: border-box;
+      min-height: 290px;
+    }
+    .testi-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 36px rgba(26, 49, 80, 0.09);
+      border-color: #cbd5e1;
+    }
+    .testi-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .testi-stars {
+      color: #f59e0b;
+      font-size: 14.5px;
+      display: flex;
+      gap: 3px;
+    }
+    .testi-quote-icon {
+      font-size: 26px;
+      color: #e2e8f0;
+      line-height: 1;
+    }
+    .testi-text {
+      font-size: 14.5px;
+      color: #475569;
+      line-height: 1.7;
+      margin-bottom: 24px;
+      font-style: normal;
+    }
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      border-top: 1px solid #f1f5f9;
+      padding-top: 18px;
+    }
+    .author-avatar {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #1a3150 0%, #2a4b73 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 15px;
+      color: #ffffff;
+      box-shadow: 0 4px 10px rgba(26, 49, 80, 0.2);
+      flex-shrink: 0;
+    }
+    .author-info h5 {
+      font-size: 15.5px;
+      color: #1a3150;
+      font-weight: 700;
+      margin: 0 0 4px;
+    }
+    .author-info span {
+      font-size: 12.5px;
+      color: #64748b;
+      display: block;
+    }
+
+    /* Controls Bar: Prev/Next & Dots */
+    .testi-controls-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      margin-top: 25px;
+    }
+    .testi-nav-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      color: #1a3150;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+      transition: all 0.25s ease;
+    }
+    .testi-nav-btn:hover {
+      background: #1a3150;
+      color: #ffffff;
+      border-color: #1a3150;
+      transform: scale(1.06);
+      box-shadow: 0 4px 14px rgba(26, 49, 80, 0.25);
+    }
+    .testi-dots {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .testi-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      background: #cbd5e1;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+      padding: 0;
+    }
+    .testi-dot.active {
+      width: 28px;
+      background: #1a3150;
+    }
+
+    @media (max-width: 1024px) {
+      .testi-card {
+        flex: 0 0 calc((100% - 24px) / 2);
+      }
+    }
+    @media (max-width: 768px) {
+      .testimonials-section {
+        padding: 55px 16px !important;
+      }
+      .testi-card {
+        flex: 0 0 100%;
+        padding: 24px 20px;
+        min-height: auto;
+      }
+      .testi-slider-wrapper {
+        padding: 10px 0 15px;
+      }
+    }
+
+    /* Section 6: FAQs (Pure White Background) */
+    .faq-section { background: #ffffff; }
+    .faq-wrapper { max-width: 850px; margin: 0 auto; }
+    .faq-block {
+      background: #ffffff;
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      margin-bottom: 14px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .faq-trigger {
+      width: 100%; text-align: left; padding: 20px 24px;
+      background: none; border: none; color: var(--primary);
+      font-size: 16px; font-weight: 700; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      font-family: inherit;
+    }
+    .faq-trigger:hover { color: var(--primary-accent); }
+    .faq-body {
+      display: none;
+      padding: 0 24px 20px;
+      color: var(--text-muted);
+      font-size: 14.5px;
+      line-height: 1.7;
+      animation: faqSlideDown 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes faqSlideDown {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Section 7: Contact Section with Google Maps */
+    .contact-section {
+      background: var(--bg-light);
+      border-top: 1px solid var(--card-border);
+    }
+    .contact-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: flex-start;
+    }
+    .contact-info-panel {
+      background: #ffffff;
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 40px;
+      box-shadow: var(--shadow-md);
+    }
+    .contact-item { display: flex; gap: 16px; margin-bottom: 24px; }
+    .contact-icon {
+      width: 46px; height: 46px;
+      background: #f8fafc; border: 1px solid #cbd5e1;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-accent);
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .contact-item h5 { font-size: 12.5px; color: var(--text-light); text-transform: uppercase; margin-bottom: 4px; font-weight: 700; letter-spacing: 0.5px; }
+    .contact-item p, .contact-item a { font-size: 15.5px; color: var(--primary); text-decoration: none; font-weight: 600; }
+    .contact-item a:hover { color: var(--primary-accent); text-decoration: underline; }
+
+    .map-frame {
+      width: 100%; height: 250px;
+      border-radius: 12px;
+      border: 1px solid var(--card-border);
+      margin-top: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .map-frame iframe { width: 100%; height: 100%; border: none; }
+
+    /* Floating WhatsApp Circular Button (Icon Only) */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      left: 28px;
+      right: auto;
+      width: 56px;
+      height: 56px;
+      background: #25d366;
+      color: #ffffff;
+      border-radius: 50% !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      text-decoration: none;
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
+      z-index: 9999;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1) translateY(-3px);
+      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+      color: #ffffff;
+    }
+
+    /* Footer: Executive Navy & White Contrast */
+    footer {
+      background: #0a0f1d;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 80px 5% 30px;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+    .footer-content {
+      max-width: 1300px; margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px; padding-bottom: 50px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .footer-col h4 { font-size: 16px; color: #fff; margin-bottom: 18px; font-family: 'Plus Jakarta Sans', sans-serif; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a { color: #94a3b8; text-decoration: none; transition: color 0.15s; }
+    .footer-col ul li a:hover { color: #6B9DD2; }
+    .footer-bottom {
+      max-width: 1300px; margin: 30px auto 0;
+      display: flex; justify-content: space-between;
+      font-size: 13px; color: #64748b;
+    }
+
+    /* Responsive Media Queries */
+    @media (max-width: 1024px) {
+      .hero-slider-content { grid-template-columns: 1fr; }
+      .hero-slider-section { height: auto; padding: 120px 0 80px; }
+      .about-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .features-grid { grid-template-columns: repeat(2, 1fr); }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .contact-container { grid-template-columns: 1fr; }
+      .footer-content { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .brand-logo-img { height: 72px !important; }
+      .hero-heading { font-size: 38px; }
+      .features-grid { grid-template-columns: 1fr; }
+      .top-strip { display: none; }
+      .slider-arrows { display: none; }
+      .footer-content { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+    }
+          /* ULTRA-PREMIUM LEFT FLOATING CTA CAPSULES */
+    .sticky-left-actions {
+      position: fixed;
+      left: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 9998;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .sticky-pill {
+      display: flex;
+      align-items: center;
+      text-decoration: none !important;
+      height: 52px;
+      width: 52px;
+      margin: 0 !important;
+      border-radius: 0 28px 28px 0 !important;
+      border: 1px solid #e2e8f0;
+      border-left: none !important;
+      background: #ffffff;
+      box-shadow: 0 4px 16px rgba(26, 49, 80, 0.08);
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      color: #1a3150 !important;
+      transition: width 0.32s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s, border-color 0.25s;
+    }
+    .sticky-pill:hover {
+      width: 185px;
+      box-shadow: 0 6px 20px rgba(26, 49, 80, 0.12);
+      border-color: #6b9dd2;
+      background: #ffffff;
+    }
+
+    /* Icon Badge: Strict Brand Navy Only */
+    .sticky-pill-icon {
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 19px;
+      flex-shrink: 0;
+      border-radius: 0 26px 26px 0;
+      color: #1a3150 !important;
+      transition: all 0.25s;
+    }
+    .sticky-pill-icon i {
+      color: #1a3150 !important;
+      font-size: 18px;
+      transition: transform 0.25s ease;
+    }
+    .sticky-pill:hover .sticky-pill-icon i {
+      color: #1a3150 !important;
+      transform: scale(1.06);
+    }
+
+    /* Text & Action Label */
+    .sticky-pill-text-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 10px;
+      padding-right: 18px;
+      white-space: nowrap;
+      opacity: 0;
+      transform: translateX(-10px);
+      transition: opacity 0.25s ease 0.08s, transform 0.25s ease 0.08s;
+    }
+    .sticky-pill:hover .sticky-pill-text-wrap {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .sticky-pill-label {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #1a3150;
+      line-height: 1.2;
+    }
+    .sticky-pill-sub {
+      font-size: 11px;
+      font-weight: 600;
+      color: #64748b;
+      letter-spacing: 0.3px;
+    }
+
+    /* Pulsing Notification Ping on Enquiry Icon */
+    .ping-badge {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      width: 10px;
+      height: 10px;
+      background: #22c55e;
+      border: 2px solid #ffffff;
+      border-radius: 50%;
+      box-shadow: 0 0 8px rgba(34, 197, 94, 0.8);
+      animation: pulse-ping 2s infinite;
+    }
+    @keyframes pulse-ping {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.3); opacity: 1; }
+      100% { transform: scale(0.95); opacity: 0.8; }
+    }
+
+    /* ENQUIRY MODAL POPUP */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(8px);
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .modal-dialog {
+      background: #ffffff;
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      width: 100%;
+      max-width: 500px;
+      padding: 38px 40px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+      position: relative;
+      transform: translateY(30px) scale(0.96);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .modal-overlay.active .modal-dialog {
+      transform: translateY(0) scale(1);
+    }
+    .modal-close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #f1f5f9;
+      border: 1px solid var(--card-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #64748b;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.2s;
+    }
+    .modal-close-btn:hover {
+      background: #fee2e2;
+      color: #ef4444;
+      border-color: #fca5a5;
+    }
+    .modal-header h3 {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 6px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .modal-header p {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+            /* HEADER RIGHT ACTIONS & GOOGLE TRANSLATOR */
+    .header-right-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    #google_translate_element {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .goog-te-gadget {
+      font-family: inherit !important;
+      font-size: 13px !important;
+      color: #64748b !important;
+      white-space: nowrap !important;
+    }
+    .goog-te-gadget select.goog-te-combo {
+      padding: 8px 12px 8px 30px !important;
+      border-radius: 8px !important;
+      border: 1px solid #cbd5e1 !important;
+      background: #ffffff url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='%230284c7' viewBox='0 0 16 16'><path d='M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 5a9.267 9.267 0 0 0-.464 2H1.08A7.001 7.001 0 0 1 4.09 5zm-.464 4c.05.69.213 1.37.464 2H1.08a7.002 7.002 0 0 1 0-4h2.546zm1.519 3H7.5v2.923c-.67-.204-1.335-.82-1.887-1.855A7.97 7.97 0 0 1 5.145 12zm3.355 2.923V12h2.355c-.178.694-.436 1.34-.748 1.855-.552 1.035-1.216 1.65-1.887 1.855zM8.5 11h2.89c.28-.63.468-1.306.546-2H8.5v2zm0-3h3.436c-.078-.694-.266-1.37-.546-2H8.5v2zm3.41-3h2.01A7.003 7.003 0 0 0 11.91 3c.484.58.88 1.258 1.155 2h-1.155zm.855 4c-.05.69-.213 1.37-.464 2h2.01a7.002 7.002 0 0 0 0-4h-2.01c.25.63.414 1.31.464 2zm-1.319 3H9.5v2.923c.67-.204 1.335-.82 1.887-1.855.312-.515.57-1.16.748-1.855zM8.5 4V1.077c.67.204 1.335.82 1.887 1.855.312.515.57 1.161.748 1.855H8.5z'/></svg>") no-repeat 10px center !important;
+      color: #0f172a !important;
+      font-weight: 700 !important;
+      font-size: 13px !important;
+      outline: none !important;
+      cursor: pointer !important;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06) !important;
+      transition: all 0.2s !important;
+    }
+    .goog-te-gadget select.goog-te-combo:hover, .goog-te-gadget select.goog-te-combo:focus {
+      border-color: #1a3150 !important;
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15) !important;
+    }
+    .goog-logo-link {
+      display: none !important;
+    }
+    .goog-te-banner-frame.skiptranslate {
+      display: none !important;
+    }
+    body { top: 0px !important; }
+    /* CUSTOM LANGUAGE DROPDOWN */
+    .custom-lang-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+    .custom-lang-select {
+      appearance: none;
+      -webkit-appearance: none;
+      padding: 10px 32px 10px 14px;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      background: #ffffff url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%230284c7' viewBox='0 0 16 16'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") no-repeat right 12px center;
+      color: #0f172a;
+      font-weight: 700;
+      font-size: 13.5px;
+      outline: none;
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      transition: all 0.2s;
+    }
+    .custom-lang-select:hover, .custom-lang-select:focus {
+      border-color: #1a3150;
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+    }
+
+    /* ============================================================
+       SMOOTH SCROLLING, PROGRESS BAR & VIEWPORT REVEAL STYLES
+       ============================================================ */
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px; /* Offset for sticky header */
+    }
+
+    /* Top Reading Progress Bar */
+    #scroll-progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3.5px;
+      width: 0%;
+      background: linear-gradient(90deg, #1A3150, #6B9DD2, #6B9DD2);
+      z-index: 99999;
+      transition: width 0.1s ease-out;
+      box-shadow: 0 0 10px rgba(107, 157, 210, 0.4);
+    }
+
+    /* Header Glass Blur Elevation on Scroll */
+    header.header-scrolled {
+      background: rgba(255, 255, 255, 0.82) !important;
+      backdrop-filter: blur(22px) saturate(190%) !important;
+      -webkit-backdrop-filter: blur(22px) saturate(190%) !important;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08) !important;
+      border-bottom-color: rgba(226, 232, 240, 0.75) !important;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Base Scroll Reveal Classes (GPU Accelerated) */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal-on-scroll.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Directional reveals */
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-36px);
+      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .reveal-left.revealed {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(36px);
+      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .reveal-right.revealed {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .reveal-scale {
+      opacity: 0;
+      transform: scale(0.96) translateY(24px);
+      transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .reveal-scale.revealed {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+
+    /* Staggered Children Delays */
+    .reveal-stagger > *:nth-child(1) { transition-delay: 0.05s; }
+    .reveal-stagger > *:nth-child(2) { transition-delay: 0.15s; }
+    .reveal-stagger > *:nth-child(3) { transition-delay: 0.25s; }
+    .reveal-stagger > *:nth-child(4) { transition-delay: 0.35s; }
+    .reveal-stagger > *:nth-child(5) { transition-delay: 0.45s; }
+    .reveal-stagger > *:nth-child(6) { transition-delay: 0.55s; }
+
+    /* Floating Back to Top Button */
+    .back-to-top-btn {
+      position: fixed;
+      bottom: 88px;
+      right: 28px;
+      width: 44px;
+      height: 44px;
+      background: #ffffff;
+      color: #0f172a;
+      border: 1px solid #cbd5e1;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(16px);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 999;
+    }
+    .back-to-top-btn.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .back-to-top-btn:hover {
+      background: #1A3150;
+      color: #ffffff;
+      border-color: #1a3150;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(2, 132, 199, 0.3);
+    }
+
+    /* Gold Stars for Testimonials */
+    .testi-stars i {
+      color: #f59e0b;
+      margin-right: 2px;
+      font-size: 14px;
+    }
+
+
+    /* ============================================================
+       ROUTEX THEME ANIMATIONS: AIRPLANE MOTIF & CIRCULAR SCROLL %
+       ============================================================ */
+    @keyframes upDown {
+      0% {
+        transform: translateY(0px) rotate(0deg);
+      }
+      100% {
+        transform: translateY(-16px) rotate(2deg);
+      }
+    }
+    .upDown {
+      animation: upDown 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes upDown-bottom {
+      0% {
+        transform: translateY(0px);
+      }
+      100% {
+        transform: translateY(-12px);
+      }
+    }
+    .upDown-bottom {
+      animation: upDown-bottom 1.6s ease-in-out infinite alternate;
+    }
+
+    /* Routex Floating Airplane Motif in Global Presence Section */
+    .routex-plane-motif {
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      width: 240px;
+      height: 200px;
+      pointer-events: none;
+      z-index: 10;
+      opacity: 0.85;
+    }
+    .routex-plane-motif .trail-bg {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 170px;
+      height: auto;
+      opacity: 0.45;
+    }
+    .routex-plane-motif .plane-body {
+      position: absolute;
+      top: 5px;
+      left: 110px;
+      width: 64px;
+    }
+    .routex-plane-motif .plane-body img {
+      width: 100%;
+      height: auto;
+      filter: drop-shadow(0 8px 16px rgba(2, 132, 199, 0.3));
+    }
+
+    /* Secondary Routex Floating Accent in About Section */
+    .routex-faq-plane-motif {
+      position: absolute;
+      top: -25px;
+      right: -25px;
+      width: 80px;
+      height: 80px;
+      z-index: 5;
+      pointer-events: none;
+    }
+    .routex-faq-plane-motif img {
+      width: 100%;
+      height: auto;
+      filter: drop-shadow(0 6px 14px rgba(2, 132, 199, 0.25));
+    }
+
+    /* Routex Exact Circular Scroll Percentage & Back To Top Button */
+    #scroll-percentage {
+      height: 54px;
+      width: 54px;
+      background: conic-gradient(#1A3150 0%, #e2e8f0 0%);
+      border-radius: 50%;
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      transform: scale(0);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 999;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.14);
+    }
+    #scroll-percentage.active {
+      transform: scale(1);
+      opacity: 1;
+      visibility: visible;
+    }
+    #scroll-percentage:hover {
+      transform: scale(1.08) translateY(-3px);
+      box-shadow: 0 14px 32px rgba(2, 132, 199, 0.35);
+    }
+    #scroll-percentage-value {
+      height: calc(100% - 6px);
+      width: calc(100% - 6px);
+      background-color: #ffffff;
+      color: #1a3150;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 12px;
+      font-weight: 700;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      transition: all 0.2s;
+    }
+    #scroll-percentage-value .pct-icon {
+      display: none;
+      font-size: 16px;
+    }
+    #scroll-percentage:hover #scroll-percentage-value {
+      background-color: #1a3150;
+      color: #ffffff;
+    }
+    #scroll-percentage:hover #scroll-percentage-value .pct-text {
+      display: none;
+    }
+    #scroll-percentage:hover #scroll-percentage-value .pct-icon {
+      display: block;
+    }
+
+
+    /* ============================================================
+       COMPREHENSIVE MOBILE RESPONSIVE STYLES (320px - 992px)
+       ============================================================ */
+    .mobile-toggle-btn {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      background: #f8fafc; border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      color: #1a3150;
+      font-size: 17px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .mobile-toggle-btn:hover {
+      background: #1A3150;
+      color: #ffffff;
+    }
+    .mobile-only-cta-item { display: none; }
+
+    @media (max-width: 992px) {
+      /* Navigation Bar & Mobile Drawer */
+      header {
+        padding: 10px 4% !important;
+      }
+      .nav-container {
+        justify-content: space-between !important;
+      }
+      .desktop-only-btn {
+        display: none !important;
+      }
+      .mobile-toggle-btn {
+        display: flex !important;
+      }
+      .mobile-only-cta-item {
+        display: block !important;
+      }
+      .nav-links {
+        display: flex !important;
+        position: fixed !important;
+        top: 66px !important;
+        left: 0 !important;
+        width: 100% !important;
+        max-height: calc(100vh - 66px) !important;
+        background: #ffffff !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0 !important;
+        padding: 20px 24px 35px !important;
+        overflow-y: auto !important;
+        border-bottom: 2px solid #e2e8f0 !important;
+        box-shadow: 0 20px 50px rgba(15, 23, 42, 0.15) !important;
+        transform: translateY(-130%) !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        z-index: 9999 !important;
+      }
+      .nav-links.mobile-open {
+        transform: translateY(0) !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+      .nav-links .nav-item {
+        width: 100% !important;
+        border-bottom: 1px solid #f1f5f9 !important;
+        padding: 14px 0 !important;
+      }
+      .nav-links .nav-link {
+        font-size: 16px !important;
+        font-weight: 700 !important;
+        color: #0f172a !important;
+        justify-content: space-between !important;
+      }
+      .nav-links .dropdown {
+        position: static !important;
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        box-shadow: none !important;
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 12px !important;
+        margin-top: 10px !important;
+        padding: 10px !important;
+        background: #f8fafc !important;
+      }
+      .nav-links .dropdown a {
+        padding: 12px 10px !important;
+        font-size: 14px !important;
+        border-bottom: 1px solid #e2e8f0 !important;
+      }
+      .nav-links .dropdown li:last-child a {
+        border-bottom: none !important;
+      }
+      .custom-lang-select {
+        padding: 6px 10px !important;
+        font-size: 12px !important;
+        max-width: 110px !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      /* General Typography & Spacing */
+      body {
+        font-size: 14px !important;
+        overflow-x: hidden !important;
+      }
+      .section-title {
+        font-size: 24px !important;
+        line-height: 1.25 !important;
+      }
+      .section-desc {
+        font-size: 13.5px !important;
+        line-height: 1.55 !important;
+      }
+      .tag-badge {
+        font-size: 11px !important;
+        padding: 5px 14px !important;
+        border-radius: 50px !important;
+        border: 1px solid #dbe6f1 !important;
+      }
+
+      /* Logo Scaling */
+      .brand-logo { gap: 8px !important; }
+      .logo-icon { width: 34px !important; height: 34px !important; font-size: 15px !important; }
+      .logo-text h3 { font-size: 16px !important; }
+      .logo-text span { font-size: 9px !important; letter-spacing: 1.5px !important; }
+
+      /* Hero Cinematic Slider Section */
+      .hero-slider-section {
+        height: auto !important;
+        min-height: 100vh !important;
+        padding: 85px 16px 50px !important;
+      }
+      .hero-slider-content {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+      }
+      .hero-badge-pill {
+        font-size: 11px !important;
+        padding: 5px 12px !important;
+        margin-bottom: 14px !important;
+      }
+      .hero-heading {
+        font-size: 26px !important;
+        line-height: 1.25 !important;
+        margin-bottom: 12px !important;
+      }
+      .hero-subtext {
+        font-size: 13.5px !important;
+        line-height: 1.55 !important;
+        margin-bottom: 20px !important;
+      }
+      .hero-actions {
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 10px !important;
+      }
+      .hero-actions .btn-primary,
+      .hero-actions .btn-secondary {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 12px 18px !important;
+        font-size: 14px !important;
+      }
+      .hero-form-card {
+        padding: 22px 16px !important;
+        border-radius: 16px !important;
+        margin-top: 5px !important;
+      }
+      .hero-form-card h3 {
+        font-size: 19px !important;
+      }
+      .slider-arrows {
+        display: none !important;
+      }
+      .slider-dots {
+        bottom: 15px !important;
+      }
+
+      /* Sticky Left Action Pills on Mobile */
+      .sticky-left-actions {
+        top: auto !important;
+        bottom: 85px !important;
+        transform: none !important;
+        left: 0 !important;
+        gap: 6px !important;
+      }
+      .sticky-pill {
+        width: 38px !important;
+        height: 38px !important;
+      }
+      .sticky-pill-icon {
+        width: 38px !important;
+        height: 38px !important;
+        font-size: 14px !important;
+      }
+      .sticky-pill:hover {
+        width: 38px !important; /* Keep compact on mobile touch screens */
+      }
+      .sticky-pill-text-wrap {
+        display: none !important;
+      }
+
+      /* About Section */
+      .about-story {
+        padding: 55px 16px !important;
+      }
+      .about-grid {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+      }
+      .about-visual img {
+        height: 250px !important;
+        object-fit: cover !important;
+        width: 100% !important;
+      }
+      .about-plane-bg-wrap {
+        display: none !important; /* Avoid horizontal viewport overflow on mobile */
+      }
+      .about-experience-badge {
+        bottom: 12px !important;
+        left: 12px !important;
+        padding: 8px 14px !important;
+      }
+      .about-experience-badge .exp-years { font-size: 24px !important; }
+      .about-experience-badge .exp-label { font-size: 10.5px !important; }
+      .story-card {
+        padding: 18px 16px !important;
+        margin-bottom: 14px !important;
+      }
+
+      /* Services Section */
+      .services-section {
+        padding: 55px 16px !important;
+      }
+      .services-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+      }
+      .service-box {
+        padding: 24px 18px !important;
+      }
+      .service-box h3 {
+        font-size: 19px !important;
+      }
+      .service-bullet-list li {
+        font-size: 13px !important;
+      }
+
+      /* Why Choose Us Section */
+      .why-choose-us {
+        padding: 55px 16px !important;
+      }
+      .features-grid {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+      }
+      .feature-tile {
+        padding: 22px 16px !important;
+      }
+
+      /* Global Presence & World Map */
+      .global-presence {
+        padding: 55px 16px !important;
+      }
+      .routex-plane-motif {
+        display: none !important;
+      }
+      .map-wrapper {
+        padding: 18px 12px !important;
+        border-radius: 16px !important;
+      }
+      #world-map {
+        height: 260px !important;
+      }
+      .map-summary-bar {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+        margin-top: 20px !important;
+        padding-top: 16px !important;
+      }
+      .map-summary-card {
+        padding: 14px !important;
+      }
+      .map-summary-card h4 {
+        font-size: 14.5px !important;
+      }
+      .map-summary-card p {
+        font-size: 12.5px !important;
+      }
+
+      /* Testimonials Section */
+      .testimonials-section {
+        padding: 55px 16px !important;
+      }
+      .testimonials-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+      }
+      .testi-card {
+        padding: 20px 16px !important;
+      }
+
+      /* FAQ Section */
+      .faq-section {
+        padding: 55px 16px !important;
+      }
+      .faq-trigger {
+        font-size: 14.5px !important;
+        padding: 16px 14px !important;
+      }
+      .faq-body {
+        font-size: 13px !important;
+        padding: 0 14px 16px !important;
+      }
+
+      /* Contact Section */
+      .contact-section {
+        padding: 55px 16px !important;
+      }
+      .contact-container {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+      }
+      .contact-info-panel,
+      .contact-form-panel {
+        padding: 22px 16px !important;
+      }
+
+      /* Footer */
+      footer {
+        padding: 50px 16px 25px !important;
+      }
+      .footer-content {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+      }
+      .footer-bottom {
+        flex-direction: column !important;
+        gap: 8px !important;
+        text-align: center !important;
+        font-size: 12px !important;
+      }
+
+      /* Floating Scroll % & WhatsApp Position */
+      #scroll-percentage {
+        bottom: 22px !important;
+        right: 20px !important;
+        width: 44px !important;
+        height: 44px !important;
+      }
+      .whatsapp-float {
+        bottom: 22px !important;
+        left: 20px !important;
+        right: auto !important;
+        width: 48px !important;
+        height: 48px !important;
+        padding: 0 !important;
+        font-size: 24px !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+
+      /* Modal Dialog on Mobile */
+      .modal-dialog {
+        padding: 24px 18px !important;
+        margin: 16px !important;
+        max-width: 95% !important;
+      }
+    }
+
+
+    /* Dedicated Mobile Viewport Enhancements */
+    @media (max-width: 992px) {
+      .desktop-only-btn {
+        display: none !important;
+      }
+      .mobile-toggle-btn {
+        display: flex !important;
+      }
+      .mobile-only-cta-item {
+        display: block !important;
+      }
+      .custom-lang-select {
+        max-width: 95px !important;
+        padding: 5px 6px !important;
+        font-size: 11.5px !important;
+      }
+      header {
+        padding: 8px 3% !important;
+      }
+      .brand-logo {
+        gap: 6px !important;
+      }
+      .logo-icon {
+        width: 32px !important;
+        height: 32px !important;
+        font-size: 14px !important;
+      }
+      .logo-text h3 {
+        font-size: 15px !important;
+      }
+      .logo-text span {
+        font-size: 8.5px !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      /* Pure circular WhatsApp FAB on Mobile (Left Bottom) */
+      .whatsapp-float {
+        bottom: 22px !important;
+        left: 20px !important;
+        right: auto !important;
+        width: 48px !important;
+        height: 48px !important;
+        padding: 0 !important;
+        font-size: 24px !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4) !important;
+        z-index: 998 !important;
+      }
+      /* Position Left Sticky Pills nicely above WhatsApp */
+      .sticky-left-actions {
+        top: auto !important;
+        bottom: 80px !important;
+        left: 0 !important;
+        transform: none !important;
+        gap: 6px !important;
+        z-index: 997 !important;
+      }
+      .sticky-pill {
+        width: 36px !important;
+        height: 36px !important;
+        border-radius: 0 18px 18px 0 !important;
+      }
+      .sticky-pill-icon {
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 13px !important;
+      }
+      .sticky-pill:hover {
+        width: 36px !important;
+      }
+      .sticky-pill-text-wrap {
+        display: none !important;
+      }
+      /* Hide top reading progress on mobile */
+      #scroll-percentage {
+        bottom: 75px !important;
+        right: 20px !important;
+        width: 42px !important;
+        height: 42px !important;
+      }
+    }
+
+
+    /* Precision Mobile Header Dimensions (Guaranteed Fit for 320px - 480px) */
+    @media (max-width: 992px) {
+      header {
+        padding: 8px 12px !important;
+      }
+      .nav-container {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      .brand-logo {
+        gap: 6px !important;
+        flex-shrink: 0 !important;
+      }
+      .logo-icon {
+        width: 32px !important;
+        height: 32px !important;
+        font-size: 14px !important;
+      }
+      .logo-text h3 {
+        font-size: 14px !important;
+        letter-spacing: -0.3px !important;
+      }
+      .logo-text span {
+        font-size: 8px !important;
+        letter-spacing: 1px !important;
+      }
+      .header-right-actions {
+        display: flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+        flex-shrink: 0 !important;
+      }
+      .custom-lang-wrapper {
+        margin: 0 !important;
+      }
+      .custom-lang-select {
+        max-width: 82px !important;
+        padding: 4px 6px !important;
+        font-size: 11px !important;
+      }
+      .mobile-toggle-btn {
+        display: flex !important;
+        width: 34px !important;
+        height: 34px !important;
+        font-size: 15px !important;
+        flex-shrink: 0 !important;
+      }
+    }
+
+
+    /* ============================================================
+       BIOMETRIC LIVE FINGERPRINT SCANNER SECTION (VIDEO STAGE)
+       ============================================================ */
+    
+    /* ==========================================================================
+       HIGH-CONTRAST BIOMETRIC LIVE SCANNER SECTION (AUTHENTIC FORENSIC THUMBPRINT)
+       ========================================================================== */
+    .scanner-showcase-section {
+      background: radial-gradient(circle at 50% 0%, #f0f9ff 0%, #ffffff 60%, #f8fafc 100%);
+      padding: 100px 5%;
+      position: relative;
+      overflow: hidden;
+      border-top: 1px solid #e2e8f0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .scanner-showcase-container {
+      max-width: 1320px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 420px 1fr;
+      gap: 38px;
+      align-items: center;
+      position: relative;
+    }
+
+    /* High-Contrast Flanking Service Cards */
+    .scanner-tags-col {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      z-index: 10;
+    }
+    .scanner-service-card {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-left: 5px solid #1A3150;
+      border-radius: 14px;
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      position: relative;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+      cursor: default;
+    }
+    .scanner-service-card:hover {
+      background: #ffffff;
+      transform: translateY(-4px) scale(1.01);
+      border-color: #6B9DD2;
+      border-left: 5px solid #00f0ff;
+      box-shadow: 0 14px 30px rgba(2, 132, 199, 0.16);
+    }
+    .scanner-service-card .card-tag-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #e0f2fe 0%, #dbe6f1 100%);
+      border: 1px solid #8ebbe8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1a3150;
+      font-size: 20px;
+      flex-shrink: 0;
+      transition: all 0.3s;
+      box-shadow: 0 2px 8px rgba(2, 132, 199, 0.15);
+    }
+    .scanner-service-card:hover .card-tag-icon {
+      background: linear-gradient(135deg, #1A3150 0%, #13253d 100%);
+      color: #ffffff;
+      border-color: #1a3150;
+      transform: scale(1.08) rotate(3deg);
+      box-shadow: 0 6px 16px rgba(2, 132, 199, 0.35);
+    }
+    .scanner-service-card h4 {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 4px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      letter-spacing: -0.2px;
+    }
+    .scanner-service-card p {
+      font-size: 13px;
+      color: #475569;
+      line-height: 1.45;
+      margin: 0;
+      font-weight: 500;
+    }
+
+    /* Center Biometric Live Scanning Video Stage */
+    .scanner-center-stage {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      z-index: 20;
+    }
+    /* Pristine Consular Optical Glass Scanner Viewport (Harmonious Light Theme) */
+        /* Refined Deep Sapphire Biometric Scanner Viewport (Decreased Contrast, Soft Luminous Navy) */
+    .scanner-viewport {
+      width: 100%;
+      max-width: 400px;
+      height: 520px;
+      background: radial-gradient(circle at 50% 45%, #132743 0%, #0d1b2e 65%, #081322 100%);
+      border: 2px solid #13253d;
+      border-radius: 26px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(8, 19, 34, 0.35), 0 0 35px rgba(2, 132, 199, 0.18);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 18px;
+    }
+
+    /* Soft Consular Cyan HUD Corner Brackets */
+    .hud-corner {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      border: 2px solid #6B9DD2;
+      pointer-events: none;
+      z-index: 18;
+      opacity: 0.85;
+    }
+    .corner-top-left { top: 14px; left: 14px; border-right: none; border-bottom: none; border-radius: 5px 0 0 0; }
+    .corner-top-right { top: 14px; right: 14px; border-left: none; border-bottom: none; border-radius: 0 5px 0 0; }
+    .corner-bottom-left { bottom: 44px; left: 14px; border-right: none; border-top: none; border-radius: 0 0 0 5px; }
+    .corner-bottom-right { bottom: 44px; right: 14px; border-left: none; border-top: none; border-radius: 0 0 5px 0; }
+
+    /* Top HUD Status Bar (Soft Frosted Slate) */
+    .scanner-hud-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 25;
+      position: relative;
+      background: rgba(13, 27, 46, 0.82);
+      padding: 7px 14px;
+      border-radius: 30px;
+      border: 1px solid rgba(56, 189, 248, 0.28);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    .hud-rec-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ef4444;
+      box-shadow: 0 0 8px rgba(239, 68, 68, 0.7);
+      animation: hudPulse 1.4s infinite;
+      display: inline-block;
+      margin-right: 7px;
+    }
+    @keyframes hudPulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.3; transform: scale(0.85); }
+    }
+    .hud-rec-text {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.1px;
+      color: #f1f5f9;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .hud-cjis-badge {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #8ebbe8;
+      background: rgba(2, 132, 199, 0.22);
+      padding: 3px 10px;
+      border-radius: 20px;
+      border: 1px solid rgba(56, 189, 248, 0.4);
+    }
+
+    /* Sub-header Live Telemetry Readout */
+    .scanner-telemetry-bar {
+      position: absolute;
+      top: 60px;
+      left: 18px;
+      right: 18px;
+      display: flex;
+      justify-content: space-between;
+      font-family: 'Inter', monospace;
+      font-size: 9.5px;
+      color: #8ebbe8;
+      letter-spacing: 0.8px;
+      z-index: 15;
+      text-transform: uppercase;
+      font-weight: 600;
+      opacity: 0.85;
+    }
+
+    /* Soft Biometric Optical Grid & Sonar Reticle */
+    .scanner-grid-overlay {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background-image: 
+        linear-gradient(rgba(56, 189, 248, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
+      background-size: 24px 24px;
+      pointer-events: none;
+      z-index: 4;
+    }
+    .scanner-sonar-circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 280px;
+      height: 280px;
+      border: 1px dashed rgba(56, 189, 248, 0.15);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 4;
+      animation: sonarSpin 20s linear infinite;
+    }
+    @keyframes sonarSpin {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    /* Real Authentic Thumb Impression (Soft Contrast, Luminous Cyan-Sapphire) */
+    .fingerprint-wrapper {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 220px;
+      height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 6;
+      border-radius: 18px;
+      overflow: visible;
+      pointer-events: none;
+    }
+    .real-thumb-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      mix-blend-mode: screen;
+      /* Softened contrast: gentle brightness and warm cyan glow without harsh pixel clipping */
+      filter: brightness(1.05) contrast(1.15) drop-shadow(0 0 12px rgba(56, 189, 248, 0.35));
+      mask-image: radial-gradient(ellipse 70% 80% at 50% 50%, black 50%, transparent 100%);
+      -webkit-mask-image: radial-gradient(ellipse 70% 80% at 50% 50%, black 50%, transparent 100%);
+      transition: all 0.3s;
+      animation: thumbBreathSoft 4s ease-in-out infinite alternate;
+    }
+    @keyframes thumbBreathSoft {
+      0% { filter: brightness(1.0) contrast(1.1) drop-shadow(0 0 8px rgba(56, 189, 248, 0.25)); transform: scale(0.98); }
+      100% { filter: brightness(1.1) contrast(1.2) drop-shadow(0 0 16px rgba(56, 189, 248, 0.45)); transform: scale(1.02); }
+    }
+
+    /* Soft Cyan Laser Scanning Beam */
+    .scanner-laser-bar {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      z-index: 14;
+      animation: laserTravel 3.2s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+    @keyframes laserTravel {
+      0% {
+        top: 90px;
+      }
+      100% {
+        top: 365px;
+      }
+    }
+    .laser-light-beam {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent 0%, #1A3150 20%, #8ebbe8 50%, #1A3150 80%, transparent 100%);
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.5), 0 0 20px rgba(2, 132, 199, 0.3);
+    }
+    .laser-trail-glow {
+      position: absolute;
+      top: -32px;
+      left: 0;
+      width: 100%;
+      height: 32px;
+      background: linear-gradient(0deg, rgba(2, 132, 199, 0.18) 0%, transparent 100%);
+    }
+
+    /* Bottom HUD Metrics Overlay (Soft Frosted Slate) */
+    .scanner-hud-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 25;
+      position: relative;
+      background: rgba(13, 27, 46, 0.85);
+      padding: 7px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      backdrop-filter: blur(10px);
+      margin-bottom: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    .hud-metric .metric-label {
+      display: block;
+      font-size: 9.5px;
+      color: #94a3b8;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+    .hud-metric .metric-val {
+      font-size: 12px;
+      font-weight: 700;
+      color: #f1f5f9;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Video Player Style Controls Bar (Soft Dark Theme) */
+    .scanner-video-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(10, 21, 38, 0.9);
+      padding: 9px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      z-index: 25;
+      position: relative;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    }
+    .scanner-control-btn {
+      background: rgba(2, 132, 199, 0.25);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      color: #8ebbe8;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      transition: all 0.25s;
+    }
+    .scanner-control-btn:hover {
+      background: #1A3150;
+      color: #ffffff;
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+      transform: scale(1.08);
+    }
+    .scanner-timeline {
+      flex: 1;
+      height: 5px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+    }
+    .scanner-timeline-bar {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, #1A3150 0%, #6B9DD2 100%);
+      transform-origin: left;
+      animation: timelineLoop 3.2s linear infinite alternate;
+    }
+    @keyframes timelineLoop {
+      0% { transform: scaleX(0.08); }
+      100% { transform: scaleX(1); }
+    }
+    .scanner-duration {
+      font-size: 11px;
+      color: #94a3b8;
+      font-family: 'Inter', monospace;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 992px) {
+      .scanner-showcase-container {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .scanner-tags-col.left-tags {
+        order: 2;
+      }
+      .scanner-center-stage {
+        order: 1;
+      }
+      .scanner-tags-col.right-tags {
+        order: 3;
+      }
+      .scanner-viewport {
+        max-width: 350px;
+        height: 480px;
+      }
+    }
+
+
+</style>
+  <!-- Routex Smooth Inertia Scrolling Library (SmoothScroll v1.4.10) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
+</head>
+<body>
+  <!-- Top Reading Scroll Progress Bar -->
+  <div id="scroll-progress-bar"></div>
+
+  <!-- Top Emergency / Schedule Notification -->
+  <div class="top-strip">
+    <div><i class="fa-solid fa-location-dot" style="color: var(--primary-accent); margin-right: 6px;"></i> Official Forensic Laboratory &bull; Hyderabad, India</div>
+    <div class="strip-items">
+      <span><i class="fa-solid fa-phone" style="color: var(--primary-accent); margin-right: 6px;"></i> Prior Appointment Mandatory: <a href="tel:+918125255814">+91 81252 55814</a></span>
+      <span><i class="fa-regular fa-clock" style="color: var(--primary-accent); margin-right: 6px;"></i> Mon - Sat: 9:30 AM - 6:30 PM</span>
+    </div>
+  </div>
+
+  <!-- Header: EXACT 3 ELEMENTS (Home, Services [PCC, FINRA only], Contact) -->
+  <header>
+    <div class="nav-container">
+      <a href="#home" class="brand-logo" title="PrimeFPrint - Fingerprinting & PCC Services">
+        <img src="images/primefpint_clean.png" alt="PrimeFPrint - Fingerprinting & PCC Services" class="brand-logo-img">
+      </a>
+
+      <!-- 3 Navigation Elements -->
+      <ul class="nav-links">
+        <li class="nav-item">
+          <a href="#home" class="nav-link">Home</a>
+        </li>
+
+        <!-- Services with PCC and FINRA only -->
+        <li class="nav-item">
+          <a href="#services" class="nav-link">
+            Services <i class="fa-solid fa-chevron-down" style="font-size: 11px;"></i>
+          </a>
+          <ul class="dropdown">
+            <li>
+              <a href="service_pcc.html">
+                <i class="fa-solid fa-passport dropdown-icon"></i>
+                <div>
+                  Police Clearance Certificate (PCC)
+                  <span class="dropdown-desc">Global Visa &amp; Immigration Clearance</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="service_finra.html">
+                <i class="fa-solid fa-briefcase dropdown-icon"></i>
+                <div>
+                  FINRA Fingerprinting
+                  <span class="dropdown-desc">US Corporate &amp; Broker-Dealer Licensing</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a href="#contact" class="nav-link">Contact</a>
+        </li>
+        <li class="mobile-only-cta-item" style="padding-top: 14px; list-style: none;">
+          <button class="btn-primary" onclick="openEnquiryModal(); toggleMobileMenu();" style="width: 100%; justify-content: center; padding: 12px; font-size: 15px;">
+            <span>Book Appointment</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </li>
+      </ul>
+
+      <div class="header-right-actions">
+        <button class="btn-header desktop-only-btn" onclick="openEnquiryModal()">Book Appointment</button>
+        
+        <!-- Reliable Custom Language Selector -->
+        <div class="custom-lang-wrapper">
+          <select id="langSelect" class="custom-lang-select" onchange="translatePage(this.value)" title="Choose Language">
+            <option value="en">English</option>
+            <option value="hi">Hindi (हिन्दी)</option>
+            <option value="te">Telugu (తెలుగు)</option>
+            <option value="ar">Arabic (العربية)</option>
+            <option value="fr">French (Français)</option>
+            <option value="es">Spanish (Español)</option>
+            <option value="de">German (Deutsch)</option>
+          </select>
+        </div>
+
+        <!-- Mobile Hamburger Menu Button -->
+        <button class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Toggle Navigation Menu" onclick="toggleMobileMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Hidden Native Google Translate Mount -->
+        <div id="google_translate_element" style="display:none !important;"></div>
+      </div>
+    </div>
+  </header>
+
+    <!-- HERO: Dynamic Cinematic Carousel Slider -->
+  <section class="hero-slider-section" id="home">
+    <div class="slide active" style="background-image: url('images/slider_fingerprint.jpg');" data-index="0">
+      <div class="slide-overlay"></div>
+    </div>
+    <div class="slide" style="background-image: url('images/slider_consular.jpg');" data-index="1">
+      <div class="slide-overlay"></div>
+    </div>
+    <div class="slide" style="background-image: url('images/slider_lab.jpg');" data-index="2">
+      <div class="slide-overlay"></div>
+    </div>
+
+    <!-- Content Overlay: Spacious Hero Layout Highlighting Banner Image -->
+    <div class="hero-slider-content">
+      <div class="hero-content-left">
+        <div class="hero-badge-pill" id="slide-pill">
+          <span class="pulse-dot"></span>
+          Police Clearance Certificate (PCC) &bull; Global Clearances
+        </div>
+
+        <h1 class="hero-heading" id="slide-title">
+          Certified PCC Fingerprinting.<br>
+          <span class="accent-sub">Embassy &amp; Visa Clearances.</span>
+        </h1>
+
+        <p class="hero-subtext" id="slide-desc">
+          Official smudge-free ink-and-roll impressions on authentic cards, fully accredited for international visas, permanent residency, and consular police clearances.
+        </p>
+        
+        <div class="hero-actions">
+          <a href="javascript:void(0)" onclick="openEnquiryModal()" class="btn-primary" style="padding: 15px 32px; font-size: 15px;">
+            <span>Schedule Fingerprinting</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#services" class="btn-glass" style="padding: 15px 28px; font-size: 15px;">
+            <i class="fa-solid fa-list-check"></i>
+            <span>View Services</span>
+          </a>
+        </div>
+
+        <div class="hero-trust-bar">
+          <div class="hero-trust-item"><i class="fa-solid fa-circle-check"></i> 100% Embassy Acceptance</div>
+          <div class="hero-trust-item"><i class="fa-solid fa-shield-halved"></i> Authentic FBI FD-258 Cards</div>
+          <div class="hero-trust-item"><i class="fa-solid fa-user-shield"></i> Ex-Govt Forensic Specialists</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Extreme Left & Right Vertically Centered Carousel Buttons -->
+    <button class="hero-carousel-arrow hero-prev-arrow" onclick="prevSlide()" title="Previous Slide" aria-label="Previous Slide">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button class="hero-carousel-arrow hero-next-arrow" onclick="nextSlide()" title="Next Slide" aria-label="Next Slide">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  </section>
+
+  <!-- About Us Section (Storytelling) -->
+  <section class="about-story" id="about">
+    <!-- Routex Style Floating Aeroplane & Looping Contrail Background Motif -->
+    <div class="about-plane-bg-wrap">
+      <svg viewBox="0 0 440 280" fill="none" xmlns="http://www.w3.org/2000/svg" class="about-flight-svg">
+        <defs>
+          <linearGradient id="planeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#1A3150" />
+            <stop offset="100%" stop-color="#13253d" />
+          </linearGradient>
+          <linearGradient id="contrailGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#6B9DD2" stop-opacity="0.1" />
+            <stop offset="45%" stop-color="#1A3150" stop-opacity="0.65" />
+            <stop offset="100%" stop-color="#1A3150" stop-opacity="0.95" />
+          </linearGradient>
+          <filter id="planeShadow" x="-30%" y="-30%" width="160%" height="160%">
+            <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#1A3150" flood-opacity="0.38" />
+          </filter>
+        </defs>
+
+        <!-- Dynamic Looping Flight Contrail (Routex Style) -->
+        <path d="M 40 250 C 75 270, 115 260, 130 210 C 145 155, 95 110, 130 65 C 165 25, 220 75, 255 65 C 275 60, 290 40, 310 46" 
+              stroke="url(#contrailGrad)" stroke-width="2.6" stroke-dasharray="7 7" stroke-linecap="round" />
+
+        <!-- Accent Swirl -->
+        <path d="M 60 260 C 100 270, 130 210, 160 150 C 190 90, 235 95, 285 70" 
+              stroke="#dbe6f1" stroke-width="1.6" stroke-dasharray="4 6" opacity="0.55" stroke-linecap="round" />
+
+        <!-- Floating Airplane Group Animated with upDown physics -->
+        <g class="upDown" filter="url(#planeShadow)" transform="translate(315, 42) rotate(32) scale(0.75)">
+          <!-- Fuselage -->
+          <path d="M 0 -48 C 6 -35, 8 22, 7 46 C 5 49, -5 49, -7 46 C -8 22, -6 -35, 0 -48 Z" fill="url(#planeGrad)" />
+          <!-- Swept Main Wings -->
+          <path d="M 0 -6 L 50 26 C 54 29, 46 32, 40 31 L 6 12 L -6 12 L -40 31 C -46 32, -54 29, -50 26 L 0 -6 Z" fill="#1A3150" />
+          <!-- Twin Jet Turbines -->
+          <rect x="16" y="12" width="6" height="14" rx="3" fill="#13253d" />
+          <rect x="-22" y="12" width="6" height="14" rx="3" fill="#13253d" />
+          <!-- Tail Stabilizers -->
+          <path d="M 0 35 L 22 48 L 18 52 L 0 46 L -18 52 L -22 48 L 0 35 Z" fill="#13253d" />
+          <!-- Vertical Tailfin -->
+          <path d="M -1.5 28 L 1.5 28 L 3 46 L -3 46 Z" fill="#6B9DD2" />
+          <!-- Cockpit Window -->
+          <path d="M -3 -36 Q 0 -40 3 -36 Q 3 -32 0 -32 Q -3 -32 -3 -36 Z" fill="#ffffff" opacity="0.95" />
+        </g>
+      </svg>
+    </div>
+
+
+    <div class="about-grid">
+      <div class="about-visual reveal-left" style="position: relative;">
+        <img src="images/about_forensic_heritage.jpg" alt="Senior Forensic Fingerprint Examiner with 40+ Years Experience">
+        <div class="about-experience-badge">
+          <div class="exp-years">40+</div>
+          <div class="exp-label">Years Experience</div>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <span class="tag-badge">Our Legacy &amp; Credibility</span>
+        <h2 class="section-title">Professional Fingerprinting and PCC Services in Hyderabad</h2>
+        <p class="section-desc" style="margin-bottom: 16px;">
+          PrimeFPrint is a premier provider of forensic fingerprint services based in Hyderabad, India. Our experts are certified and experienced professionals with over 40 years of service in the government and private sector.
+        </p>
+        <p style="font-size: 15px; color: var(--text-muted); line-height: 1.75; margin-bottom: 24px;">
+          We specialise in providing fingerprinting services for FINRA for corporate companies, NCLEX, Nursing and Medical Licenses, Police Clearance Certificates (PCC) required by different countries like USA, RCMP clearance from Canada, Australia, United Kingdom, Singapore, Bahrain, Qatar, Hong Kong, Dubai UAE etc.
+        </p>
+
+        <div class="story-card">
+          <h4>Government &amp; Embassy Standards</h4>
+          <p>Our technicians use original FBI FD-258 cards, specialized live-scan techniques, and archival smudge-free ink rolled prints that ensure zero rejection across global visa consulates.</p>
+        </div>
+
+        <div class="story-card">
+          <h4>Chain of Custody &amp; Absolute Discretion</h4>
+          <p>Every piece of biometric evidence and questioned documentation is handled under strict legal non-disclosure protocols, ensuring 100% confidentiality.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section: PCC and FINRA Only -->
+  <section class="services-section" id="services">
+    <div class="section-head reveal-on-scroll">
+      <span class="tag-badge">Specialized Practice Areas</span>
+      <h2 class="section-title">Global Verification Services</h2>
+      <p class="section-desc">Certified forensic fingerprinting, documentation, and identity verification adhering to sovereign consular criteria.</p>
+    </div>
+
+    <div class="services-grid reveal-stagger">
+      <!-- 1. PCC Highlighted Visual Showcase Card -->
+      <div class="service-box reveal-on-scroll" id="service-pcc">
+        <div class="service-box-inner">
+          <!-- Prominent Highlighted Photography Header -->
+          <a href="service_pcc.html" class="service-card-media" title="View Police Clearance Certificate (PCC) Details">
+            <img src="images/pcc_hero.jpg" alt="Police Clearance Certificate (PCC) Fingerprinting &amp; Consular Verification">
+            <div class="service-card-media-overlay"></div>
+            <span class="service-card-chip"><i class="fa-solid fa-shield-halved"></i> Global Consular Acceptance</span>
+          </a>
+          <div class="service-box-body">
+            <div class="service-meta-strip">
+              <span><i class="fa-regular fa-clock"></i> 20-Min Fast-Track Slot</span>
+              <span><i class="fa-solid fa-globe"></i> 25+ Sovereign Consulates</span>
+            </div>
+            <a href="service_pcc.html" class="service-title-link">
+              <h3>Police Clearance Certificate (PCC)</h3>
+            </a>
+            <p>
+              Official certified ink-and-roll fingerprinting and court-admissible forensic documentation for international visas, permanent residency (PR), and police clearances across USA, Canada, UK, Australia, Singapore &amp; UAE.
+            </p>
+            <ul class="service-bullet-list" style="margin-bottom: 0;">
+              <li><i class="fa-solid fa-circle-check"></i> Authentic FBI FD-258 &amp; RCMP C-216C Formats in Stock</li>
+              <li><i class="fa-solid fa-circle-check"></i> 100% Embassy &amp; Consular Acceptance Guarantee</li>
+              <li><i class="fa-solid fa-circle-check"></i> Rolled by Ex-Govt Forensic Specialists (40+ Yrs Exp)</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="service_pcc.html" class="btn-primary btn-service-view-more">
+                <span>View More Details &amp; Book</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. FINRA Highlighted Visual Showcase Card -->
+      <div class="service-box reveal-on-scroll" id="service-finra">
+        <div class="service-box-inner">
+          <!-- Prominent Highlighted Photography Header -->
+          <a href="service_finra.html" class="service-card-media" title="View FINRA Corporate Fingerprinting Details">
+            <img src="images/finra_hero.jpg" alt="FINRA Corporate Fingerprinting &amp; US Broker-Dealer Licensing">
+            <div class="service-card-media-overlay"></div>
+            <span class="service-card-chip"><i class="fa-solid fa-building-columns"></i> US SEC / FBI Regulated</span>
+          </a>
+          <div class="service-box-body">
+            <div class="service-meta-strip">
+              <span><i class="fa-regular fa-clock"></i> 15-20 Min In-Lab</span>
+              <span><i class="fa-solid fa-truck-fast"></i> US Courier Tracking</span>
+            </div>
+            <a href="service_finra.html" class="service-title-link">
+              <h3>FINRA Corporate Fingerprinting</h3>
+            </a>
+            <p>
+              Specialized statutory background check fingerprinting on official FBI Form FD-258 cards under SEC Rule 17f-2 for FINRA member broker-dealers, investment advisors, funding entities, and offshore financial IT contractors.
+            </p>
+            <ul class="service-bullet-list" style="margin-bottom: 0;">
+              <li><i class="fa-solid fa-circle-check"></i> Official FINRA Form FD-258 Fingerprint Cards in Stock</li>
+              <li><i class="fa-solid fa-circle-check"></i> Fast-Track Corporate Batches &amp; Individual Slots</li>
+              <li><i class="fa-solid fa-circle-check"></i> Complete Non-Disclosure Agreement (NDA) Protection</li>
+            </ul>
+            <div class="service-card-footer">
+              <a href="service_finra.html" class="btn-primary btn-service-view-more">
+                <span>View More Details &amp; Book</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="why-choose-us" id="why-us">
+    <div class="section-head reveal-on-scroll">
+      <span class="tag-badge">The PrimeFPrint Advantage</span>
+      <h2 class="section-title">Why Global Applicants Choose Us</h2>
+      <p class="section-desc">Experience, certified precision, and dedicated consular compliance ensure your application succeeds the first time.</p>
+    </div>
+
+    <div class="features-grid reveal-stagger">
+      <div class="feature-tile reveal-on-scroll">
+        <div class="feature-icon-circle"><i class="fa-solid fa-award"></i></div>
+        <h4>40+ Years Expertise</h4>
+        <p>Supervised by former government and senior forensic crime laboratory specialists.</p>
+      </div>
+      <div class="feature-tile reveal-on-scroll">
+        <div class="feature-icon-circle"><i class="fa-solid fa-check-double"></i></div>
+        <h4>Zero Rejection Guarantee</h4>
+        <p>Rigorous ridge pattern inspection ensures 100% acceptance by FBI and foreign embassies.</p>
+      </div>
+      <div class="feature-tile reveal-on-scroll">
+        <div class="feature-icon-circle"><i class="fa-solid fa-box-archive"></i></div>
+        <h4>Original Official Forms</h4>
+        <p>Authentic FBI FD-258 cards, RCMP formats, and international cards supplied directly in lab.</p>
+      </div>
+      <div class="feature-tile reveal-on-scroll">
+        <div class="feature-icon-circle"><i class="fa-solid fa-user-shield"></i></div>
+        <h4>100% Confidential</h4>
+        <p>All biometric information is protected under strict non-disclosure legal guidelines.</p>
+      </div>
+    </div>
+  </section>
+
+    <!-- Biometric Live Fingerprint Scanner Section (High Contrast Real Thumb Impression) -->
+  <section class="scanner-showcase-section" id="biometric-scanner">
+    <div class="section-head reveal-on-scroll">
+      <span class="tag-badge">Certified Biometrics</span>
+      <h2 class="section-title">We Specialise in Ink &amp; Roll Fingerprinting Services For</h2>
+      <p class="section-desc">Live forensic optical scanning, digital biometric verification, and court-admissible ink rolled impressions accepted across international consulates and federal agencies.</p>
+    </div>
+
+    <div class="scanner-showcase-container reveal-scale">
+      <!-- Left Service Badges Column (High Contrast) -->
+      <div class="scanner-tags-col left-tags reveal-left">
+        <div class="scanner-service-card">
+          <div class="card-tag-icon"><i class="fa-solid fa-passport"></i></div>
+          <div class="card-tag-content">
+            <h4>Police Clearance Certificate (PCC)</h4>
+            <p>Certified consular clearance for immigration, visas &amp; PR</p>
+          </div>
+        </div>
+
+        <div class="scanner-service-card">
+          <div class="card-tag-icon"><i class="fa-solid fa-fingerprint"></i></div>
+          <div class="card-tag-content">
+            <h4>FBI FD-258 Cards (USA)</h4>
+            <p>Authentic FBI CJIS standard fingerprint cards in stock</p>
+          </div>
+        </div>
+
+        <div class="scanner-service-card">
+          <div class="card-tag-icon"><i class="fa-solid fa-user-doctor"></i></div>
+          <div class="card-tag-content">
+            <h4>Medical &amp; Nursing Licenses</h4>
+            <p>NCLEX, CGFNS &amp; state medical board clearances</p>
+          </div>
+        </div>
+
+        <div class="scanner-service-card">
+          <div class="card-tag-icon"><i class="fa-solid fa-plane-departure"></i></div>
+          <div class="card-tag-content">
+            <h4>Visa &amp; Sovereign Embassy Filings</h4>
+            <p>Certified zero-smudge rolled impressions for 25+ nations</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Center Biometric Live Scanning Video Stage -->
+      <div class="scanner-center-stage">
+        <div class="scanner-viewport">
+          <!-- Background Grid & Sonar Reticle -->
+          <div class="scanner-grid-overlay"></div>
+          <div class="scanner-sonar-circle"></div>
+
+          <!-- Biometric Crosshair Corners (HUD) -->
+          <div class="hud-corner corner-top-left"></div>
+          <div class="hud-corner corner-top-right"></div>
+          <div class="hud-corner corner-bottom-left"></div>
+          <div class="hud-corner corner-bottom-right"></div>
+
+          <!-- Top Status Bar -->
+          <div class="scanner-hud-bar">
+            <div>
+              <span class="hud-rec-dot"></span>
+              <span class="hud-rec-text">LIVE FORENSIC SCAN</span>
+            </div>
+            <span class="hud-cjis-badge">FBI CJIS VERIFIED</span>
+          </div>
+
+          <!-- Sub-header Live Telemetry Readout -->
+          <div class="scanner-telemetry-bar">
+            <span>RES: 500 DPI</span>
+            <span id="scannerCoordinates">X: 248.6 &bull; Y: 512.3</span>
+            <span>NFIQ-2: 98/100</span>
+          </div>
+
+          <!-- Real Authentic Rolled Thumb Impression (Pristine, 100% Clean Without Any Text On Fingerprint) -->
+          <div class="fingerprint-wrapper">
+            <img src="images/real_thumbprint.jpg" alt="Authentic Forensic Rolled Thumb Impression" class="real-thumb-img" />
+          </div>
+
+          <!-- Moving Laser Scanning Beam & Atmospheric Glow -->
+          <div class="scanner-laser-bar">
+            <div class="laser-light-beam"></div>
+            <div class="laser-trail-glow"></div>
+          </div>
+
+          <!-- Bottom HUD Metrics Overlay -->
+          <div class="scanner-hud-bottom">
+            <div class="hud-metric">
+              <span class="metric-label">RIDGE DENSITY</span>
+              <span class="metric-val" style="color: #00f0ff;">100% SMUDGE-FREE</span>
+            </div>
+            <div class="hud-metric" style="text-align: right;">
+              <span class="metric-label">ACCEPTANCE</span>
+              <span class="metric-val" style="color: #10b981;">ZERO REJECTION</span>
+            </div>
+          </div>
+
+          <!-- Video Style Play / Scan Controls -->
+          <div class="scanner-video-controls">
+            <button class="scanner-control-btn" id="scannerPauseBtn" onclick="toggleScannerPlay()" title="Pause / Resume Live Scan">
+              <i class="fa-solid fa-pause"></i>
+            </button>
+            <div class="scanner-timeline">
+              <div class="scanner-timeline-bar"></div>
+            </div>
+            <span class="scanner-duration">00:06 / 00:06</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Service Badges Column (High Contrast) -->
+      <div class="scanner-tags-col right-tags reveal-right">
+        <div class="scanner-service-card">
+          <div class="card-tag-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <div class="card-tag-content">
+            <h4>Criminal Background Checks</h4>
+            <p>Global employer &amp; sovereign security clearance vetting</p>
+          </div>
+        </div>
+
+        <div class="scanner-service-card">
+          <div class="card-tag-icon"><i class="fa-solid fa-briefcase"></i></div>
+          <div class="card-tag-content">
+            <h4>FINRA US Corporate Licensing</h4>
+            <p>Mandatory financial broker-dealer &amp; fintech compliance cards</p>
+          </div>
+        </div>
+
+        <div class="scanner-service-card">
+          <div class="card-tag-icon"><i class="fa-solid fa-flag"></i></div>
+          <div class="card-tag-content">
+            <h4>Canadian RCMP (C-216C)</h4>
+            <p>Official CCRTIS accredited ink rolled cards for Canada PR</p>
+          </div>
+        </div>
+
+        <div class="scanner-service-card">
+          <div class="card-tag-icon"><i class="fa-solid fa-building-columns"></i></div>
+          <div class="card-tag-content">
+            <h4>Immigration &amp; PR Visas</h4>
+            <p>Certified clearances for USA, UK, Australia, UAE &amp; Singapore</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Interactive World Map: Global Presence -->
+  <section class="global-presence" id="global-presence" style="position: relative;">
+    <!-- Routex Style Floating Airplane Motif with Curved Contrail -->
+    <div class="routex-plane-motif">
+      <img class="trail-bg" src="images/counter-bg-shape.png" alt="International Flight Trail">
+      <div class="plane-body upDown">
+        <img src="images/counter-plane-img.png" alt="Consular Clearances Airplane">
+      </div>
+    </div>
+    <div class="section-head reveal-on-scroll">
+      <span class="tag-badge">Worldwide Clearances</span>
+      <h2 class="section-title">Our Global Presence &amp; Accreditations</h2>
+      <p class="section-desc">Interactive Map: Countries where our certified fingerprinting and forensic clearances are routinely accepted.</p>
+    </div>
+
+    <div class="map-wrapper reveal-scale">
+      <!-- Top Region Filter Tabs (Positioned Above Map) -->
+      <div class="map-top-filter-bar">
+        <div class="region-filter-tabs">
+          <button class="region-tab-btn active" onclick="filterCountries('all', this)"><i class="fa-solid fa-globe"></i> All (34)</button>
+          <button class="region-tab-btn" onclick="filterCountries('gulf', this)"><i class="fa-solid fa-location-dot"></i> Gulf &amp; Middle East (11)</button>
+          <button class="region-tab-btn" onclick="filterCountries('americas', this)"><i class="fa-solid fa-location-dot"></i> Americas &amp; Europe (7)</button>
+          <button class="region-tab-btn" onclick="filterCountries('asia', this)"><i class="fa-solid fa-location-dot"></i> Asia-Pacific (8)</button>
+          <button class="region-tab-btn" onclick="filterCountries('africa', this)"><i class="fa-solid fa-location-dot"></i> Africa (8)</button>
+        </div>
+      </div>
+
+      <!-- Interactive World Map Container -->
+      <div id="world-map"></div>
+
+      <!-- Clean, Professional Global Verification Key Cards (Client Designated 34 Countries) -->
+      <div class="countries-directory-section">
+        <div class="countries-dir-head">
+          <div>
+            <h3 class="countries-dir-title">
+              <i class="fa-solid fa-location-dot" style="color: #6b9dd2;"></i>
+              Accredited Sovereign Jurisdictions
+              <span class="countries-dir-badge">34 Countries</span>
+            </h3>
+            <p style="font-size: 13.5px; color: var(--text-muted); margin: 4px 0 0;">Certified fingerprinting and police clearance certificate (PCC) documentation accepted across these client-designated jurisdictions:</p>
+          </div>
+        </div>
+
+        <div class="client-countries-grid" id="clientCountriesGrid">
+
+          <div class="country-loc-card" data-region="asia">
+            <div class="loc-pin-highlight" title="Highlighted Location Marker">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="country-info">
+              <div class="country-title-row">
+                <span class="country-num">#1</span>
+                <span class="country-name">Afghanistan</span>
+              </div>
+              <span class="country-badge-sub">
+                <i class="fa-solid fa-circle-check" style="font-size: 11px; color: #16a34a;"></i>
+                Sovereign Embassy Clearance
+              </span>
+            </div>
+          </div>
+          <div class="country-loc-card" data-region="asia">
+            <div class="loc-pin-highlight" title="Highlighted Location Marker">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="country-info">
+              <div class="country-title-row">
+                <span class="country-num">#2</span>
+                <span class="country-name">Australia</span>
+              </div>
+              <span class="country-badge-sub">
+                <i class="fa-solid fa-circle-check" style="font-size: 11px; color: #16a34a;"></i>
+                AFP Police Clearance
+              </span>
+            </div>
+          </div>
+          <div class="country-loc-card" data-region="gulf">
+            <div class="loc-pin-highlight" title="Highlighted Location Marker">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="country-info">
+              <div class="country-title-row">
+                <span class="country-num">#3</span>
+                <span class="country-name">Bahrain</span>
+              </div>
+              <span class="country-badge-sub">
+                <i class="fa-solid fa-circle-check" style="font-size: 11px; color: #16a34a;"></i>
+                Consular Fingerprinting
+              </span>
+            </div>
+          </div>
+          <div class="country-loc-card" data-region="africa">
+            <div class="loc-pin-highlight" title="Highlighted Location Marker">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="country-info">
+              <div class="country-title-row">
+                <span class="country-num">#4</span>
+                <span class="country-name">Botswana</span>
+              </div>
+              <span class="country-badge-sub">
+                <i class="fa-solid fa-circle-check" style="font-size: 11px; color: #16a34a;"></i>
+                Police Record Clearance
+              </span>
+            </div>
+          </div>
+          <div class="country-loc-card" data-region="americas">
+            <div class="loc-pin-highlight" title="Highlighted Location Marker">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="country-info">
+              <div class="country-title-row">
+                <span class="country-num">#5</span>
+                <span class="country-name">Canada</span>
+              </div>
+              <span class="country-badge-sub">
+                <i class="fa-solid fa-circle-check" style="font-size: 11px; color: #16a34a;"></i>
+                RCMP C-216C Certified
+              </span>
+            </div>
+          </div>
+          <div class="country-loc-card" data-region="africa">
+            <div class="loc-pin-highlight" title="Highlighted Location Marker">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="country-info">
+              <div class="country-title-row">
+                <span class="country-num">#6</span>
+                <span class="country-name">Ghana</span>
+              </div>
+              <span class="country-badge-sub">
+                <i class="fa-solid fa-circle-check" style="font-size: 11px; color: #16a34a;"></i>
+                Criminal Record Vetting
+              </span>
+            </div>
+          </div>
+          <div class="country-loc-card" data-region="asia">
+            <div class="loc-pin-highlight" title="Highlighted Location Marker">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="country-info">
+              <div class="country-title-row">
+                <span class="country-num">#7</span>
+                <span class="country-name">Hong Kong</span>
+              </div>
+              <span class="country-badge-sub">
+                <i class="fa-solid fa-circle-check" style="font-size: 11px; color: #16a34a;"></i>
+                CNCC Fingerprint Clearances
+              </span>
+            </div>
+          </div>
+          <div class="country-loc-card" data-region="europe">
+            <div class="loc-pin-highlight" title="Highlighted Location Marker">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="country-info">
+              <div class="country-title-row">
+                <span class="country-num">#8</span>
+                <span class="country-name">Italy</span>
+              </div>
+              <span class="country-badge-sub">
+                <i class="fa-solid fa-circle-check" style="font-size: 11px; color: #16a34a;"></i>
+                Casellario Giudiziale
+              </span>
+            </div>
+          </div>
+          <div class="country-loc-card" data-region="americas">
+            <div class="loc-pin-highlight" title="Highlighted Location Marker">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="country-info">
+              <div class="country-title-row">
+                <span class="country-num">#9</span>
+                <span class="country-name">Jamaica</span>
+              </div>
+              <span class="country-badge-sub">
+                <i class="fa-solid fa-circle-check" style="font-size: 11px; color: #16a34a;"></i>
+                Police Clearance Certificate
+              </span>
+            </div>
+          </div>
+          <div class="country-loc-card" data-region="africa">
+            <div class="loc-pin-highlight" title="Highlighted Location Marker">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="country-info">
+              <div class="country-title-row">
+                <span class="country-num">#10</span>
+                <span class="country-name">Kenya</span>
+              </div>
+              <span class="country-badge-sub">
+                <i class="fa-solid fa-circle-check" style="font-size: 11px; color: #16a34a;"></i>
+                DCI Police Clearance
+              </span>
+            </div>
+          </div>
+          <div class="country-loc-card" data-region="gulf">
+            <div class="loc-pin-highlight" title="Highlighted Location Marker">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="country-info">
+              <div class="country-title-row">
+                <span class="country-num">#11</span>
+                <span class="country-name">Kuwait</span>
+              </div>
+              <span class="country-badge-sub">
+                <i class="fa-solid fa-circle-check" style="font-size: 11px; color: #16a34a;"></i>
+                General Dept Criminal Evidence
+              </span>
+            </div>
+          </div>
+          <div class="country-loc-card" data-region="gulf">
+            <div class="loc-pin-highlight" title="Highlighted Location Marker">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="country-info">
+              <div class="country-title-row">
+                <span class="country-num">#12</span>
+                <span class="country-name">Lebanon</span>
+              </div>
+              <span class="country-badge-sub">
+                <i class="fa-solid fa-circle-check" style="font-size: 11px; color: #16a34a;"></i>
+                Judicial Record Clearance
+              </span>
+            </div>
+          </div>
+          <div class="country-loc-card" data-region="gulf">
+            <div class="loc-pin-highlight" title="Highlighted Location Marker">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="country-info">
+              <div class="country-title-row">
+                <span class="country-num">#13</span>
+                <span class="country-name">Oman (With ID)</span>
+              </div>
+              <span class="country-badge-sub">
+                <i class="fa-solid fa-circle-check" style="font-size: 11px; color: #16a34a;"></i>
+                ROP Clearance • With National ID
+              </span>
+            </div>
+          </div>
+          <div class="country-loc-card" data-region="gulf">
+            <div class="loc-pin-highlight" title="Highlighted Location Marker">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="country-info">
+              <div class="country-title-row">
+                <span class="country-num">#14</span>
+                <span class="country-name">Oman (No ID)</span>
+              </div>
+              <span class="country-badge-sub">
+                <i class="fa-solid fa-circle-check" style="font-size: 11px; color: #16a34a;"></i>
+                ROP Clearance • Without ID
+              </span>
+            </div>
+          </div>
+          <div class="country-loc-card" data-region="europe">
+            <div class="loc-pin-highlight" title="Highlighted Location Marker">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="country-info">
+              <div class="country-title-row">
+                <span class="country-num">#15</span>
+                <span class="country-name">Malta</span>
+              </div>
+              <span class="country-badge-sub">
+                <i class="fa-solid fa-circle-check" style="font-size: 11px; color: #16a34a;"></i>
+                Police Conduct Certificate
+              </span>
+            </div>
+          </div>
+          <div class="country-loc-card" data-region="asia">
+            <div class="loc-pin-highlight" title="Highlighted Location Marker">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="country-info">
+              <div class="country-title-row">
+                <span class="country-num">#16</span>
+                <span class="country-name">Malaysia</span>
+              </div>
+              <span class="country-badge-sub">
+                <i class="fa-solid fa-circle-check" style="font-size: 11px; color: #16a34a;"></i>
+                Certificate of Good Conduct
+              </span>
+            </div>
+          </div>
+          <div class="country-loc-card" data-region="asia">
+            <div class="loc-pin-highlight" title="Highlighted Location Marker">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="country-info">
+              <div class="country-title-row">
+                <span class="country-num">#17</span>
+                <span class="country-name">Maldives</span>
+              </div>
+              <span class="country-badge-sub">
+                <i class="fa-solid fa-circle-check" style="font-size: 11px; color: #16a34a;"></i>
+                Police Clearance Certificate
+              </span>
+            </div>
+          </div>
+          <div class="country-loc-card" data-region="africa">
+            <div class="loc-pin-highlight" title="Highlighted Location Marker">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="country-info">
+              <div class="country-title-row">
+                <span class="country-num">#18</span>
+                <span class="country-name">Nigeria</span>
+              </div>
+              <span class="country-badge-sub">
+                <i class="fa-solid fa-circle-check" style="font-size: 11px; color: #16a34a;"></i>
+                CID Police Character Certificate
+              </span>
+            </div>
+          </div>
+          <div class="country-loc-card" data-region="gulf">
+            <div class="loc-pin-highlight" title="Highlighted Location Marker">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="country-info">
+              <div class="country-title-row">
+                <span class="country-num">#19</span>
+                <span class="country-name">Qatar (With ID)</span>
+              </div>
+              <span class="country-badge-sub">
+                <i class="fa-solid fa-circle-check" style="font-size: 11px; color: #16a34a;"></i>
+                CEID Police Clearance • With QID
+              </span>
+            </div>
+          </div>
+          <div class="country-loc-card" data-region="gulf">
+            <div class="loc-pin-highlight" title="Highlighted Location Marker">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="country-info">
+              <div class="country-title-row">
+                <span class="country-num">#20</span>
+                <span class="country-name">Qatar (Without ID)</span>
+              </div>
+              <span class="country-badge-sub">
+                <i class="fa-solid fa-circle-check" style="font-size: 11px; color: #16a34a;"></i>
+                CEID Consular File • Without QID
+              </span>
+            </div>
+          </div>
+          <div class="country-loc-card" data-region="gulf">
+            <div class="loc-pin-highlight" title="Highlighted Location Marker">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="country-info">
+              <div class="country-title-row">
+                <span class="country-num">#21</span>
+                <span class="country-name">Saudi Arabia (Saudi Arab)</span>
+              </div>
+              <span class="country-badge-sub">
+                <i class="fa-solid fa-circle-check" style="font-size: 11px; color: #16a34a;"></i>
+                PCC Fingerprinting Clearance
+              </span>
+            </div>
+          </div>
+          <div class="country-loc-card" data-region="africa">
+            <div class="loc-pin-highlight" title="Highlighted Location Marker">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="country-info">
+              <div class="country-title-row">
+                <span class="country-num">#22</span>
+                <span class="country-name">South Africa</span>
+              </div>
+              <span class="country-badge-sub">
+                <i class="fa-solid fa-circle-check" style="font-size: 11px; color: #16a34a;"></i>
+                SAPS Criminal Record Centre
+              </span>
+            </div>
+          </div>
+          <div class="country-loc-card" data-region="europe">
+            <div class="loc-pin-highlight" title="Highlighted Location Marker">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="country-info">
+              <div class="country-title-row">
+                <span class="country-num">#23</span>
+                <span class="country-name">Switzerland</span>
+              </div>
+              <span class="country-badge-sub">
+                <i class="fa-solid fa-circle-check" style="font-size: 11px; color: #16a34a;"></i>
+                Swiss Criminal Records Vetting
+              </span>
+            </div>
+          </div>
+          <div class="country-loc-card" data-region="africa">
+            <div class="loc-pin-highlight" title="Highlighted Location Marker">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="country-info">
+              <div class="country-title-row">
+                <span class="country-num">#24</span>
+                <span class="country-name">Tanzania</span>
+              </div>
+              <span class="country-badge-sub">
+                <i class="fa-solid fa-circle-check" style="font-size: 11px; color: #16a34a;"></i>
+                Police Forensic Clearance
+              </span>
+            </div>
+          </div>
+          <div class="country-loc-card" data-region="asia">
+            <div class="loc-pin-highlight" title="Highlighted Location Marker">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="country-info">
+              <div class="country-title-row">
+                <span class="country-num">#25</span>
+                <span class="country-name">Singapore</span>
+              </div>
+              <span class="country-badge-sub">
+                <i class="fa-solid fa-circle-check" style="font-size: 11px; color: #16a34a;"></i>
+                SPF Certificate of Clearance (COC)
+              </span>
+            </div>
+          </div>
+          <div class="country-loc-card" data-region="asia">
+            <div class="loc-pin-highlight" title="Highlighted Location Marker">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="country-info">
+              <div class="country-title-row">
+                <span class="country-num">#26</span>
+                <span class="country-name">Thailand</span>
+              </div>
+              <span class="country-badge-sub">
+                <i class="fa-solid fa-circle-check" style="font-size: 11px; color: #16a34a;"></i>
+                Royal Thai Police Clearance
+              </span>
+            </div>
+          </div>
+          <div class="country-loc-card" data-region="gulf">
+            <div class="loc-pin-highlight" title="Highlighted Location Marker">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="country-info">
+              <div class="country-title-row">
+                <span class="country-num">#27</span>
+                <span class="country-name">UAE Dubai (With ID)</span>
+              </div>
+              <span class="country-badge-sub">
+                <i class="fa-solid fa-circle-check" style="font-size: 11px; color: #16a34a;"></i>
+                Dubai Police Clearance • With ID
+              </span>
+            </div>
+          </div>
+          <div class="country-loc-card" data-region="gulf">
+            <div class="loc-pin-highlight" title="Highlighted Location Marker">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="country-info">
+              <div class="country-title-row">
+                <span class="country-num">#28</span>
+                <span class="country-name">UAE Dubai (Without ID)</span>
+              </div>
+              <span class="country-badge-sub">
+                <i class="fa-solid fa-circle-check" style="font-size: 11px; color: #16a34a;"></i>
+                Dubai Police Clearance • Without ID
+              </span>
+            </div>
+          </div>
+          <div class="country-loc-card" data-region="gulf">
+            <div class="loc-pin-highlight" title="Highlighted Location Marker">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="country-info">
+              <div class="country-title-row">
+                <span class="country-num">#29</span>
+                <span class="country-name">UAE Abu Dhabi</span>
+              </div>
+              <span class="country-badge-sub">
+                <i class="fa-solid fa-circle-check" style="font-size: 11px; color: #16a34a;"></i>
+                Abu Dhabi Police Criminal Clearance
+              </span>
+            </div>
+          </div>
+          <div class="country-loc-card" data-region="africa">
+            <div class="loc-pin-highlight" title="Highlighted Location Marker">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="country-info">
+              <div class="country-title-row">
+                <span class="country-num">#30</span>
+                <span class="country-name">Uganda</span>
+              </div>
+              <span class="country-badge-sub">
+                <i class="fa-solid fa-circle-check" style="font-size: 11px; color: #16a34a;"></i>
+                Interpol Police Clearance
+              </span>
+            </div>
+          </div>
+          <div class="country-loc-card" data-region="europe">
+            <div class="loc-pin-highlight" title="Highlighted Location Marker">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="country-info">
+              <div class="country-title-row">
+                <span class="country-num">#31</span>
+                <span class="country-name">United Kingdom (UK NM)</span>
+              </div>
+              <span class="country-badge-sub">
+                <i class="fa-solid fa-circle-check" style="font-size: 11px; color: #16a34a;"></i>
+                ACRO Police Certificate • UK (NM)
+              </span>
+            </div>
+          </div>
+          <div class="country-loc-card" data-region="europe">
+            <div class="loc-pin-highlight" title="Highlighted Location Marker">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="country-info">
+              <div class="country-title-row">
+                <span class="country-num">#32</span>
+                <span class="country-name">United Kingdom (UK FM)</span>
+              </div>
+              <span class="country-badge-sub">
+                <i class="fa-solid fa-circle-check" style="font-size: 11px; color: #16a34a;"></i>
+                ACRO & Foreign Mission • UK (FM)
+              </span>
+            </div>
+          </div>
+          <div class="country-loc-card" data-region="americas">
+            <div class="loc-pin-highlight" title="Highlighted Location Marker">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="country-info">
+              <div class="country-title-row">
+                <span class="country-num">#33</span>
+                <span class="country-name">United States (US FBI)</span>
+              </div>
+              <span class="country-badge-sub">
+                <i class="fa-solid fa-circle-check" style="font-size: 11px; color: #16a34a;"></i>
+                FBI FD-258 & FINRA Compliance
+              </span>
+            </div>
+          </div>
+          <div class="country-loc-card" data-region="asia">
+            <div class="loc-pin-highlight" title="Highlighted Location Marker">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="country-info">
+              <div class="country-title-row">
+                <span class="country-num">#34</span>
+                <span class="country-name">Vietnam</span>
+              </div>
+              <span class="country-badge-sub">
+                <i class="fa-solid fa-circle-check" style="font-size: 11px; color: #16a34a;"></i>
+                Judicial Record Card (Phieu Ly Lịch)
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Slider Section -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="section-head reveal-on-scroll">
+      <span class="tag-badge">Client Endorsements</span>
+      <h2 class="section-title">Trusted by Thousands Worldwide</h2>
+      <p class="section-desc">Read how our certified precision helped professionals secure visas, corporate licenses, and clearances without delay.</p>
+    </div>
+
+    <div class="testimonials-slider-container reveal-scale">
+      <div class="testi-slider-wrapper">
+        <div class="testi-track" id="testiTrack">
+          <!-- Card 1 -->
+          <div class="testi-card">
+            <div>
+              <div class="testi-card-top">
+                <div class="testi-stars">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <i class="fa-solid fa-quote-right testi-quote-icon"></i>
+              </div>
+              <p class="testi-text">"I needed FBI FD-258 fingerprinting for my US Green Card. PrimeFPrint provided original cards and rolled my prints flawlessly. The FBI approved them on the first attempt without any smudge warnings!"</p>
+            </div>
+            <div class="testi-author">
+              <div class="author-avatar">VS</div>
+              <div class="author-info">
+                <h5>Venkatesh S.</h5>
+                <span>Software Architect (US EB-1 Visa)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="testi-card">
+            <div>
+              <div class="testi-card-top">
+                <div class="testi-stars">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <i class="fa-solid fa-quote-right testi-quote-icon"></i>
+              </div>
+              <p class="testi-text">"Our IT financial clients in New York required FINRA registration fingerprints on short notice. The PrimeFPrint team handled 15 corporate employees smoothly with complete documentation."</p>
+            </div>
+            <div class="testi-author">
+              <div class="author-avatar">PR</div>
+              <div class="author-info">
+                <h5>Pooja Reddy</h5>
+                <span>HR Director, FinTech Solutions</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="testi-card">
+            <div>
+              <div class="testi-card-top">
+                <div class="testi-stars">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <i class="fa-solid fa-quote-right testi-quote-icon"></i>
+              </div>
+              <p class="testi-text">"Got my Singapore Police Clearance and Canadian RCMP verification done here. Very knowledgeable forensic experts who know the exact requirements for every country."</p>
+            </div>
+            <div class="testi-author">
+              <div class="author-avatar">MN</div>
+              <div class="author-info">
+                <h5>Mohammed Noman</h5>
+                <span>Healthcare Specialist (Canada PR)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="testi-card">
+            <div>
+              <div class="testi-card-top">
+                <div class="testi-stars">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <i class="fa-solid fa-quote-right testi-quote-icon"></i>
+              </div>
+              <p class="testi-text">"Required Australian Federal Police (AFP) fingerprint clearance for my permanent residency. The entire rolled-ink capture took just 20 minutes and was accepted without delay by Australian immigration."</p>
+            </div>
+            <div class="testi-author">
+              <div class="author-avatar">RK</div>
+              <div class="author-info">
+                <h5>Rajesh Kumar</h5>
+                <span>Senior Cloud Engineer (Australia PR)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="testi-card">
+            <div>
+              <div class="testi-card-top">
+                <div class="testi-stars">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <i class="fa-solid fa-quote-right testi-quote-icon"></i>
+              </div>
+              <p class="testi-text">"PrimeFPrint facilitated certified fingerprinting for my UAE Dubai Police clearance without an Emirates ID. The consular submission was approved seamlessly on the first attempt by Dubai authorities."</p>
+            </div>
+            <div class="testi-author">
+              <div class="author-avatar">FK</div>
+              <div class="author-info">
+                <h5>Fatima Khan</h5>
+                <span>Financial Risk Analyst (Dubai Relocation)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="testi-card">
+            <div>
+              <div class="testi-card-top">
+                <div class="testi-stars">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <i class="fa-solid fa-quote-right testi-quote-icon"></i>
+              </div>
+              <p class="testi-text">"Exceptional expertise for UK ACRO and South African PCC clearances. Their ex-government senior forensic examiners know international consulate standards down to the millimeter."</p>
+            </div>
+            <div class="testi-author">
+              <div class="author-avatar">AS</div>
+              <div class="author-info">
+                <h5>Anand Sharma</h5>
+                <span>Global Mobility Director (London)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonials Slider Controls -->
+      <div class="testi-controls-bar">
+        <button class="testi-nav-btn prev" id="testiPrevBtn" onclick="moveTestiSlide(-1)" aria-label="Previous Testimonials">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div class="testi-dots" id="testiDots"></div>
+        <button class="testi-nav-btn next" id="testiNextBtn" onclick="moveTestiSlide(1)" aria-label="Next Testimonials">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="faq-section" id="faq">
+    <div class="section-head reveal-on-scroll">
+      <span class="tag-badge">Got Questions?</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-desc">Clear answers regarding required forms, turnaround time, and appointment protocols.</p>
+    </div>
+
+    <div class="faq-wrapper reveal-stagger">
+      <div class="faq-block reveal-on-scroll">
+        <button class="faq-trigger" onclick="toggleFaq(this)">
+          Is prior appointment necessary before visiting the lab?
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="faq-body">
+          Yes. To ensure zero waiting time and personalized attention by senior forensic examiners, all applicants must schedule an appointment prior to visiting.
+        </div>
+      </div>
+
+      <div class="faq-block reveal-on-scroll">
+        <button class="faq-trigger" onclick="toggleFaq(this)">
+          Do I need to carry my own fingerprint forms (e.g. FBI FD-258 or RCMP)?
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="faq-body">
+          No. We maintain fresh, original stock of official FBI FD-258 cards, Canadian RCMP forms, Singapore PCC formats, and standard consular sheets in our laboratory.
+        </div>
+      </div>
+
+      <div class="faq-block reveal-on-scroll">
+        <button class="faq-trigger" onclick="toggleFaq(this)">
+          What identification documents must I bring to the appointment?
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="faq-body">
+          Please carry your original valid Passport, Government photo ID (Aadhaar Card, Voter ID, or Driving License), two recent passport-size photographs, and any official letter received from the embassy or employer.
+        </div>
+      </div>
+
+      <div class="faq-block reveal-on-scroll">
+        <button class="faq-trigger" onclick="toggleFaq(this)">
+          How long does an ink-and-roll fingerprinting appointment take?
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="faq-body">
+          A standard session takes approximately 20 to 30 minutes, which includes ID verification, test impressions, rolled card recording, and signing the examiner certificates.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us Section with Map & Form -->
+  <section class="contact-section" id="contact">
+    <div class="section-head reveal-on-scroll">
+      <span class="tag-badge">Get In Touch</span>
+      <h2 class="section-title">Schedule In-Person Consultation</h2>
+      <p class="section-desc">Visit our certified laboratory or speak directly with our senior forensic experts.</p>
+    </div>
+
+    <div class="contact-container reveal-scale">
+      <div class="contact-info-panel">
+        <h3 style="font-size: 22px; color: var(--primary); margin-bottom: 24px; font-family: 'Plus Jakarta Sans', sans-serif;">Laboratory Headquarters</h3>
+        
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div>
+            <h5>Address</h5>
+            <p>PrimeFPrint Laboratory, Hyderabad, Telangana, India</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+          <div>
+            <h5>Direct Appointments</h5>
+            <a href="tel:+918125255814">+91 81252 55814</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div>
+            <h5>Official Correspondence</h5>
+            <a href="mailto:info@keyforensics.in">info@keyforensics.in</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fa-regular fa-clock"></i></div>
+          <div>
+            <h5>Operating Hours</h5>
+            <p>Monday - Saturday: 9:30 AM &ndash; 6:30 PM (Prior Appointment Mandatory)</p>
+          </div>
+        </div>
+
+        <!-- Google Map Embed -->
+        <div class="map-frame">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121820.39572417743!2d78.38469854999999!3d17.4123487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+
+      <!-- Contact Message Form -->
+      <div class="hero-lead-card" style="padding: 40px; box-shadow: var(--shadow-md);">
+        <h3 class="card-title">Send a Confidential Inquiry</h3>
+        <p class="card-subtitle">Have a specialized case or corporate batch requirement? Leave your details below.</p>
+
+        <form onsubmit="alert('Message sent successfully! Our experts will contact you within 2 hours.'); return false;">
+          <div class="form-field">
+            <label>Your Full Name</label>
+            <input type="text" placeholder="e.g. Ananya Sen" required>
+          </div>
+          <div class="form-field">
+            <label>Email Address</label>
+            <input type="email" placeholder="name@domain.com" required>
+          </div>
+          <div class="form-field">
+            <label>Phone / WhatsApp Number</label>
+            <input type="tel" placeholder="+91 98765 43210" required>
+          </div>
+          <div class="form-field">
+            <label>Case Type / Country</label>
+            <input type="text" placeholder="e.g. USA FBI Check or Canada PCC" required>
+          </div>
+          <div class="form-field">
+            <label>Brief Message</label>
+            <textarea rows="3" placeholder="Tell us about your requirements or preferred time..." style="width: 100%; background: #f8fafc; border: 1px solid #cbd5e1; padding: 13px 16px; border-radius: 8px; color: var(--text-main); font-size: 14px; font-family: inherit; outline: none;"></textarea>
+          </div>
+          <button type="submit" class="btn-submit-lead">
+            Submit Consultation Request &rarr;
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating WhatsApp CTA (Icon Only) -->
+  <a href="https://wa.me/918125255814?text=Hello%20PrimeFPrint,%20I%20would%20like%20to%20book%20a%20fingerprinting%20appointment." target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col">
+        <div class="brand-logo" style="margin-bottom: 20px;">
+          <div style="background: #ffffff; padding: 6px 14px; border-radius: 12px; display: inline-flex; align-items: center; box-shadow: 0 4px 16px rgba(0,0,0,0.25);">
+            <img src="images/primefpint_clean.png" alt="PrimeFPrint" style="height: 64px; width: auto; display: block; border-radius: 4px;">
+          </div>
+        </div>
+        <p style="font-size: 14px; line-height: 1.7; max-width: 380px;">
+          Premier government-accredited forensic laboratory specializing in international police clearances, FINRA corporate verifications, FBI FD-258 fingerprint cards, and court-admissible questioned document analysis.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Clearance Services</h4>
+        <ul>
+          <li><a href="service_pcc.html">Police Clearance Certificate (PCC)</a></li>
+          <li><a href="service_finra.html">FINRA Fingerprinting</a></li>
+          <li><a href="#book-appointment">Book Prior Appointment</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Destinations</h4>
+        <ul>
+          <li><a href="#global-presence">United States (USA)</a></li>
+          <li><a href="#global-presence">Canada</a></li>
+          <li><a href="#global-presence">Australia &amp; NZ</a></li>
+          <li><a href="#global-presence">United Kingdom (UK)</a></li>
+          <li><a href="#global-presence">UAE, Singapore, Qatar</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Headquarters</h4>
+        <p style="margin-bottom: 8px;">Hyderabad, Telangana, India</p>
+        <p style="margin-bottom: 8px;">Phone: +91 81252 55814</p>
+        <p style="margin-bottom: 8px;">Email: info@keyforensics.in</p>
+        <p>Prior Appointment Mandatory</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2026 PrimeFPrint India. All rights reserved.</div>
+      <div>Designed for Supreme Accuracy &bull; Official Consular Submission Standards</div>
+    </div>
+  </footer>
+
+  <!-- jsVectorMap Script & World Map Implementation -->
+  <script src="https://cdn.jsdelivr.net/npm/jsvectormap"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jsvectormap/dist/maps/world.js"></script>
+
+  <script>
+    // ============================================
+    // MODAL POPUP CONTROLLERS (GLOBAL FUNCTIONS)
+    // ============================================
+    window.openEnquiryModal = function() {
+      const modal = document.getElementById('enquiryModal');
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    };
+
+    window.closeEnquiryModal = function() {
+      const modal = document.getElementById('enquiryModal');
+      if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    };
+
+    window.handleOverlayClick = function(e) {
+      if (e.target && e.target.id === 'enquiryModal') {
+        window.closeEnquiryModal();
+      }
+    };
+
+    window.handleModalSubmit = function(e) {
+      e.preventDefault();
+      const name = document.getElementById('modalName').value;
+      const phone = document.getElementById('modalPhone').value;
+      alert(`Thank you, ${name}! Your callback request has been prioritized. Our team will contact you on ${phone} shortly.`);
+      window.closeEnquiryModal();
+    };
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        window.closeEnquiryModal();
+      }
+    });
+  </script>
+
+  <script>
+    // Carousel logic
+    const slidesData = [
+      {
+        pill: "Police Clearance Certificate (PCC) &bull; Global Clearances",
+        title: "Certified PCC Fingerprinting.<br><span class='accent-sub'>Embassy &amp; Visa Clearances.</span>",
+        desc: "Official smudge-free ink-and-roll impressions on authentic cards, fully accredited for international visas, permanent residency, and consular police clearances."
+      },
+      {
+        pill: "FINRA Corporate Fingerprinting &bull; US Licensing",
+        title: "Mandatory FINRA Clearances.<br><span class='accent-sub'>Fast-Track US Licensing.</span>",
+        desc: "Specialized background check fingerprinting for corporate financial institutions, US broker-dealers, investment advisors, and offshore IT professionals."
+      },
+      {
+        pill: "FBI FD-258 &bull; RCMP Canada &bull; 40+ Years Heritage",
+        title: "High-Security Clearances.<br><span class='accent-sub'>Zero-Rejection Heritage.</span>",
+        desc: "Court-admissible FBI CJIS and Canadian RCMP cards backed by senior crime laboratory supervision and international acceptance."
+      }
+    ];
+
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.slider-dot');
+    const pill = document.getElementById('slide-pill');
+    const title = document.getElementById('slide-title');
+    const desc = document.getElementById('slide-desc');
+
+    function showSlide(idx) {
+      slides.forEach(s => s.classList.remove('active'));
+      slides[idx].classList.add('active');
+
+      pill.innerHTML = `<span class="pulse-dot"></span> ` + slidesData[idx].pill;
+      title.innerHTML = slidesData[idx].title;
+      desc.innerHTML = slidesData[idx].desc;
+
+      currentSlide = idx;
+    }
+
+    function nextSlide() {
+      let next = (currentSlide + 1) % slides.length;
+      showSlide(next);
+    }
+
+    function prevSlide() {
+      let prev = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(prev);
+    }
+
+    function goToSlide(idx) {
+      showSlide(idx);
+    }
+
+    setInterval(nextSlide, 6000);
+
+    // Initialize Interactive World Map (With Dynamic Region Tab Filtering & Synchronized Highlighting)
+    const allClientMarkers = [
+      { name: "United States (US FBI & FINRA)", coords: [38.9072, -77.0369], region: "americas" },
+      { name: "Canada (RCMP C-216C)", coords: [45.4215, -75.6972], region: "americas" },
+      { name: "United Kingdom (UK NM & FM)", coords: [51.5074, -0.1278], region: "europe" },
+      { name: "Australia (AFP Clearance)", coords: [-33.8688, 151.2093], region: "asia" },
+      { name: "UAE (Dubai & Abu Dhabi - With & Without ID)", coords: [25.2048, 55.2708], region: "gulf" },
+      { name: "Qatar (With ID & Without ID)", coords: [25.2854, 51.5310], region: "gulf" },
+      { name: "Saudi Arabia (Saudi Arab)", coords: [24.7136, 46.6753], region: "gulf" },
+      { name: "Kuwait (Police Clearance)", coords: [29.3759, 47.9774], region: "gulf" },
+      { name: "Bahrain (Embassy Clearance)", coords: [26.2285, 50.5860], region: "gulf" },
+      { name: "Oman (With ID & No ID)", coords: [23.5880, 58.3829], region: "gulf" },
+      { name: "Singapore (SPF Clearance)", coords: [1.3521, 103.8198], region: "asia" },
+      { name: "Malaysia (Good Conduct)", coords: [3.1390, 101.6869], region: "asia" },
+      { name: "Thailand (Royal Thai Police)", coords: [13.7563, 100.5018], region: "asia" },
+      { name: "Vietnam (Judicial Record)", coords: [21.0285, 105.8542], region: "asia" },
+      { name: "Hong Kong (CNCC Clearance)", coords: [22.3193, 114.1694], region: "asia" },
+      { name: "Maldives (Police Clearance)", coords: [4.1755, 73.5093], region: "asia" },
+      { name: "Italy (Casellario Giudiziale)", coords: [41.9028, 12.4964], region: "europe" },
+      { name: "Switzerland (Swiss Records)", coords: [46.9480, 7.4474], region: "europe" },
+      { name: "Malta (Police Conduct)", coords: [35.8989, 14.5146], region: "africa" },
+      { name: "South Africa (SAPS Clearance)", coords: [-25.7479, 28.2293], region: "africa" },
+      { name: "Nigeria (CID Certificate)", coords: [9.0765, 7.3986], region: "africa" },
+      { name: "Ghana (CID Record)", coords: [5.6037, -0.1870], region: "africa" },
+      { name: "Kenya (DCI Clearance)", coords: [-1.2921, 36.8219], region: "africa" },
+      { name: "Tanzania (Forensic Clearance)", coords: [-6.7924, 39.2083], region: "africa" },
+      { name: "Uganda (Interpol Clearance)", coords: [0.3476, 32.5825], region: "africa" },
+      { name: "Botswana (Police Clearance)", coords: [-24.6282, 25.9231], region: "africa" },
+      { name: "Lebanon (Judicial Record)", coords: [33.8938, 35.5018], region: "gulf" },
+      { name: "Afghanistan (Consular Clearance)", coords: [34.5553, 69.2075], region: "asia" },
+      { name: "Jamaica (Police Clearance)", coords: [17.9712, -76.7928], region: "americas" },
+      { name: "PrimeFPrint Forensic Lab (Hyderabad, India)", coords: [17.4123, 78.3847], region: "hub" }
+    ];
+
+    const regionConfig = {
+      all: {
+        codes: [
+          'AF', 'AU', 'BH', 'BW', 'CA', 'GH', 'HK', 'IT', 'JM', 'KE', 'KW', 'LB',
+          'OM', 'MT', 'MY', 'MV', 'NG', 'QA', 'SA', 'ZA', 'CH', 'TZ', 'TH', 'AE',
+          'UG', 'GB', 'US', 'VN'
+        ],
+        markers: allClientMarkers
+      },
+      gulf: {
+        codes: ['BH', 'KW', 'LB', 'OM', 'QA', 'SA', 'AE'],
+        markers: allClientMarkers.filter(m => m.region === 'gulf' || m.region === 'hub')
+      },
+      americas: {
+        codes: ['US', 'CA', 'GB', 'IT', 'CH', 'JM'],
+        markers: allClientMarkers.filter(m => m.region === 'americas' || m.region === 'europe' || m.region === 'hub')
+      },
+      asia: {
+        codes: ['AF', 'AU', 'HK', 'MY', 'MV', 'TH', 'VN'],
+        markers: allClientMarkers.filter(m => m.region === 'asia' || m.region === 'hub')
+      },
+      africa: {
+        codes: ['ZA', 'NG', 'GH', 'KE', 'TZ', 'UG', 'BW', 'MT'],
+        markers: allClientMarkers.filter(m => m.region === 'africa' || m.region === 'hub')
+      }
+    };
+
+    window.worldMapInstance = null;
+
+    document.addEventListener("DOMContentLoaded", function () {
+      if (document.getElementById('world-map') && typeof jsVectorMap !== 'undefined') {
+        window.worldMapInstance = new jsVectorMap({
+          selector: '#world-map',
+          map: 'world',
+          backgroundColor: 'transparent',
+          draggable: true,
+          zoomButtons: true,
+          zoomOnScroll: false,
+          regionStyle: {
+            initial: {
+              fill: '#e2e8f0',
+              stroke: '#ffffff',
+              strokeWidth: 1.2,
+              fillOpacity: 1
+            },
+            hover: {
+              fill: '#6b9dd2',
+              fillOpacity: 0.95,
+              cursor: 'pointer'
+            },
+            selected: {
+              fill: '#1a3150',
+              fillOpacity: 1
+            },
+            selectedHover: {
+              fill: '#0f172a',
+              fillOpacity: 1
+            }
+          },
+          selectedRegions: regionConfig.all.codes,
+          markers: allClientMarkers,
+          markerStyle: {
+            initial: {
+              r: 6.5,
+              fill: '#f59e0b',
+              stroke: '#ffffff',
+              strokeWidth: 2,
+              fillOpacity: 1
+            },
+            hover: {
+              r: 10,
+              fill: '#1a3150',
+              stroke: '#6b9dd2',
+              strokeWidth: 3
+            }
+          },
+          onRegionTooltipShow: function(event, tooltip, code) {
+            const countryDirectory = {
+              'US': 'United States • FBI FD-258 & FINRA Compliance',
+              'CA': 'Canada • RCMP C-216C Certified Clearances',
+              'AU': 'Australia • AFP Police Clearance',
+              'GB': 'United Kingdom • UK (NM) & UK (FM) ACRO',
+              'AE': 'UAE • Dubai (With/Without ID) & Abu Dhabi',
+              'SG': 'Singapore • SPF Certificate of Clearance',
+              'BH': 'Bahrain • Consular Police Clearance',
+              'QA': 'Qatar • CEID Clearances (With & Without ID)',
+              'KW': 'Kuwait • Police Clearance Vetting',
+              'SA': 'Saudi Arabia (Saudi Arab) • PCC Clearance',
+              'OM': 'Oman • ROP Clearance (With ID & No ID)',
+              'MY': 'Malaysia • Certificate of Good Conduct',
+              'TH': 'Thailand • Royal Thai Police Clearance',
+              'VN': 'Vietnam • Judicial Record Card',
+              'IT': 'Italy • Casellario Giudiziale',
+              'CH': 'Switzerland • Swiss Criminal Records Vetting',
+              'ZA': 'South Africa • SAPS Criminal Records',
+              'NG': 'Nigeria • CID Character Certificate',
+              'GH': 'Ghana • Criminal Record Vetting',
+              'KE': 'Kenya • DCI Police Clearance',
+              'TZ': 'Tanzania • Police Forensic Clearance',
+              'UG': 'Uganda • Interpol Police Clearance',
+              'BW': 'Botswana • Police Record Clearance',
+              'LB': 'Lebanon • Judicial Record Clearance',
+              'AF': 'Afghanistan • Sovereign Embassy Clearance',
+              'JM': 'Jamaica • Police Clearance Certificate'
+            };
+            if (countryDirectory[code]) {
+              tooltip.text(countryDirectory[code], true);
+            }
+          }
+        });
+
+        // Ensure all client countries are highlighted by default on initial page load
+        if (window.worldMapInstance && regionConfig.all.codes) {
+          window.worldMapInstance.setSelectedRegions(regionConfig.all.codes);
+        }
+      }
+    });
+
+    // Country Filter Function: Synchronously filters Cards, Highlights Map Regions & Filters Markers (NO zoom effect)
+    function filterCountries(region, btn) {
+      // 1. Update Tab Buttons UI
+      document.querySelectorAll('.region-tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // 2. Filter Country Cards Below
+      const cards = document.querySelectorAll('.country-loc-card');
+      cards.forEach(card => {
+        const cardReg = card.getAttribute('data-region');
+        if (
+          region === 'all' ||
+          cardReg === region ||
+          (region === 'americas' && (cardReg === 'americas' || cardReg === 'europe'))
+        ) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // 3. Highlight and Filter Respective Countries in Map (Keeps map steady at full globe view - no zoom jumps)
+      if (window.worldMapInstance && regionConfig[region]) {
+        const config = regionConfig[region];
+
+        // Clear previous selected regions and highlight respective countries only
+        window.worldMapInstance.clearSelectedRegions();
+        if (config.codes && config.codes.length > 0) {
+          window.worldMapInstance.setSelectedRegions(config.codes);
+        }
+
+        // Update Location Markers for respective region
+        window.worldMapInstance.removeMarkers();
+        if (config.markers && config.markers.length > 0) {
+          window.worldMapInstance.addMarkers(config.markers);
+        }
+      }
+    }
+
+    // FAQ Toggle
+
+    function toggleFaq(btn) {
+      const body = btn.nextElementSibling;
+      const icon = btn.querySelector('i');
+      const isCurrentlyOpen = body.style.display === 'block';
+
+      // Close all open FAQs
+      document.querySelectorAll('.faq-body').forEach(b => {
+        b.style.display = 'none';
+      });
+      document.querySelectorAll('.faq-trigger i').forEach(ic => {
+        ic.classList.remove('fa-minus');
+        ic.classList.add('fa-plus');
+      });
+
+      // If clicked item was not open, open it
+      if (!isCurrentlyOpen) {
+        body.style.display = 'block';
+        icon.classList.remove('fa-plus');
+        icon.classList.add('fa-minus');
+      }
+    }
+
+    // ============================================================
+    // TESTIMONIALS CAROUSEL SLIDER CONTROLLER
+    // ============================================================
+    (function initTestimonialSlider() {
+      const track = document.getElementById('testiTrack');
+      const dotsContainer = document.getElementById('testiDots');
+      const prevBtn = document.getElementById('testiPrevBtn');
+      const nextBtn = document.getElementById('testiNextBtn');
+      if (!track) return;
+
+      const cards = track.querySelectorAll('.testi-card');
+      const totalCards = cards.length;
+      let currentIndex = 0;
+      let autoPlayTimer = null;
+
+      function getVisibleCount() {
+        if (window.innerWidth >= 1024) return 3;
+        if (window.innerWidth >= 768) return 2;
+        return 1;
+      }
+
+      function getMaxIndex() {
+        const visible = getVisibleCount();
+        return Math.max(0, totalCards - visible);
+      }
+
+      function renderDots() {
+        if (!dotsContainer) return;
+        dotsContainer.innerHTML = '';
+        const maxIdx = getMaxIndex();
+        const totalDots = maxIdx + 1;
+        for (let i = 0; i < totalDots; i++) {
+          const dot = document.createElement('button');
+          dot.className = 'testi-dot' + (i === currentIndex ? ' active' : '');
+          dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+          dot.onclick = () => goToTestiSlide(i);
+          dotsContainer.appendChild(dot);
+        }
+      }
+
+      function updateSliderPosition() {
+        const maxIdx = getMaxIndex();
+        if (currentIndex > maxIdx) currentIndex = maxIdx;
+        if (currentIndex < 0) currentIndex = 0;
+
+        const card = cards[0];
+        if (!card) return;
+
+        const cardWidth = card.getBoundingClientRect().width;
+        const gap = 24;
+        const offset = currentIndex * (cardWidth + gap);
+
+        track.style.transform = `translateX(-${offset}px)`;
+
+        // Update active dot
+        if (dotsContainer) {
+          const dots = dotsContainer.querySelectorAll('.testi-dot');
+          dots.forEach((d, i) => {
+            d.classList.toggle('active', i === currentIndex);
+          });
+        }
+      }
+
+      window.moveTestiSlide = function(direction) {
+        const maxIdx = getMaxIndex();
+        let nextIndex = currentIndex + direction;
+        if (nextIndex > maxIdx) {
+          nextIndex = 0; // Loop back to start
+        } else if (nextIndex < 0) {
+          nextIndex = maxIdx; // Loop to end
+        }
+        currentIndex = nextIndex;
+        updateSliderPosition();
+      };
+
+      window.goToTestiSlide = function(index) {
+        currentIndex = index;
+        updateSliderPosition();
+      };
+
+      // Auto-play every 5s with pause on hover
+      function startAutoPlay() {
+        stopAutoPlay();
+        autoPlayTimer = setInterval(() => {
+          window.moveTestiSlide(1);
+        }, 5000);
+      }
+
+      function stopAutoPlay() {
+        if (autoPlayTimer) clearInterval(autoPlayTimer);
+      }
+
+      const container = document.querySelector('.testimonials-slider-container');
+      if (container) {
+        container.addEventListener('mouseenter', stopAutoPlay);
+        container.addEventListener('mouseleave', startAutoPlay);
+        container.addEventListener('touchstart', stopAutoPlay, { passive: true });
+        container.addEventListener('touchend', startAutoPlay, { passive: true });
+      }
+
+      // Touch drag / swipe support
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      track.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      track.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        if (touchStartX - touchEndX > 45) {
+          window.moveTestiSlide(1);
+        } else if (touchEndX - touchStartX > 45) {
+          window.moveTestiSlide(-1);
+        }
+      }, { passive: true });
+
+      window.addEventListener('resize', () => {
+        renderDots();
+        updateSliderPosition();
+      });
+
+      // Initialize on load
+      setTimeout(() => {
+        renderDots();
+        updateSliderPosition();
+        startAutoPlay();
+      }, 100);
+    })();
+
+    // ============================================================
+    // SMOOTH SCROLLING ANIMATIONS & REVEAL CONTROLLER
+    // ============================================================
+    document.addEventListener("DOMContentLoaded", function () {
+      // 1. Reading Progress Bar & Header Shadow on Scroll
+      const progressBar = document.getElementById('scroll-progress-bar');
+      const headerEl = document.querySelector('header');
+      const backToTop = document.getElementById('backToTopBtn');
+
+      // Initialize Routex Smooth Wheel Momentum Scrolling
+      if (typeof SmoothScroll !== 'undefined') {
+        SmoothScroll({
+          animationTime: 850,
+          stepSize: 80,
+          accelerationDelta: 50,
+          accelerationMax: 3,
+          pulseAlgorithm: true,
+          pulseScale: 4,
+          pulseNormalize: 1,
+          touchpadSupport: true
+        });
+      }
+
+      const scrollPctEl = document.getElementById('scroll-percentage');
+      const pctTextEl = document.querySelector('#scroll-percentage-value .pct-text');
+
+      window.addEventListener('scroll', function () {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollPercent = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+        const roundedPct = Math.round(scrollPercent);
+
+        if (progressBar) {
+          progressBar.style.width = scrollPercent + '%';
+        }
+
+        if (headerEl) {
+          if (scrollTop > 40) {
+            headerEl.classList.add('header-scrolled');
+          } else {
+            headerEl.classList.remove('header-scrolled');
+          }
+        }
+
+        // Routex Circular Scroll Indicator Update
+        if (scrollPctEl) {
+          scrollPctEl.style.background = `conic-gradient(#1A3150 ${roundedPct}%, #e2e8f0 ${roundedPct}%)`;
+          if (pctTextEl) {
+            pctTextEl.textContent = roundedPct + '%';
+          }
+          if (scrollTop > 200) {
+            scrollPctEl.classList.add('active');
+          } else {
+            scrollPctEl.classList.remove('active');
+          }
+        }
+      }, { passive: true });
+
+      // 2. Smooth Scroll for Anchor Links with Header Offset
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const targetId = this.getAttribute('href');
+          if (targetId && targetId !== '#') {
+            const targetEl = document.querySelector(targetId);
+            if (targetEl) {
+              e.preventDefault();
+              const headerOffset = 80;
+              const elementPosition = targetEl.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
+            }
+          }
+        });
+      });
+
+      // 3. Intersection Observer for Scroll Reveals
+      const revealElements = document.querySelectorAll(
+        '.reveal-on-scroll, .reveal-left, .reveal-right, .reveal-scale'
+      );
+
+      if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('revealed');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.12,
+          rootMargin: '0px 0px -40px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+      } else {
+        // Fallback for older browsers
+        revealElements.forEach(el => el.classList.add('revealed'));
+      }
+    });
+
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+
+
+    // Mobile Hamburger Menu Controller
+    window.toggleMobileMenu = function() {
+      const navLinks = document.querySelector('.nav-links');
+      const toggleBtn = document.getElementById('mobileMenuToggle');
+      if (navLinks) {
+        navLinks.classList.toggle('mobile-open');
+        const isOpen = navLinks.classList.contains('mobile-open');
+        if (toggleBtn) {
+          toggleBtn.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+        }
+      }
+    };
+
+    // Auto-close mobile menu upon clicking any nav link
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', function() {
+          const navLinks = document.querySelector('.nav-links');
+          const toggleBtn = document.getElementById('mobileMenuToggle');
+          if (navLinks && navLinks.classList.contains('mobile-open')) {
+            navLinks.classList.remove('mobile-open');
+            if (toggleBtn) toggleBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+          }
+        });
+      });
+    });
+
+
+    // Live Biometric Scanner Control
+    window.toggleScannerPlay = function() {
+      const laserBar = document.querySelector('.scanner-laser-bar');
+      const timelineBar = document.querySelector('.scanner-timeline-bar');
+      const btnIcon = document.querySelector('#scannerPauseBtn i');
+      if (laserBar && timelineBar) {
+        const isPaused = laserBar.style.animationPlayState === 'paused';
+        laserBar.style.animationPlayState = isPaused ? 'running' : 'paused';
+        timelineBar.style.animationPlayState = isPaused ? 'running' : 'paused';
+        if (btnIcon) {
+          btnIcon.className = isPaused ? 'fa-solid fa-pause' : 'fa-solid fa-play';
+        }
+      }
+    };
+
+  </script>
+
+    <!-- LEFT SIDE STICKY EXPANDING ACTION PILLS (FLOATING LUXURY CAPSULES) -->
+  <div class="sticky-left-actions">
+    <!-- 1. Direct Phone Call Capsule -->
+    <a href="tel:+918125255814" class="sticky-pill phone-pill" title="Call Us Directly: +91 81252 55814" style="color: #1a3150 !important;">
+      <div class="sticky-pill-icon">
+        <i class="fa-solid fa-phone" style="color: #1a3150 !important;"></i>
+      </div>
+      <div class="sticky-pill-text-wrap">
+        <div class="sticky-pill-label">Call Expert</div>
+        <div class="sticky-pill-sub">+91 81252 55814</div>
+      </div>
+    </a>
+
+    <!-- 2. Instant Enquiry Modal Capsule -->
+    <div class="sticky-pill enquiry-pill" onclick="openEnquiryModal()" title="Open Quick Enquiry Form">
+      <div class="sticky-pill-icon">
+        <i class="fa-solid fa-envelope-open-text" style="color: #1a3150 !important;"></i>
+      </div>
+      <div class="sticky-pill-text-wrap">
+        <div class="sticky-pill-label">Quick Enquiry</div>
+        <div class="sticky-pill-sub">Instant Callback</div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- INTERACTIVE ENQUIRY MODAL POPUP -->
+  <div class="modal-overlay" id="enquiryModal" onclick="handleOverlayClick(event)">
+    <div class="modal-dialog">
+      <div class="modal-close-btn" onclick="closeEnquiryModal()">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+
+      <div class="modal-header">
+        <span class="tag-badge" style="margin-bottom: 8px;">Confidential Booking</span>
+        <h3>Request Immediate Callback</h3>
+        <p>Fill out the details below. Our senior forensic clearance officer will call you within 15 minutes.</p>
+      </div>
+
+      <form onsubmit="handleModalSubmit(event)">
+        <div class="form-field">
+          <label>Your Full Name *</label>
+          <input type="text" placeholder="e.g. Anand R." required id="modalName">
+        </div>
+        <div class="form-field">
+          <label>Phone / WhatsApp Number *</label>
+          <input type="tel" placeholder="+91 98765 43210" required id="modalPhone">
+        </div>
+        <div class="form-field">
+          <label>Required Service *</label>
+          <select required id="modalService">
+            <option value="pcc">Police Clearance Certificate (PCC)</option>
+            <option value="finra">FINRA Corporate Fingerprinting</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label>Target Country / Embassy</label>
+          <input type="text" placeholder="e.g. USA, Canada, Australia, UAE" required id="modalCountry">
+        </div>
+        <button type="submit" class="btn-submit-lead" style="margin-top: 10px;">
+          Confirm Callback Slot &rarr;
+        </button>
+      </form>
+    </div>
+  </div>
+      <!-- Google Translate Engine & Cookie Dispatcher -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+
+    function translatePage(langCode) {
+      // 1. Set Google Translate Cookie (works on all protocols & servers)
+      const domain = window.location.hostname;
+      const cookieValue = '/en/' + langCode;
+      
+      document.cookie = `googtrans=${cookieValue}; path=/;`;
+      if (domain) {
+        document.cookie = `googtrans=${cookieValue}; path=/; domain=.${domain};`;
+      }
+
+      // 2. Try dispatching directly to native hidden select if already loaded
+      const combo = document.querySelector('.goog-te-combo');
+      if (combo) {
+        combo.value = langCode;
+        combo.dispatchEvent(new Event('change'));
+      } else {
+        // Reload page so Google Translate reads the newly placed cookie and translates all text immediately
+        window.location.reload();
+      }
+    }
+
+    // Read current language on load and sync dropdown
+    document.addEventListener('DOMContentLoaded', function() {
+      const match = document.cookie.match(/googtrans=\/en\/([a-zA-Z\-]+)/);
+      if (match && match[1]) {
+        const select = document.getElementById('langSelect');
+        if (select) select.value = match[1];
+      }
+    });
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <!-- Routex Circular Scroll-Percentage & Back To Top -->
+  <div id="scroll-percentage" onclick="scrollToTop()" title="Back to Top">
+    <div id="scroll-percentage-value">
+      <span class="pct-text">0%</span>
+      <i class="fa-solid fa-arrow-up pct-icon"></i>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
