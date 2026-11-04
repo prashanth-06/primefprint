@@ -3421,7 +3421,7 @@
 
         <!-- Services with PCC and FINRA only -->
         <li class="nav-item has-dropdown">
-          <button type="button" class="nav-link dropdown-toggle" id="servicesToggle" aria-label="Toggle Services Menu" style="background:none; border:none; padding:0; margin:0; font-family:inherit; font-size:inherit; font-weight:inherit; color:inherit; width:100%; cursor:pointer; display:flex; align-items:center; justify-content:space-between;">
+          <button type="button" class="nav-link dropdown-toggle" id="servicesToggle" onclick="toggleServicesDropdown(event)" aria-label="Toggle Services Menu" style="background:none; border:none; padding:0; margin:0; font-family:inherit; font-size:inherit; font-weight:inherit; color:inherit; width:100%; cursor:pointer; display:flex; align-items:center; justify-content:space-between; outline: none; -webkit-tap-highlight-color: transparent;">
             <span>Services</span>
             <i class="fa-solid fa-chevron-down dropdown-chevron" style="font-size: 11px;"></i>
           </button>
@@ -4769,6 +4769,20 @@
   <script src="https://cdn.jsdelivr.net/npm/jsvectormap/dist/maps/world.js"></script>
 
   <script>
+    window.toggleServicesDropdown = function(e) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      const btn = document.getElementById('servicesToggle');
+      if (btn) {
+        const parent = btn.closest('.nav-item');
+        if (parent) {
+          parent.classList.toggle('dropdown-open');
+        }
+      }
+    };
+
     // ============================================
     // MODAL POPUP CONTROLLERS (GLOBAL FUNCTIONS)
     // ============================================
