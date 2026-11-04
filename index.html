@@ -56,77 +56,6 @@
       letter-spacing: -0.02em;
     }
 
-    /* Top Header Strip - Executive Luxury Bar */
-    .top-strip {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 9px 5%;
-      font-size: 12.5px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: #cbd5e1;
-      background: linear-gradient(90deg, #0e1e34 0%, #152b4b 50%, #0e1e34 100%);
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      position: relative;
-      z-index: 1001;
-    }
-    .top-strip-left {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      font-weight: 500;
-      color: #e2e8f0;
-      letter-spacing: 0.1px;
-    }
-    .top-strip-left i {
-      color: #6B9DD2;
-      font-size: 13px;
-    }
-    .strip-items {
-      display: flex;
-      gap: 16px;
-      align-items: center;
-    }
-    .strip-phone-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      background: rgba(107, 157, 210, 0.14);
-      border: 1px solid rgba(107, 157, 210, 0.32);
-      color: #ffffff !important;
-      padding: 4px 13px;
-      border-radius: 50px;
-      font-weight: 600;
-      text-decoration: none !important;
-      transition: all 0.22s ease;
-      font-size: 12px;
-    }
-    .strip-phone-link i {
-      color: #6B9DD2;
-      font-size: 11px;
-    }
-    .strip-phone-link:hover {
-      background: #6B9DD2;
-      color: #0d1e35 !important;
-      border-color: #6B9DD2;
-      box-shadow: 0 0 12px rgba(107, 157, 210, 0.5);
-    }
-    .strip-phone-link:hover i {
-      color: #0d1e35;
-    }
-    .strip-hours {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      color: #94a3b8;
-      font-weight: 500;
-      font-size: 12px;
-    }
-    .strip-hours i {
-      color: #6B9DD2;
-      font-size: 12px;
-    }
-
     /* Sticky Header - Glass Blur UI */
     header {
       position: sticky;
@@ -1712,31 +1641,7 @@
       .brand-logo-img { height: 72px !important; }
       .hero-heading { font-size: 38px; }
       .features-grid { grid-template-columns: 1fr; }
-      .top-strip {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 6px !important;
-        text-align: center !important;
-        padding: 8px 4% !important;
-        font-size: 11.5px !important;
-      }
-      .top-strip-left {
-        justify-content: center !important;
-        text-align: center !important;
-        font-size: 11px !important;
-      }
-      .strip-items {
-        justify-content: center !important;
-        flex-wrap: wrap !important;
-        gap: 8px 12px !important;
-      }
-      .strip-phone-link {
-        font-size: 11px !important;
-        padding: 3px 10px !important;
-      }
-      .strip-hours {
-        font-size: 11px !important;
-      }
+      
       .slider-arrows { display: none; }
       .footer-content { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
@@ -3293,23 +3198,7 @@
   <!-- Top Reading Scroll Progress Bar -->
   <div id="scroll-progress-bar"></div>
 
-  <!-- Top Header Notification Strip -->
-  <div class="top-strip">
-    <div class="top-strip-left">
-      <i class="fa-solid fa-location-dot"></i>
-      <span>House No. 5-8-300, Road No. 08, Sagar Housing Complex, B.N Reddy Nagar, Hyderabad-500070, Telangana</span>
-    </div>
-    <div class="strip-items">
-      <a href="tel:+919441821998" class="strip-phone-link">
-        <i class="fa-solid fa-phone"></i>
-        <span>Prior Appointment Mandatory: <strong>+91 94418 21998</strong></span>
-      </a>
-      <span class="strip-hours">
-        <i class="fa-regular fa-clock"></i>
-        <span>Mon - Sat: 9:30 AM - 6:30 PM</span>
-      </span>
-    </div>
-  </div>
+  
 
   <!-- Header: EXACT 3 ELEMENTS (Home, Services [PCC, FINRA only], Contact) -->
   <header>
