@@ -2191,67 +2191,7 @@
       .mobile-only-cta-item {
         display: block !important;
       }
-      .nav-links {
-        display: flex !important;
-        position: fixed !important;
-        top: 66px !important;
-        left: 0 !important;
-        width: 100% !important;
-        max-height: calc(100vh - 66px) !important;
-        background: #ffffff !important;
-        flex-direction: column !important;
-        align-items: stretch !important;
-        gap: 0 !important;
-        padding: 20px 24px 35px !important;
-        overflow-y: auto !important;
-        border-bottom: 2px solid #e2e8f0 !important;
-        box-shadow: 0 20px 50px rgba(15, 23, 42, 0.15) !important;
-        transform: translateY(-130%) !important;
-        opacity: 0 !important;
-        visibility: hidden !important;
-        transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
-        z-index: 9999 !important;
-      }
-      .nav-links.mobile-open {
-        transform: translateY(0) !important;
-        opacity: 1 !important;
-        visibility: visible !important;
-      }
-      .nav-links .nav-item {
-        width: 100% !important;
-        border-bottom: 1px solid #f1f5f9 !important;
-        padding: 14px 0 !important;
-      }
-      .nav-links .nav-link {
-        font-size: 16px !important;
-        font-weight: 700 !important;
-        color: #0f172a !important;
-        justify-content: space-between !important;
-      }
-      .nav-links .dropdown {
-        position: static !important;
-        display: none !important;
-        opacity: 0 !important;
-        visibility: hidden !important;
-        box-shadow: none !important;
-        border: 1px solid #e2e8f0 !important;
-        border-radius: 12px !important;
-        margin-top: 10px !important;
-        padding: 8px 10px !important;
-        background: #f8fafc !important;
-        transition: all 0.25s ease !important;
-      }
-      .nav-links .nav-item.dropdown-open .dropdown {
-        display: block !important;
-        opacity: 1 !important;
-        visibility: visible !important;
-      }
-      .dropdown-chevron {
-        transition: transform 0.25s ease !important;
-      }
-      .nav-links .nav-item.dropdown-open .dropdown-chevron {
-        transform: rotate(180deg) !important;
-      }
+      /* duplicate mobile nav removed */
       .mobile-only-cta-item .mobile-cta-btn {
         width: 100% !important;
         background: linear-gradient(135deg, #1A3150 0%, #2b4f7e 100%) !important;
@@ -3255,7 +3195,7 @@
         transform: scale(0.92) !important;
       }
 
-      /* Smooth Opening Mobile Menu Drawer */
+      /* Fixed Full-Width Mobile Navigation Drawer */
       .nav-links {
         display: flex !important;
         position: fixed !important;
@@ -3272,16 +3212,52 @@
         -webkit-overflow-scrolling: touch !important;
         border-bottom: 2px solid #e2e8f0 !important;
         box-shadow: 0 25px 60px rgba(15, 23, 42, 0.22) !important;
-        transform: translateY(-120%) !important;
+        transform: translateY(-115%) !important;
         opacity: 0 !important;
         visibility: hidden !important;
-        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.28s ease, visibility 0.28s !important;
+        pointer-events: none !important;
+        will-change: transform, opacity !important;
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, visibility 0.35s !important;
         z-index: 9999 !important;
       }
       .nav-links.mobile-open {
         transform: translateY(0) !important;
         opacity: 1 !important;
         visibility: visible !important;
+        pointer-events: auto !important;
+        transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, visibility 0s !important;
+      }
+
+      /* Silky Smooth Accordion Dropdown for Services */
+      .nav-links .dropdown {
+        position: static !important;
+        display: block !important;
+        max-height: 0 !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        overflow: hidden !important;
+        box-shadow: none !important;
+        border: 1px solid transparent !important;
+        border-radius: 12px !important;
+        margin-top: 0 !important;
+        padding: 0 10px !important;
+        background: #f8fafc !important;
+        transition: max-height 0.32s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.22s ease, margin 0.22s ease, padding 0.22s ease, visibility 0.32s !important;
+      }
+      .nav-links .nav-item.dropdown-open .dropdown {
+        max-height: 260px !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        margin-top: 10px !important;
+        padding: 8px 10px !important;
+        border-color: #e2e8f0 !important;
+        transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, margin 0.25s ease, padding 0.25s ease, visibility 0s !important;
+      }
+      .dropdown-chevron {
+        transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      }
+      .nav-links .nav-item.dropdown-open .dropdown-chevron {
+        transform: rotate(180deg) !important;
       }
 
       .nav-links .nav-item {
@@ -3414,7 +3390,7 @@
       </a>
 
       <!-- Navigation Elements & Mobile Drawer Content -->
-      <ul class="nav-links">
+      <ul class="nav-links" id="navLinks">
         <li class="nav-item">
           <a href="#home" class="nav-link">Home</a>
         </li>
@@ -4773,6 +4749,8 @@
       if (e) {
         e.preventDefault();
         e.stopPropagation();
+        if (e._handledByDropdown) return;
+        e._handledByDropdown = true;
       }
       const btn = document.getElementById('servicesToggle');
       if (btn) {
@@ -5335,45 +5313,60 @@
 
 
     // Mobile Hamburger Menu Controller
-    window.toggleMobileMenu = function() {
-      const navLinks = document.querySelector('.nav-links');
+    window.toggleMobileMenu = function(e) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      const navLinks = document.getElementById('navLinks') || document.querySelector('.nav-links');
       const toggleBtn = document.getElementById('mobileMenuToggle');
       if (navLinks) {
-        navLinks.classList.toggle('mobile-open');
-        const isOpen = navLinks.classList.contains('mobile-open');
-        if (!isOpen) {
-          document.querySelectorAll('.nav-item.dropdown-open').forEach(el => el.classList.remove('dropdown-open'));
+        const willOpen = !navLinks.classList.contains('mobile-open');
+        if (willOpen) {
+          navLinks.classList.add('mobile-open');
+        } else {
+          navLinks.classList.remove('mobile-open');
+          // Delay resetting dropdown-open until after the menu drawer slides up (350ms),
+          // completely eliminating visual fluctuation/glitch!
+          setTimeout(function() {
+            document.querySelectorAll('.nav-item.dropdown-open').forEach(function(el) {
+              el.classList.remove('dropdown-open');
+            });
+          }, 350);
         }
         if (toggleBtn) {
-          toggleBtn.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+          toggleBtn.innerHTML = willOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+          toggleBtn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
         }
       }
     };
 
     // Sub-dropdown accordion toggle & auto-close logic
     document.addEventListener('DOMContentLoaded', function() {
-      // Toggle Services dropdown on tap (no href, no page jump)
+      // Services dropdown touch & click binding
       const servicesToggle = document.getElementById('servicesToggle');
       if (servicesToggle) {
         servicesToggle.addEventListener('click', function(e) {
-          e.preventDefault();
-          e.stopPropagation();
-          const parent = this.closest('.nav-item');
-          if (parent) {
-            parent.classList.toggle('dropdown-open');
-          }
+          window.toggleServicesDropdown(e);
         });
       }
 
-      // Auto-close mobile menu upon clicking links
-      document.querySelectorAll('.nav-links a').forEach(link => {
+      // Auto-close mobile menu upon clicking links (excluding the dropdown toggle button)
+      document.querySelectorAll('.nav-links a:not(.dropdown-toggle)').forEach(link => {
         link.addEventListener('click', function(e) {
-          const navLinks = document.querySelector('.nav-links');
+          const navLinks = document.getElementById('navLinks') || document.querySelector('.nav-links');
           const toggleBtn = document.getElementById('mobileMenuToggle');
           if (navLinks && navLinks.classList.contains('mobile-open')) {
             navLinks.classList.remove('mobile-open');
-            document.querySelectorAll('.nav-item.dropdown-open').forEach(el => el.classList.remove('dropdown-open'));
-            if (toggleBtn) toggleBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            if (toggleBtn) {
+              toggleBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+              toggleBtn.setAttribute('aria-expanded', 'false');
+            }
+            setTimeout(function() {
+              document.querySelectorAll('.nav-item.dropdown-open').forEach(function(el) {
+                el.classList.remove('dropdown-open');
+              });
+            }, 350);
           }
         });
       });
