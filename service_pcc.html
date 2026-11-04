@@ -1,0 +1,2845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Police Clearance Certificate (PCC) Processing &amp; Fingerprinting | PrimeFPrint</title>
+  <meta name="description" content="Certified Police Clearance Certificate (PCC) fingerprinting and international consular processing in Hyderabad, India. Accepted for USA, Canada, UK, Australia, Singapore &amp; UAE immigration.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+
+    :root {
+      /* Neutral Brand Color System (Derived from PrimeFPrint Logo) */
+      --primary: #1a3150;           /* Logo Deep Navy */
+      --primary-accent: #1a3150;    /* Primary Brand Navy */
+      --primary-navy: #1a3150;
+      --primary-accent-dark: #12243b; /* Deeper Navy Hover */
+      --accent-soft: #6b9dd2;       /* Logo Soft Slate Blue (from 'FP' & swoosh) */
+      --accent-cyan: #6b9dd2;       /* Replaced electric cyan with muted logo slate blue */
+      --bg-white: #ffffff;          /* Pure White */
+      --bg-light: #f8fafc;          /* Off-white Pearl */
+      --bg-subtle: #f1f5f9;         /* Cool Neutral Slate */
+      --card-white: #ffffff;
+      --card-border: #e2e8f0;       /* Hairline Neutral Border */
+      --card-border-hover: #cbd5e1;
+      --text-main: #1a3150;         /* Deep Navy Headings */
+      --text-muted: #526071;        /* Muted Charcoal/Slate */
+      --text-light: #64748b;
+      --shadow-sm: 0 2px 8px rgba(26, 49, 80, 0.04);
+      --shadow-md: 0 10px 30px rgba(26, 49, 80, 0.06);
+      --shadow-lg: 0 20px 50px rgba(26, 49, 80, 0.08);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: var(--text-main);
+      background-color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+      top: 0px !important;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--primary);
+    }
+
+    /* TOP NOTIFICATION STRIP */
+    .top-strip {
+      background: #0a0f1d;
+      color: #94a3b8;
+      font-size: 13px;
+      padding: 10px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .top-strip a { color: #6B9DD2; text-decoration: none; font-weight: 600; }
+    .strip-items { display: flex; gap: 20px; }
+
+    /* HEADER & NAVIGATION */
+    header {
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid var(--card-border);
+      padding: 14px 5%;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      transition: all 0.3s ease;
+    }
+    .nav-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand-logo-img {
+      height: 96px;
+      width: auto;
+      max-width: 140px;
+      object-fit: contain;
+      display: block;
+      image-rendering: -webkit-optimize-contrast;
+      transition: transform 0.25s ease;
+    }
+    .brand-logo:hover .brand-logo-img {
+      transform: scale(1.03);
+    }
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .logo-icon {
+      width: 42px; height: 42px;
+      background: linear-gradient(135deg, #1A3150 0%, #13253d 100%);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 20px;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+    }
+    .logo-text h3 {
+      font-size: 19px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin: 0;
+      letter-spacing: -0.5px;
+      color: #0f172a;
+    }
+    .logo-text span {
+      font-size: 11px;
+      color: var(--primary-accent);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      display: block;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-link {
+      text-decoration: none;
+      color: #334155;
+      font-weight: 600;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+      position: relative;
+    }
+    .nav-link:hover, .nav-link.active { color: var(--primary-accent); }
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: -18px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--primary-accent);
+      border-radius: 3px 3px 0 0;
+    }
+
+    /* Dropdown */
+    .nav-item { position: relative; }
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: -20px;
+      background: #ffffff;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      width: 290px;
+      padding: 12px;
+      list-style: none;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 100;
+    }
+    .nav-item:hover .dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(6px);
+    }
+    .dropdown li { margin-bottom: 6px; }
+    .dropdown li:last-child { margin-bottom: 0; }
+    .dropdown a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 14px;
+      color: #334155;
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: all 0.2s;
+    }
+    .dropdown a:hover, .dropdown a.active {
+      background: #f0f9ff;
+      color: var(--primary-accent);
+    }
+    .dropdown-icon {
+      font-size: 16px;
+      color: var(--primary-accent);
+      width: 20px;
+      text-align: center;
+    }
+    .dropdown-desc {
+      display: block;
+      font-size: 11px;
+      color: var(--text-muted);
+      font-weight: 400;
+      margin-top: 2px;
+    }
+
+    .header-right-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .btn-header {
+      background: #1a3150;
+      color: #ffffff;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(26, 49, 80, 0.18);
+      border: 1px solid #14263e;
+      transition: all 0.2s;
+    }
+    .step-card:hover {
+      transform: translateY(-4px);
+      border-color: #1a3150;
+      box-shadow: 0 14px 30px rgba(2, 132, 199, 0.12);
+    }
+    .step-badge {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #1A3150;
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      box-shadow: 0 0 12px rgba(2, 132, 199, 0.5);
+    }
+    .step-card h4 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 8px;
+    }
+    .step-time {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      color: #1a3150;
+      background: #f0f9ff;
+      border: 1px solid #dbe6f1;
+      padding: 3px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+    .step-card p {
+      font-size: 13.5px;
+      color: #64748b;
+      line-height: 1.5;
+    }
+
+    /* ROTATING BORDER FORM ON SERVICE PAGES */
+    .booking-wrapper {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    .service-booking-card {
+      background: #cbd5e1;
+      border: none;
+      border-radius: 22px;
+      padding: 40px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15), 0 0 30px rgba(2, 132, 199, 0.15);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .service-booking-card::before {
+      content: "";
+      position: absolute;
+      top: -65%;
+      left: -65%;
+      width: 230%;
+      height: 230%;
+      background: conic-gradient(
+        transparent 0deg,
+        transparent 160deg,
+        #1A3150 200deg,
+        #6B9DD2 215deg,
+        #ffffff 225deg,
+        #6B9DD2 235deg,
+        #1A3150 250deg,
+        transparent 290deg,
+        transparent 360deg
+      );
+      animation: rotateHeroBorder 5s linear infinite;
+      z-index: -2;
+    }
+    .service-booking-card::after {
+      content: "";
+      position: absolute;
+      inset: 2px;
+      background: #ffffff;
+      border-radius: 20px;
+      z-index: -1;
+    }
+    .form-inner-content {
+      position: relative;
+      z-index: 2;
+    }
+    .form-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .form-field { margin-bottom: 16px; }
+    .form-field label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: #475569;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .form-field input, .form-field select, .form-field textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 14px;
+      background: #f8fafc;
+      color: #0f172a;
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+    .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+      outline: none;
+      border-color: #1a3150;
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.12);
+    }
+
+    /* FAQ ACCORDION */
+    .faq-wrapper { max-width: 860px; margin: 0 auto; }
+    .faq-block {
+      background: #ffffff;
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      margin-bottom: 14px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    }
+    .faq-trigger {
+      width: 100%;
+      text-align: left;
+      padding: 20px 24px;
+      background: none;
+      border: none;
+      color: #0f172a;
+      font-size: 16.5px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      transition: color 0.2s;
+    }
+    .faq-trigger:hover { color: var(--primary-accent); }
+    .faq-body {
+      display: none;
+      padding: 0 24px 20px;
+      color: var(--text-muted);
+      font-size: 14.5px;
+      line-height: 1.7;
+      animation: faqSlideDown 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes faqSlideDown {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* FLOATING WHATSAPP BUTTON (BOTTOM LEFT, ICON ONLY) */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      left: 28px;
+      width: 56px;
+      height: 56px;
+      background: #25d366;
+      color: #ffffff;
+      border-radius: 50% !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      text-decoration: none;
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
+      z-index: 9999;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1) translateY(-3px);
+      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+      color: #ffffff;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0a0f1d;
+      color: #94a3b8;
+      padding: 70px 5% 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .footer-content {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 50px;
+      margin-bottom: 50px;
+    }
+    .footer-col h4 {
+      color: #ffffff;
+      font-size: 17px;
+      margin-bottom: 20px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul a {
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+    .footer-col ul a:hover { color: #6B9DD2; }
+    .footer-bottom {
+      max-width: 1300px;
+      margin: 0 auto;
+      text-align: center;
+      padding-top: 25px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 13px;
+    }
+
+    
+    
+    /* ============================================================
+       FEATURE GRID 4 & TIMELINE STEPS (DESKTOP & RESPONSIVE)
+       ============================================================ */
+    .feature-grid-4 {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 1200px) {
+      .feature-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    .timeline-steps {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .step-card {
+      background: #ffffff;
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 34px 24px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+
+    /* ============================================================
+       MOBILE TOGGLE BUTTON (HIDDEN ON DESKTOP)
+       ============================================================ */
+    .mobile-toggle-btn {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      color: #1a3150;
+      font-size: 17px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .mobile-toggle-btn:hover {
+      background: #1a3150;
+      color: #ffffff;
+    }
+
+    /* ============================================================
+       INNER PAGE HERO & BREADCRUMB
+       ============================================================ */
+    .inner-page-hero {
+      background: linear-gradient(135deg, #f0f7ff 0%, #f8fafc 60%, #ffffff 100%);
+      border-bottom: 1px solid var(--card-border);
+      padding: 42px 5% 46px;
+      position: relative;
+    }
+    .inner-hero-container {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+    .breadcrumb-nav {
+      margin-bottom: 12px;
+    }
+    .breadcrumb-list {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+    .breadcrumb-list li a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb-list li a:hover {
+      color: var(--primary);
+    }
+    .breadcrumb-separator {
+      font-size: 10px;
+      color: #94a3b8;
+    }
+    .breadcrumb-list li.active {
+      color: var(--primary);
+      font-weight: 700;
+    }
+    .inner-hero-title {
+      font-size: 38px;
+      font-weight: 800;
+      letter-spacing: -0.8px;
+      color: var(--primary);
+      margin: 0;
+      line-height: 1.2;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* ============================================================
+       TYPOGRAPHY & SECTION HEADINGS
+       ============================================================ */
+    .section-head {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 55px;
+    }
+    .tag-badge {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      font-size: 11.5px !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 1.2px !important;
+      color: #1a3150 !important;
+      background: #f0f4f8 !important;
+      border: 1px solid #d0dbe7 !important;
+      padding: 6px 18px !important;
+      border-radius: 50px !important;
+      box-shadow: 0 1px 4px rgba(26, 49, 80, 0.04) !important;
+      margin-bottom: 16px !important;
+      transition: all 0.25s ease !important;
+    }
+    .tag-badge::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #1a3150;
+    }
+    .section-title {
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: -0.8px;
+      margin-bottom: 14px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--primary);
+      line-height: 1.25;
+    }
+    .section-desc {
+      font-size: 15.5px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ============================================================
+       OVERVIEW SPLIT LAYOUT & FANCYBOX CARD
+       ============================================================ */
+    .pcc-overview-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 55px;
+      align-items: center;
+    }
+    .fancybox-card {
+      display: block;
+      text-decoration: none;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 12px 35px rgba(26, 49, 80, 0.08);
+      border: 1px solid #cbd5e1;
+      position: relative;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      background: #ffffff;
+      cursor: pointer;
+    }
+    .fancybox-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 45px rgba(26, 49, 80, 0.16);
+      border-color: #6b9dd2;
+    }
+    .fancybox-img-container {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      background: #0f172a;
+    }
+    .fancybox-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .fancybox-card:hover .fancybox-img-container img {
+      transform: scale(1.05);
+    }
+    .fancybox-badge {
+      position: absolute;
+      bottom: 14px;
+      right: 14px;
+      background: rgba(26, 49, 80, 0.88);
+      backdrop-filter: blur(8px);
+      color: #ffffff;
+      padding: 8px 14px;
+      border-radius: 30px;
+      font-size: 12.5px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.25s;
+    }
+    .fancybox-badge i {
+      color: #6b9dd2;
+      font-size: 13px;
+    }
+    .fancybox-card:hover .fancybox-badge {
+      background: #12243b;
+      color: #ffffff;
+    }
+    .fancybox-card:hover .fancybox-badge i {
+      color: #ffffff;
+    }
+    .fancybox-card-caption {
+      padding: 16px 20px;
+      background: #ffffff;
+      border-top: 1px solid var(--card-border);
+    }
+    .fancybox-card-caption h5 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #1a3150;
+      margin-bottom: 4px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .fancybox-card-caption p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* ============================================================
+       SERVICE BULLETS & CALL TO ACTION BUTTONS
+       ============================================================ */
+    .service-bullet-list {
+      list-style: none;
+      margin-bottom: 28px;
+      padding: 0;
+      font-size: 14.5px;
+      color: var(--text-main);
+    }
+    .service-bullet-list li {
+      margin-bottom: 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      line-height: 1.6;
+    }
+    .service-bullet-list li i {
+      color: #16a34a;
+      font-size: 16px;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+    .overview-cta-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+    .btn-primary {
+      background: #1a3150;
+      color: #ffffff;
+      padding: 13px 26px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 14px rgba(26, 49, 80, 0.2);
+      border: 1px solid #14263e;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-primary:hover {
+      background: #12243b;
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(26, 49, 80, 0.28);
+    }
+    .btn-outline {
+      background: #ffffff;
+      color: var(--primary);
+      border: 1.5px solid #cbd5e1;
+      padding: 13px 24px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s;
+    }
+    .btn-outline:hover {
+      border-color: var(--primary);
+      background: #f8fafc;
+      color: var(--primary);
+    }
+
+    /* ============================================================
+       FEATURE GRID 3 & CARDS (PILLARS)
+       ============================================================ */
+    .feature-grid-3 {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .feature-card {
+      background: #ffffff;
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 32px 28px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .feature-card:hover {
+      transform: translateY(-4px);
+      border-color: #cbd5e1;
+      box-shadow: var(--shadow-md);
+    }
+    .card-icon-wrap {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: #f0f4f8;
+      border: 1px solid #d0dbe7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+    .feature-card h4 {
+      font-size: 19px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--primary);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .feature-card p {
+      font-size: 14.5px;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    
+    /* ============================================================
+       SCROLL TO TOP CIRCULAR PROGRESS INDICATOR
+       ============================================================ */
+    #scroll-percentage {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: conic-gradient(#1a3150 0%, #e2e8f0 0%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(26, 49, 80, 0.15);
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+      z-index: 999;
+    }
+    #scroll-percentage.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    #scroll-percentage-value {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    #scroll-percentage-value .pct-icon { display: none; font-size: 13px; color: var(--primary); }
+    #scroll-percentage:hover #scroll-percentage-value .pct-text { display: none; }
+    #scroll-percentage:hover #scroll-percentage-value .pct-icon { display: inline-block; }
+
+        /* ============================================================
+       COMPREHENSIVE MOBILE RESPONSIVE STYLES (320px - 992px)
+       ============================================================ */
+    @media (max-width: 992px) {
+      /* Header & Navigation Bar */
+      header {
+        padding: 10px 4% !important;
+      }
+      .nav-container {
+        gap: 10px !important;
+      }
+      .brand-logo-img {
+        height: 72px !important;
+        max-width: 110px !important;
+      }
+      .header-right-actions {
+        gap: 8px !important;
+      }
+      .btn-header {
+        padding: 8px 13px !important;
+        font-size: 12px !important;
+        white-space: nowrap !important;
+        border-radius: 6px !important;
+      }
+      .mobile-toggle-btn {
+        display: flex !important;
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 15px !important;
+        flex-shrink: 0 !important;
+      }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        padding: 20px 5%;
+        border-bottom: 1px solid var(--card-border);
+        flex-direction: column;
+        gap: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        z-index: 1000;
+      }
+      .nav-links.mobile-open {
+        display: flex !important;
+      }
+
+      /* Top Notification Strip */
+      .top-strip {
+        flex-direction: column;
+        gap: 6px;
+        text-align: center;
+        padding: 8px 4%;
+        font-size: 11.5px;
+      }
+      .strip-items {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      /* Inner Page Hero */
+      .inner-page-hero {
+        padding: 28px 4% 32px !important;
+      }
+      .inner-hero-title {
+        font-size: 26px !important;
+        line-height: 1.25 !important;
+      }
+      .breadcrumb-list {
+        flex-wrap: wrap;
+        font-size: 12px;
+        gap: 6px;
+      }
+
+      /* Main Overview Section (FIX FOR SQUISHED IMAGES ON MOBILE) */
+      .pcc-overview-container {
+        grid-template-columns: 1fr !important;
+        gap: 36px !important;
+      }
+      .pcc-overview-content {
+        order: 1;
+      }
+      .pcc-overview-visual {
+        order: 2;
+        width: 100% !important;
+        max-width: 520px !important;
+        margin: 0 auto !important;
+      }
+      .fancybox-card {
+        width: 100% !important;
+        border-radius: 14px !important;
+      }
+      .fancybox-img-container {
+        width: 100% !important;
+        aspect-ratio: 16 / 10 !important;
+      }
+      .fancybox-img-container img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        display: block !important;
+      }
+
+      /* Overview Action Buttons */
+      .overview-cta-row {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+      }
+      .overview-cta-row .btn-primary,
+      .overview-cta-row .btn-outline {
+        width: 100% !important;
+        justify-content: center !important;
+        text-align: center;
+      }
+
+      /* Sections & Headings Padding */
+      section[style*="padding"] {
+        padding: 55px 4% !important;
+      }
+      .section-head {
+        margin-bottom: 35px !important;
+      }
+      .section-title {
+        font-size: 25px !important;
+        line-height: 1.25 !important;
+      }
+      .section-desc {
+        font-size: 14.5px !important;
+        line-height: 1.6 !important;
+      }
+
+      /* Feature Grids & Timelines */
+      .feature-grid-3,
+      .feature-grid-4,
+      .timeline-steps {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+      }
+      .feature-card {
+        padding: 24px 18px !important;
+      }
+      .step-card {
+        padding: 26px 18px !important;
+      }
+
+      /* Booking Form */
+      .form-grid-2 {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+      }
+      .service-booking-card {
+        padding: 24px 16px !important;
+        border-radius: 16px !important;
+      }
+      .form-field input,
+      .form-field select {
+        font-size: 14px !important;
+        padding: 12px 14px !important;
+      }
+
+      /* WhatsApp & Bottom UI */
+      .whatsapp-float {
+        bottom: 20px !important;
+        left: 18px !important;
+        width: 46px !important;
+        height: 46px !important;
+        font-size: 24px !important;
+      }
+      .footer-content {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+        padding: 50px 4% 30px !important;
+      }
+    }
+
+    /* GOOGLE TRANSLATOR & CUSTOM LANGUAGE SELECTOR STYLES */
+    .goog-logo-link { display: none !important; }
+    .goog-te-banner-frame.skiptranslate { display: none !important; }
+    body { top: 0px !important; }
+    .custom-lang-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+    .custom-lang-select {
+      appearance: none;
+      -webkit-appearance: none;
+      padding: 10px 32px 10px 14px;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      background: #ffffff url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%230284c7' viewBox='0 0 16 16'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") no-repeat right 12px center;
+      color: #0f172a;
+      font-weight: 700;
+      font-size: 13.5px;
+      outline: none;
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      transition: all 0.2s;
+    }
+    .custom-lang-select:hover, .custom-lang-select:focus {
+      border-color: #1a3150;
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+    }
+    @media (max-width: 768px) {
+      .custom-lang-select {
+        padding: 6px 26px 6px 10px !important;
+        font-size: 12px !important;
+        max-width: 100px !important;
+      }
+    }
+  
+    /* ============================================================
+       ACCREDITED PCC COUNTRIES & FLAGS DIRECTORY STYLES
+       ============================================================ */
+    .pcc-directory-section {
+      background: linear-gradient(180deg, #f8fafc 0%, #ffffff 50%, #f8fafc 100%);
+      padding: 90px 5%;
+      border-top: 1px solid #e2e8f0;
+      border-bottom: 1px solid #e2e8f0;
+      position: relative;
+    }
+    .pcc-directory-container {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+    .pcc-controls-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-bottom: 24px;
+      align-items: center;
+    }
+    .pcc-search-box {
+      width: 100%;
+      max-width: 620px;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .pcc-search-box i.fa-magnifying-glass {
+      position: absolute;
+      left: 18px;
+      color: #64748b;
+      font-size: 16px;
+      pointer-events: none;
+    }
+    .pcc-search-box input {
+      width: 100%;
+      padding: 14px 44px 14px 48px;
+      border-radius: 999px;
+      border: 1.5px solid #cbd5e1;
+      background: #ffffff;
+      font-size: 15px;
+      color: #0f172a;
+      outline: none;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+      transition: all 0.25s ease;
+    }
+    .pcc-search-box input:focus {
+      border-color: #1A3150;
+      box-shadow: 0 0 0 3px rgba(101, 163, 220, 0.25);
+    }
+    .pcc-search-box button#pccClearSearch {
+      position: absolute;
+      right: 14px;
+      background: transparent;
+      border: none;
+      color: #94a3b8;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 4px 8px;
+    }
+    .pcc-search-box button#pccClearSearch:hover {
+      color: #0f172a;
+    }
+    .pcc-region-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .pcc-tab {
+      background: #ffffff;
+      color: #475569;
+      border: 1px solid #cbd5e1;
+      border-radius: 999px;
+      padding: 9px 18px;
+      font-size: 13.5px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s ease;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    }
+    .pcc-tab:hover {
+      border-color: #1A3150;
+      color: #1A3150;
+      transform: translateY(-1px);
+    }
+    .pcc-tab.active {
+      background: #1A3150;
+      color: #ffffff;
+      border-color: #1A3150;
+      box-shadow: 0 6px 18px rgba(26, 49, 80, 0.22);
+    }
+    .pcc-count-bar {
+      margin-bottom: 24px;
+      text-align: right;
+      font-size: 13px;
+      color: #64748b;
+    }
+    .pcc-count-bar strong {
+      color: #1A3150;
+    }
+
+    /* Grid Layout */
+    .pcc-countries-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: 1200px) {
+      .pcc-countries-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 860px) {
+      .pcc-countries-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    }
+    @media (max-width: 540px) {
+      .pcc-countries-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Country Card */
+    .pcc-country-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.03);
+      position: relative;
+    }
+    .pcc-country-card:hover {
+      transform: translateY(-4px);
+      border-color: #65a3dc;
+      box-shadow: 0 14px 28px rgba(26, 49, 80, 0.09);
+    }
+    .pcc-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .pcc-flag-wrap {
+      width: 44px;
+      height: 30px;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+      border: 1px solid rgba(0,0,0,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f8fafc;
+    }
+    .pcc-flag-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .pcc-badge-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .pcc-sno {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #64748b;
+      background: #f1f5f9;
+      padding: 3px 8px;
+      border-radius: 6px;
+      letter-spacing: 0.5px;
+    }
+    .pcc-status {
+      font-size: 11px;
+      font-weight: 700;
+      color: #15803d;
+      background: #f0fdf4;
+      padding: 3px 8px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      border: 1px solid #bbf7d0;
+    }
+    .pcc-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #16a34a;
+      display: inline-block;
+    }
+    .pcc-country-name {
+      font-size: 16.5px;
+      font-weight: 700;
+      color: #1A3150;
+      margin: 0 0 6px 0;
+      line-height: 1.35;
+    }
+    .pcc-country-tag {
+      font-size: 13px;
+      color: #475569;
+      line-height: 1.45;
+      margin: 0 0 16px 0;
+      min-height: 38px;
+    }
+    .pcc-card-btn {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 9px 14px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #1A3150;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.2s ease;
+      width: 100%;
+    }
+    .pcc-card-btn:hover {
+      background: #1A3150;
+      color: #ffffff;
+      border-color: #1A3150;
+    }
+    .pcc-card-btn:hover i {
+      transform: translateX(4px);
+    }
+    .pcc-card-btn i {
+      transition: transform 0.2s ease;
+      font-size: 11px;
+    }
+
+    /* Global Banner */
+    .pcc-global-banner {
+      margin-top: 45px;
+      background: linear-gradient(135deg, #1A3150 0%, #1e3a8a 100%);
+      border-radius: 16px;
+      padding: 32px 36px;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      box-shadow: 0 16px 36px rgba(26, 49, 80, 0.22);
+    }
+    .pcc-global-content {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .pcc-global-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      color: #7db9ed;
+      flex-shrink: 0;
+    }
+    .pcc-global-content h3 {
+      font-size: 19px;
+      font-weight: 700;
+      margin: 0 0 6px 0;
+      color: #ffffff;
+    }
+    .pcc-global-content p {
+      font-size: 14px;
+      color: #cbd5e1;
+      margin: 0;
+      line-height: 1.55;
+      max-width: 680px;
+    }
+    .pcc-global-btn {
+      background: #ffffff;
+      color: #1A3150;
+      padding: 14px 26px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      flex-shrink: 0;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+      transition: all 0.25s ease;
+    }
+    .pcc-global-btn:hover {
+      background: #7db9ed;
+      color: #0f172a;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(125, 185, 237, 0.4);
+    }
+    @media (max-width: 900px) {
+      .pcc-global-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 26px 24px;
+      }
+      .pcc-global-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+      .pcc-global-btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
+  <!-- Fancybox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+</head>
+<body>
+  <!-- Top Reading Scroll Progress Bar -->
+  <div id="scroll-progress-bar"></div>
+
+  <!-- Top Strip -->
+  <div class="top-strip">
+    <div><i class="fa-solid fa-location-dot" style="color: var(--primary-accent); margin-right: 6px;"></i> Official Forensic Laboratory &bull; Hyderabad, India</div>
+    <div class="strip-items">
+      <span><i class="fa-solid fa-phone" style="color: var(--primary-accent); margin-right: 6px;"></i> Prior Appointment Mandatory: <a href="tel:+918125255814">+91 81252 55814</a></span>
+      <span><i class="fa-regular fa-clock" style="color: var(--primary-accent); margin-right: 6px;"></i> Mon - Sat: 9:30 AM - 6:30 PM</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo" title="PrimeFPrint - Fingerprinting & PCC Services">
+        <img src="images/primefpint_clean.png" alt="PrimeFPrint - Fingerprinting & PCC Services" class="brand-logo-img">
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="index.html#services" class="nav-link active">
+            Services <i class="fa-solid fa-chevron-down" style="font-size: 11px;"></i>
+          </a>
+          <ul class="dropdown">
+            <li>
+              <a href="service_pcc.html" class="active">
+                <i class="fa-solid fa-passport dropdown-icon"></i>
+                <div>
+                  Police Clearance Certificate (PCC)
+                  <span class="dropdown-desc">Global Visa &amp; Immigration Clearance</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="service_finra.html">
+                <i class="fa-solid fa-briefcase dropdown-icon"></i>
+                <div>
+                  FINRA Fingerprinting
+                  <span class="dropdown-desc">US Corporate &amp; Broker-Dealer Licensing</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="index.html#contact" class="nav-link">Contact</a>
+        </li>
+      </ul>
+
+      <div class="header-right-actions">
+        <a href="#pcc-booking" class="btn-header">Book Appointment</a>
+        
+        <!-- Reliable Custom Language Selector -->
+        <div class="custom-lang-wrapper">
+          <select id="langSelect" class="custom-lang-select" onchange="translatePage(this.value)" title="Choose Language">
+            <option value="en">English</option>
+            <option value="hi">Hindi (हिन्दी)</option>
+            <option value="te">Telugu (తెలుగు)</option>
+            <option value="ar">Arabic (العربية)</option>
+            <option value="fr">French (Français)</option>
+            <option value="es">Spanish (Español)</option>
+            <option value="de">German (Deutsch)</option>
+          </select>
+        </div>
+
+        <!-- Hidden Native Google Translate Mount -->
+        <div id="google_translate_element" style="display:none !important;"></div>
+
+        <button class="mobile-toggle-btn" onclick="toggleMobileMenu()" aria-label="Toggle Navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Clean Light Inner Page Hero (Heading & Breadcrumb Only) -->
+  <section class="inner-page-hero">
+    <div class="inner-hero-container">
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <ol class="breadcrumb-list">
+          <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+          <li class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></li>
+          <li class="active" aria-current="page">Police Clearance Certificate (PCC)</li>
+        </ol>
+      </nav>
+      <h1 class="inner-hero-title">Police Clearance Certificate (PCC)</h1>
+    </div>
+  </section>
+
+  <!-- Content Section 1: PCC Overview with Integrated Fancybox Visual Inspection -->
+  <section style="background: #ffffff; padding: 75px 5% 70px;">
+    <div class="pcc-overview-container">
+      <div class="pcc-overview-content">
+        <span class="tag-badge">Official Consular Clarification</span>
+        <h2 class="section-title heading-fade" style="text-align: left; margin-bottom: 20px;">What is a Police Clearance Certificate (PCC)?</h2>
+        <p class="section-desc" style="text-align: left; margin-bottom: 20px;">
+          A Police Clearance Certificate (PCC) is an official legal record issued by sovereign police or federal law enforcement agencies confirming whether an individual has any criminal convictions or ongoing judicial proceedings. It serves as mandatory proof of good character for international relocation.
+        </p>
+        <p style="font-size: 15px; color: #475569; line-height: 1.75; margin-bottom: 28px;">
+          Different foreign governments require fingerprints rolled on specific sovereign fingerprint cards (such as <strong>FBI FD-258</strong> for the USA or <strong>RCMP C-216C</strong> for Canada) along with court-admissible forensic examiner authentication.
+        </p>
+
+        <!-- Properly Spaced Service List Items (No double bullet dots) -->
+        <ul class="service-bullet-list">
+          <li>
+            <i class="fa-solid fa-circle-check"></i>
+            <div><strong>100% Embassy Acceptance:</strong> Recognized across 25+ sovereign consulates worldwide</div>
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-check"></i>
+            <div><strong>Original Fingerprint Cards:</strong> Authentic FBI FD-258 &amp; RCMP C-216C forms in stock</div>
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-check"></i>
+            <div><strong>Ex-Govt Senior Examiners:</strong> 40+ years experience ensuring zero smudge rejection</div>
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-check"></i>
+            <div><strong>20-Min Fast Track:</strong> Express in-lab appointments with same-day completion</div>
+          </li>
+        </ul>
+
+        <!-- Generous CTA Action Row -->
+        <div class="overview-cta-row">
+          <a href="#pcc-booking" class="btn-primary">
+            <span>Schedule PCC Fingerprinting</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="tel:+918125255814" class="btn-outline">
+            <i class="fa-solid fa-phone"></i>
+            <span>Call Examiner: +91 81252 55814</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Fancybox Image Inspection Card (Pure Image + Sleek Badge) -->
+      <div class="pcc-overview-visual">
+        <a href="images/pcc_hero.jpg" data-fancybox="pcc-gallery" data-caption="Official Police Clearance Certificate (PCC) Documentation &amp; FBI FD-258 Fingerprint Verification" class="fancybox-card">
+          <div class="fancybox-img-container">
+            <img src="images/pcc_hero.jpg" alt="Certified Police Clearance Certificate Consular Verification Desk">
+            <div class="fancybox-badge">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span>Click to Enlarge / Inspect</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Section 2: Core Certification Pillars (Enhanced Card Section) -->
+  <section class="section-pillars" style="background: #f8fafc; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; padding: 85px 5%;">
+    <div class="section-head heading-fade">
+      <span class="tag-badge">Core Benchmarks</span>
+      <h2 class="section-title">Essential Certification Pillars</h2>
+      <p class="section-desc">Key standards ensuring international sovereign admissibility without rejection or delay.</p>
+    </div>
+
+    <div class="feature-grid-3">
+      <div class="feature-card">
+        <div class="card-icon-wrap"><i class="fa-solid fa-passport"></i></div>
+        <h4>Also Known As</h4>
+        <p>Criminal Record Check (CRC), Certificate of Clearance (COC), Identity History Summary (IdHS), Police Check, or Good Standing Certificate.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="card-icon-wrap"><i class="fa-solid fa-scale-balanced"></i></div>
+        <h4>Legal Requirement</h4>
+        <p>Mandatory for foreign embassies, consulates, immigration departments, and international corporations to verify applicant security standing.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="card-icon-wrap"><i class="fa-solid fa-award"></i></div>
+        <h4>Zero-Smudge Guarantee</h4>
+        <p>Our senior crime laboratory examiners ensure smudge-free, high-definition friction ridge rolling to eliminate any risk of rejection by foreign consulates.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who Requires PCC / Ideal For -->
+  <section style="background: #f8fafc; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; padding: 85px 5%;">
+    <div class="section-head">
+      <span class="tag-badge">Applicant Scope</span>
+      <h2 class="section-title">Who Needs a PCC? (Ideal For)</h2>
+      <p class="section-desc">We routinely assist applicants filing documentation with global embassies and immigration boards.</p>
+    </div>
+
+    <div class="feature-grid-4">
+      <div class="feature-card">
+        <div class="card-icon-wrap"><i class="fa-solid fa-plane-arrival"></i></div>
+        <h4>Immigration &amp; PR</h4>
+        <p>Permanent residency filings for Canada Express Entry, Australia PR, USA Green Card, and UK Settlement.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="card-icon-wrap"><i class="fa-solid fa-briefcase"></i></div>
+        <h4>Employment Abroad</h4>
+        <p>Foreign corporate background vetting across UAE, Qatar, Singapore, Europe, and multinational corporations.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="card-icon-wrap"><i class="fa-solid fa-graduation-cap"></i></div>
+        <h4>Higher Education</h4>
+        <p>International university admissions, student visa clearances, and embassy security clearances.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="card-icon-wrap"><i class="fa-solid fa-user-doctor"></i></div>
+        <h4>Medical &amp; Nursing</h4>
+        <p>NCLEX, CGFNS, UK NMC, and foreign healthcare board licensing requiring official background checks.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="card-icon-wrap"><i class="fa-solid fa-id-card"></i></div>
+        <h4>Work Permits</h4>
+        <p>Specialized work visa processing and overseas assignment documentation for IT and healthcare professionals.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="card-icon-wrap"><i class="fa-solid fa-users"></i></div>
+        <h4>Family &amp; Dependent Visas</h4>
+        <p>Spousal sponsorships, dependent visa applications, and child adoption background verifications.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="card-icon-wrap"><i class="fa-solid fa-flag"></i></div>
+        <h4>Citizenship Applications</h4>
+        <p>Naturalization and dual citizenship verification requiring full criminal history checks.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="card-icon-wrap"><i class="fa-solid fa-shield-halved"></i></div>
+        <h4>Security Clearances</h4>
+        <p>Sovereign defence, aviation, maritime, and offshore infrastructure security compliance.</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- Accredited PCC Sovereign Jurisdictions (34 Countries Directory with Flags) -->
+  <section class="pcc-directory-section" id="pcc-countries">
+    <div class="pcc-directory-container">
+      <div class="section-head heading-fade">
+        <span class="tag-badge">Official Jurisdiction Directory</span>
+        <h2 class="section-title">34 Client-Accredited PCC Countries &amp; Jurisdictions</h2>
+        <p class="section-desc">
+          PrimeFPrint provides verified police clearance certificate (PCC) assistance, consular fingerprinting, and document legalization across all official client-designated jurisdictions below.
+        </p>
+      </div>
+
+      <!-- Controls: Quick Search & Regional Filter Tabs -->
+      <div class="pcc-controls-wrap">
+        <div class="pcc-search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="pccSearchInput" placeholder="Search country, clearance type, or ID requirement..." oninput="handlePccSearch(this.value)">
+          <button id="pccClearSearch" onclick="clearPccSearch()" title="Clear search" style="display: none;">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <div class="pcc-region-tabs" role="tablist">
+          <button class="pcc-tab active" data-filter="all" onclick="filterPccRegion('all')">
+            <i class="fa-solid fa-globe"></i> All Jurisdictions (34)
+          </button>
+          <button class="pcc-tab" data-filter="gulf" onclick="filterPccRegion('gulf')">
+            <i class="fa-solid fa-mosque"></i> Gulf &amp; Middle East (11)
+          </button>
+          <button class="pcc-tab" data-filter="americas" onclick="filterPccRegion('americas')">
+            <i class="fa-solid fa-landmark"></i> Americas &amp; Europe (9)
+          </button>
+          <button class="pcc-tab" data-filter="asia" onclick="filterPccRegion('asia')">
+            <i class="fa-solid fa-earth-asia"></i> Asia-Pacific (7)
+          </button>
+          <button class="pcc-tab" data-filter="africa" onclick="filterPccRegion('africa')">
+            <i class="fa-solid fa-earth-africa"></i> Africa (7)
+          </button>
+        </div>
+      </div>
+
+      <!-- Live Counter Display -->
+      <div class="pcc-count-bar">
+        <span>Showing <strong id="pccVisibleCount">34</strong> of 34 accredited jurisdictions</span>
+      </div>
+
+      <!-- Responsive Countries Grid -->
+      <div class="pcc-countries-grid" id="pccCountriesGrid">
+
+      <div class="pcc-country-card" data-region="asia" data-name="afghanistan" data-tag="consular clearance & forensic vetting">
+        <div class="pcc-card-top">
+          <div class="pcc-flag-wrap">
+            <img src="images/flags/af.png" alt="Afghanistan Flag" class="pcc-flag-img" loading="lazy">
+          </div>
+          <div class="pcc-badge-wrap">
+            <span class="pcc-sno">#01</span>
+            <span class="pcc-status"><span class="pcc-dot"></span> Active</span>
+          </div>
+        </div>
+        <h3 class="pcc-country-name">Afghanistan</h3>
+        <p class="pcc-country-tag">Consular Clearance & Forensic Vetting</p>
+        <button type="button" class="pcc-card-btn" onclick="selectPccCountry('Afghanistan')">
+          <span>Apply for Afghanistan PCC</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+
+      <div class="pcc-country-card" data-region="americas" data-name="australia" data-tag="afp national police check & fingerprint card">
+        <div class="pcc-card-top">
+          <div class="pcc-flag-wrap">
+            <img src="images/flags/au.png" alt="Australia Flag" class="pcc-flag-img" loading="lazy">
+          </div>
+          <div class="pcc-badge-wrap">
+            <span class="pcc-sno">#02</span>
+            <span class="pcc-status"><span class="pcc-dot"></span> Active</span>
+          </div>
+        </div>
+        <h3 class="pcc-country-name">Australia</h3>
+        <p class="pcc-country-tag">AFP National Police Check & Fingerprint Card</p>
+        <button type="button" class="pcc-card-btn" onclick="selectPccCountry('Australia')">
+          <span>Apply for Australia PCC</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+
+      <div class="pcc-country-card" data-region="gulf" data-name="bahrain" data-tag="criminal investigation directorate (cid) pcc">
+        <div class="pcc-card-top">
+          <div class="pcc-flag-wrap">
+            <img src="images/flags/bh.png" alt="Bahrain Flag" class="pcc-flag-img" loading="lazy">
+          </div>
+          <div class="pcc-badge-wrap">
+            <span class="pcc-sno">#03</span>
+            <span class="pcc-status"><span class="pcc-dot"></span> Active</span>
+          </div>
+        </div>
+        <h3 class="pcc-country-name">Bahrain</h3>
+        <p class="pcc-country-tag">Criminal Investigation Directorate (CID) PCC</p>
+        <button type="button" class="pcc-card-btn" onclick="selectPccCountry('Bahrain')">
+          <span>Apply for Bahrain PCC</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+
+      <div class="pcc-country-card" data-region="africa" data-name="botswana" data-tag="botswana police service fingerprint check">
+        <div class="pcc-card-top">
+          <div class="pcc-flag-wrap">
+            <img src="images/flags/bw.png" alt="Botswana Flag" class="pcc-flag-img" loading="lazy">
+          </div>
+          <div class="pcc-badge-wrap">
+            <span class="pcc-sno">#04</span>
+            <span class="pcc-status"><span class="pcc-dot"></span> Active</span>
+          </div>
+        </div>
+        <h3 class="pcc-country-name">Botswana</h3>
+        <p class="pcc-country-tag">Botswana Police Service Fingerprint Check</p>
+        <button type="button" class="pcc-card-btn" onclick="selectPccCountry('Botswana')">
+          <span>Apply for Botswana PCC</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+
+      <div class="pcc-country-card" data-region="americas" data-name="canada" data-tag="rcmp c-216c certified criminal record check">
+        <div class="pcc-card-top">
+          <div class="pcc-flag-wrap">
+            <img src="images/flags/ca.png" alt="Canada Flag" class="pcc-flag-img" loading="lazy">
+          </div>
+          <div class="pcc-badge-wrap">
+            <span class="pcc-sno">#05</span>
+            <span class="pcc-status"><span class="pcc-dot"></span> Active</span>
+          </div>
+        </div>
+        <h3 class="pcc-country-name">Canada</h3>
+        <p class="pcc-country-tag">RCMP C-216C Certified Criminal Record Check</p>
+        <button type="button" class="pcc-card-btn" onclick="selectPccCountry('Canada')">
+          <span>Apply for Canada PCC</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+
+      <div class="pcc-country-card" data-region="africa" data-name="ghana" data-tag="cid police headquarters criminal record vetting">
+        <div class="pcc-card-top">
+          <div class="pcc-flag-wrap">
+            <img src="images/flags/gh.png" alt="Ghana Flag" class="pcc-flag-img" loading="lazy">
+          </div>
+          <div class="pcc-badge-wrap">
+            <span class="pcc-sno">#06</span>
+            <span class="pcc-status"><span class="pcc-dot"></span> Active</span>
+          </div>
+        </div>
+        <h3 class="pcc-country-name">Ghana</h3>
+        <p class="pcc-country-tag">CID Police Headquarters Criminal Record Vetting</p>
+        <button type="button" class="pcc-card-btn" onclick="selectPccCountry('Ghana')">
+          <span>Apply for Ghana PCC</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+
+      <div class="pcc-country-card" data-region="asia" data-name="hong kong" data-tag="cncc certificate of no criminal conviction">
+        <div class="pcc-card-top">
+          <div class="pcc-flag-wrap">
+            <img src="images/flags/hk.png" alt="Hong Kong Flag" class="pcc-flag-img" loading="lazy">
+          </div>
+          <div class="pcc-badge-wrap">
+            <span class="pcc-sno">#07</span>
+            <span class="pcc-status"><span class="pcc-dot"></span> Active</span>
+          </div>
+        </div>
+        <h3 class="pcc-country-name">Hong Kong</h3>
+        <p class="pcc-country-tag">CNCC Certificate of No Criminal Conviction</p>
+        <button type="button" class="pcc-card-btn" onclick="selectPccCountry('Hong Kong')">
+          <span>Apply for Hong PCC</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+
+      <div class="pcc-country-card" data-region="americas" data-name="italy" data-tag="certificato del casellario giudiziale">
+        <div class="pcc-card-top">
+          <div class="pcc-flag-wrap">
+            <img src="images/flags/it.png" alt="Italy Flag" class="pcc-flag-img" loading="lazy">
+          </div>
+          <div class="pcc-badge-wrap">
+            <span class="pcc-sno">#08</span>
+            <span class="pcc-status"><span class="pcc-dot"></span> Active</span>
+          </div>
+        </div>
+        <h3 class="pcc-country-name">Italy</h3>
+        <p class="pcc-country-tag">Certificato del Casellario Giudiziale</p>
+        <button type="button" class="pcc-card-btn" onclick="selectPccCountry('Italy')">
+          <span>Apply for Italy PCC</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+
+      <div class="pcc-country-card" data-region="americas" data-name="jamaica" data-tag="jamaica constabulary force (jcf) clearance">
+        <div class="pcc-card-top">
+          <div class="pcc-flag-wrap">
+            <img src="images/flags/jm.png" alt="Jamaica Flag" class="pcc-flag-img" loading="lazy">
+          </div>
+          <div class="pcc-badge-wrap">
+            <span class="pcc-sno">#09</span>
+            <span class="pcc-status"><span class="pcc-dot"></span> Active</span>
+          </div>
+        </div>
+        <h3 class="pcc-country-name">Jamaica</h3>
+        <p class="pcc-country-tag">Jamaica Constabulary Force (JCF) Clearance</p>
+        <button type="button" class="pcc-card-btn" onclick="selectPccCountry('Jamaica')">
+          <span>Apply for Jamaica PCC</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+
+      <div class="pcc-country-card" data-region="africa" data-name="kenya" data-tag="dci directorate of criminal investigations pcc">
+        <div class="pcc-card-top">
+          <div class="pcc-flag-wrap">
+            <img src="images/flags/ke.png" alt="Kenya Flag" class="pcc-flag-img" loading="lazy">
+          </div>
+          <div class="pcc-badge-wrap">
+            <span class="pcc-sno">#10</span>
+            <span class="pcc-status"><span class="pcc-dot"></span> Active</span>
+          </div>
+        </div>
+        <h3 class="pcc-country-name">Kenya</h3>
+        <p class="pcc-country-tag">DCI Directorate of Criminal Investigations PCC</p>
+        <button type="button" class="pcc-card-btn" onclick="selectPccCountry('Kenya')">
+          <span>Apply for Kenya PCC</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+
+      <div class="pcc-country-card" data-region="gulf" data-name="kuwait" data-tag="general department of criminal evidence pcc">
+        <div class="pcc-card-top">
+          <div class="pcc-flag-wrap">
+            <img src="images/flags/kw.png" alt="Kuwait Flag" class="pcc-flag-img" loading="lazy">
+          </div>
+          <div class="pcc-badge-wrap">
+            <span class="pcc-sno">#11</span>
+            <span class="pcc-status"><span class="pcc-dot"></span> Active</span>
+          </div>
+        </div>
+        <h3 class="pcc-country-name">Kuwait</h3>
+        <p class="pcc-country-tag">General Department of Criminal Evidence PCC</p>
+        <button type="button" class="pcc-card-btn" onclick="selectPccCountry('Kuwait')">
+          <span>Apply for Kuwait PCC</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+
+      <div class="pcc-country-card" data-region="gulf" data-name="lebanon" data-tag="judicial police clean criminal record">
+        <div class="pcc-card-top">
+          <div class="pcc-flag-wrap">
+            <img src="images/flags/lb.png" alt="Lebanon Flag" class="pcc-flag-img" loading="lazy">
+          </div>
+          <div class="pcc-badge-wrap">
+            <span class="pcc-sno">#12</span>
+            <span class="pcc-status"><span class="pcc-dot"></span> Active</span>
+          </div>
+        </div>
+        <h3 class="pcc-country-name">Lebanon</h3>
+        <p class="pcc-country-tag">Judicial Police Clean Criminal Record</p>
+        <button type="button" class="pcc-card-btn" onclick="selectPccCountry('Lebanon')">
+          <span>Apply for Lebanon PCC</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+
+      <div class="pcc-country-card" data-region="gulf" data-name="oman (with id)" data-tag="royal oman police clearance with civil id">
+        <div class="pcc-card-top">
+          <div class="pcc-flag-wrap">
+            <img src="images/flags/om.png" alt="Oman (With ID) Flag" class="pcc-flag-img" loading="lazy">
+          </div>
+          <div class="pcc-badge-wrap">
+            <span class="pcc-sno">#13</span>
+            <span class="pcc-status"><span class="pcc-dot"></span> Active</span>
+          </div>
+        </div>
+        <h3 class="pcc-country-name">Oman (With ID)</h3>
+        <p class="pcc-country-tag">Royal Oman Police Clearance with Civil ID</p>
+        <button type="button" class="pcc-card-btn" onclick="selectPccCountry('Oman (With ID)')">
+          <span>Apply for Oman PCC</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+
+      <div class="pcc-country-card" data-region="gulf" data-name="oman (no id)" data-tag="rop clearance for former expatriates">
+        <div class="pcc-card-top">
+          <div class="pcc-flag-wrap">
+            <img src="images/flags/om.png" alt="Oman (No ID) Flag" class="pcc-flag-img" loading="lazy">
+          </div>
+          <div class="pcc-badge-wrap">
+            <span class="pcc-sno">#14</span>
+            <span class="pcc-status"><span class="pcc-dot"></span> Active</span>
+          </div>
+        </div>
+        <h3 class="pcc-country-name">Oman (No ID)</h3>
+        <p class="pcc-country-tag">ROP Clearance for Former Expatriates</p>
+        <button type="button" class="pcc-card-btn" onclick="selectPccCountry('Oman (No ID)')">
+          <span>Apply for Oman PCC</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+
+      <div class="pcc-country-card" data-region="americas" data-name="malta" data-tag="police conduct certificate (form a & b)">
+        <div class="pcc-card-top">
+          <div class="pcc-flag-wrap">
+            <img src="images/flags/mt.png" alt="Malta Flag" class="pcc-flag-img" loading="lazy">
+          </div>
+          <div class="pcc-badge-wrap">
+            <span class="pcc-sno">#15</span>
+            <span class="pcc-status"><span class="pcc-dot"></span> Active</span>
+          </div>
+        </div>
+        <h3 class="pcc-country-name">Malta</h3>
+        <p class="pcc-country-tag">Police Conduct Certificate (Form A & B)</p>
+        <button type="button" class="pcc-card-btn" onclick="selectPccCountry('Malta')">
+          <span>Apply for Malta PCC</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+
+      <div class="pcc-country-card" data-region="asia" data-name="malaysia" data-tag="certificate of good conduct (cgc)">
+        <div class="pcc-card-top">
+          <div class="pcc-flag-wrap">
+            <img src="images/flags/my.png" alt="Malaysia Flag" class="pcc-flag-img" loading="lazy">
+          </div>
+          <div class="pcc-badge-wrap">
+            <span class="pcc-sno">#16</span>
+            <span class="pcc-status"><span class="pcc-dot"></span> Active</span>
+          </div>
+        </div>
+        <h3 class="pcc-country-name">Malaysia</h3>
+        <p class="pcc-country-tag">Certificate of Good Conduct (CGC)</p>
+        <button type="button" class="pcc-card-btn" onclick="selectPccCountry('Malaysia')">
+          <span>Apply for Malaysia PCC</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+
+      <div class="pcc-country-card" data-region="asia" data-name="maldives" data-tag="maldives police service record clearance">
+        <div class="pcc-card-top">
+          <div class="pcc-flag-wrap">
+            <img src="images/flags/mv.png" alt="Maldives Flag" class="pcc-flag-img" loading="lazy">
+          </div>
+          <div class="pcc-badge-wrap">
+            <span class="pcc-sno">#17</span>
+            <span class="pcc-status"><span class="pcc-dot"></span> Active</span>
+          </div>
+        </div>
+        <h3 class="pcc-country-name">Maldives</h3>
+        <p class="pcc-country-tag">Maldives Police Service Record Clearance</p>
+        <button type="button" class="pcc-card-btn" onclick="selectPccCountry('Maldives')">
+          <span>Apply for Maldives PCC</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+
+      <div class="pcc-country-card" data-region="africa" data-name="nigeria" data-tag="cid police character certificate (pcc)">
+        <div class="pcc-card-top">
+          <div class="pcc-flag-wrap">
+            <img src="images/flags/ng.png" alt="Nigeria Flag" class="pcc-flag-img" loading="lazy">
+          </div>
+          <div class="pcc-badge-wrap">
+            <span class="pcc-sno">#18</span>
+            <span class="pcc-status"><span class="pcc-dot"></span> Active</span>
+          </div>
+        </div>
+        <h3 class="pcc-country-name">Nigeria</h3>
+        <p class="pcc-country-tag">CID Police Character Certificate (PCC)</p>
+        <button type="button" class="pcc-card-btn" onclick="selectPccCountry('Nigeria')">
+          <span>Apply for Nigeria PCC</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+
+      <div class="pcc-country-card" data-region="gulf" data-name="qatar (with id)" data-tag="ceid criminal evidence dept with qid">
+        <div class="pcc-card-top">
+          <div class="pcc-flag-wrap">
+            <img src="images/flags/qa.png" alt="Qatar (With ID) Flag" class="pcc-flag-img" loading="lazy">
+          </div>
+          <div class="pcc-badge-wrap">
+            <span class="pcc-sno">#19</span>
+            <span class="pcc-status"><span class="pcc-dot"></span> Active</span>
+          </div>
+        </div>
+        <h3 class="pcc-country-name">Qatar (With ID)</h3>
+        <p class="pcc-country-tag">CEID Criminal Evidence Dept with QID</p>
+        <button type="button" class="pcc-card-btn" onclick="selectPccCountry('Qatar (With ID)')">
+          <span>Apply for Qatar PCC</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+
+      <div class="pcc-country-card" data-region="gulf" data-name="qatar (without id)" data-tag="ceid embassy non-resident attestation">
+        <div class="pcc-card-top">
+          <div class="pcc-flag-wrap">
+            <img src="images/flags/qa.png" alt="Qatar (Without ID) Flag" class="pcc-flag-img" loading="lazy">
+          </div>
+          <div class="pcc-badge-wrap">
+            <span class="pcc-sno">#20</span>
+            <span class="pcc-status"><span class="pcc-dot"></span> Active</span>
+          </div>
+        </div>
+        <h3 class="pcc-country-name">Qatar (Without ID)</h3>
+        <p class="pcc-country-tag">CEID Embassy Non-Resident Attestation</p>
+        <button type="button" class="pcc-card-btn" onclick="selectPccCountry('Qatar (Without ID)')">
+          <span>Apply for Qatar PCC</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+
+      <div class="pcc-country-card" data-region="gulf" data-name="saudi arabia" data-tag="absher & ministry of interior police clearance">
+        <div class="pcc-card-top">
+          <div class="pcc-flag-wrap">
+            <img src="images/flags/sa.png" alt="Saudi Arabia Flag" class="pcc-flag-img" loading="lazy">
+          </div>
+          <div class="pcc-badge-wrap">
+            <span class="pcc-sno">#21</span>
+            <span class="pcc-status"><span class="pcc-dot"></span> Active</span>
+          </div>
+        </div>
+        <h3 class="pcc-country-name">Saudi Arabia</h3>
+        <p class="pcc-country-tag">Absher & Ministry of Interior Police Clearance</p>
+        <button type="button" class="pcc-card-btn" onclick="selectPccCountry('Saudi Arabia')">
+          <span>Apply for Saudi PCC</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+
+      <div class="pcc-country-card" data-region="africa" data-name="south africa" data-tag="saps criminal record centre (crc) clearance">
+        <div class="pcc-card-top">
+          <div class="pcc-flag-wrap">
+            <img src="images/flags/za.png" alt="South Africa Flag" class="pcc-flag-img" loading="lazy">
+          </div>
+          <div class="pcc-badge-wrap">
+            <span class="pcc-sno">#22</span>
+            <span class="pcc-status"><span class="pcc-dot"></span> Active</span>
+          </div>
+        </div>
+        <h3 class="pcc-country-name">South Africa</h3>
+        <p class="pcc-country-tag">SAPS Criminal Record Centre (CRC) Clearance</p>
+        <button type="button" class="pcc-card-btn" onclick="selectPccCountry('South Africa')">
+          <span>Apply for South PCC</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+
+      <div class="pcc-country-card" data-region="americas" data-name="switzerland" data-tag="federal office of justice (foj) extract">
+        <div class="pcc-card-top">
+          <div class="pcc-flag-wrap">
+            <img src="images/flags/ch.png" alt="Switzerland Flag" class="pcc-flag-img" loading="lazy">
+          </div>
+          <div class="pcc-badge-wrap">
+            <span class="pcc-sno">#23</span>
+            <span class="pcc-status"><span class="pcc-dot"></span> Active</span>
+          </div>
+        </div>
+        <h3 class="pcc-country-name">Switzerland</h3>
+        <p class="pcc-country-tag">Federal Office of Justice (FOJ) Extract</p>
+        <button type="button" class="pcc-card-btn" onclick="selectPccCountry('Switzerland')">
+          <span>Apply for Switzerland PCC</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+
+      <div class="pcc-country-card" data-region="africa" data-name="tanzania" data-tag="police force forensic fingerprint bureau">
+        <div class="pcc-card-top">
+          <div class="pcc-flag-wrap">
+            <img src="images/flags/tz.png" alt="Tanzania Flag" class="pcc-flag-img" loading="lazy">
+          </div>
+          <div class="pcc-badge-wrap">
+            <span class="pcc-sno">#24</span>
+            <span class="pcc-status"><span class="pcc-dot"></span> Active</span>
+          </div>
+        </div>
+        <h3 class="pcc-country-name">Tanzania</h3>
+        <p class="pcc-country-tag">Police Force Forensic Fingerprint Bureau</p>
+        <button type="button" class="pcc-card-btn" onclick="selectPccCountry('Tanzania')">
+          <span>Apply for Tanzania PCC</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+
+      <div class="pcc-country-card" data-region="asia" data-name="singapore" data-tag="spf certificate of clearance (coc)">
+        <div class="pcc-card-top">
+          <div class="pcc-flag-wrap">
+            <img src="images/flags/sg.png" alt="Singapore Flag" class="pcc-flag-img" loading="lazy">
+          </div>
+          <div class="pcc-badge-wrap">
+            <span class="pcc-sno">#25</span>
+            <span class="pcc-status"><span class="pcc-dot"></span> Active</span>
+          </div>
+        </div>
+        <h3 class="pcc-country-name">Singapore</h3>
+        <p class="pcc-country-tag">SPF Certificate of Clearance (COC)</p>
+        <button type="button" class="pcc-card-btn" onclick="selectPccCountry('Singapore')">
+          <span>Apply for Singapore PCC</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+
+      <div class="pcc-country-card" data-region="asia" data-name="thailand" data-tag="royal thai police clearance certificate">
+        <div class="pcc-card-top">
+          <div class="pcc-flag-wrap">
+            <img src="images/flags/th.png" alt="Thailand Flag" class="pcc-flag-img" loading="lazy">
+          </div>
+          <div class="pcc-badge-wrap">
+            <span class="pcc-sno">#26</span>
+            <span class="pcc-status"><span class="pcc-dot"></span> Active</span>
+          </div>
+        </div>
+        <h3 class="pcc-country-name">Thailand</h3>
+        <p class="pcc-country-tag">Royal Thai Police Clearance Certificate</p>
+        <button type="button" class="pcc-card-btn" onclick="selectPccCountry('Thailand')">
+          <span>Apply for Thailand PCC</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+
+      <div class="pcc-country-card" data-region="gulf" data-name="uae (dubai) with id" data-tag="dubai police clearance with active emirates id">
+        <div class="pcc-card-top">
+          <div class="pcc-flag-wrap">
+            <img src="images/flags/ae.png" alt="UAE (Dubai) With ID Flag" class="pcc-flag-img" loading="lazy">
+          </div>
+          <div class="pcc-badge-wrap">
+            <span class="pcc-sno">#27</span>
+            <span class="pcc-status"><span class="pcc-dot"></span> Active</span>
+          </div>
+        </div>
+        <h3 class="pcc-country-name">UAE (Dubai) With ID</h3>
+        <p class="pcc-country-tag">Dubai Police Clearance with Active Emirates ID</p>
+        <button type="button" class="pcc-card-btn" onclick="selectPccCountry('UAE (Dubai) With ID')">
+          <span>Apply for UAE PCC</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+
+      <div class="pcc-country-card" data-region="gulf" data-name="uae (dubai) without id" data-tag="dubai police clearance for former residents">
+        <div class="pcc-card-top">
+          <div class="pcc-flag-wrap">
+            <img src="images/flags/ae.png" alt="UAE (Dubai) Without ID Flag" class="pcc-flag-img" loading="lazy">
+          </div>
+          <div class="pcc-badge-wrap">
+            <span class="pcc-sno">#28</span>
+            <span class="pcc-status"><span class="pcc-dot"></span> Active</span>
+          </div>
+        </div>
+        <h3 class="pcc-country-name">UAE (Dubai) Without ID</h3>
+        <p class="pcc-country-tag">Dubai Police Clearance for Former Residents</p>
+        <button type="button" class="pcc-card-btn" onclick="selectPccCountry('UAE (Dubai) Without ID')">
+          <span>Apply for UAE PCC</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+
+      <div class="pcc-country-card" data-region="gulf" data-name="uae abu dhabi" data-tag="abu dhabi judicial & police clearance certificate">
+        <div class="pcc-card-top">
+          <div class="pcc-flag-wrap">
+            <img src="images/flags/ae.png" alt="UAE Abu Dhabi Flag" class="pcc-flag-img" loading="lazy">
+          </div>
+          <div class="pcc-badge-wrap">
+            <span class="pcc-sno">#29</span>
+            <span class="pcc-status"><span class="pcc-dot"></span> Active</span>
+          </div>
+        </div>
+        <h3 class="pcc-country-name">UAE Abu Dhabi</h3>
+        <p class="pcc-country-tag">Abu Dhabi Judicial & Police Clearance Certificate</p>
+        <button type="button" class="pcc-card-btn" onclick="selectPccCountry('UAE Abu Dhabi')">
+          <span>Apply for UAE PCC</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+
+      <div class="pcc-country-card" data-region="africa" data-name="uganda" data-tag="uganda police interpol & forensic vetting">
+        <div class="pcc-card-top">
+          <div class="pcc-flag-wrap">
+            <img src="images/flags/ug.png" alt="Uganda Flag" class="pcc-flag-img" loading="lazy">
+          </div>
+          <div class="pcc-badge-wrap">
+            <span class="pcc-sno">#30</span>
+            <span class="pcc-status"><span class="pcc-dot"></span> Active</span>
+          </div>
+        </div>
+        <h3 class="pcc-country-name">Uganda</h3>
+        <p class="pcc-country-tag">Uganda Police Interpol & Forensic Vetting</p>
+        <button type="button" class="pcc-card-btn" onclick="selectPccCountry('Uganda')">
+          <span>Apply for Uganda PCC</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+
+      <div class="pcc-country-card" data-region="americas" data-name="uk (nm)" data-tag="acro police certificate - name check">
+        <div class="pcc-card-top">
+          <div class="pcc-flag-wrap">
+            <img src="images/flags/gb.png" alt="UK (NM) Flag" class="pcc-flag-img" loading="lazy">
+          </div>
+          <div class="pcc-badge-wrap">
+            <span class="pcc-sno">#31</span>
+            <span class="pcc-status"><span class="pcc-dot"></span> Active</span>
+          </div>
+        </div>
+        <h3 class="pcc-country-name">UK (NM)</h3>
+        <p class="pcc-country-tag">ACRO Police Certificate - Name Check</p>
+        <button type="button" class="pcc-card-btn" onclick="selectPccCountry('UK (NM)')">
+          <span>Apply for UK PCC</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+
+      <div class="pcc-country-card" data-region="americas" data-name="uk (fm)" data-tag="acro police certificate - fingerprint match">
+        <div class="pcc-card-top">
+          <div class="pcc-flag-wrap">
+            <img src="images/flags/gb.png" alt="UK (FM) Flag" class="pcc-flag-img" loading="lazy">
+          </div>
+          <div class="pcc-badge-wrap">
+            <span class="pcc-sno">#32</span>
+            <span class="pcc-status"><span class="pcc-dot"></span> Active</span>
+          </div>
+        </div>
+        <h3 class="pcc-country-name">UK (FM)</h3>
+        <p class="pcc-country-tag">ACRO Police Certificate - Fingerprint Match</p>
+        <button type="button" class="pcc-card-btn" onclick="selectPccCountry('UK (FM)')">
+          <span>Apply for UK PCC</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+
+      <div class="pcc-country-card" data-region="americas" data-name="us (fbi)" data-tag="fbi fd-258 fingerprint card criminal history">
+        <div class="pcc-card-top">
+          <div class="pcc-flag-wrap">
+            <img src="images/flags/us.png" alt="US (FBI) Flag" class="pcc-flag-img" loading="lazy">
+          </div>
+          <div class="pcc-badge-wrap">
+            <span class="pcc-sno">#33</span>
+            <span class="pcc-status"><span class="pcc-dot"></span> Active</span>
+          </div>
+        </div>
+        <h3 class="pcc-country-name">US (FBI)</h3>
+        <p class="pcc-country-tag">FBI FD-258 Fingerprint Card Criminal History</p>
+        <button type="button" class="pcc-card-btn" onclick="selectPccCountry('US (FBI)')">
+          <span>Apply for US PCC</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+
+      <div class="pcc-country-card" data-region="asia" data-name="vietnam" data-tag="judicial record certificate (phieu ly lich)">
+        <div class="pcc-card-top">
+          <div class="pcc-flag-wrap">
+            <img src="images/flags/vn.png" alt="Vietnam Flag" class="pcc-flag-img" loading="lazy">
+          </div>
+          <div class="pcc-badge-wrap">
+            <span class="pcc-sno">#34</span>
+            <span class="pcc-status"><span class="pcc-dot"></span> Active</span>
+          </div>
+        </div>
+        <h3 class="pcc-country-name">Vietnam</h3>
+        <p class="pcc-country-tag">Judicial Record Certificate (Phieu Ly Lich)</p>
+        <button type="button" class="pcc-card-btn" onclick="selectPccCountry('Vietnam')">
+          <span>Apply for Vietnam PCC</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      </div>
+
+      <!-- Global Reassurance Banner -->
+      <div class="pcc-global-banner">
+        <div class="pcc-global-content">
+          <div class="pcc-global-icon">
+            <i class="fa-solid fa-passport"></i>
+          </div>
+          <div>
+            <h3>Need PCC or Fingerprinting for Another Country Worldwide?</h3>
+            <p>
+              We provide sovereign fingerprinting on authentic FBI FD-258, RCMP C-216C, Singapore COC, and foreign government forms accepted by embassies and immigration authorities in over 190 countries globally.
+            </p>
+          </div>
+        </div>
+        <a href="#pcc-booking" class="pcc-global-btn" onclick="selectPccCountry('Global Jurisdiction')">
+          <span>Schedule Global Clearance</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- End-to-End PCC Services Workflow -->
+  <section style="background: #ffffff; padding: 85px 5%;">
+    <div class="section-head">
+      <span class="tag-badge">Structured Process</span>
+      <h2 class="section-title">Our End-to-End PCC Processing Assistance</h2>
+      <p class="section-desc">Fast, confidential, and accurate assistance from in-person card rolling to embassy tracking.</p>
+    </div>
+
+    <div class="timeline-steps">
+      <div class="step-card">
+        <div class="step-badge">1</div>
+        <span class="step-time">15 - 20 Minutes</span>
+        <h4>Ink &amp; Roll Fingerprinting</h4>
+        <p>Precision ten-print rolling on authentic foreign government cards (FBI FD-258, RCMP C-216C, or consular forms) by senior examiners.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-badge">2</div>
+        <span class="step-time">Same Day</span>
+        <h4>Document Quality Verification</h4>
+        <p>Thorough examination of ridge density, delta points, and applicant demographics to ensure 100% compliance with consular guidelines.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-badge">3</div>
+        <span class="step-time">End-to-End</span>
+        <h4>Submission &amp; Follow-Up</h4>
+        <p>Complete application filing guidance, apostille/attestation coordination, and status tracking until your PCC document is received.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Booking Form Section -->
+  <section id="pcc-booking" style="background: radial-gradient(circle at 50% 0%, #f0f9ff 0%, #ffffff 70%); padding: 90px 5%;">
+    <div class="section-head">
+      <span class="tag-badge">Direct Laboratory Slot</span>
+      <h2 class="section-title">Schedule In-Person PCC Fingerprinting</h2>
+      <p class="section-desc">Prior appointment mandatory to guarantee zero wait time at our Hyderabad forensic laboratory.</p>
+    </div>
+
+    <div class="booking-wrapper">
+      <div class="service-booking-card">
+        <div class="form-inner-content">
+          <form onsubmit="alert('Thank you! Your PCC appointment request has been submitted. Our consular desk will contact you via WhatsApp/call within 15 minutes.'); return false;">
+            <div class="form-grid-2">
+              <div class="form-field">
+                <label>Full Name *</label>
+                <input type="text" placeholder="e.g. Rahul Sharma" required>
+              </div>
+              <div class="form-field">
+                <label>Mobile / WhatsApp Number *</label>
+                <input type="tel" placeholder="+91 98765 43210" required>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-field">
+                <label>Destination Country *</label>\n                <input type="text" id="pccDestinationCountry" placeholder="e.g. USA, Canada, Australia, Singapore, UAE" required>
+              </div>
+              <div class="form-field">
+                <label>PCC Purpose *</label>
+                <select required>
+                  <option value="">Select Purpose...</option>
+                  <option value="immigration">Immigration / Permanent Residency (PR)</option>
+                  <option value="employment">Employment Abroad / Work Permit</option>
+                  <option value="student">Student Visa / University Admission</option>
+                  <option value="nursing">Medical / Nursing License (NCLEX/CGFNS)</option>
+                  <option value="citizenship">Citizenship / Naturalization</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label>Preferred Date &amp; Time Slot *</label>
+              <input type="datetime-local" required>
+            </div>
+
+            <div class="form-field">
+              <label>Additional Notes / Form Requirements (Optional)</label>
+              <textarea rows="2" placeholder="Mention if you require FBI FD-258, Canadian RCMP, or specific consular cards..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; padding: 16px; font-size: 16px;">
+              <span>Confirm PCC Appointment Slot</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+            <div style="text-align: center; margin-top: 14px; font-size: 12px; color: #64748b;">
+              <i class="fa-solid fa-shield-halved" style="color: #1a3150; margin-right: 4px;"></i>
+              100% Confidentiality &bull; Authentic Government Fingerprint Cards &bull; Zero Embassy Rejection Guarantee
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PCC Frequently Asked Questions -->
+  <section style="background: #ffffff; border-top: 1px solid #e2e8f0; padding: 85px 5%;">
+    <div class="section-head">
+      <span class="tag-badge">Clear Answers</span>
+      <h2 class="section-title">PCC Processing FAQs</h2>
+      <p class="section-desc">Answers to common questions regarding forms, document checklists, and turnaround times.</p>
+    </div>
+
+    <div class="faq-wrapper">
+      <div class="faq-block">
+        <button class="faq-trigger" onclick="toggleFaq(this)">
+          Do I need to carry my own fingerprint cards (e.g. FBI FD-258 or RCMP C-216C)?
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="faq-body">
+          No. We maintain fresh, authentic stock of original FBI FD-258 cards, Canadian RCMP C-216C forms, Singapore SPF sheets, and international consular cards in our laboratory. You do not need to bring blank forms.
+        </div>
+      </div>
+
+      <div class="faq-block">
+        <button class="faq-trigger" onclick="toggleFaq(this)">
+          What identification documents must I bring to the appointment?
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="faq-body">
+          Please carry your original valid Passport, a Government photo ID (Aadhaar Card, Voter ID, or Driving License), two recent passport-size photographs, and any official letter or checklist received from the foreign embassy or immigration department.
+        </div>
+      </div>
+
+      <div class="faq-block">
+        <button class="faq-trigger" onclick="toggleFaq(this)">
+          How long does the in-person PCC fingerprinting appointment take?
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="faq-body">
+          The appointment takes approximately 15 to 20 minutes, including ID verification, test ink impressions, official ten-print card rolling, and certification signing by our forensic specialists.
+        </div>
+      </div>
+
+      <div class="faq-block">
+        <button class="faq-trigger" onclick="toggleFaq(this)">
+          Can you provide mobile/doorstep fingerprinting in Hyderabad?
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="faq-body">
+          Yes! We provide on-site mobile fingerprinting services across Hyderabad for senior citizens, VIP applicants, and corporate batches. Please contact our helpline (+91 81252 55814) to arrange a home or office visit.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating WhatsApp CTA (Bottom-Left, Icon Only) -->
+  <a href="https://wa.me/918125255814?text=Hello%20PrimeFPrint,%20I%20would%20like%20to%20book%20a%20Police%20Clearance%20Certificate%20(PCC)%20appointment." target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col">
+        <div class="brand-logo" style="margin-bottom: 20px;">
+          <div style="background: #ffffff; padding: 6px 14px; border-radius: 12px; display: inline-flex; align-items: center; box-shadow: 0 4px 16px rgba(0,0,0,0.25);">
+            <img src="images/primefpint_clean.png" alt="PrimeFPrint" style="height: 64px; width: auto; display: block; border-radius: 4px;">
+          </div>
+        </div>
+        <p style="font-size: 13.5px; line-height: 1.6; margin-bottom: 16px;">
+          Government recognized private forensic crime laboratory in Hyderabad, India. Specializing in court-admissible ink rolled fingerprinting, police clearance certificates, and FINRA corporate verification.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Practice Areas</h4>
+        <ul>
+          <li><a href="service_pcc.html">Police Clearance Certificate (PCC)</a></li>
+          <li><a href="service_finra.html">FINRA Corporate Fingerprinting</a></li>
+          <li><a href="index.html#service-pcc">FBI FD-258 Cards</a></li>
+          <li><a href="index.html#service-pcc">Canadian RCMP (C-216C)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#about">Our Legacy &amp; Lab</a></li>
+          <li><a href="index.html#why-us">Why Choose Us</a></li>
+          <li><a href="index.html#faq">FAQs</a></li>
+          <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Direct Lab Contact</h4>
+        <p style="font-size: 13.5px; margin-bottom: 8px;"><i class="fa-solid fa-phone" style="color: #6B9DD2; margin-right: 8px;"></i> <a href="tel:+918125255814" style="color: #ffffff; text-decoration: none;">+91 81252 55814</a></p>
+        <p style="font-size: 13.5px; margin-bottom: 8px;"><i class="fa-solid fa-envelope" style="color: #6B9DD2; margin-right: 8px;"></i> <a href="mailto:forensicexperthyd@gmail.com" style="color: #94a3b8; text-decoration: none;">forensicexperthyd@gmail.com</a></p>
+        <p style="font-size: 13px; color: #64748b; margin-top: 10px;">Hyderabad, Telangana, India</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2026 PrimeFPrint &bull; All Rights Reserved &bull; ISO Certified Forensic Laboratory
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileMenu() {
+      document.getElementById('navLinks').classList.toggle('mobile-open');
+    }
+
+    function toggleFaq(btn) {
+      const body = btn.nextElementSibling;
+      const icon = btn.querySelector('i');
+      const isCurrentlyOpen = body.style.display === 'block';
+
+      document.querySelectorAll('.faq-body').forEach(b => b.style.display = 'none');
+      document.querySelectorAll('.faq-trigger i').forEach(ic => {
+        ic.classList.remove('fa-minus');
+        ic.classList.add('fa-plus');
+      });
+
+      if (!isCurrentlyOpen) {
+        body.style.display = 'block';
+        icon.classList.remove('fa-plus');
+        icon.classList.add('fa-minus');
+      }
+    }
+  </script>
+  
+  <!-- Routex Smooth Inertia Scrolling & Heading Fade Observer -->
+  <div id="scroll-percentage" onclick="scrollToTop()" title="Back to Top">
+    <div id="scroll-percentage-value">
+      <span class="pct-text">0%</span>
+      <i class="fa-solid fa-arrow-up pct-icon"></i>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script>
+    // 1. Initialize Fancybox
+    Fancybox.bind("[data-fancybox]", {});
+
+    // 2. Initialize Routex Smooth Momentum Scroll
+    document.addEventListener("DOMContentLoaded", function () {
+      if (typeof SmoothScroll !== 'undefined') {
+        SmoothScroll({
+          animationTime: 850,
+          stepSize: 80,
+          accelerationDelta: 50,
+          accelerationMax: 3,
+          pulseAlgorithm: true,
+          pulseScale: 4,
+          pulseNormalize: 1,
+          touchpadSupport: true
+        });
+      }
+
+      // Top Progress Bar & Scroll Indicator
+      const progressBar = document.getElementById('scroll-progress-bar');
+      const scrollPctEl = document.getElementById('scroll-percentage');
+      const pctTextEl = document.querySelector('#scroll-percentage-value .pct-text');
+
+      window.addEventListener('scroll', function () {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollPercent = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+        const roundedPct = Math.round(scrollPercent);
+
+        if (progressBar) progressBar.style.width = scrollPercent + '%';
+
+        if (scrollPctEl) {
+          scrollPctEl.style.background = `conic-gradient(#1A3150 ${roundedPct}%, #e2e8f0 ${roundedPct}%)`;
+          if (pctTextEl) pctTextEl.textContent = roundedPct + '%';
+          if (scrollTop > 200) {
+            scrollPctEl.classList.add('active');
+          } else {
+            scrollPctEl.classList.remove('active');
+          }
+        }
+      }, { passive: true });
+
+      // Smooth Anchor Navigation with Offset
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const targetId = this.getAttribute('href');
+          if (targetId && targetId !== '#') {
+            const targetEl = document.querySelector(targetId);
+            if (targetEl) {
+              e.preventDefault();
+              const headerOffset = 90;
+              const elementPosition = targetEl.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
+            }
+          }
+        });
+      });
+
+      // 3. Heading Fade In & Fade Out on Scroll
+      const headingObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            entry.target.classList.remove('faded-out');
+          } else {
+            if (entry.boundingClientRect.top < 0) {
+              entry.target.classList.add('faded-out');
+              entry.target.classList.remove('revealed');
+            } else {
+              entry.target.classList.remove('revealed');
+              entry.target.classList.remove('faded-out');
+            }
+          }
+        });
+      }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      document.querySelectorAll('.heading-fade, .section-title, .section-head, .inner-hero-title').forEach(el => {
+        headingObserver.observe(el);
+      });
+
+      // Reveal hero title immediately on load
+      const heroTitle = document.querySelector('.inner-hero-title');
+      if (heroTitle) {
+        setTimeout(() => heroTitle.classList.add('revealed'), 80);
+      }
+    });
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function toggleMobileMenu() {
+      document.getElementById('navLinks').classList.toggle('mobile-open');
+    }
+
+    function toggleFaq(btn) {
+      const body = btn.nextElementSibling;
+      const icon = btn.querySelector('i');
+      const isCurrentlyOpen = body.style.display === 'block';
+
+      document.querySelectorAll('.faq-body').forEach(b => b.style.display = 'none');
+      document.querySelectorAll('.faq-trigger i').forEach(ic => {
+        ic.classList.remove('fa-minus');
+        ic.classList.add('fa-plus');
+      });
+
+      if (!isCurrentlyOpen) {
+        body.style.display = 'block';
+        icon.classList.remove('fa-plus');
+        icon.classList.add('fa-minus');
+      }
+    }
+  </script>
+  <!-- Google Translate Engine & Cookie Dispatcher -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+
+    function translatePage(langCode) {
+      // 1. Set Google Translate Cookie (works on all protocols & servers)
+      const domain = window.location.hostname;
+      const cookieValue = '/en/' + langCode;
+      
+      document.cookie = `googtrans=${cookieValue}; path=/;`;
+      if (domain) {
+        document.cookie = `googtrans=${cookieValue}; path=/; domain=${domain};`;
+      }
+
+      // 2. Trigger native select if available
+      const combo = document.querySelector('.goog-te-combo');
+      if (combo) {
+        combo.value = langCode;
+        combo.dispatchEvent(new Event('change'));
+      } else {
+        // Reload page so Google Translate reads the newly placed cookie and translates all text immediately
+        window.location.reload();
+      }
+    }
+
+    // Read current language on load and sync dropdown
+    window.addEventListener('DOMContentLoaded', () => {
+      const match = document.cookie.match(/(?:^|;\s*)googtrans=\/en\/([a-zA-Z\-]+)/);
+      if (match && match[1]) {
+        const sel = document.getElementById('langSelect');
+        if (sel) sel.value = match[1];
+      }
+    });
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- PCC Interactive Directory Script -->
+  <script>
+    let currentPccRegion = 'all';
+    let currentPccSearch = '';
+
+    function filterPccRegion(region) {
+      currentPccRegion = region;
+      document.querySelectorAll('.pcc-tab').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.filter === region);
+      });
+      applyPccFilter();
+    }
+
+    function handlePccSearch(val) {
+      currentPccSearch = (val || '').toLowerCase().trim();
+      const clearBtn = document.getElementById('pccClearSearch');
+      if (clearBtn) clearBtn.style.display = currentPccSearch ? 'block' : 'none';
+      applyPccFilter();
+    }
+
+    function clearPccSearch() {
+      const input = document.getElementById('pccSearchInput');
+      if (input) input.value = '';
+      handlePccSearch('');
+      if (input) input.focus();
+    }
+
+    function applyPccFilter() {
+      const cards = document.querySelectorAll('.pcc-country-card');
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const regionMatch = currentPccRegion === 'all' || card.dataset.region === currentPccRegion;
+        const searchMatch = !currentPccSearch || 
+          card.dataset.name.includes(currentPccSearch) || 
+          card.dataset.tag.includes(currentPccSearch);
+
+        if (regionMatch && searchMatch) {
+          card.style.display = 'flex';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      const countEl = document.getElementById('pccVisibleCount');
+      if (countEl) countEl.textContent = visibleCount;
+    }
+
+    function selectPccCountry(countryName) {
+      const input = document.getElementById('pccDestinationCountry');
+      if (input) {
+        input.value = countryName;
+        input.style.borderColor = '#65a3dc';
+        input.style.boxShadow = '0 0 0 4px rgba(101, 163, 220, 0.35)';
+        setTimeout(() => {
+          input.style.borderColor = '';
+          input.style.boxShadow = '';
+        }, 2500);
+      }
+      const bookingSection = document.getElementById('pcc-booking');
+      if (bookingSection) {
+        bookingSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      if (input) {
+        setTimeout(() => input.focus(), 600);
+      }
+    }
+  </script>
+
+</body>
+</html>
