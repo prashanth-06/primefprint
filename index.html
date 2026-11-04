@@ -33,7 +33,7 @@
       --bg-subtle: #f1f5f9;         /* Cool Neutral Slate */
       --card-white: #ffffff;
       --card-border: #e2e8f0;       /* Hairline Neutral Border */
-      --card-border-hover: #cbd5e1;
+      --card-border-hover: #6B9DD2;    /* Logo Sky Blue hover border */
       --text-main: #1a3150;         /* Deep Navy Headings */
       --text-muted: #526071;        /* Muted Charcoal/Slate */
       --text-light: #64748b;
@@ -844,6 +844,45 @@
       font-size: 15px;
       font-weight: 700;
       border-radius: 12px;
+      /* Book Appointment style: navy base, sky-blue slide-up hover */
+      position: relative;
+      background: #1a3150 !important;
+      color: #ffffff !important;
+      border: 1px solid #1a3150 !important;
+      overflow: hidden;
+      z-index: 1;
+      box-shadow: 0 4px 14px rgba(26, 49, 80, 0.18);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-service-view-more span,
+    .btn-service-view-more i {
+      position: relative;
+      z-index: 2;
+      color: #ffffff !important;
+      font-weight: 700;
+    }
+    .btn-service-view-more::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(135deg, #3a7bc8 0%, #65a3dc 50%, #7db9ed 100%);
+      z-index: -1;
+      transform: translateY(100%);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-service-view-more:hover::before {
+      transform: translateY(0);
+    }
+    .btn-service-view-more:hover {
+      transform: translateY(-3px);
+      border-color: #7db9ed !important;
+      box-shadow: 0 10px 28px rgba(101, 163, 220, 0.42);
+      color: #ffffff !important;
     }
     .service-card-media img {
       width: 100%;
@@ -2695,8 +2734,8 @@
       background: #ffffff;
       transform: translateY(-4px) scale(1.01);
       border-color: #6B9DD2;
-      border-left: 5px solid #00f0ff;
-      box-shadow: 0 14px 30px rgba(2, 132, 199, 0.16);
+      border-left: 5px solid #6B9DD2;
+      box-shadow: 0 14px 30px rgba(107, 157, 210, 0.22);
     }
     .scanner-service-card .card-tag-icon {
       width: 48px;
