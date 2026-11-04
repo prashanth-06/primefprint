@@ -1712,7 +1712,31 @@
       .brand-logo-img { height: 72px !important; }
       .hero-heading { font-size: 38px; }
       .features-grid { grid-template-columns: 1fr; }
-      .top-strip { display: none; }
+      .top-strip {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 6px !important;
+        text-align: center !important;
+        padding: 8px 4% !important;
+        font-size: 11.5px !important;
+      }
+      .top-strip-left {
+        justify-content: center !important;
+        text-align: center !important;
+        font-size: 11px !important;
+      }
+      .strip-items {
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+        gap: 8px 12px !important;
+      }
+      .strip-phone-link {
+        font-size: 11px !important;
+        padding: 3px 10px !important;
+      }
+      .strip-hours {
+        font-size: 11px !important;
+      }
       .slider-arrows { display: none; }
       .footer-content { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
@@ -2489,8 +2513,47 @@
       }
 
       /* Hide Sticky Left Action Pills on Mobile to prevent overlapping content */
+      /* Sticky Left Action Pills on Mobile */
       .sticky-left-actions {
+        display: flex !important;
+        position: fixed !important;
+        left: 0 !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        flex-direction: column !important;
+        gap: 8px !important;
+        z-index: 9998 !important;
+      }
+      .sticky-pill {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 44px !important;
+        height: 44px !important;
+        border-radius: 0 22px 22px 0 !important;
+        background: #ffffff !important;
+        border: 1.5px solid #6B9DD2 !important;
+        border-left: none !important;
+        box-shadow: 0 4px 16px rgba(26, 49, 80, 0.2) !important;
+        cursor: pointer !important;
+        transition: transform 0.2s ease !important;
+      }
+      .sticky-pill-icon {
+        width: 44px !important;
+        height: 44px !important;
+        font-size: 16px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+      .sticky-pill-icon i {
+        color: #1a3150 !important;
+      }
+      .sticky-pill-text-wrap {
         display: none !important;
+      }
+      .sticky-pill:active {
+        transform: scale(0.92) !important;
       }
 
       /* About Section */
@@ -2717,8 +2780,47 @@
         z-index: 998 !important;
       }
       /* Hide Left Sticky Pills on Mobile */
+      /* Sticky Left Action Pills on Mobile */
       .sticky-left-actions {
+        display: flex !important;
+        position: fixed !important;
+        left: 0 !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        flex-direction: column !important;
+        gap: 8px !important;
+        z-index: 9998 !important;
+      }
+      .sticky-pill {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 44px !important;
+        height: 44px !important;
+        border-radius: 0 22px 22px 0 !important;
+        background: #ffffff !important;
+        border: 1.5px solid #6B9DD2 !important;
+        border-left: none !important;
+        box-shadow: 0 4px 16px rgba(26, 49, 80, 0.2) !important;
+        cursor: pointer !important;
+        transition: transform 0.2s ease !important;
+      }
+      .sticky-pill-icon {
+        width: 44px !important;
+        height: 44px !important;
+        font-size: 16px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+      .sticky-pill-icon i {
+        color: #1a3150 !important;
+      }
+      .sticky-pill-text-wrap {
         display: none !important;
+      }
+      .sticky-pill:active {
+        transform: scale(0.92) !important;
       }
       /* Hide top reading progress on mobile */
       #scroll-percentage {
@@ -3224,10 +3326,10 @@
 
         <!-- Services with PCC and FINRA only -->
         <li class="nav-item has-dropdown">
-          <a href="javascript:void(0)" class="nav-link dropdown-toggle" id="servicesToggle">
+          <button type="button" class="nav-link dropdown-toggle" id="servicesToggle" aria-label="Toggle Services Menu" style="background:none; border:none; padding:0; margin:0; font-family:inherit; font-size:inherit; font-weight:inherit; color:inherit; width:100%; cursor:pointer; display:flex; align-items:center; justify-content:space-between;">
             <span>Services</span>
             <i class="fa-solid fa-chevron-down dropdown-chevron" style="font-size: 11px;"></i>
-          </a>
+          </button>
           <ul class="dropdown">
             <li>
               <a href="service_pcc.html">
@@ -5119,27 +5221,22 @@
 
     // Sub-dropdown accordion toggle & auto-close logic
     document.addEventListener('DOMContentLoaded', function() {
-      // Toggle Services dropdown on mobile tap
+      // Toggle Services dropdown on tap (no href, no page jump)
       const servicesToggle = document.getElementById('servicesToggle');
       if (servicesToggle) {
         servicesToggle.addEventListener('click', function(e) {
-          if (window.innerWidth <= 992) {
-            e.preventDefault();
-            e.stopPropagation();
-            const parent = this.closest('.nav-item');
-            if (parent) {
-              parent.classList.toggle('dropdown-open');
-            }
+          e.preventDefault();
+          e.stopPropagation();
+          const parent = this.closest('.nav-item');
+          if (parent) {
+            parent.classList.toggle('dropdown-open');
           }
         });
       }
 
-      // Auto-close mobile menu upon clicking links (except dropdown toggle)
+      // Auto-close mobile menu upon clicking links
       document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', function() {
-          if (this.id === 'servicesToggle' && window.innerWidth <= 992) {
-            return;
-          }
+        link.addEventListener('click', function(e) {
           const navLinks = document.querySelector('.nav-links');
           const toggleBtn = document.getElementById('mobileMenuToggle');
           if (navLinks && navLinks.classList.contains('mobile-open')) {

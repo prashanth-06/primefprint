@@ -977,6 +977,30 @@
       .nav-links.mobile-open {
         display: flex !important;
       }
+      .nav-links .dropdown {
+        position: static !important;
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        box-shadow: none !important;
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 12px !important;
+        margin-top: 10px !important;
+        padding: 8px 10px !important;
+        background: #f8fafc !important;
+        transition: all 0.25s ease !important;
+      }
+      .nav-links .nav-item.dropdown-open .dropdown {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+      .dropdown-chevron {
+        transition: transform 0.25s ease !important;
+      }
+      .nav-links .nav-item.dropdown-open .dropdown-chevron {
+        transform: rotate(180deg) !important;
+      }
 
       /* Top Notification Strip */
       .top-strip {
@@ -1527,10 +1551,11 @@
         <li class="nav-item">
           <a href="index.html" class="nav-link">Home</a>
         </li>
-        <li class="nav-item">
-          <a href="index.html#services" class="nav-link active">
-            Services <i class="fa-solid fa-chevron-down" style="font-size: 11px;"></i>
-          </a>
+        <li class="nav-item has-dropdown">
+          <button type="button" class="nav-link dropdown-toggle" id="servicesToggle" aria-label="Toggle Services Menu" style="background:none; border:none; padding:0; margin:0; font-family:inherit; font-size:inherit; font-weight:inherit; color:inherit; width:100%; cursor:pointer; display:flex; align-items:center; justify-content:space-between;">
+            <span>Services</span>
+            <i class="fa-solid fa-chevron-down dropdown-chevron" style="font-size: 11px;"></i>
+          </button>
           <ul class="dropdown">
             <li>
               <a href="service_pcc.html">
