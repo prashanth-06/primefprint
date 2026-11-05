@@ -1595,6 +1595,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
   <!-- Fancybox CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+  <!-- PrimeFPrint Custom Magnetic Cursor & Heading Animations (GSAP Vistara Style) -->
+  <link rel="stylesheet" href="css/prime-cursor.css">
 </head>
 <body>
   <!-- Top Reading Scroll Progress Bar -->
@@ -1763,7 +1765,7 @@
 
       <!-- Fancybox Image Inspection Card (Pure Image + Sleek Badge) -->
       <div class="pcc-overview-visual">
-        <a href="images/pcc_hero.jpg" data-fancybox="pcc-gallery" data-caption="Official Police Clearance Certificate (PCC) Documentation &amp; FBI FD-258 Fingerprint Verification" class="fancybox-card">
+        <a href="images/pcc_hero.jpg" data-fancybox="pcc-gallery" data-caption="Official Police Clearance Certificate (PCC) Documentation &amp; FBI FD-258 Fingerprint Verification" class="fancybox-card" data-cursor-text="View">
           <div class="fancybox-img-container">
             <img src="images/pcc_hero.jpg" alt="Certified Police Clearance Certificate Consular Verification Desk">
             <div class="fancybox-badge">
@@ -1913,7 +1915,7 @@
       <!-- Responsive Countries Grid -->
       <div class="pcc-countries-grid" id="pccCountriesGrid">
 
-      <div class="pcc-country-card" data-region="asia" data-name="afghanistan" data-tag="consular clearance & forensic vetting">
+      <div class="pcc-country-card" data-cursor-text="Select" data-region="asia" data-name="afghanistan" data-tag="consular clearance & forensic vetting">
         <div class="pcc-card-top">
           <div class="pcc-flag-wrap">
             <img src="images/flags/af.png" alt="Afghanistan Flag" class="pcc-flag-img" loading="lazy">
@@ -1932,7 +1934,7 @@
       </div>
 
 
-      <div class="pcc-country-card" data-region="americas" data-name="australia" data-tag="afp national police check & fingerprint card">
+      <div class="pcc-country-card" data-cursor-text="Select" data-region="americas" data-name="australia" data-tag="afp national police check & fingerprint card">
         <div class="pcc-card-top">
           <div class="pcc-flag-wrap">
             <img src="images/flags/au.png" alt="Australia Flag" class="pcc-flag-img" loading="lazy">
@@ -1951,7 +1953,7 @@
       </div>
 
 
-      <div class="pcc-country-card" data-region="gulf" data-name="bahrain" data-tag="criminal investigation directorate (cid) pcc">
+      <div class="pcc-country-card" data-cursor-text="Select" data-region="gulf" data-name="bahrain" data-tag="criminal investigation directorate (cid) pcc">
         <div class="pcc-card-top">
           <div class="pcc-flag-wrap">
             <img src="images/flags/bh.png" alt="Bahrain Flag" class="pcc-flag-img" loading="lazy">
@@ -1970,7 +1972,7 @@
       </div>
 
 
-      <div class="pcc-country-card" data-region="africa" data-name="botswana" data-tag="botswana police service fingerprint check">
+      <div class="pcc-country-card" data-cursor-text="Select" data-region="africa" data-name="botswana" data-tag="botswana police service fingerprint check">
         <div class="pcc-card-top">
           <div class="pcc-flag-wrap">
             <img src="images/flags/bw.png" alt="Botswana Flag" class="pcc-flag-img" loading="lazy">
@@ -1989,7 +1991,7 @@
       </div>
 
 
-      <div class="pcc-country-card" data-region="americas" data-name="canada" data-tag="rcmp c-216c certified criminal record check">
+      <div class="pcc-country-card" data-cursor-text="Select" data-region="americas" data-name="canada" data-tag="rcmp c-216c certified criminal record check">
         <div class="pcc-card-top">
           <div class="pcc-flag-wrap">
             <img src="images/flags/ca.png" alt="Canada Flag" class="pcc-flag-img" loading="lazy">
@@ -2008,7 +2010,7 @@
       </div>
 
 
-      <div class="pcc-country-card" data-region="africa" data-name="ghana" data-tag="cid police headquarters criminal record vetting">
+      <div class="pcc-country-card" data-cursor-text="Select" data-region="africa" data-name="ghana" data-tag="cid police headquarters criminal record vetting">
         <div class="pcc-card-top">
           <div class="pcc-flag-wrap">
             <img src="images/flags/gh.png" alt="Ghana Flag" class="pcc-flag-img" loading="lazy">
@@ -2027,7 +2029,7 @@
       </div>
 
 
-      <div class="pcc-country-card" data-region="asia" data-name="hong kong" data-tag="cncc certificate of no criminal conviction">
+      <div class="pcc-country-card" data-cursor-text="Select" data-region="asia" data-name="hong kong" data-tag="cncc certificate of no criminal conviction">
         <div class="pcc-card-top">
           <div class="pcc-flag-wrap">
             <img src="images/flags/hk.png" alt="Hong Kong Flag" class="pcc-flag-img" loading="lazy">
@@ -2046,7 +2048,7 @@
       </div>
 
 
-      <div class="pcc-country-card" data-region="americas" data-name="italy" data-tag="certificato del casellario giudiziale">
+      <div class="pcc-country-card" data-cursor-text="Select" data-region="americas" data-name="italy" data-tag="certificato del casellario giudiziale">
         <div class="pcc-card-top">
           <div class="pcc-flag-wrap">
             <img src="images/flags/it.png" alt="Italy Flag" class="pcc-flag-img" loading="lazy">
@@ -2065,7 +2067,7 @@
       </div>
 
 
-      <div class="pcc-country-card" data-region="americas" data-name="jamaica" data-tag="jamaica constabulary force (jcf) clearance">
+      <div class="pcc-country-card" data-cursor-text="Select" data-region="americas" data-name="jamaica" data-tag="jamaica constabulary force (jcf) clearance">
         <div class="pcc-card-top">
           <div class="pcc-flag-wrap">
             <img src="images/flags/jm.png" alt="Jamaica Flag" class="pcc-flag-img" loading="lazy">
@@ -2084,7 +2086,7 @@
       </div>
 
 
-      <div class="pcc-country-card" data-region="africa" data-name="kenya" data-tag="dci directorate of criminal investigations pcc">
+      <div class="pcc-country-card" data-cursor-text="Select" data-region="africa" data-name="kenya" data-tag="dci directorate of criminal investigations pcc">
         <div class="pcc-card-top">
           <div class="pcc-flag-wrap">
             <img src="images/flags/ke.png" alt="Kenya Flag" class="pcc-flag-img" loading="lazy">
@@ -2103,7 +2105,7 @@
       </div>
 
 
-      <div class="pcc-country-card" data-region="gulf" data-name="kuwait" data-tag="general department of criminal evidence pcc">
+      <div class="pcc-country-card" data-cursor-text="Select" data-region="gulf" data-name="kuwait" data-tag="general department of criminal evidence pcc">
         <div class="pcc-card-top">
           <div class="pcc-flag-wrap">
             <img src="images/flags/kw.png" alt="Kuwait Flag" class="pcc-flag-img" loading="lazy">
@@ -2122,7 +2124,7 @@
       </div>
 
 
-      <div class="pcc-country-card" data-region="gulf" data-name="lebanon" data-tag="judicial police clean criminal record">
+      <div class="pcc-country-card" data-cursor-text="Select" data-region="gulf" data-name="lebanon" data-tag="judicial police clean criminal record">
         <div class="pcc-card-top">
           <div class="pcc-flag-wrap">
             <img src="images/flags/lb.png" alt="Lebanon Flag" class="pcc-flag-img" loading="lazy">
@@ -2141,7 +2143,7 @@
       </div>
 
 
-      <div class="pcc-country-card" data-region="gulf" data-name="oman (with id)" data-tag="royal oman police clearance with civil id">
+      <div class="pcc-country-card" data-cursor-text="Select" data-region="gulf" data-name="oman (with id)" data-tag="royal oman police clearance with civil id">
         <div class="pcc-card-top">
           <div class="pcc-flag-wrap">
             <img src="images/flags/om.png" alt="Oman (With ID) Flag" class="pcc-flag-img" loading="lazy">
@@ -2160,7 +2162,7 @@
       </div>
 
 
-      <div class="pcc-country-card" data-region="gulf" data-name="oman (no id)" data-tag="rop clearance for former expatriates">
+      <div class="pcc-country-card" data-cursor-text="Select" data-region="gulf" data-name="oman (no id)" data-tag="rop clearance for former expatriates">
         <div class="pcc-card-top">
           <div class="pcc-flag-wrap">
             <img src="images/flags/om.png" alt="Oman (No ID) Flag" class="pcc-flag-img" loading="lazy">
@@ -2179,7 +2181,7 @@
       </div>
 
 
-      <div class="pcc-country-card" data-region="americas" data-name="malta" data-tag="police conduct certificate (form a & b)">
+      <div class="pcc-country-card" data-cursor-text="Select" data-region="americas" data-name="malta" data-tag="police conduct certificate (form a & b)">
         <div class="pcc-card-top">
           <div class="pcc-flag-wrap">
             <img src="images/flags/mt.png" alt="Malta Flag" class="pcc-flag-img" loading="lazy">
@@ -2198,7 +2200,7 @@
       </div>
 
 
-      <div class="pcc-country-card" data-region="asia" data-name="malaysia" data-tag="certificate of good conduct (cgc)">
+      <div class="pcc-country-card" data-cursor-text="Select" data-region="asia" data-name="malaysia" data-tag="certificate of good conduct (cgc)">
         <div class="pcc-card-top">
           <div class="pcc-flag-wrap">
             <img src="images/flags/my.png" alt="Malaysia Flag" class="pcc-flag-img" loading="lazy">
@@ -2217,7 +2219,7 @@
       </div>
 
 
-      <div class="pcc-country-card" data-region="asia" data-name="maldives" data-tag="maldives police service record clearance">
+      <div class="pcc-country-card" data-cursor-text="Select" data-region="asia" data-name="maldives" data-tag="maldives police service record clearance">
         <div class="pcc-card-top">
           <div class="pcc-flag-wrap">
             <img src="images/flags/mv.png" alt="Maldives Flag" class="pcc-flag-img" loading="lazy">
@@ -2236,7 +2238,7 @@
       </div>
 
 
-      <div class="pcc-country-card" data-region="africa" data-name="nigeria" data-tag="cid police character certificate (pcc)">
+      <div class="pcc-country-card" data-cursor-text="Select" data-region="africa" data-name="nigeria" data-tag="cid police character certificate (pcc)">
         <div class="pcc-card-top">
           <div class="pcc-flag-wrap">
             <img src="images/flags/ng.png" alt="Nigeria Flag" class="pcc-flag-img" loading="lazy">
@@ -2255,7 +2257,7 @@
       </div>
 
 
-      <div class="pcc-country-card" data-region="gulf" data-name="qatar (with id)" data-tag="ceid criminal evidence dept with qid">
+      <div class="pcc-country-card" data-cursor-text="Select" data-region="gulf" data-name="qatar (with id)" data-tag="ceid criminal evidence dept with qid">
         <div class="pcc-card-top">
           <div class="pcc-flag-wrap">
             <img src="images/flags/qa.png" alt="Qatar (With ID) Flag" class="pcc-flag-img" loading="lazy">
@@ -2274,7 +2276,7 @@
       </div>
 
 
-      <div class="pcc-country-card" data-region="gulf" data-name="qatar (without id)" data-tag="ceid embassy non-resident attestation">
+      <div class="pcc-country-card" data-cursor-text="Select" data-region="gulf" data-name="qatar (without id)" data-tag="ceid embassy non-resident attestation">
         <div class="pcc-card-top">
           <div class="pcc-flag-wrap">
             <img src="images/flags/qa.png" alt="Qatar (Without ID) Flag" class="pcc-flag-img" loading="lazy">
@@ -2293,7 +2295,7 @@
       </div>
 
 
-      <div class="pcc-country-card" data-region="gulf" data-name="saudi arabia" data-tag="absher & ministry of interior police clearance">
+      <div class="pcc-country-card" data-cursor-text="Select" data-region="gulf" data-name="saudi arabia" data-tag="absher & ministry of interior police clearance">
         <div class="pcc-card-top">
           <div class="pcc-flag-wrap">
             <img src="images/flags/sa.png" alt="Saudi Arabia Flag" class="pcc-flag-img" loading="lazy">
@@ -2312,7 +2314,7 @@
       </div>
 
 
-      <div class="pcc-country-card" data-region="africa" data-name="south africa" data-tag="saps criminal record centre (crc) clearance">
+      <div class="pcc-country-card" data-cursor-text="Select" data-region="africa" data-name="south africa" data-tag="saps criminal record centre (crc) clearance">
         <div class="pcc-card-top">
           <div class="pcc-flag-wrap">
             <img src="images/flags/za.png" alt="South Africa Flag" class="pcc-flag-img" loading="lazy">
@@ -2331,7 +2333,7 @@
       </div>
 
 
-      <div class="pcc-country-card" data-region="americas" data-name="switzerland" data-tag="federal office of justice (foj) extract">
+      <div class="pcc-country-card" data-cursor-text="Select" data-region="americas" data-name="switzerland" data-tag="federal office of justice (foj) extract">
         <div class="pcc-card-top">
           <div class="pcc-flag-wrap">
             <img src="images/flags/ch.png" alt="Switzerland Flag" class="pcc-flag-img" loading="lazy">
@@ -2350,7 +2352,7 @@
       </div>
 
 
-      <div class="pcc-country-card" data-region="africa" data-name="tanzania" data-tag="police force forensic fingerprint bureau">
+      <div class="pcc-country-card" data-cursor-text="Select" data-region="africa" data-name="tanzania" data-tag="police force forensic fingerprint bureau">
         <div class="pcc-card-top">
           <div class="pcc-flag-wrap">
             <img src="images/flags/tz.png" alt="Tanzania Flag" class="pcc-flag-img" loading="lazy">
@@ -2369,7 +2371,7 @@
       </div>
 
 
-      <div class="pcc-country-card" data-region="asia" data-name="singapore" data-tag="spf certificate of clearance (coc)">
+      <div class="pcc-country-card" data-cursor-text="Select" data-region="asia" data-name="singapore" data-tag="spf certificate of clearance (coc)">
         <div class="pcc-card-top">
           <div class="pcc-flag-wrap">
             <img src="images/flags/sg.png" alt="Singapore Flag" class="pcc-flag-img" loading="lazy">
@@ -2388,7 +2390,7 @@
       </div>
 
 
-      <div class="pcc-country-card" data-region="asia" data-name="thailand" data-tag="royal thai police clearance certificate">
+      <div class="pcc-country-card" data-cursor-text="Select" data-region="asia" data-name="thailand" data-tag="royal thai police clearance certificate">
         <div class="pcc-card-top">
           <div class="pcc-flag-wrap">
             <img src="images/flags/th.png" alt="Thailand Flag" class="pcc-flag-img" loading="lazy">
@@ -2407,7 +2409,7 @@
       </div>
 
 
-      <div class="pcc-country-card" data-region="gulf" data-name="uae (dubai) with id" data-tag="dubai police clearance with active emirates id">
+      <div class="pcc-country-card" data-cursor-text="Select" data-region="gulf" data-name="uae (dubai) with id" data-tag="dubai police clearance with active emirates id">
         <div class="pcc-card-top">
           <div class="pcc-flag-wrap">
             <img src="images/flags/ae.png" alt="UAE (Dubai) With ID Flag" class="pcc-flag-img" loading="lazy">
@@ -2426,7 +2428,7 @@
       </div>
 
 
-      <div class="pcc-country-card" data-region="gulf" data-name="uae (dubai) without id" data-tag="dubai police clearance for former residents">
+      <div class="pcc-country-card" data-cursor-text="Select" data-region="gulf" data-name="uae (dubai) without id" data-tag="dubai police clearance for former residents">
         <div class="pcc-card-top">
           <div class="pcc-flag-wrap">
             <img src="images/flags/ae.png" alt="UAE (Dubai) Without ID Flag" class="pcc-flag-img" loading="lazy">
@@ -2445,7 +2447,7 @@
       </div>
 
 
-      <div class="pcc-country-card" data-region="gulf" data-name="uae abu dhabi" data-tag="abu dhabi judicial & police clearance certificate">
+      <div class="pcc-country-card" data-cursor-text="Select" data-region="gulf" data-name="uae abu dhabi" data-tag="abu dhabi judicial & police clearance certificate">
         <div class="pcc-card-top">
           <div class="pcc-flag-wrap">
             <img src="images/flags/ae.png" alt="UAE Abu Dhabi Flag" class="pcc-flag-img" loading="lazy">
@@ -2464,7 +2466,7 @@
       </div>
 
 
-      <div class="pcc-country-card" data-region="africa" data-name="uganda" data-tag="uganda police interpol & forensic vetting">
+      <div class="pcc-country-card" data-cursor-text="Select" data-region="africa" data-name="uganda" data-tag="uganda police interpol & forensic vetting">
         <div class="pcc-card-top">
           <div class="pcc-flag-wrap">
             <img src="images/flags/ug.png" alt="Uganda Flag" class="pcc-flag-img" loading="lazy">
@@ -2483,7 +2485,7 @@
       </div>
 
 
-      <div class="pcc-country-card" data-region="americas" data-name="uk (nm)" data-tag="acro police certificate - name check">
+      <div class="pcc-country-card" data-cursor-text="Select" data-region="americas" data-name="uk (nm)" data-tag="acro police certificate - name check">
         <div class="pcc-card-top">
           <div class="pcc-flag-wrap">
             <img src="images/flags/gb.png" alt="UK (NM) Flag" class="pcc-flag-img" loading="lazy">
@@ -2502,7 +2504,7 @@
       </div>
 
 
-      <div class="pcc-country-card" data-region="americas" data-name="uk (fm)" data-tag="acro police certificate - fingerprint match">
+      <div class="pcc-country-card" data-cursor-text="Select" data-region="americas" data-name="uk (fm)" data-tag="acro police certificate - fingerprint match">
         <div class="pcc-card-top">
           <div class="pcc-flag-wrap">
             <img src="images/flags/gb.png" alt="UK (FM) Flag" class="pcc-flag-img" loading="lazy">
@@ -2521,7 +2523,7 @@
       </div>
 
 
-      <div class="pcc-country-card" data-region="americas" data-name="us (fbi)" data-tag="fbi fd-258 fingerprint card criminal history">
+      <div class="pcc-country-card" data-cursor-text="Select" data-region="americas" data-name="us (fbi)" data-tag="fbi fd-258 fingerprint card criminal history">
         <div class="pcc-card-top">
           <div class="pcc-flag-wrap">
             <img src="images/flags/us.png" alt="US (FBI) Flag" class="pcc-flag-img" loading="lazy">
@@ -2540,7 +2542,7 @@
       </div>
 
 
-      <div class="pcc-country-card" data-region="asia" data-name="vietnam" data-tag="judicial record certificate (phieu ly lich)">
+      <div class="pcc-country-card" data-cursor-text="Select" data-region="asia" data-name="vietnam" data-tag="judicial record certificate (phieu ly lich)">
         <div class="pcc-card-top">
           <div class="pcc-flag-wrap">
             <img src="images/flags/vn.png" alt="Vietnam Flag" class="pcc-flag-img" loading="lazy">
@@ -2889,40 +2891,34 @@
           }
         });
       });
-      if (typeof SmoothScroll !== 'undefined') {
-        SmoothScroll({
-          animationTime: 850,
-          stepSize: 80,
-          accelerationDelta: 50,
-          accelerationMax: 3,
-          pulseAlgorithm: true,
-          pulseScale: 4,
-          pulseNormalize: 1,
-          touchpadSupport: true
-        });
-      }
-
-      // Top Progress Bar & Scroll Indicator
+      // Top Progress Bar & Scroll Indicator (GPU & compositor friendly throttled scroll)
       const progressBar = document.getElementById('scroll-progress-bar');
       const scrollPctEl = document.getElementById('scroll-percentage');
       const pctTextEl = document.querySelector('#scroll-percentage-value .pct-text');
 
+      let isScrollTicking = false;
       window.addEventListener('scroll', function () {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrollPercent = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
-        const roundedPct = Math.round(scrollPercent);
+        if (!isScrollTicking) {
+          window.requestAnimationFrame(function () {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercent = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+            const roundedPct = Math.round(scrollPercent);
 
-        if (progressBar) progressBar.style.width = scrollPercent + '%';
+            if (progressBar) progressBar.style.width = scrollPercent + '%';
 
-        if (scrollPctEl) {
-          scrollPctEl.style.background = `conic-gradient(#1A3150 ${roundedPct}%, #e2e8f0 ${roundedPct}%)`;
-          if (pctTextEl) pctTextEl.textContent = roundedPct + '%';
-          if (scrollTop > 200) {
-            scrollPctEl.classList.add('active');
-          } else {
-            scrollPctEl.classList.remove('active');
-          }
+            if (scrollPctEl) {
+              scrollPctEl.style.background = `conic-gradient(#1A3150 ${roundedPct}%, #e2e8f0 ${roundedPct}%)`;
+              if (pctTextEl) pctTextEl.textContent = roundedPct + '%';
+              if (scrollTop > 200) {
+                scrollPctEl.classList.add('active');
+              } else {
+                scrollPctEl.classList.remove('active');
+              }
+            }
+            isScrollTicking = false;
+          });
+          isScrollTicking = true;
         }
       }, { passive: true });
 
@@ -3113,5 +3109,10 @@
     }
   </script>
 
+  <!-- GSAP 3 & ScrollTrigger for Kinetic Heading Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- PrimeFPrint Custom Physics Cursor & Text Animation Controller -->
+  <script src="js/prime-cursor-anime.js"></script>
 </body>
 </html>

@@ -3375,6 +3375,8 @@
   </style>
   <!-- Routex Smooth Inertia Scrolling Library (SmoothScroll v1.4.10) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
+  <!-- PrimeFPrint Custom Magnetic Cursor & Heading Animations (GSAP Vistara Style) -->
+  <link rel="stylesheet" href="css/prime-cursor.css">
 </head>
 <body>
   <!-- Top Reading Scroll Progress Bar -->
@@ -3607,12 +3609,12 @@
           We specialise in providing fingerprinting services for FINRA for corporate companies, NCLEX, Nursing and Medical Licenses, Police Clearance Certificates (PCC) required by different countries like USA, RCMP clearance from Canada, Australia, United Kingdom, Singapore, Bahrain, Qatar, Hong Kong, Dubai UAE etc.
         </p>
 
-        <div class="story-card">
+        <div class="story-card" data-cursor-text="Lab">
           <h4>Government &amp; Embassy Standards</h4>
           <p>Our technicians use original FBI FD-258 cards, specialized live-scan techniques, and archival smudge-free ink rolled prints that ensure zero rejection across global visa consulates.</p>
         </div>
 
-        <div class="story-card">
+        <div class="story-card" data-cursor-text="Lab">
           <h4>Chain of Custody &amp; Absolute Discretion</h4>
           <p>Every piece of biometric evidence and questioned documentation is handled under strict legal non-disclosure protocols, ensuring 100% confidentiality.</p>
         </div>
@@ -3630,7 +3632,7 @@
 
     <div class="services-grid reveal-stagger">
       <!-- 1. PCC Highlighted Visual Showcase Card -->
-      <div class="service-box reveal-on-scroll" id="service-pcc">
+      <div class="service-box reveal-on-scroll" data-cursor-text="Explore" id="service-pcc">
         <div class="service-box-inner">
           <!-- Prominent Highlighted Photography Header -->
           <a href="service_pcc.html" class="service-card-media" title="View Police Clearance Certificate (PCC) Details">
@@ -3665,7 +3667,7 @@
       </div>
 
       <!-- 2. FINRA Highlighted Visual Showcase Card -->
-      <div class="service-box reveal-on-scroll" id="service-finra">
+      <div class="service-box reveal-on-scroll" data-cursor-text="Explore" id="service-finra">
         <div class="service-box-inner">
           <!-- Prominent Highlighted Photography Header -->
           <a href="service_finra.html" class="service-card-media" title="View FINRA Corporate Fingerprinting Details">
@@ -5209,52 +5211,46 @@
       const headerEl = document.querySelector('header');
       const backToTop = document.getElementById('backToTopBtn');
 
-      // Initialize Routex Smooth Wheel Momentum Scrolling
-      if (typeof SmoothScroll !== 'undefined') {
-        SmoothScroll({
-          animationTime: 850,
-          stepSize: 80,
-          accelerationDelta: 50,
-          accelerationMax: 3,
-          pulseAlgorithm: true,
-          pulseScale: 4,
-          pulseNormalize: 1,
-          touchpadSupport: true
-        });
-      }
-
       const scrollPctEl = document.getElementById('scroll-percentage');
       const pctTextEl = document.querySelector('#scroll-percentage-value .pct-text');
 
+      // High-performance throttled scroll listener (GPU & compositor friendly)
+      let isScrollTicking = false;
       window.addEventListener('scroll', function () {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrollPercent = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
-        const roundedPct = Math.round(scrollPercent);
+        if (!isScrollTicking) {
+          window.requestAnimationFrame(function () {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercent = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+            const roundedPct = Math.round(scrollPercent);
 
-        if (progressBar) {
-          progressBar.style.width = scrollPercent + '%';
-        }
+            if (progressBar) {
+              progressBar.style.width = scrollPercent + '%';
+            }
 
-        if (headerEl) {
-          if (scrollTop > 40) {
-            headerEl.classList.add('header-scrolled');
-          } else {
-            headerEl.classList.remove('header-scrolled');
-          }
-        }
+            if (headerEl) {
+              if (scrollTop > 40) {
+                headerEl.classList.add('header-scrolled');
+              } else {
+                headerEl.classList.remove('header-scrolled');
+              }
+            }
 
-        // Routex Circular Scroll Indicator Update
-        if (scrollPctEl) {
-          scrollPctEl.style.background = `conic-gradient(#1A3150 ${roundedPct}%, #e2e8f0 ${roundedPct}%)`;
-          if (pctTextEl) {
-            pctTextEl.textContent = roundedPct + '%';
-          }
-          if (scrollTop > 200) {
-            scrollPctEl.classList.add('active');
-          } else {
-            scrollPctEl.classList.remove('active');
-          }
+            // Circular Scroll Indicator Update
+            if (scrollPctEl) {
+              scrollPctEl.style.background = `conic-gradient(#1A3150 ${roundedPct}%, #e2e8f0 ${roundedPct}%)`;
+              if (pctTextEl) {
+                pctTextEl.textContent = roundedPct + '%';
+              }
+              if (scrollTop > 200) {
+                scrollPctEl.classList.add('active');
+              } else {
+                scrollPctEl.classList.remove('active');
+              }
+            }
+            isScrollTicking = false;
+          });
+          isScrollTicking = true;
         }
       }, { passive: true });
 
@@ -5520,6 +5516,11 @@
       <i class="fa-solid fa-arrow-up pct-icon"></i>
     </div>
   </div>
+  <!-- GSAP 3 & ScrollTrigger for Kinetic Heading Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- PrimeFPrint Custom Physics Cursor & Text Animation Controller -->
+  <script src="js/prime-cursor-anime.js"></script>
 </body>
 </html>
 
