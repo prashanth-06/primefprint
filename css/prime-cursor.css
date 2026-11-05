@@ -124,3 +124,49 @@
 .prime-split-char {
   display: inline-block !important;
 }
+
+/* ============================================================
+   VISTARA-STYLE DIAGONAL GLASS LIGHT-SWEEP / SHINE HOVER EFFECT
+   Zero layout reflow: pure pseudo-element overlay with pointer-events: none
+   ============================================================ */
+
+.prime-image-anime,
+.about-visual,
+.service-card-media,
+.fancybox-img-container {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.prime-image-anime::after,
+.about-visual::after,
+.service-card-media::after,
+.fancybox-img-container::after {
+  content: "" !important;
+  position: absolute !important;
+  width: 200% !important;
+  height: 0% !important;
+  left: 50% !important;
+  top: 50% !important;
+  background-color: rgba(255, 255, 255, 0.48) !important;
+  transform: translate(-50%, -50%) rotate(-45deg) !important;
+  z-index: 4 !important;
+  pointer-events: none !important;
+}
+
+.prime-image-anime:hover::after,
+.about-visual:hover::after,
+.service-box:hover .service-card-media::after,
+.service-card-media:hover::after,
+.fancybox-card:hover .fancybox-img-container::after {
+  height: 260% !important;
+  background-color: transparent !important;
+  transition: height 650ms linear, background-color 650ms linear !important;
+}
+
+/* Ensure foreground badges and chips stay crisp on top of the shimmer */
+.about-experience-badge,
+.service-card-chip,
+.fancybox-badge {
+  z-index: 10 !important;
+}
