@@ -674,21 +674,33 @@
       z-index: 2;
     }
 
-    /* Routex Floating Aeroplane in About Us Background */
-    .about-plane-bg-wrap {
+    /* Vistara Floating Airplane & Flight Trail Motif (About Us Section) */
+    .about-flight-pattern-wrap {
       position: absolute;
-      top: 60px;
-      left: 8%;
-      width: 440px;
-      height: 280px;
+      top: -35px;
+      right: -20px;
+      width: 250px;
+      height: auto;
       pointer-events: none;
-      z-index: 1;
-      opacity: 0.95;
+      z-index: 0;
+      opacity: 0.92;
     }
-    .about-flight-svg {
+    .about-flight-pattern-img {
       width: 100%;
-      height: 100%;
-      overflow: visible;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 8px 18px rgba(26, 49, 80, 0.16));
+    }
+    .reveal-right {
+      position: relative;
+    }
+    .reveal-right .tag-badge,
+    .reveal-right .section-title,
+    .reveal-right .section-desc,
+    .reveal-right p,
+    .reveal-right .story-card {
+      position: relative;
+      z-index: 1;
     }
 
     .about-visual {
@@ -2414,8 +2426,8 @@
         object-fit: cover !important;
         width: 100% !important;
       }
-      .about-plane-bg-wrap {
-        display: none !important; /* Avoid horizontal viewport overflow on mobile */
+      .about-flight-pattern-wrap {
+        display: none !important; /* Avoid horizontal viewport overflow and text overlap on mobile */
       }
       .about-experience-badge {
         bottom: 12px !important;
@@ -3545,52 +3557,6 @@
 
   <!-- About Us Section (Storytelling) -->
   <section class="about-story" id="about">
-    <!-- Routex Style Floating Aeroplane & Looping Contrail Background Motif -->
-    <div class="about-plane-bg-wrap">
-      <svg viewBox="0 0 440 280" fill="none" xmlns="http://www.w3.org/2000/svg" class="about-flight-svg">
-        <defs>
-          <linearGradient id="planeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#1A3150" />
-            <stop offset="100%" stop-color="#13253d" />
-          </linearGradient>
-          <linearGradient id="contrailGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#6B9DD2" stop-opacity="0.1" />
-            <stop offset="45%" stop-color="#1A3150" stop-opacity="0.65" />
-            <stop offset="100%" stop-color="#1A3150" stop-opacity="0.95" />
-          </linearGradient>
-          <filter id="planeShadow" x="-30%" y="-30%" width="160%" height="160%">
-            <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#1A3150" flood-opacity="0.38" />
-          </filter>
-        </defs>
-
-        <!-- Dynamic Looping Flight Contrail (Routex Style) -->
-        <path d="M 40 250 C 75 270, 115 260, 130 210 C 145 155, 95 110, 130 65 C 165 25, 220 75, 255 65 C 275 60, 290 40, 310 46" 
-              stroke="url(#contrailGrad)" stroke-width="2.6" stroke-dasharray="7 7" stroke-linecap="round" />
-
-        <!-- Accent Swirl -->
-        <path d="M 60 260 C 100 270, 130 210, 160 150 C 190 90, 235 95, 285 70" 
-              stroke="#dbe6f1" stroke-width="1.6" stroke-dasharray="4 6" opacity="0.55" stroke-linecap="round" />
-
-        <!-- Floating Airplane Group Animated with upDown physics -->
-        <g class="upDown" filter="url(#planeShadow)" transform="translate(315, 42) rotate(32) scale(0.75)">
-          <!-- Fuselage -->
-          <path d="M 0 -48 C 6 -35, 8 22, 7 46 C 5 49, -5 49, -7 46 C -8 22, -6 -35, 0 -48 Z" fill="url(#planeGrad)" />
-          <!-- Swept Main Wings -->
-          <path d="M 0 -6 L 50 26 C 54 29, 46 32, 40 31 L 6 12 L -6 12 L -40 31 C -46 32, -54 29, -50 26 L 0 -6 Z" fill="#1A3150" />
-          <!-- Twin Jet Turbines -->
-          <rect x="16" y="12" width="6" height="14" rx="3" fill="#13253d" />
-          <rect x="-22" y="12" width="6" height="14" rx="3" fill="#13253d" />
-          <!-- Tail Stabilizers -->
-          <path d="M 0 35 L 22 48 L 18 52 L 0 46 L -18 52 L -22 48 L 0 35 Z" fill="#13253d" />
-          <!-- Vertical Tailfin -->
-          <path d="M -1.5 28 L 1.5 28 L 3 46 L -3 46 Z" fill="#6B9DD2" />
-          <!-- Cockpit Window -->
-          <path d="M -3 -36 Q 0 -40 3 -36 Q 3 -32 0 -32 Q -3 -32 -3 -36 Z" fill="#ffffff" opacity="0.95" />
-        </g>
-      </svg>
-    </div>
-
-
     <div class="about-grid">
       <div class="about-visual prime-image-anime reveal-left" style="position: relative;">
         <img src="images/about_forensic_heritage.jpg" alt="Senior Forensic Fingerprint Examiner with 5+ Years Experience">
@@ -3600,6 +3566,11 @@
         </div>
       </div>
       <div class="reveal-right">
+        <!-- Vistara Theme Flight Pattern Motif (Logo Navy Palette with Gentle Buoyant Float) -->
+        <div class="about-flight-pattern-wrap upDown" aria-hidden="true">
+          <img src="images/vistara_flight_prime.png" alt="International Clearances Flight Pattern" class="about-flight-pattern-img">
+        </div>
+
         <span class="tag-badge">Our Legacy &amp; Credibility</span>
         <h2 class="section-title">Professional Fingerprinting and PCC Services in Hyderabad</h2>
         <p class="section-desc" style="margin-bottom: 16px;">
