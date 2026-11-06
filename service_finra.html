@@ -142,29 +142,49 @@
       border-radius: 3px 3px 0 0;
     }
 
-    /* Dropdown */
+    /* Vistara-Style Dropdown Menu Animation & Interactive Micro-Nudge (Services Menu) */
     .nav-item { position: relative; }
     .dropdown {
       position: absolute;
       top: 100%;
       left: -20px;
       background: #ffffff;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
       border: 1px solid var(--card-border);
       border-radius: 14px;
-      width: 290px;
+      width: 320px;
       padding: 12px;
       list-style: none;
       opacity: 0;
       visibility: hidden;
-      transform: translateY(12px);
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: scaleY(0.8);
+      transform-origin: top;
+      transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
       z-index: 100;
+      pointer-events: none;
     }
-    .nav-item:hover .dropdown {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(6px);
+    .dropdown::before {
+      content: '';
+      position: absolute;
+      top: -14px;
+      left: 0;
+      width: 100%;
+      height: 14px;
+    }
+    .dropdown-chevron {
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      display: inline-block;
+    }
+    @media (min-width: 993px) {
+      .nav-item:hover .dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: scaleY(1);
+        pointer-events: auto;
+      }
+      .nav-item:hover .dropdown-chevron {
+        transform: rotate(180deg);
+      }
     }
     .dropdown li { margin-bottom: 6px; }
     .dropdown li:last-child { margin-bottom: 0; }
@@ -183,6 +203,7 @@
     .dropdown a:hover, .dropdown a.active {
       background: #f0f9ff;
       color: var(--primary-accent);
+      padding-left: 20px;
     }
     .dropdown-icon {
       font-size: 16px;
@@ -1474,6 +1495,8 @@
 
       /* Silky Smooth Accordion Dropdown for Services */
       .nav-links .dropdown {
+        transform: none !important;
+        pointer-events: auto !important;
         position: static !important;
         display: block !important;
         max-height: 0 !important;

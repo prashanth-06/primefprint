@@ -147,7 +147,7 @@
     }
     .nav-link:hover { color: var(--primary-accent); }
 
-    /* Dropdown: ONLY PCC and FINRA */
+    /* Vistara-Style Dropdown Menu Animation & Interactive Micro-Nudge (Services Menu) */
     .dropdown {
       position: absolute;
       top: 100%;
@@ -156,18 +156,39 @@
       border: 1px solid var(--card-border);
       box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
       border-radius: 12px;
-      width: 330px;
+      width: 340px;
       padding: 12px;
       list-style: none;
       opacity: 0;
       visibility: hidden;
-      transform: translateY(12px);
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: scaleY(0.8);
+      transform-origin: top;
+      transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none;
     }
-    .nav-item:hover .dropdown {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
+    /* Invisible hover bridge to eliminate gap flickering */
+    .dropdown::before {
+      content: '';
+      position: absolute;
+      top: -14px;
+      left: 0;
+      width: 100%;
+      height: 14px;
+    }
+    .dropdown-chevron {
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      display: inline-block;
+    }
+    @media (min-width: 993px) {
+      .nav-item:hover .dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: scaleY(1);
+        pointer-events: auto;
+      }
+      .nav-item:hover .dropdown-chevron {
+        transform: rotate(180deg);
+      }
     }
     .dropdown li { margin-bottom: 6px; }
     .dropdown li:last-child { margin-bottom: 0; }
@@ -175,20 +196,38 @@
       display: flex;
       align-items: flex-start;
       gap: 12px;
-      padding: 12px;
+      padding: 12px 14px;
       border-radius: 8px;
       text-decoration: none;
       color: var(--text-main);
       font-size: 14px;
       font-weight: 700;
-      transition: all 0.15s;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
     }
     .dropdown li a:hover {
       background: #eff6ff;
       color: var(--primary-accent);
+      padding-left: 20px; /* Vistara-style smooth rightward nudge */
     }
-    .dropdown-icon { font-size: 18px; color: var(--primary-accent); margin-top: 2px; }
-    .dropdown-desc { display: block; font-size: 12px; font-weight: 400; color: var(--text-muted); margin-top: 3px; line-height: 1.4; }
+    .dropdown-icon {
+      font-size: 18px;
+      color: var(--primary-accent);
+      margin-top: 2px;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+    .dropdown li a:hover .dropdown-icon {
+      transform: scale(1.12);
+    }
+    .dropdown-desc {
+      display: block;
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--text-muted);
+      margin-top: 3px;
+      line-height: 1.4;
+      transition: color 0.25s ease;
+    }
 
     /* Book Appointment Button: Smooth Color Fill Hover Transition (Logo "FP" Light Blue Gradient) */
     .btn-header {
@@ -3254,7 +3293,12 @@
         margin-top: 0 !important;
         padding: 0 10px !important;
         background: #f8fafc !important;
+        transform: none !important;
+        pointer-events: auto !important;
         transition: max-height 0.32s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.22s ease, margin 0.22s ease, padding 0.22s ease, visibility 0.32s !important;
+      }
+      .nav-links .dropdown::before {
+        display: none !important;
       }
       .nav-links .nav-item.dropdown-open .dropdown {
         max-height: 260px !important;
