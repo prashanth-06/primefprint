@@ -742,6 +742,9 @@
       z-index: 1;
     }
 
+    .about-visual-wrap {
+      position: relative;
+    }
     .about-visual {
       position: relative;
       border-radius: 18px;
@@ -750,18 +753,139 @@
       box-shadow: var(--shadow-lg);
     }
     .about-visual img { width: 100%; height: 480px; object-fit: cover; display: block; }
-    .about-experience-badge {
+
+    /* 360-Degree Rotating Circular Experience Badge (Reference Style) */
+    .exp-circular-badge {
       position: absolute;
-      bottom: 24px;
-      right: 24px;
+      right: -36px;
+      bottom: 42px;
+      width: 156px;
+      height: 156px;
+      border-radius: 50%;
       background: #ffffff;
-      border: 1px solid var(--card-border);
-      padding: 18px 24px;
-      border-radius: 14px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      box-shadow: 0 18px 45px rgba(26, 49, 80, 0.2), 0 4px 14px rgba(0, 0, 0, 0.06);
+      border: 1px solid rgba(26, 49, 80, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 5;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+      user-select: none;
     }
-    .exp-years { font-size: 36px; font-weight: 800; color: var(--primary-accent); line-height: 1; font-family: 'Plus Jakarta Sans', sans-serif;}
-    .exp-label { font-size: 12px; font-weight: 700; color: var(--primary); text-transform: uppercase; margin-top: 4px; letter-spacing: 0.5px;}
+    .exp-circular-badge:hover {
+      transform: scale(1.06) translateY(-2px);
+      box-shadow: 0 24px 55px rgba(26, 49, 80, 0.28), 0 6px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Outer Rotating SVG Circular Text */
+    .exp-rotating-text-svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      animation: spinCircularBadge 16s linear infinite;
+      transform-origin: center center;
+      pointer-events: none;
+    }
+    .exp-circle-svg-text {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 13.5px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      fill: #1a3150;
+      text-transform: uppercase;
+    }
+    .exp-circular-badge:hover .exp-rotating-text-svg {
+      animation-duration: 8s;
+    }
+
+    /* Inner Solid Colored Hub / Disc */
+    .exp-circle-inner-disc {
+      position: relative;
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #1a3150 0%, #102237 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 18px rgba(26, 49, 80, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      overflow: hidden;
+      z-index: 2;
+      transition: all 0.35s ease;
+    }
+    .exp-circle-inner-disc:hover {
+      background: linear-gradient(135deg, #223f66 0%, #152b45 100%);
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+    /* Optional Reference Orange Variant */
+    .exp-circle-inner-disc.theme-orange {
+      background: linear-gradient(135deg, #e0531c 0%, #f36b21 100%) !important;
+      box-shadow: 0 6px 18px rgba(224, 83, 28, 0.35) !important;
+    }
+
+    /* Watermark Thumbprint in the Disc Background */
+    .exp-watermark-thumb {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 74px;
+      color: #ffffff;
+      opacity: 0.08;
+      pointer-events: none;
+      line-height: 1;
+      transition: opacity 0.35s ease;
+    }
+    .exp-circular-badge:hover .exp-watermark-thumb {
+      opacity: 0.15;
+    }
+
+    /* Foreground Thumb Impression Icon */
+    .exp-disc-thumb {
+      font-size: 19px;
+      color: #8bbbeb;
+      line-height: 1;
+      margin-bottom: 2px;
+      z-index: 2;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+    .exp-circular-badge:hover .exp-disc-thumb {
+      transform: scale(1.12);
+      color: #ffffff;
+    }
+
+    /* 10+ Number */
+    .exp-disc-number {
+      font-size: 27px;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      letter-spacing: -0.5px;
+      z-index: 2;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    }
+
+    /* YEARS Caption */
+    .exp-disc-label {
+      font-size: 8.5px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.85);
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      margin-top: 2px;
+      line-height: 1;
+      z-index: 2;
+    }
+
+    @keyframes spinCircularBadge {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
 
     .story-card {
       margin-bottom: 22px;
@@ -2468,13 +2592,29 @@
       .about-flight-pattern-wrap {
         display: none !important; /* Avoid horizontal viewport overflow and text overlap on mobile */
       }
-      .about-experience-badge {
-        bottom: 12px !important;
-        left: 12px !important;
-        padding: 8px 14px !important;
+      .exp-circular-badge {
+        right: 14px !important;
+        bottom: 14px !important;
+        width: 114px !important;
+        height: 114px !important;
       }
-      .about-experience-badge .exp-years { font-size: 24px !important; }
-      .about-experience-badge .exp-label { font-size: 10.5px !important; }
+      .exp-circle-svg-text {
+        font-size: 14.5px !important;
+      }
+      .exp-circle-inner-disc {
+        width: 70px !important;
+        height: 70px !important;
+      }
+      .exp-disc-thumb {
+        font-size: 14px !important;
+        margin-bottom: 1px !important;
+      }
+      .exp-disc-number {
+        font-size: 20px !important;
+      }
+      .exp-disc-label {
+        font-size: 7px !important;
+      }
       .story-card {
         padding: 18px 16px !important;
         margin-bottom: 14px !important;
@@ -3602,11 +3742,36 @@
   <!-- About Us Section (Storytelling) -->
   <section class="about-story" id="about">
     <div class="about-grid">
-      <div class="about-visual prime-image-anime reveal-left" style="position: relative;">
-        <img src="images/primeimage.jpeg" alt="Senior Forensic Fingerprint Examiner with 10+ Years Experience">
-        <div class="about-experience-badge">
-          <div class="exp-years">10+</div>
-          <div class="exp-label">Years Experience</div>
+      <div class="about-visual-wrap reveal-left">
+        <div class="about-visual prime-image-anime">
+          <img src="images/primeimage.jpeg" alt="Senior Forensic Fingerprint Examiner with 10+ Years Experience">
+        </div>
+
+        <!-- 360-Degree Rotating Circular Experience Badge (Reference Style) -->
+        <div class="exp-circular-badge" data-cursor-text="10+ Years" title="10+ Years of Forensic Experience">
+          <!-- Outer Rotating Circular Text Ring -->
+          <svg class="exp-rotating-text-svg" viewBox="0 0 200 200" aria-hidden="true">
+            <defs>
+              <path id="expCirclePath" d="M 100, 100 m -74, 0 a 74,74 0 1,1 148,0 a 74,74 0 1,1 -148,0" fill="none" />
+            </defs>
+            <text class="exp-circle-svg-text">
+              <textPath href="#expCirclePath" xlink:href="#expCirclePath" startOffset="0%" textLength="465" lengthAdjust="spacing">
+                • YEARS OF FORENSIC EXPERIENCE • PRIME FPRINT •
+              </textPath>
+            </text>
+          </svg>
+
+          <!-- Inner Circular Disc with Thumb Impression & 10+ Years -->
+          <div class="exp-circle-inner-disc">
+            <div class="exp-watermark-thumb" aria-hidden="true">
+              <i class="fa-solid fa-fingerprint"></i>
+            </div>
+            <div class="exp-disc-thumb">
+              <i class="fa-solid fa-fingerprint"></i>
+            </div>
+            <div class="exp-disc-number">10+</div>
+            <div class="exp-disc-label">YEARS</div>
+          </div>
         </div>
       </div>
       <div class="reveal-right">
