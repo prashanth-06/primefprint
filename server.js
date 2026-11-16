@@ -15,7 +15,8 @@ const mimeTypes = {
   '.js': 'text/javascript',
   '.json': 'application/json',
   '.pdf': 'application/pdf',
-  '.webp': 'image/webp'
+  '.webp': 'image/webp',
+  '.ico': 'image/x-icon'
 };
 
 const server = http.createServer((req, res) => {
