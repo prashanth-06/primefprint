@@ -3018,449 +3018,402 @@
     }
 
 
+    /* ============================================================
+       BIOMETRIC LIVE FINGERPRINT SCANNER SECTION (VIDEO STAGE)
+       ============================================================ */
+    
     /* ==========================================================================
-       ANIMATED FORENSIC COMMAND STATION (#biometric-scanner)
+       HIGH-CONTRAST BIOMETRIC LIVE SCANNER SECTION (AUTHENTIC FORENSIC THUMBPRINT)
        ========================================================================== */
-    .forensic-station-section {
-      background: radial-gradient(circle at 50% 0%, #f0f9ff 0%, #ffffff 50%, #f8fafc 100%);
-      padding: 95px 5% 90px;
+    .scanner-showcase-section {
+      background: radial-gradient(circle at 50% 0%, #f0f9ff 0%, #ffffff 60%, #f8fafc 100%);
+      padding: 100px 5%;
       position: relative;
+      overflow: hidden;
       border-top: 1px solid #e2e8f0;
       border-bottom: 1px solid #e2e8f0;
-      overflow: hidden;
     }
-
-    .forensic-station-container {
-      max-width: 1300px;
+    .scanner-showcase-container {
+      max-width: 1320px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 36px;
-      align-items: start;
+      grid-template-columns: 1fr 420px 1fr;
+      gap: 38px;
+      align-items: center;
+      position: relative;
     }
 
-    /* Left Column: 8 Interactive Service Cards (2x4 Grid) */
-    .station-services-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-    }
-
-    .station-service-card {
-      background: #ffffff;
-      border: 1.5px solid #e2e8f0;
-      border-radius: 16px;
-      padding: 18px 18px 16px;
+    /* High-Contrast Flanking Service Cards */
+    .scanner-tags-col {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      position: relative;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
-      cursor: pointer;
-      user-select: none;
-      text-decoration: none;
-      color: inherit;
+      gap: 16px;
+      z-index: 10;
     }
-
-    .station-service-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3.5px;
-      background: linear-gradient(90deg, #1A3150 0%, #6B9DD2 100%);
-      border-radius: 16px 16px 0 0;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .station-service-card:hover,
-    .station-service-card.active {
-      transform: translateY(-4px);
-      border-color: #6B9DD2;
-      box-shadow: 0 12px 28px rgba(26, 49, 80, 0.12);
+    .scanner-service-card {
       background: #ffffff;
-    }
-
-    .station-service-card:hover::before,
-    .station-service-card.active::before {
-      opacity: 1;
-    }
-
-    .station-card-top {
+      border: 1px solid #cbd5e1;
+      border-left: 5px solid #1A3150;
+      border-radius: 14px;
+      padding: 18px 22px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      margin-bottom: 12px;
+      gap: 18px;
+      position: relative;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+      cursor: default;
     }
-
-    .station-card-icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, #f0f7ff 0%, #e2efff 100%);
-      border: 1px solid #bfdbfe;
+    .scanner-service-card:hover {
+      background: #ffffff;
+      transform: translateY(-4px) scale(1.01);
+      border-color: #6B9DD2;
+      border-left: 5px solid #6B9DD2;
+      box-shadow: 0 14px 30px rgba(107, 157, 210, 0.22);
+    }
+    .scanner-service-card .card-tag-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #e0f2fe 0%, #dbe6f1 100%);
+      border: 1px solid #8ebbe8;
       display: flex;
       align-items: center;
       justify-content: center;
       color: #1a3150;
-      font-size: 18px;
-      transition: all 0.3s ease;
+      font-size: 20px;
+      flex-shrink: 0;
+      transition: all 0.3s;
+      box-shadow: 0 2px 8px rgba(2, 132, 199, 0.15);
     }
-
-    .station-service-card:hover .station-card-icon,
-    .station-service-card.active .station-card-icon {
+    .scanner-service-card:hover .card-tag-icon {
       background: linear-gradient(135deg, #1A3150 0%, #13253d 100%);
       color: #ffffff;
       border-color: #1a3150;
-      transform: scale(1.06);
+      transform: scale(1.08) rotate(3deg);
+      box-shadow: 0 6px 16px rgba(2, 132, 199, 0.35);
     }
-
-    .station-card-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      font-size: 11px;
-      font-weight: 700;
-      color: #64748b;
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      padding: 3px 8px;
-      border-radius: 12px;
-      font-family: 'Plus Jakarta Sans', monospace;
-      transition: all 0.25s ease;
-    }
-
-    .station-service-card.active .station-card-badge {
-      color: #16a34a;
-      background: #f0fdf4;
-      border-color: #bbf7d0;
-    }
-
-    .station-service-card.active .station-card-badge::before {
-      content: '';
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #16a34a;
-      box-shadow: 0 0 6px rgba(22, 163, 74, 0.6);
-      display: inline-block;
-    }
-
-    .station-card-body h4 {
-      font-size: 15px;
+    .scanner-service-card h4 {
+      font-size: 15.5px;
       font-weight: 700;
       color: #0f172a;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
       font-family: 'Plus Jakarta Sans', sans-serif;
       letter-spacing: -0.2px;
-      line-height: 1.35;
     }
-
-    .station-card-body p {
-      font-size: 12.5px;
+    .scanner-service-card p {
+      font-size: 13px;
       color: #475569;
-      line-height: 1.5;
-      margin-bottom: 12px;
-      font-weight: 450;
+      line-height: 1.45;
+      margin: 0;
+      font-weight: 500;
     }
 
-    .station-card-tags {
+    /* Center Biometric Live Scanning Video Stage */
+    .scanner-center-stage {
       display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
-      padding-top: 10px;
-      border-top: 1px solid #f1f5f9;
-    }
-
-    .station-tag {
-      font-size: 10.5px;
-      font-weight: 600;
-      color: #1e3a8a;
-      background: #eff6ff;
-      border: 1px solid #dbeafe;
-      padding: 2px 7px;
-      border-radius: 5px;
-    }
-
-    /* Right Column: High-Tech Forensic Inspection Console (Sticky) */
-    .station-console-column {
-      position: sticky;
-      top: 115px;
+      justify-content: center;
+      position: relative;
       z-index: 20;
     }
-
-    .forensic-console-card {
-      background: radial-gradient(circle at 50% 35%, #132743 0%, #0d1b2e 65%, #081322 100%);
-      border: 2px solid #1e3a5f;
+    /* Pristine Consular Optical Glass Scanner Viewport (Harmonious Light Theme) */
+        /* Refined Deep Sapphire Biometric Scanner Viewport (Decreased Contrast, Soft Luminous Navy) */
+    .scanner-viewport {
+      width: 100%;
+      max-width: 400px;
+      height: 520px;
+      background: radial-gradient(circle at 50% 45%, #132743 0%, #0d1b2e 65%, #081322 100%);
+      border: 2px solid #13253d;
       border-radius: 26px;
-      box-shadow: 0 25px 60px rgba(8, 19, 34, 0.4), 0 0 40px rgba(56, 189, 248, 0.15);
-      padding: 22px 20px 20px;
-      color: #ffffff;
       position: relative;
       overflow: hidden;
+      box-shadow: 0 20px 50px rgba(8, 19, 34, 0.35), 0 0 35px rgba(2, 132, 199, 0.18);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 18px;
     }
 
-    /* Top Console HUD Header */
-    .console-hud-header {
+    /* Soft Consular Cyan HUD Corner Brackets */
+    .hud-corner {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      border: 2px solid #6B9DD2;
+      pointer-events: none;
+      z-index: 18;
+      opacity: 0.85;
+    }
+    .corner-top-left { top: 14px; left: 14px; border-right: none; border-bottom: none; border-radius: 5px 0 0 0; }
+    .corner-top-right { top: 14px; right: 14px; border-left: none; border-bottom: none; border-radius: 0 5px 0 0; }
+    .corner-bottom-left { bottom: 44px; left: 14px; border-right: none; border-top: none; border-radius: 0 0 0 5px; }
+    .corner-bottom-right { bottom: 44px; right: 14px; border-left: none; border-top: none; border-radius: 0 0 5px 0; }
+
+    /* Top HUD Status Bar (Soft Frosted Slate) */
+    .scanner-hud-bar {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-bottom: 12px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      margin-bottom: 14px;
+      z-index: 25;
+      position: relative;
+      background: rgba(13, 27, 46, 0.82);
+      padding: 7px 14px;
+      border-radius: 30px;
+      border: 1px solid rgba(56, 189, 248, 0.28);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
-
-    .console-live-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.8px;
-      color: #f1f5f9;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-    }
-
-    .console-pulse-dot {
+    .hud-rec-dot {
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: #10b981;
-      box-shadow: 0 0 10px rgba(16, 185, 129, 0.8);
-      animation: consolePulse 1.4s infinite;
+      background: #ef4444;
+      box-shadow: 0 0 8px rgba(239, 68, 68, 0.7);
+      animation: hudPulse 1.4s infinite;
+      display: inline-block;
+      margin-right: 7px;
     }
-
-    @keyframes consolePulse {
+    @keyframes hudPulse {
       0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.4; transform: scale(0.85); }
+      50% { opacity: 0.3; transform: scale(0.85); }
     }
-
-    .console-specimen-pill {
+    .hud-rec-text {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.1px;
+      color: #f1f5f9;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .hud-cjis-badge {
       font-size: 10px;
       font-weight: 700;
       letter-spacing: 0.5px;
       color: #8ebbe8;
       background: rgba(2, 132, 199, 0.22);
-      padding: 4px 12px;
+      padding: 3px 10px;
       border-radius: 20px;
       border: 1px solid rgba(56, 189, 248, 0.4);
-      text-transform: uppercase;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      transition: all 0.3s ease;
     }
 
-    /* Central Viewport with Real Minutiae & Laser Scanning */
-    .console-viewport {
-      height: 250px;
-      background: rgba(8, 19, 34, 0.6);
-      border: 1px solid rgba(56, 189, 248, 0.2);
-      border-radius: 18px;
-      position: relative;
-      overflow: hidden;
-      margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* HUD Corner Brackets */
-    .hud-bracket {
+    /* Sub-header Live Telemetry Readout */
+    .scanner-telemetry-bar {
       position: absolute;
-      width: 18px;
-      height: 18px;
-      border: 2px solid #6B9DD2;
-      pointer-events: none;
+      top: 60px;
+      left: 18px;
+      right: 18px;
+      display: flex;
+      justify-content: space-between;
+      font-family: 'Inter', monospace;
+      font-size: 9.5px;
+      color: #8ebbe8;
+      letter-spacing: 0.8px;
       z-index: 15;
+      text-transform: uppercase;
+      font-weight: 600;
       opacity: 0.85;
     }
-    .bracket-tl { top: 10px; left: 10px; border-right: none; border-bottom: none; border-radius: 4px 0 0 0; }
-    .bracket-tr { top: 10px; right: 10px; border-left: none; border-bottom: none; border-radius: 0 4px 0 0; }
-    .bracket-bl { bottom: 10px; left: 10px; border-right: none; border-top: none; border-radius: 0 0 0 4px; }
-    .bracket-br { bottom: 10px; right: 10px; border-left: none; border-top: none; border-radius: 0 0 4px 0; }
 
-    /* Grid Overlay & Holographic Reticle */
-    .console-grid-overlay {
+    /* Soft Biometric Optical Grid & Sonar Reticle */
+    .scanner-grid-overlay {
       position: absolute;
       top: 0; left: 0; width: 100%; height: 100%;
       background-image: 
-        linear-gradient(rgba(56, 189, 248, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(56, 189, 248, 0.05) 1px, transparent 1px);
-      background-size: 20px 20px;
+        linear-gradient(rgba(56, 189, 248, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
+      background-size: 24px 24px;
       pointer-events: none;
-      z-index: 2;
+      z-index: 4;
     }
-
-    .console-reticle-ring {
+    .scanner-sonar-circle {
       position: absolute;
-      width: 210px;
-      height: 210px;
-      border: 1px dashed rgba(56, 189, 248, 0.22);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 280px;
+      height: 280px;
+      border: 1px dashed rgba(56, 189, 248, 0.15);
       border-radius: 50%;
       pointer-events: none;
-      z-index: 3;
-      animation: consoleRingSpin 24s linear infinite;
+      z-index: 4;
+      animation: sonarSpin 20s linear infinite;
+    }
+    @keyframes sonarSpin {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
     }
 
-    @keyframes consoleRingSpin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
-    /* Real Authentic Thumb Impression */
-    .console-thumb-wrapper {
-      position: relative;
-      width: 160px;
-      height: 205px;
+    /* Real Authentic Thumb Impression (Soft Contrast, Luminous Cyan-Sapphire) */
+    .fingerprint-wrapper {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 220px;
+      height: 260px;
       display: flex;
       align-items: center;
       justify-content: center;
-      z-index: 5;
+      z-index: 6;
+      border-radius: 18px;
+      overflow: visible;
+      pointer-events: none;
     }
-
-    .console-thumb-img {
+    .real-thumb-img {
       width: 100%;
       height: 100%;
       object-fit: contain;
       mix-blend-mode: screen;
-      filter: brightness(1.08) contrast(1.15) drop-shadow(0 0 12px rgba(56, 189, 248, 0.4));
+      /* Softened contrast: gentle brightness and warm cyan glow without harsh pixel clipping */
+      filter: brightness(1.05) contrast(1.15) drop-shadow(0 0 12px rgba(56, 189, 248, 0.35));
       mask-image: radial-gradient(ellipse 70% 80% at 50% 50%, black 50%, transparent 100%);
       -webkit-mask-image: radial-gradient(ellipse 70% 80% at 50% 50%, black 50%, transparent 100%);
-      animation: thumbBreathe 4s ease-in-out infinite alternate;
+      transition: all 0.3s;
+      animation: thumbBreathSoft 4s ease-in-out infinite alternate;
+    }
+    @keyframes thumbBreathSoft {
+      0% { filter: brightness(1.0) contrast(1.1) drop-shadow(0 0 8px rgba(56, 189, 248, 0.25)); transform: scale(0.98); }
+      100% { filter: brightness(1.1) contrast(1.2) drop-shadow(0 0 16px rgba(56, 189, 248, 0.45)); transform: scale(1.02); }
     }
 
-    @keyframes thumbBreathe {
-      0% { filter: brightness(1.02) contrast(1.1) drop-shadow(0 0 8px rgba(56, 189, 248, 0.25)); transform: scale(0.98); }
-      100% { filter: brightness(1.12) contrast(1.2) drop-shadow(0 0 18px rgba(56, 189, 248, 0.5)); transform: scale(1.02); }
-    }
-
-    /* Laser Scanning Bar */
-    .console-laser-line {
+    /* Soft Cyan Laser Scanning Beam */
+    .scanner-laser-bar {
       position: absolute;
       left: 0;
       width: 100%;
       height: 3px;
-      background: linear-gradient(90deg, transparent 0%, #1A3150 15%, #6B9DD2 50%, #1A3150 85%, transparent 100%);
-      box-shadow: 0 0 10px rgba(56, 189, 248, 0.6), 0 0 20px rgba(56, 189, 248, 0.3);
-      z-index: 10;
-      animation: consoleLaser 3.2s ease-in-out infinite alternate;
+      z-index: 14;
+      animation: laserTravel 3.2s ease-in-out infinite alternate;
       pointer-events: none;
     }
-
-    @keyframes consoleLaser {
-      0% { top: 20px; }
-      100% { top: 220px; }
+    @keyframes laserTravel {
+      0% {
+        top: 90px;
+      }
+      100% {
+        top: 365px;
+      }
     }
-
-    /* Holographic Minutiae Feature Badges */
-    .console-minutiae-badge {
+    .laser-light-beam {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent 0%, #1A3150 20%, #8ebbe8 50%, #1A3150 80%, transparent 100%);
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.5), 0 0 20px rgba(2, 132, 199, 0.3);
+    }
+    .laser-trail-glow {
       position: absolute;
-      font-size: 9px;
-      font-weight: 700;
-      color: #38bdf8;
-      background: rgba(15, 23, 42, 0.85);
-      border: 1px solid rgba(56, 189, 248, 0.4);
-      border-radius: 6px;
-      padding: 3px 8px;
-      letter-spacing: 0.5px;
-      z-index: 12;
-      backdrop-filter: blur(4px);
-      pointer-events: none;
+      top: -32px;
+      left: 0;
+      width: 100%;
+      height: 32px;
+      background: linear-gradient(0deg, rgba(2, 132, 199, 0.18) 0%, transparent 100%);
     }
 
-    .badge-top-left { top: 12px; left: 12px; }
-    .badge-bottom-right { bottom: 12px; right: 12px; color: #10b981; border-color: rgba(16, 185, 129, 0.4); }
-
-    /* Telemetry Metrics Readout */
-    .console-telemetry-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-bottom: 14px;
+    /* Bottom HUD Metrics Overlay (Soft Frosted Slate) */
+    .scanner-hud-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 25;
+      position: relative;
+      background: rgba(13, 27, 46, 0.85);
+      padding: 7px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      backdrop-filter: blur(10px);
+      margin-bottom: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
-
-    .console-telemetry-box {
-      background: rgba(15, 23, 42, 0.65);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 12px;
-      padding: 9px 12px;
-    }
-
-    .console-telemetry-box .tel-label {
+    .hud-metric .metric-label {
       display: block;
       font-size: 9.5px;
       color: #94a3b8;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      margin-bottom: 2px;
+      letter-spacing: 1px;
+      font-weight: 700;
     }
-
-    .console-telemetry-box .tel-val {
+    .hud-metric .metric-val {
       font-size: 12px;
       font-weight: 700;
       color: #f1f5f9;
       font-family: 'Plus Jakarta Sans', sans-serif;
-      transition: color 0.25s ease;
     }
 
-    /* Console CTA Button */
-    .console-cta-btn {
-      width: 100%;
-      background: linear-gradient(135deg, #1A3150 0%, #254a7a 100%);
-      border: 1px solid #6B9DD2;
-      color: #ffffff;
-      padding: 12px 18px;
+    /* Video Player Style Controls Bar (Soft Dark Theme) */
+    .scanner-video-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(10, 21, 38, 0.9);
+      padding: 9px 14px;
       border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      z-index: 25;
+      position: relative;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    }
+    .scanner-control-btn {
+      background: rgba(2, 132, 199, 0.25);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      color: #8ebbe8;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      font-size: 13.5px;
-      font-weight: 700;
-      cursor: pointer;
-      text-decoration: none;
-      transition: all 0.25s ease;
-      box-shadow: 0 4px 16px rgba(2, 132, 199, 0.25);
+      font-size: 13px;
+      transition: all 0.25s;
     }
-
-    .console-cta-btn:hover {
-      background: linear-gradient(135deg, #13243a 0%, #1A3150 100%);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(2, 132, 199, 0.4);
+    .scanner-control-btn:hover {
+      background: #1A3150;
       color: #ffffff;
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+      transform: scale(1.08);
+    }
+    .scanner-timeline {
+      flex: 1;
+      height: 5px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+    }
+    .scanner-timeline-bar {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, #1A3150 0%, #6B9DD2 100%);
+      transform-origin: left;
+      animation: timelineLoop 3.2s linear infinite alternate;
+    }
+    @keyframes timelineLoop {
+      0% { transform: scaleX(0.08); }
+      100% { transform: scaleX(1); }
+    }
+    .scanner-duration {
+      font-size: 11px;
+      color: #94a3b8;
+      font-family: 'Inter', monospace;
+      font-weight: 700;
+      letter-spacing: 0.5px;
     }
 
-    @media (max-width: 1024px) {
-      .forensic-station-container {
+    @media (max-width: 992px) {
+      .scanner-showcase-container {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 28px;
       }
-
-      .station-console-column {
-        position: static;
-        order: -1;
+      .scanner-tags-col.left-tags {
+        order: 2;
       }
-
-      .forensic-console-card {
-        max-width: 520px;
-        margin: 0 auto;
+      .scanner-center-stage {
+        order: 1;
       }
-    }
-
-    @media (max-width: 640px) {
-      .station-services-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
+      .scanner-tags-col.right-tags {
+        order: 3;
       }
-
-      .console-viewport {
-        height: 230px;
-      }
-
-      .console-telemetry-grid {
-        grid-template-columns: 1fr;
-        gap: 8px;
+      .scanner-viewport {
+        max-width: 350px;
+        height: 480px;
       }
     }
 
@@ -4059,209 +4012,147 @@
     </div>
   </section>
 
-    <!-- Specialized Fingerprinting & PCC Services: Animated Forensic Command Station -->
-  <section class="forensic-station-section" id="biometric-scanner">
+    <!-- Biometric Live Fingerprint Scanner Section (High Contrast Real Thumb Impression) -->
+  <section class="scanner-showcase-section" id="biometric-scanner">
     <div class="section-head reveal-on-scroll">
       <span class="tag-badge">Certified Biometrics</span>
       <h2 class="section-title">We Are Specialized in Ink and Roll Fingerprinting and PCC Services For</h2>
       <p class="section-desc">Court admissible Ink rolled Impressions in accordance with the requirements of International Consulates and Federal Agencies.</p>
     </div>
 
-    <div class="forensic-station-container reveal-scale">
-      <!-- Left Column: 8 Interactive Service Cards (2x4 Grid) -->
-      <div class="station-services-grid">
-        <!-- 01. Police Clearance Certificate (PCC) -->
-        <div class="station-service-card active" data-key="pcc" onmouseenter="switchForensicSpecimen('pcc')" onclick="window.location.href='service_pcc.html'" title="Explore Police Clearance Certificate Details">
-          <div class="station-card-top">
-            <div class="station-card-icon"><i class="fa-solid fa-passport"></i></div>
-            <span class="station-card-badge">#01 ACTIVE</span>
-          </div>
-          <div class="station-card-body">
+    <div class="scanner-showcase-container reveal-scale">
+      <!-- Left Service Badges Column (High Contrast) -->
+      <div class="scanner-tags-col left-tags reveal-left">
+        <div class="scanner-service-card">
+          <div class="card-tag-icon"><i class="fa-solid fa-passport"></i></div>
+          <div class="card-tag-content">
             <h4>Police Clearance Certificate (PCC)</h4>
-            <p>Certified consular clearance documentation and friction ridge rolling for international visas, immigration, and PR.</p>
-          </div>
-          <div class="station-card-tags">
-            <span class="station-tag"><i class="fa-solid fa-circle-check" style="font-size: 9px; color: #16a34a;"></i> Consular Clearances</span>
-            <span class="station-tag">25+ Nations</span>
+            <p>Certified Consular Clearance for Immigration, Visas and PR</p>
           </div>
         </div>
 
-        <!-- 02. FBI FD-258 Cards (USA) -->
-        <div class="station-service-card" data-key="fd258" onmouseenter="switchForensicSpecimen('fd258')" onclick="window.location.href='service_pcc.html'" title="Explore FBI FD-258 Card Details">
-          <div class="station-card-top">
-            <div class="station-card-icon"><i class="fa-solid fa-fingerprint"></i></div>
-            <span class="station-card-badge">#02</span>
-          </div>
-          <div class="station-card-body">
+        <div class="scanner-service-card">
+          <div class="card-tag-icon"><i class="fa-solid fa-fingerprint"></i></div>
+          <div class="card-tag-content">
             <h4>FBI FD-258 Cards (USA)</h4>
-            <p>Authentic FBI CJIS-standard rolled fingerprinting on original heavy stock cards for US IdHSC clearances.</p>
-          </div>
-          <div class="station-card-tags">
-            <span class="station-tag"><i class="fa-solid fa-circle-check" style="font-size: 9px; color: #16a34a;"></i> FBI CJIS Standard</span>
-            <span class="station-tag">FD-258 Stock</span>
+            <p>Authentic FBI CJIS standard Fingerprinting and end-to-end seamless PCC process</p>
           </div>
         </div>
 
-        <!-- 03. Medical & Nursing Licenses -->
-        <div class="station-service-card" data-key="medical" onmouseenter="switchForensicSpecimen('medical')" onclick="openEnquiryModal()" title="Inquire for Medical / Nursing Fingerprinting">
-          <div class="station-card-top">
-            <div class="station-card-icon"><i class="fa-solid fa-user-doctor"></i></div>
-            <span class="station-card-badge">#03</span>
-          </div>
-          <div class="station-card-body">
-            <h4>Medical &amp; Nursing Licenses</h4>
-            <p>NCLEX, CGFNS, and State Medical Board clearances strictly adhering to state standards and IdentoGO requirements.</p>
-          </div>
-          <div class="station-card-tags">
-            <span class="station-tag"><i class="fa-solid fa-circle-check" style="font-size: 9px; color: #16a34a;"></i> NCLEX / CGFNS</span>
-            <span class="station-tag">IdentoGO Specs</span>
+        <div class="scanner-service-card">
+          <div class="card-tag-icon"><i class="fa-solid fa-user-doctor"></i></div>
+          <div class="card-tag-content">
+            <h4>Medical, Physicians and Nursing Licenses</h4>
+            <p>NCLEX, CGFNS and State Medical Board Clearances as per State standards and IdentoGo requirements</p>
           </div>
         </div>
 
-        <!-- 04. Visa & Sovereign Embassy Filings -->
-        <div class="station-service-card" data-key="visa" onmouseenter="switchForensicSpecimen('visa')" onclick="openEnquiryModal()" title="Inquire for Embassy Filings">
-          <div class="station-card-top">
-            <div class="station-card-icon"><i class="fa-solid fa-landmark"></i></div>
-            <span class="station-card-badge">#04</span>
-          </div>
-          <div class="station-card-body">
+        <div class="scanner-service-card">
+          <div class="card-tag-icon"><i class="fa-solid fa-plane-departure"></i></div>
+          <div class="card-tag-content">
             <h4>Visa &amp; Sovereign Embassy Filings</h4>
-            <p>Certified zero-smudge rolled impressions formulated specifically for foreign diplomatic missions and consular compliance.</p>
-          </div>
-          <div class="station-card-tags">
-            <span class="station-tag"><i class="fa-solid fa-circle-check" style="font-size: 9px; color: #16a34a;"></i> Embassy Filings</span>
-            <span class="station-tag">Zero Rejection</span>
-          </div>
-        </div>
-
-        <!-- 05. Criminal Background Checks -->
-        <div class="station-service-card" data-key="background" onmouseenter="switchForensicSpecimen('background')" onclick="openEnquiryModal()" title="Inquire for Background Checks">
-          <div class="station-card-top">
-            <div class="station-card-icon"><i class="fa-solid fa-shield-halved"></i></div>
-            <span class="station-card-badge">#05</span>
-          </div>
-          <div class="station-card-body">
-            <h4>Criminal Background Checks</h4>
-            <p>Comprehensive ten-print biometric recording for international employers, sovereign defense, and background vetting.</p>
-          </div>
-          <div class="station-card-tags">
-            <span class="station-tag"><i class="fa-solid fa-circle-check" style="font-size: 9px; color: #16a34a;"></i> Global Employer Vetting</span>
-            <span class="station-tag">Security Clearances</span>
-          </div>
-        </div>
-
-        <!-- 06. FINRA US Corporate Licensing -->
-        <div class="station-service-card" data-key="finra" onmouseenter="switchForensicSpecimen('finra')" onclick="window.location.href='service_finra.html'" title="Explore FINRA Corporate Fingerprinting Details">
-          <div class="station-card-top">
-            <div class="station-card-icon"><i class="fa-solid fa-briefcase"></i></div>
-            <span class="station-card-badge">#06</span>
-          </div>
-          <div class="station-card-body">
-            <h4>FINRA Corporate Licensing</h4>
-            <p>Mandatory Financial Broker Dealer and Fintech Compliance under SEC Rule 17f-2 on official Sterling cards.</p>
-          </div>
-          <div class="station-card-tags">
-            <span class="station-tag"><i class="fa-solid fa-circle-check" style="font-size: 9px; color: #16a34a;"></i> SEC Rule 17f-2</span>
-            <span class="station-tag">FINRA Sterling</span>
-          </div>
-        </div>
-
-        <!-- 07. Gaming License Fingerprinting -->
-        <div class="station-service-card" data-key="gaming" onmouseenter="switchForensicSpecimen('gaming')" onclick="openEnquiryModal()" title="Inquire for Gaming License Fingerprinting">
-          <div class="station-card-top">
-            <div class="station-card-icon"><i class="fa-solid fa-dice"></i></div>
-            <span class="station-card-badge">#07</span>
-          </div>
-          <div class="station-card-body">
-            <h4>Gaming License Fingerprinting</h4>
-            <p>Officially approved Fingerprinting that complies with standards prescribed by the International Gaming Board.</p>
-          </div>
-          <div class="station-card-tags">
-            <span class="station-tag"><i class="fa-solid fa-circle-check" style="font-size: 9px; color: #16a34a;"></i> Gaming Board Approved</span>
-            <span class="station-tag">Compliance Specs</span>
-          </div>
-        </div>
-
-        <!-- 08. Immigration, Visas and PR -->
-        <div class="station-service-card" data-key="immigration" onmouseenter="switchForensicSpecimen('immigration')" onclick="openEnquiryModal()" title="Inquire for Immigration Clearances">
-          <div class="station-card-top">
-            <div class="station-card-icon"><i class="fa-solid fa-plane-departure"></i></div>
-            <span class="station-card-badge">#08</span>
-          </div>
-          <div class="station-card-body">
-            <h4>Immigration, Visas and PR</h4>
-            <p>Certified Clearances for USA, UK, Canada, Australia, Singapore, Qatar, UAE and 25+ sovereign countries worldwide.</p>
-          </div>
-          <div class="station-card-tags">
-            <span class="station-tag"><i class="fa-solid fa-circle-check" style="font-size: 9px; color: #16a34a;"></i> Permanent Residency</span>
-            <span class="station-tag">25+ Countries</span>
+            <p>Certified zero-smudge rolled impressions for 25+ nations</p>
           </div>
         </div>
       </div>
 
-      <!-- Right Column: Animated Forensic Inspection Console (Sticky) -->
-      <div class="station-console-column">
-        <div class="forensic-console-card">
-          <!-- Top Console HUD Header -->
-          <div class="console-hud-header">
-            <div class="console-live-badge">
-              <span class="console-pulse-dot"></span>
-              <span>LIVE FORENSIC LAB</span>
+      <!-- Center Biometric Live Scanning Video Stage -->
+      <div class="scanner-center-stage">
+        <div class="scanner-viewport">
+          <!-- Background Grid & Sonar Reticle -->
+          <div class="scanner-grid-overlay"></div>
+          <div class="scanner-sonar-circle"></div>
+
+          <!-- Biometric Crosshair Corners (HUD) -->
+          <div class="hud-corner corner-top-left"></div>
+          <div class="hud-corner corner-top-right"></div>
+          <div class="hud-corner corner-bottom-left"></div>
+          <div class="hud-corner corner-bottom-right"></div>
+
+          <!-- Top Status Bar -->
+          <div class="scanner-hud-bar">
+            <div>
+              <span class="hud-rec-dot"></span>
+              <span class="hud-rec-text">LIVE FORENSIC SCAN</span>
             </div>
-            <span class="console-specimen-pill" id="consoleCardSpecimen">SOVEREIGN CONSULAR PCC</span>
+            <span class="hud-cjis-badge">FBI CJIS VERIFIED</span>
           </div>
 
-          <!-- Central Viewport with Real Minutiae & Laser Scanning -->
-          <div class="console-viewport">
-            <!-- HUD Corner Brackets -->
-            <div class="hud-bracket bracket-tl"></div>
-            <div class="hud-bracket bracket-tr"></div>
-            <div class="hud-bracket bracket-bl"></div>
-            <div class="hud-bracket bracket-br"></div>
-
-            <!-- Optical Grid & Holographic Reticle Ring -->
-            <div class="console-grid-overlay"></div>
-            <div class="console-reticle-ring"></div>
-
-            <!-- Floating Minutiae Badges -->
-            <span class="console-minutiae-badge badge-top-left">RES: 500+ DPI &bull; NFIQ-2: 98</span>
-            <span class="console-minutiae-badge badge-bottom-right">DELTA &bull; CORE VERIFIED</span>
-
-            <!-- Laser Scanning Beam -->
-            <div class="console-laser-line"></div>
-
-            <!-- Real Authentic Rolled Thumb Impression -->
-            <div class="console-thumb-wrapper">
-              <img src="images/real_thumbprint.jpg" alt="Authentic Forensic Rolled Thumb Impression" class="console-thumb-img" />
-            </div>
+          <!-- Sub-header Live Telemetry Readout -->
+          <div class="scanner-telemetry-bar">
+            <span>RES: 500 DPI</span>
+            <span id="scannerCoordinates">X: 248.6 &bull; Y: 512.3</span>
+            <span>NFIQ-2: 98/100</span>
           </div>
 
-          <!-- Telemetry Metrics Readout -->
-          <div class="console-telemetry-grid">
-            <div class="console-telemetry-box">
-              <span class="tel-label">Specimen Standard</span>
-              <span class="tel-val" id="consoleCardFormat">FBI FD-258 / RCMP C-216C</span>
+          <!-- Real Authentic Rolled Thumb Impression (Pristine, 100% Clean Without Any Text On Fingerprint) -->
+          <div class="fingerprint-wrapper">
+            <img src="images/real_thumbprint.jpg" alt="Authentic Forensic Rolled Thumb Impression" class="real-thumb-img" />
+          </div>
+
+          <!-- Moving Laser Scanning Beam & Atmospheric Glow -->
+          <div class="scanner-laser-bar">
+            <div class="laser-light-beam"></div>
+            <div class="laser-trail-glow"></div>
+          </div>
+
+          <!-- Bottom HUD Metrics Overlay -->
+          <div class="scanner-hud-bottom">
+            <div class="hud-metric">
+              <span class="metric-label">RIDGE DENSITY</span>
+              <span class="metric-val" style="color: #00f0ff;">100% SMUDGE-FREE</span>
             </div>
-            <div class="console-telemetry-box">
-              <span class="tel-label">Accreditation Code</span>
-              <span class="tel-val" id="consoleRegCode">25+ NATIONS &bull; ZERO REJECTION</span>
-            </div>
-            <div class="console-telemetry-box">
-              <span class="tel-label">Ridge Density</span>
-              <span class="tel-val" style="color: #38bdf8;">100% SMUDGE-FREE</span>
-            </div>
-            <div class="console-telemetry-box">
-              <span class="tel-label">Acceptance Warranty</span>
-              <span class="tel-val" style="color: #10b981;">ZERO REJECTION</span>
+            <div class="hud-metric" style="text-align: right;">
+              <span class="metric-label">ACCEPTANCE</span>
+              <span class="metric-val" style="color: #10b981;">ZERO REJECTION</span>
             </div>
           </div>
 
-          <!-- Console CTA Button -->
-          <a href="service_pcc.html" id="consoleActionBtn" class="console-cta-btn">
-            <i class="fa-solid fa-calendar-check"></i>
-            <span id="consoleBtnText">Schedule PCC Appointment</span>
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
+          <!-- Video Style Play / Scan Controls -->
+          <div class="scanner-video-controls">
+            <button class="scanner-control-btn" id="scannerPauseBtn" onclick="toggleScannerPlay()" title="Pause / Resume Live Scan">
+              <i class="fa-solid fa-pause"></i>
+            </button>
+            <div class="scanner-timeline">
+              <div class="scanner-timeline-bar"></div>
+            </div>
+            <span class="scanner-duration">00:06 / 00:06</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Service Badges Column (High Contrast) -->
+      <div class="scanner-tags-col right-tags reveal-right">
+        <div class="scanner-service-card">
+          <div class="card-tag-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <div class="card-tag-content">
+            <h4>Criminal Background Checks</h4>
+            <p>Global Employer and Sovereign Security Clearance Vetting</p>
+          </div>
+        </div>
+
+        <div class="scanner-service-card">
+          <div class="card-tag-icon"><i class="fa-solid fa-briefcase"></i></div>
+          <div class="card-tag-content">
+            <h4>FINRA US Corporate Licensing</h4>
+            <p>Mandatory Financial Broker Dealer and Fintech Compliance according to the U.S. Securities and Exchange Commission (SEC) under Rule 17f-2 of the Securities Exchange Act of 1934.</p>
+          </div>
+        </div>
+
+        <div class="scanner-service-card">
+          <div class="card-tag-icon"><i class="fa-solid fa-dice"></i></div>
+          <div class="card-tag-content">
+            <h4>Gaming License Fingerprinting</h4>
+            <p>We provide officially approved Fingerprinting that complies with the regulatory standards and specifications prescribed by the International Gaming Board.</p>
+          </div>
+        </div>
+
+        <div class="scanner-service-card">
+          <div class="card-tag-icon"><i class="fa-solid fa-building-columns"></i></div>
+          <div class="card-tag-content">
+            <h4>Immigration, Visas and PR</h4>
+            <p>Certified Clearances for USA, UK, Canada, Australia, Singapore, Qatar, UAE and 25+ countries</p>
+          </div>
         </div>
       </div>
     </div>
@@ -5748,6 +5639,22 @@
       }
     });
 
+
+    // Live Biometric Scanner Control
+    window.toggleScannerPlay = function() {
+      const laserBar = document.querySelector('.scanner-laser-bar');
+      const timelineBar = document.querySelector('.scanner-timeline-bar');
+      const btnIcon = document.querySelector('#scannerPauseBtn i');
+      if (laserBar && timelineBar) {
+        const isPaused = laserBar.style.animationPlayState === 'paused';
+        laserBar.style.animationPlayState = isPaused ? 'running' : 'paused';
+        timelineBar.style.animationPlayState = isPaused ? 'running' : 'paused';
+        if (btnIcon) {
+          btnIcon.className = isPaused ? 'fa-solid fa-pause' : 'fa-solid fa-play';
+        }
+      }
+    };
+
   </script>
 
     <!-- LEFT SIDE STICKY EXPANDING ACTION PILLS (FLOATING LUXURY CAPSULES) -->
@@ -5853,124 +5760,6 @@
         if (select) select.value = match[1];
       }
     });
-
-    // ============================================================
-    // FORENSIC COMMAND STATION INTERACTIVE SWITCHER
-    // ============================================================
-    const forensicSpecimens = {
-      pcc: {
-        pill: "SOVEREIGN CONSULAR PCC",
-        format: "FBI FD-258 / RCMP C-216C",
-        regCode: "25+ NATIONS • ZERO REJECTION",
-        btnText: "Schedule PCC Appointment",
-        btnLink: "service_pcc.html",
-        action: ""
-      },
-      fd258: {
-        pill: "FBI FD-258 USA STANDARD",
-        format: "ORIGINAL FBI HEAVY STOCK",
-        regCode: "USA IdHSC • CJIS EBTS",
-        btnText: "Schedule FBI FD-258 Inking",
-        btnLink: "service_pcc.html",
-        action: ""
-      },
-      medical: {
-        pill: "NCLEX / CGFNS MEDICAL",
-        format: "STATE MEDICAL BOARD SPECS",
-        regCode: "IDENTOGO FORMAT COMPLIANT",
-        btnText: "Book Medical Board Inking",
-        btnLink: "javascript:void(0)",
-        action: "openEnquiryModal()"
-      },
-      visa: {
-        pill: "EMBASSY FILINGS",
-        format: "DIPLOMATIC MISSION SPECS",
-        regCode: "COURT-ADMISSIBLE INKING",
-        btnText: "Book Consular Inking Slot",
-        btnLink: "javascript:void(0)",
-        action: "openEnquiryModal()"
-      },
-      background: {
-        pill: "SOVEREIGN VETTING",
-        format: "DEFENSE & EMPLOYER RECORD",
-        regCode: "TEN-PRINT ARCHIVAL RECORD",
-        btnText: "Book Background Vetting",
-        btnLink: "javascript:void(0)",
-        action: "openEnquiryModal()"
-      },
-      finra: {
-        pill: "FINRA STERLING CARD",
-        format: "OFFICIAL STERLING IN-STOCK",
-        regCode: "SEC RULE 17f-2 COMPLIANT",
-        btnText: "Schedule FINRA Appointment",
-        btnLink: "service_finra.html",
-        action: ""
-      },
-      gaming: {
-        pill: "GAMING BOARD LICENSING",
-        format: "OFFICIALLY APPROVED INKING",
-        regCode: "INTERNATIONAL GAMING BOARD",
-        btnText: "Book Gaming Board Inking",
-        btnLink: "javascript:void(0)",
-        action: "openEnquiryModal()"
-      },
-      immigration: {
-        pill: "GLOBAL IMMIGRATION & PR",
-        format: "100% GLOBAL ACCEPTANCE",
-        regCode: "USA • CAN • AUS • UK • GULF",
-        btnText: "Book Immigration Inking Slot",
-        btnLink: "javascript:void(0)",
-        action: "openEnquiryModal()"
-      }
-    };
-
-    window.switchForensicSpecimen = function (key) {
-      const data = forensicSpecimens[key];
-      if (!data) return;
-
-      // Update active card styling
-      document.querySelectorAll('.station-service-card').forEach(c => {
-        c.classList.remove('active');
-        const badge = c.querySelector('.station-card-badge');
-        if (badge) {
-          const num = c.getAttribute('data-key');
-          const idx = Object.keys(forensicSpecimens).indexOf(num) + 1;
-          badge.textContent = '#' + (idx < 10 ? '0' + idx : idx);
-        }
-      });
-
-      const activeCard = document.querySelector(`.station-service-card[data-key="${key}"]`);
-      if (activeCard) {
-        activeCard.classList.add('active');
-        const badge = activeCard.querySelector('.station-card-badge');
-        if (badge) {
-          const idx = Object.keys(forensicSpecimens).indexOf(key) + 1;
-          badge.textContent = '#' + (idx < 10 ? '0' + idx : idx) + ' ACTIVE';
-        }
-      }
-
-      // Update console HUD
-      const pill = document.getElementById('consoleCardSpecimen');
-      const format = document.getElementById('consoleCardFormat');
-      const regCode = document.getElementById('consoleRegCode');
-      const btn = document.getElementById('consoleActionBtn');
-      const btnText = document.getElementById('consoleBtnText');
-
-      if (pill) pill.textContent = data.pill;
-      if (format) format.textContent = data.format;
-      if (regCode) regCode.textContent = data.regCode;
-      if (btnText) btnText.textContent = data.btnText;
-
-      if (btn) {
-        if (data.action) {
-          btn.href = "javascript:void(0)";
-          btn.setAttribute("onclick", data.action);
-        } else {
-          btn.href = data.btnLink;
-          btn.removeAttribute("onclick");
-        }
-      }
-    };
   </script>
   <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <!-- Routex Circular Scroll-Percentage & Back To Top -->
