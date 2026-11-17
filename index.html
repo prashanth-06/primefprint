@@ -3018,402 +3018,186 @@
     }
 
 
-    /* ============================================================
-       BIOMETRIC LIVE FINGERPRINT SCANNER SECTION (VIDEO STAGE)
-       ============================================================ */
-    
     /* ==========================================================================
-       HIGH-CONTRAST BIOMETRIC LIVE SCANNER SECTION (AUTHENTIC FORENSIC THUMBPRINT)
+       EXECUTIVE BENTO GRID: SPECIALIZED FINGERPRINTING & PCC SERVICES
        ========================================================================== */
-    .scanner-showcase-section {
-      background: radial-gradient(circle at 50% 0%, #f0f9ff 0%, #ffffff 60%, #f8fafc 100%);
-      padding: 100px 5%;
+    .specialized-bento-section {
+      background: radial-gradient(circle at 50% 0%, #f0f9ff 0%, #ffffff 50%, #f8fafc 100%);
+      padding: 95px 5% 90px;
       position: relative;
-      overflow: hidden;
       border-top: 1px solid #e2e8f0;
       border-bottom: 1px solid #e2e8f0;
     }
-    .scanner-showcase-container {
-      max-width: 1320px;
+    .specialized-bento-container {
+      max-width: 1300px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 420px 1fr;
-      gap: 38px;
-      align-items: center;
-      position: relative;
     }
 
-    /* High-Contrast Flanking Service Cards */
-    .scanner-tags-col {
+    /* Executive Forensic Telemetry & Trust Strip */
+    .bento-telemetry-strip {
       display: flex;
-      flex-direction: column;
-      gap: 16px;
-      z-index: 10;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px 28px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 40px;
+      padding: 12px 26px;
+      margin: 0 auto 40px;
+      max-width: 980px;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
     }
-    .scanner-service-card {
+    .telemetry-pill-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #1a3150;
+      letter-spacing: 0.1px;
+    }
+    .telemetry-pill-item i {
+      color: #6B9DD2;
+      font-size: 14px;
+    }
+    .telemetry-pill-divider {
+      color: #cbd5e1;
+      font-size: 12px;
+    }
+
+    /* Bento 8-Card Grid (4 Columns Desktop, 2 Tablet, 1 Mobile) */
+    .bento-services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+    .bento-service-card {
       background: #ffffff;
       border: 1px solid #cbd5e1;
-      border-left: 5px solid #1A3150;
-      border-radius: 14px;
-      padding: 18px 22px;
+      border-radius: 18px;
+      padding: 24px 22px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+    }
+    .bento-service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #1A3150 0%, #6B9DD2 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .bento-service-card:hover {
+      transform: translateY(-6px);
+      border-color: #6B9DD2;
+      box-shadow: 0 16px 36px rgba(26, 49, 80, 0.12);
+    }
+    .bento-service-card:hover::before {
+      opacity: 1;
+    }
+    .bento-card-header {
       display: flex;
       align-items: center;
-      gap: 18px;
-      position: relative;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
-      cursor: default;
+      justify-content: space-between;
+      margin-bottom: 16px;
     }
-    .scanner-service-card:hover {
-      background: #ffffff;
-      transform: translateY(-4px) scale(1.01);
-      border-color: #6B9DD2;
-      border-left: 5px solid #6B9DD2;
-      box-shadow: 0 14px 30px rgba(107, 157, 210, 0.22);
-    }
-    .scanner-service-card .card-tag-icon {
-      width: 48px;
-      height: 48px;
+    .bento-card-icon {
+      width: 46px;
+      height: 46px;
       border-radius: 12px;
-      background: linear-gradient(135deg, #e0f2fe 0%, #dbe6f1 100%);
-      border: 1px solid #8ebbe8;
+      background: linear-gradient(135deg, #f0f7ff 0%, #e2efff 100%);
+      border: 1px solid #bfdbfe;
       display: flex;
       align-items: center;
       justify-content: center;
       color: #1a3150;
-      font-size: 20px;
-      flex-shrink: 0;
-      transition: all 0.3s;
-      box-shadow: 0 2px 8px rgba(2, 132, 199, 0.15);
+      font-size: 19px;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(26, 49, 80, 0.06);
     }
-    .scanner-service-card:hover .card-tag-icon {
+    .bento-service-card:hover .bento-card-icon {
       background: linear-gradient(135deg, #1A3150 0%, #13253d 100%);
       color: #ffffff;
       border-color: #1a3150;
       transform: scale(1.08) rotate(3deg);
-      box-shadow: 0 6px 16px rgba(2, 132, 199, 0.35);
+      box-shadow: 0 6px 16px rgba(26, 49, 80, 0.25);
     }
-    .scanner-service-card h4 {
-      font-size: 15.5px;
+    .bento-card-num {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #64748b;
+      letter-spacing: 0.5px;
+      background: #f1f5f9;
+      padding: 3px 9px;
+      border-radius: 20px;
+      border: 1px solid #e2e8f0;
+      font-family: 'Plus Jakarta Sans', monospace;
+    }
+    .bento-card-body h4 {
+      font-size: 16px;
       font-weight: 700;
       color: #0f172a;
-      margin-bottom: 4px;
+      margin-bottom: 8px;
       font-family: 'Plus Jakarta Sans', sans-serif;
       letter-spacing: -0.2px;
+      line-height: 1.35;
     }
-    .scanner-service-card p {
+    .bento-card-body p {
       font-size: 13px;
       color: #475569;
-      line-height: 1.45;
-      margin: 0;
-      font-weight: 500;
+      line-height: 1.55;
+      margin-bottom: 16px;
+      font-weight: 450;
     }
-
-    /* Center Biometric Live Scanning Video Stage */
-    .scanner-center-stage {
+    .bento-card-tags {
       display: flex;
-      justify-content: center;
-      position: relative;
-      z-index: 20;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding-top: 14px;
+      border-top: 1px solid #f1f5f9;
     }
-    /* Pristine Consular Optical Glass Scanner Viewport (Harmonious Light Theme) */
-        /* Refined Deep Sapphire Biometric Scanner Viewport (Decreased Contrast, Soft Luminous Navy) */
-    .scanner-viewport {
-      width: 100%;
-      max-width: 400px;
-      height: 520px;
-      background: radial-gradient(circle at 50% 45%, #132743 0%, #0d1b2e 65%, #081322 100%);
-      border: 2px solid #13253d;
-      border-radius: 26px;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 20px 50px rgba(8, 19, 34, 0.35), 0 0 35px rgba(2, 132, 199, 0.18);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 18px;
-    }
-
-    /* Soft Consular Cyan HUD Corner Brackets */
-    .hud-corner {
-      position: absolute;
-      width: 24px;
-      height: 24px;
-      border: 2px solid #6B9DD2;
-      pointer-events: none;
-      z-index: 18;
-      opacity: 0.85;
-    }
-    .corner-top-left { top: 14px; left: 14px; border-right: none; border-bottom: none; border-radius: 5px 0 0 0; }
-    .corner-top-right { top: 14px; right: 14px; border-left: none; border-bottom: none; border-radius: 0 5px 0 0; }
-    .corner-bottom-left { bottom: 44px; left: 14px; border-right: none; border-top: none; border-radius: 0 0 0 5px; }
-    .corner-bottom-right { bottom: 44px; right: 14px; border-left: none; border-top: none; border-radius: 0 0 5px 0; }
-
-    /* Top HUD Status Bar (Soft Frosted Slate) */
-    .scanner-hud-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      z-index: 25;
-      position: relative;
-      background: rgba(13, 27, 46, 0.82);
-      padding: 7px 14px;
-      border-radius: 30px;
-      border: 1px solid rgba(56, 189, 248, 0.28);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    }
-    .hud-rec-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #ef4444;
-      box-shadow: 0 0 8px rgba(239, 68, 68, 0.7);
-      animation: hudPulse 1.4s infinite;
-      display: inline-block;
-      margin-right: 7px;
-    }
-    @keyframes hudPulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.3; transform: scale(0.85); }
-    }
-    .hud-rec-text {
+    .bento-tag {
       font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 1.1px;
-      color: #f1f5f9;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-    }
-    .hud-cjis-badge {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      color: #8ebbe8;
-      background: rgba(2, 132, 199, 0.22);
-      padding: 3px 10px;
-      border-radius: 20px;
-      border: 1px solid rgba(56, 189, 248, 0.4);
-    }
-
-    /* Sub-header Live Telemetry Readout */
-    .scanner-telemetry-bar {
-      position: absolute;
-      top: 60px;
-      left: 18px;
-      right: 18px;
-      display: flex;
-      justify-content: space-between;
-      font-family: 'Inter', monospace;
-      font-size: 9.5px;
-      color: #8ebbe8;
-      letter-spacing: 0.8px;
-      z-index: 15;
-      text-transform: uppercase;
       font-weight: 600;
-      opacity: 0.85;
+      color: #1e3a8a;
+      background: #eff6ff;
+      border: 1px solid #dbeafe;
+      padding: 3px 8px;
+      border-radius: 6px;
+      letter-spacing: 0.1px;
     }
 
-    /* Soft Biometric Optical Grid & Sonar Reticle */
-    .scanner-grid-overlay {
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background-image: 
-        linear-gradient(rgba(56, 189, 248, 0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
-      background-size: 24px 24px;
-      pointer-events: none;
-      z-index: 4;
-    }
-    .scanner-sonar-circle {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 280px;
-      height: 280px;
-      border: 1px dashed rgba(56, 189, 248, 0.15);
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 4;
-      animation: sonarSpin 20s linear infinite;
-    }
-    @keyframes sonarSpin {
-      from { transform: translate(-50%, -50%) rotate(0deg); }
-      to { transform: translate(-50%, -50%) rotate(360deg); }
-    }
-
-    /* Real Authentic Thumb Impression (Soft Contrast, Luminous Cyan-Sapphire) */
-    .fingerprint-wrapper {
-      position: absolute;
-      top: 45%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 220px;
-      height: 260px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 6;
-      border-radius: 18px;
-      overflow: visible;
-      pointer-events: none;
-    }
-    .real-thumb-img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      mix-blend-mode: screen;
-      /* Softened contrast: gentle brightness and warm cyan glow without harsh pixel clipping */
-      filter: brightness(1.05) contrast(1.15) drop-shadow(0 0 12px rgba(56, 189, 248, 0.35));
-      mask-image: radial-gradient(ellipse 70% 80% at 50% 50%, black 50%, transparent 100%);
-      -webkit-mask-image: radial-gradient(ellipse 70% 80% at 50% 50%, black 50%, transparent 100%);
-      transition: all 0.3s;
-      animation: thumbBreathSoft 4s ease-in-out infinite alternate;
-    }
-    @keyframes thumbBreathSoft {
-      0% { filter: brightness(1.0) contrast(1.1) drop-shadow(0 0 8px rgba(56, 189, 248, 0.25)); transform: scale(0.98); }
-      100% { filter: brightness(1.1) contrast(1.2) drop-shadow(0 0 16px rgba(56, 189, 248, 0.45)); transform: scale(1.02); }
-    }
-
-    /* Soft Cyan Laser Scanning Beam */
-    .scanner-laser-bar {
-      position: absolute;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      z-index: 14;
-      animation: laserTravel 3.2s ease-in-out infinite alternate;
-      pointer-events: none;
-    }
-    @keyframes laserTravel {
-      0% {
-        top: 90px;
-      }
-      100% {
-        top: 365px;
+    @media (max-width: 1100px) {
+      .bento-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
       }
     }
-    .laser-light-beam {
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent 0%, #1A3150 20%, #8ebbe8 50%, #1A3150 80%, transparent 100%);
-      box-shadow: 0 0 10px rgba(56, 189, 248, 0.5), 0 0 20px rgba(2, 132, 199, 0.3);
-    }
-    .laser-trail-glow {
-      position: absolute;
-      top: -32px;
-      left: 0;
-      width: 100%;
-      height: 32px;
-      background: linear-gradient(0deg, rgba(2, 132, 199, 0.18) 0%, transparent 100%);
-    }
-
-    /* Bottom HUD Metrics Overlay (Soft Frosted Slate) */
-    .scanner-hud-bottom {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 25;
-      position: relative;
-      background: rgba(13, 27, 46, 0.85);
-      padding: 7px 14px;
-      border-radius: 14px;
-      border: 1px solid rgba(56, 189, 248, 0.2);
-      backdrop-filter: blur(10px);
-      margin-bottom: 8px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    }
-    .hud-metric .metric-label {
-      display: block;
-      font-size: 9.5px;
-      color: #94a3b8;
-      letter-spacing: 1px;
-      font-weight: 700;
-    }
-    .hud-metric .metric-val {
-      font-size: 12px;
-      font-weight: 700;
-      color: #f1f5f9;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-    }
-
-    /* Video Player Style Controls Bar (Soft Dark Theme) */
-    .scanner-video-controls {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      background: rgba(10, 21, 38, 0.9);
-      padding: 9px 14px;
-      border-radius: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      z-index: 25;
-      position: relative;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-    }
-    .scanner-control-btn {
-      background: rgba(2, 132, 199, 0.25);
-      border: 1px solid rgba(56, 189, 248, 0.35);
-      color: #8ebbe8;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 13px;
-      transition: all 0.25s;
-    }
-    .scanner-control-btn:hover {
-      background: #1A3150;
-      color: #ffffff;
-      box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
-      transform: scale(1.08);
-    }
-    .scanner-timeline {
-      flex: 1;
-      height: 5px;
-      background: rgba(255, 255, 255, 0.15);
-      border-radius: 10px;
-      overflow: hidden;
-      position: relative;
-    }
-    .scanner-timeline-bar {
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, #1A3150 0%, #6B9DD2 100%);
-      transform-origin: left;
-      animation: timelineLoop 3.2s linear infinite alternate;
-    }
-    @keyframes timelineLoop {
-      0% { transform: scaleX(0.08); }
-      100% { transform: scaleX(1); }
-    }
-    .scanner-duration {
-      font-size: 11px;
-      color: #94a3b8;
-      font-family: 'Inter', monospace;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-    }
-
-    @media (max-width: 992px) {
-      .scanner-showcase-container {
+    @media (max-width: 640px) {
+      .bento-services-grid {
         grid-template-columns: 1fr;
-        gap: 28px;
+        gap: 16px;
       }
-      .scanner-tags-col.left-tags {
-        order: 2;
+      .bento-telemetry-strip {
+        border-radius: 18px;
+        padding: 14px 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
       }
-      .scanner-center-stage {
-        order: 1;
-      }
-      .scanner-tags-col.right-tags {
-        order: 3;
-      }
-      .scanner-viewport {
-        max-width: 350px;
-        height: 480px;
+      .telemetry-pill-divider {
+        display: none;
       }
     }
 
@@ -4013,145 +3797,181 @@
   </section>
 
     <!-- Biometric Live Fingerprint Scanner Section (High Contrast Real Thumb Impression) -->
-  <section class="scanner-showcase-section" id="biometric-scanner">
+  <!-- Specialized Fingerprinting & PCC Services: Executive Bento Grid -->
+  <section class="specialized-bento-section" id="biometric-scanner">
     <div class="section-head reveal-on-scroll">
       <span class="tag-badge">Certified Biometrics</span>
       <h2 class="section-title">We Are Specialized in Ink and Roll Fingerprinting and PCC Services For</h2>
       <p class="section-desc">Court admissible Ink rolled Impressions in accordance with the requirements of International Consulates and Federal Agencies.</p>
     </div>
 
-    <div class="scanner-showcase-container reveal-scale">
-      <!-- Left Service Badges Column (High Contrast) -->
-      <div class="scanner-tags-col left-tags reveal-left">
-        <div class="scanner-service-card">
-          <div class="card-tag-icon"><i class="fa-solid fa-passport"></i></div>
-          <div class="card-tag-content">
-            <h4>Police Clearance Certificate (PCC)</h4>
-            <p>Certified Consular Clearance for Immigration, Visas and PR</p>
-          </div>
+    <div class="specialized-bento-container reveal-scale">
+      <!-- Executive Forensic Telemetry & Trust Strip -->
+      <div class="bento-telemetry-strip">
+        <div class="telemetry-pill-item">
+          <i class="fa-solid fa-microscope"></i>
+          <span>500+ DPI Archival Inking Standard</span>
         </div>
-
-        <div class="scanner-service-card">
-          <div class="card-tag-icon"><i class="fa-solid fa-fingerprint"></i></div>
-          <div class="card-tag-content">
-            <h4>FBI FD-258 Cards (USA)</h4>
-            <p>Authentic FBI CJIS standard Fingerprinting and end-to-end seamless PCC process</p>
-          </div>
+        <span class="telemetry-pill-divider">&bull;</span>
+        <div class="telemetry-pill-item">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>100% Global Acceptance Guarantee</span>
         </div>
-
-        <div class="scanner-service-card">
-          <div class="card-tag-icon"><i class="fa-solid fa-user-doctor"></i></div>
-          <div class="card-tag-content">
-            <h4>Medical, Physicians and Nursing Licenses</h4>
-            <p>NCLEX, CGFNS and State Medical Board Clearances as per State standards and IdentoGo requirements</p>
-          </div>
+        <span class="telemetry-pill-divider">&bull;</span>
+        <div class="telemetry-pill-item">
+          <i class="fa-solid fa-box-archive"></i>
+          <span>Authentic Sovereign Card Stock</span>
         </div>
-
-        <div class="scanner-service-card">
-          <div class="card-tag-icon"><i class="fa-solid fa-plane-departure"></i></div>
-          <div class="card-tag-content">
-            <h4>Visa &amp; Sovereign Embassy Filings</h4>
-            <p>Certified zero-smudge rolled impressions for 25+ nations</p>
-          </div>
+        <span class="telemetry-pill-divider">&bull;</span>
+        <div class="telemetry-pill-item">
+          <i class="fa-solid fa-user-check"></i>
+          <span>Supervised by Senior Forensic Experts</span>
         </div>
       </div>
 
-      <!-- Center Biometric Live Scanning Video Stage -->
-      <div class="scanner-center-stage">
-        <div class="scanner-viewport">
-          <!-- Background Grid & Sonar Reticle -->
-          <div class="scanner-grid-overlay"></div>
-          <div class="scanner-sonar-circle"></div>
-
-          <!-- Biometric Crosshair Corners (HUD) -->
-          <div class="hud-corner corner-top-left"></div>
-          <div class="hud-corner corner-top-right"></div>
-          <div class="hud-corner corner-bottom-left"></div>
-          <div class="hud-corner corner-bottom-right"></div>
-
-          <!-- Top Status Bar -->
-          <div class="scanner-hud-bar">
-            <div>
-              <span class="hud-rec-dot"></span>
-              <span class="hud-rec-text">LIVE FORENSIC SCAN</span>
+      <!-- 8-Card High Contrast Bento Grid -->
+      <div class="bento-services-grid">
+        <!-- 01. Police Clearance Certificate (PCC) -->
+        <a href="service_pcc.html" class="bento-service-card" title="View Police Clearance Certificate Details">
+          <div>
+            <div class="bento-card-header">
+              <div class="bento-card-icon"><i class="fa-solid fa-passport"></i></div>
+              <span class="bento-card-num">#01</span>
             </div>
-            <span class="hud-cjis-badge">FBI CJIS VERIFIED</span>
-          </div>
-
-          <!-- Sub-header Live Telemetry Readout -->
-          <div class="scanner-telemetry-bar">
-            <span>RES: 500 DPI</span>
-            <span id="scannerCoordinates">X: 248.6 &bull; Y: 512.3</span>
-            <span>NFIQ-2: 98/100</span>
-          </div>
-
-          <!-- Real Authentic Rolled Thumb Impression (Pristine, 100% Clean Without Any Text On Fingerprint) -->
-          <div class="fingerprint-wrapper">
-            <img src="images/real_thumbprint.jpg" alt="Authentic Forensic Rolled Thumb Impression" class="real-thumb-img" />
-          </div>
-
-          <!-- Moving Laser Scanning Beam & Atmospheric Glow -->
-          <div class="scanner-laser-bar">
-            <div class="laser-light-beam"></div>
-            <div class="laser-trail-glow"></div>
-          </div>
-
-          <!-- Bottom HUD Metrics Overlay -->
-          <div class="scanner-hud-bottom">
-            <div class="hud-metric">
-              <span class="metric-label">RIDGE DENSITY</span>
-              <span class="metric-val" style="color: #00f0ff;">100% SMUDGE-FREE</span>
-            </div>
-            <div class="hud-metric" style="text-align: right;">
-              <span class="metric-label">ACCEPTANCE</span>
-              <span class="metric-val" style="color: #10b981;">ZERO REJECTION</span>
+            <div class="bento-card-body">
+              <h4>Police Clearance Certificate (PCC)</h4>
+              <p>Certified consular clearance documentation and friction ridge rolling for international visas, immigration, and permanent residency (PR).</p>
             </div>
           </div>
-
-          <!-- Video Style Play / Scan Controls -->
-          <div class="scanner-video-controls">
-            <button class="scanner-control-btn" id="scannerPauseBtn" onclick="toggleScannerPlay()" title="Pause / Resume Live Scan">
-              <i class="fa-solid fa-pause"></i>
-            </button>
-            <div class="scanner-timeline">
-              <div class="scanner-timeline-bar"></div>
-            </div>
-            <span class="scanner-duration">00:06 / 00:06</span>
+          <div class="bento-card-tags">
+            <span class="bento-tag"><i class="fa-solid fa-circle-check" style="font-size: 10px; color: #16a34a;"></i> Consular Clearances</span>
+            <span class="bento-tag">25+ Nations</span>
           </div>
-        </div>
-      </div>
+        </a>
 
-      <!-- Right Service Badges Column (High Contrast) -->
-      <div class="scanner-tags-col right-tags reveal-right">
-        <div class="scanner-service-card">
-          <div class="card-tag-icon"><i class="fa-solid fa-shield-halved"></i></div>
-          <div class="card-tag-content">
-            <h4>Criminal Background Checks</h4>
-            <p>Global Employer and Sovereign Security Clearance Vetting</p>
+        <!-- 02. FBI FD-258 Cards (USA) -->
+        <a href="service_pcc.html" class="bento-service-card" title="View FBI FD-258 Card Details">
+          <div>
+            <div class="bento-card-header">
+              <div class="bento-card-icon"><i class="fa-solid fa-fingerprint"></i></div>
+              <span class="bento-card-num">#02</span>
+            </div>
+            <div class="bento-card-body">
+              <h4>FBI FD-258 Cards (USA)</h4>
+              <p>Authentic FBI CJIS-standard rolled fingerprinting on original heavy stock cards for US Identity History Summary Checks (IdHSC).</p>
+            </div>
+          </div>
+          <div class="bento-card-tags">
+            <span class="bento-tag"><i class="fa-solid fa-circle-check" style="font-size: 10px; color: #16a34a;"></i> FBI CJIS Standard</span>
+            <span class="bento-tag">FD-258 Stock</span>
+          </div>
+        </a>
+
+        <!-- 03. Medical & Nursing Licenses -->
+        <div class="bento-service-card" onclick="openEnquiryModal()" style="cursor: pointer;" title="Inquire for Medical / Nursing Fingerprinting">
+          <div>
+            <div class="bento-card-header">
+              <div class="bento-card-icon"><i class="fa-solid fa-user-doctor"></i></div>
+              <span class="bento-card-num">#03</span>
+            </div>
+            <div class="bento-card-body">
+              <h4>Medical &amp; Nursing Licenses</h4>
+              <p>NCLEX, CGFNS, and State Medical Board Clearances strictly adhering to state regulatory standards and IdentoGO requirements.</p>
+            </div>
+          </div>
+          <div class="bento-card-tags">
+            <span class="bento-tag"><i class="fa-solid fa-circle-check" style="font-size: 10px; color: #16a34a;"></i> NCLEX / CGFNS</span>
+            <span class="bento-tag">IdentoGO Specs</span>
           </div>
         </div>
 
-        <div class="scanner-service-card">
-          <div class="card-tag-icon"><i class="fa-solid fa-briefcase"></i></div>
-          <div class="card-tag-content">
-            <h4>FINRA US Corporate Licensing</h4>
-            <p>Mandatory Financial Broker Dealer and Fintech Compliance according to the U.S. Securities and Exchange Commission (SEC) under Rule 17f-2 of the Securities Exchange Act of 1934.</p>
+        <!-- 04. Visa & Sovereign Embassy Filings -->
+        <div class="bento-service-card" onclick="openEnquiryModal()" style="cursor: pointer;" title="Inquire for Embassy Filings">
+          <div>
+            <div class="bento-card-header">
+              <div class="bento-card-icon"><i class="fa-solid fa-landmark"></i></div>
+              <span class="bento-card-num">#04</span>
+            </div>
+            <div class="bento-card-body">
+              <h4>Visa &amp; Sovereign Embassy Filings</h4>
+              <p>Certified zero-smudge rolled impressions formulated specifically for foreign diplomatic missions and consular submission compliance.</p>
+            </div>
+          </div>
+          <div class="bento-card-tags">
+            <span class="bento-tag"><i class="fa-solid fa-circle-check" style="font-size: 10px; color: #16a34a;"></i> Embassy Filings</span>
+            <span class="bento-tag">Zero Rejection</span>
           </div>
         </div>
 
-        <div class="scanner-service-card">
-          <div class="card-tag-icon"><i class="fa-solid fa-dice"></i></div>
-          <div class="card-tag-content">
-            <h4>Gaming License Fingerprinting</h4>
-            <p>We provide officially approved Fingerprinting that complies with the regulatory standards and specifications prescribed by the International Gaming Board.</p>
+        <!-- 05. Criminal Background Checks -->
+        <div class="bento-service-card" onclick="openEnquiryModal()" style="cursor: pointer;" title="Inquire for Background Checks">
+          <div>
+            <div class="bento-card-header">
+              <div class="bento-card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+              <span class="bento-card-num">#05</span>
+            </div>
+            <div class="bento-card-body">
+              <h4>Criminal Background Checks</h4>
+              <p>Comprehensive ten-print biometric recording for international employers, sovereign defense vetting, and multinational background checks.</p>
+            </div>
+          </div>
+          <div class="bento-card-tags">
+            <span class="bento-tag"><i class="fa-solid fa-circle-check" style="font-size: 10px; color: #16a34a;"></i> Global Employer Vetting</span>
+            <span class="bento-tag">Security Clearances</span>
           </div>
         </div>
 
-        <div class="scanner-service-card">
-          <div class="card-tag-icon"><i class="fa-solid fa-building-columns"></i></div>
-          <div class="card-tag-content">
-            <h4>Immigration, Visas and PR</h4>
-            <p>Certified Clearances for USA, UK, Canada, Australia, Singapore, Qatar, UAE and 25+ countries</p>
+        <!-- 06. FINRA US Corporate Licensing -->
+        <a href="service_finra.html" class="bento-service-card" title="View FINRA Corporate Fingerprinting Details">
+          <div>
+            <div class="bento-card-header">
+              <div class="bento-card-icon"><i class="fa-solid fa-briefcase"></i></div>
+              <span class="bento-card-num">#06</span>
+            </div>
+            <div class="bento-card-body">
+              <h4>FINRA Corporate Licensing</h4>
+              <p>Mandatory Financial Broker Dealer and Fintech Compliance according to the SEC under Rule 17f-2 on official Sterling cards.</p>
+            </div>
+          </div>
+          <div class="bento-card-tags">
+            <span class="bento-tag"><i class="fa-solid fa-circle-check" style="font-size: 10px; color: #16a34a;"></i> SEC Rule 17f-2</span>
+            <span class="bento-tag">FINRA Sterling</span>
+          </div>
+        </a>
+
+        <!-- 07. Gaming License Fingerprinting -->
+        <div class="bento-service-card" onclick="openEnquiryModal()" style="cursor: pointer;" title="Inquire for Gaming License Fingerprinting">
+          <div>
+            <div class="bento-card-header">
+              <div class="bento-card-icon"><i class="fa-solid fa-dice"></i></div>
+              <span class="bento-card-num">#07</span>
+            </div>
+            <div class="bento-card-body">
+              <h4>Gaming License Fingerprinting</h4>
+              <p>Officially approved Fingerprinting that complies with the regulatory standards and specifications prescribed by the International Gaming Board.</p>
+            </div>
+          </div>
+          <div class="bento-card-tags">
+            <span class="bento-tag"><i class="fa-solid fa-circle-check" style="font-size: 10px; color: #16a34a;"></i> Gaming Board Approved</span>
+            <span class="bento-tag">Compliance Specs</span>
+          </div>
+        </div>
+
+        <!-- 08. Immigration, Visas and PR -->
+        <div class="bento-service-card" onclick="openEnquiryModal()" style="cursor: pointer;" title="Inquire for Immigration Clearances">
+          <div>
+            <div class="bento-card-header">
+              <div class="bento-card-icon"><i class="fa-solid fa-plane-departure"></i></div>
+              <span class="bento-card-num">#08</span>
+            </div>
+            <div class="bento-card-body">
+              <h4>Immigration, Visas and PR</h4>
+              <p>Certified Clearances for USA, UK, Canada, Australia, Singapore, Qatar, UAE and 25+ sovereign countries worldwide.</p>
+            </div>
+          </div>
+          <div class="bento-card-tags">
+            <span class="bento-tag"><i class="fa-solid fa-circle-check" style="font-size: 10px; color: #16a34a;"></i> Permanent Residency</span>
+            <span class="bento-tag">25+ Countries</span>
           </div>
         </div>
       </div>
@@ -5638,22 +5458,6 @@
         }, { passive: true });
       }
     });
-
-
-    // Live Biometric Scanner Control
-    window.toggleScannerPlay = function() {
-      const laserBar = document.querySelector('.scanner-laser-bar');
-      const timelineBar = document.querySelector('.scanner-timeline-bar');
-      const btnIcon = document.querySelector('#scannerPauseBtn i');
-      if (laserBar && timelineBar) {
-        const isPaused = laserBar.style.animationPlayState === 'paused';
-        laserBar.style.animationPlayState = isPaused ? 'running' : 'paused';
-        timelineBar.style.animationPlayState = isPaused ? 'running' : 'paused';
-        if (btnIcon) {
-          btnIcon.className = isPaused ? 'fa-solid fa-pause' : 'fa-solid fa-play';
-        }
-      }
-    };
 
   </script>
 
