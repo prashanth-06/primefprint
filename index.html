@@ -5097,18 +5097,35 @@
     function nextSlide() {
       let next = (currentSlide + 1) % slides.length;
       showSlide(next);
+      resetHeroTimer();
     }
 
     function prevSlide() {
       let prev = (currentSlide - 1 + slides.length) % slides.length;
       showSlide(prev);
+      resetHeroTimer();
     }
 
     function goToSlide(idx) {
       showSlide(idx);
+      resetHeroTimer();
     }
 
-    setInterval(nextSlide, 6000);
+    let heroTimer = setInterval(nextSlide, 3000);
+    function resetHeroTimer() {
+      if (heroTimer) clearInterval(heroTimer);
+      heroTimer = setInterval(nextSlide, 3000);
+    }
+
+    const heroSectionEl = document.getElementById('home');
+    if (heroSectionEl) {
+      heroSectionEl.addEventListener('mouseenter', () => {
+        if (heroTimer) clearInterval(heroTimer);
+      });
+      heroSectionEl.addEventListener('mouseleave', () => {
+        resetHeroTimer();
+      });
+    }
 
     // Initialize Interactive World Map (With Dynamic Region Tab Filtering & Synchronized Highlighting)
     const allClientMarkers = [
